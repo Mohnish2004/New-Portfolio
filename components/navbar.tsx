@@ -30,7 +30,6 @@ export const Navbar = () => {
     <NextUINavbar maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
@@ -59,7 +58,6 @@ export const Navbar = () => {
           <ThemeSwitch />
         </NavbarItem>
       </NavbarContent>
-
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="center">
         <Link isExternal aria-label="Github" href={siteConfig.links.github}>
           <GithubIcon className="text-default-500" />
@@ -76,9 +74,7 @@ export const Navbar = () => {
                 color={
                   index === 2
                     ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "danger"
-                      : "foreground"
+                    : "foreground"
                 }
                 href="#"
                 size="lg"

@@ -13,9 +13,13 @@ import Image from 'next/image';
 import { FlipWords } from "@/components/flip"; // Replace with the correct path to FlipWords component
 import { LinkPreview } from "@/components/link-preview";
 import { SparklesCore } from "@/components/sparkles";
-import {Card, CardHeader, CardBody, CardFooter, Avatar, Button} from "@nextui-org/react";
+import {Card as NextUICard, CardHeader, CardBody, CardFooter, Avatar, Button} from "@nextui-org/react";
 import React from "react";
 import { InfiniteMovingCards } from "@/components/infinite-moving-cards";
+import Card1 from "@/components/Card1";
+import { animate, motion, useMotionValue } from "framer-motion";
+import { useEffect, useState } from "react";
+import useMeasure from "react-use-measure";
 
 function Badge() {
   return (
@@ -147,47 +151,13 @@ function BlogLink({}) {
 
 
 
-
-
-
-
-
-
 const Home = () => {
   const words = ["Developer", "Manager", "Designer", "Leader","Photographer","Innovator", "Full-stack","Mobile","Web","AI","ML","Data","Security","Product"]; // Example words array
   const duration = 2000; // Example duration in milliseconds
   const [isFollowed, setIsFollowed] = React.useState(false);
-  const testimonials = [
-    {
-      quote:
-        "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-      name: "Charles Dickens",
-      title: "A Tale of Two Cities",
-    },
-    {
-      quote:
-        "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-      name: "William Shakespeare",
-      title: "Hamlet",
-    },
-    {
-      quote: "All that we see or seem is but a dream within a dream.",
-      name: "Edgar Allan Poe",
-      title: "A Dream Within a Dream",
-    },
-    {
-      quote:
-        "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-      name: "Jane Austen",
-      title: "Pride and Prejudice",
-    },
-    {
-      quote:
-        "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-      name: "Herman Melville",
-      title: "Moby-Dick",
-    },
-  ];
+  
+
+
   return (
     
     <section className="antialiased max-w-xl mx-4 mt-8 sm:mx-auto">
@@ -196,12 +166,13 @@ const Home = () => {
        Hey, I'm Mohnish 👋
       </h1>
       <div className="mb-20">
-      <Chip className="select-none text-slate bg-white mr-2 dark:text-white dark:bg-slate-900 dark:border-slate-800" variant="faded" radius="sm" size="sm">
-          <FlipWords words={words} duration={duration} className="my-custom-class" />
-        </Chip>
-      <Chip className="select-none text-slate bg-white mr-2 dark:text-white dark:bg-slate-900 dark:border-slate-800" variant="faded" radius="sm" size="sm">President of CodeLab</Chip>
-      <Chip className="select-none text-slate bg-white mr-2 mt-2 dark:text-white dark:bg-slate-900 dark:border-slate-800" variant="dot" radius="sm" size="sm">Open for internships</Chip>
-      </div>
+      <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">          <FlipWords words={words} duration={duration} className="my-custom-class" />
+</span>
+      <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">President of CodeLab</span>
+      <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">Open for internships</span>
+
+
+       </div>
 
       <div className="mb-10">
       <h2 className=" font-semibold mb-2 text-2xl tracking-tighter">
@@ -219,7 +190,7 @@ const Home = () => {
       <h2 className=" font-semibold mb-5 text-2xl tracking-tighter">
        Projects
       </h2>
-      <div className="h-25 rounded-lg p-2 border border-neutral-200 bg-neutral-50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+      <div className="h-25 rounded-lg p-2 border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
   <div className="grid h-full grid-cols-2">
   <div className="m-5">
           <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
@@ -227,7 +198,7 @@ const Home = () => {
             </p>
             <h2 className="font-light leading-none text-neutral-900 dark:text-neutral-100 ">
             Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.            </h2>
-            <Chip className="text-slate mbg-white mt-2 dark:text-white dark:bg-slate-900 dark:border-slate-800" variant="faded" radius="sm" size="sm">Web Development</Chip>
+            <span className="inline-flex items-center dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-5 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">AI/ML</span>
           </div>
     <div className=" flex items-center justify-center ">
       <img src="/mobile.png" alt=""/>
@@ -240,7 +211,7 @@ const Home = () => {
     </div>
 
     
-    <div className="h-25 mb-5 rounded-lg p-2 border border-neutral-200 bg-neutral-50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+    <div className="h-25 mb-5 rounded-lg p-2 border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
   <div className="grid h-full grid-cols-2">
   <div className="m-5">
           <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
@@ -248,7 +219,7 @@ const Home = () => {
             </p>
             <h2 className="font-light leading-none text-neutral-900 dark:text-neutral-100 ">
             Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.            </h2>
-            <Chip className="text-slate mbg-white mt-2 dark:text-white dark:bg-slate-900 dark:border-slate-800" variant="faded" radius="sm" size="sm">Web Development</Chip>
+            <span className="inline-flex items-center dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-5 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">Web Development</span>
           </div>
     <div className=" flex items-center justify-center">
       <img src="/mobile.png" className=" "  />
@@ -259,7 +230,7 @@ const Home = () => {
     </div>
     </div>
 
-    <div className="h-25 mb-5 rounded-lg p-2 border border-neutral-200 bg-neutral-50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+    <div className="h-25 mb-5 rounded-lg p-2 border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
   <div className="grid h-full grid-cols-2">
   <div className="m-5">
           <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
@@ -267,7 +238,7 @@ const Home = () => {
             </p>
             <h2 className="font-light leading-none text-neutral-900 dark:text-neutral-100 ">
             Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.            </h2>
-            <Chip className="text-slate mbg-white mt-2 dark:text-white dark:bg-slate-900 dark:border-slate-800" variant="faded" radius="sm" size="sm">Web Development</Chip>
+            <span className="inline-flex items-center dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-5 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">Mobile App</span>
           </div>
     <div className=" flex items-center justify-center">
       <img src="/mobile.png" className="" />
@@ -418,161 +389,67 @@ const Home = () => {
        Testimonials
       </h2>
 
-      <Card className="max-w-[340px]">
-      <CardHeader className="justify-between">
-        <div className="flex gap-5">
-          <Avatar isBordered radius="full" size="md" src="https://nextui.org/avatars/avatar-1.png" />
-          <div className="flex flex-col gap-1 items-start justify-center">
-            <h4 className="text-small font-semibold leading-none text-default-600">Zoey Lang</h4>
-            <h5 className="text-small tracking-tight text-default-400">@zoeylang</h5>
-          </div>
-        </div>
-        <Button
-          className={isFollowed ? "bg-transparent text-foreground border-default-200" : ""}
-          color="primary"
-          radius="full"
-          size="sm"
-          variant={isFollowed ? "bordered" : "solid"}
-          onPress={() => setIsFollowed(!isFollowed)}
-        >
-          {isFollowed ? "Unfollow" : "Follow"}
-        </Button>
-      </CardHeader>
-      <CardBody className="px-3 py-0 text-small text-default-400">
-        <p>
-          Frontend developer and UI/UX enthusiast. Join me on this coding adventure! Frontend developer and UI/UX enthusiast. Join me on this coding adventure!
-
-          Frontend developer and UI/UX enthusiast. Join me on this coding adventure!
-
-
-        </p>
-        <span className="pt-2">
-          #FrontendWithZoey 
-          <span className="py-2" aria-label="computer" role="img">
-            💻
-          </span>
-        </span>
-      </CardBody>
-      <CardFooter className="gap-3">
-        <div className="flex gap-1">
-          <p className="font-semibold text-default-400 text-small">4</p>
-          <p className=" text-default-400 text-small">Following</p>
-        </div>
-        <div className="flex gap-1">
-          <p className="font-semibold text-default-400 text-small">97.1K</p>
-          <p className="text-default-400 text-small">Followers</p>
-        </div>
-      </CardFooter>
-    </Card>
-
-
-
-    <Card className="max-w-[340px]">
-      <CardHeader className="justify-between">
-        <div className="flex gap-5">
-          <Avatar isBordered radius="full" size="md" src="https://nextui.org/avatars/avatar-1.png" />
-          <div className="flex flex-col gap-1 items-start justify-center">
-            <h4 className="text-small font-semibold leading-none text-default-600">Zoey Lang</h4>
-            <h5 className="text-small tracking-tight text-default-400">@zoeylang</h5>
-          </div>
-        </div>
-        <Button
-          className={isFollowed ? "bg-transparent text-foreground border-default-200" : ""}
-          color="primary"
-          radius="full"
-          size="sm"
-          variant={isFollowed ? "bordered" : "solid"}
-          onPress={() => setIsFollowed(!isFollowed)}
-        >
-          {isFollowed ? "Unfollow" : "Follow"}
-        </Button>
-      </CardHeader>
-      <CardBody className="px-3 py-0 text-small text-default-400">
-        <p>
-          Frontend developer and UI/UX enthusiast. Join me on this coding adventure! Frontend developer and UI/UX enthusiast. Join me on this coding adventure!
-
-          Frontend developer and UI/UX enthusiast. Join me on this coding adventure!
-
-
-        </p>
-        <span className="pt-2">
-          #FrontendWithZoey 
-          <span className="py-2" aria-label="computer" role="img">
-            💻
-          </span>
-        </span>
-      </CardBody>
-      <CardFooter className="gap-3">
-        <div className="flex gap-1">
-          <p className="font-semibold text-default-400 text-small">4</p>
-          <p className=" text-default-400 text-small">Following</p>
-        </div>
-        <div className="flex gap-1">
-          <p className="font-semibold text-default-400 text-small">97.1K</p>
-          <p className="text-default-400 text-small">Followers</p>
-        </div>
-      </CardFooter>
-    </Card>
+</div>
 
 
 
 
-    <Card className="max-w-[340px]">
-      <CardHeader className="justify-between">
-        <div className="flex gap-5">
-          <Avatar isBordered radius="full" size="md" src="https://nextui.org/avatars/avatar-1.png" />
-          <div className="flex flex-col gap-1 items-start justify-center">
-            <h4 className="text-small font-semibold leading-none text-default-600">Zoey Lang</h4>
-            <h5 className="text-small tracking-tight text-default-400">@zoeylang</h5>
-          </div>
-        </div>
-        <Button
-          className={isFollowed ? "bg-transparent text-foreground border-default-200" : ""}
-          color="primary"
-          radius="full"
-          size="sm"
-          variant={isFollowed ? "bordered" : "solid"}
-          onPress={() => setIsFollowed(!isFollowed)}
-        >
-          {isFollowed ? "Unfollow" : "Follow"}
-        </Button>
-      </CardHeader>
-      <CardBody className="px-3 py-0 text-small text-default-400">
-        <p>
-          Frontend developer and UI/UX enthusiast. Join me on this coding adventure! Frontend developer and UI/UX enthusiast. Join me on this coding adventure!
+<div className="grid mt-10 mb-8 border border-gray-200 rounded-lg max-w-3xl shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800">
+    <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700">
+        <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Very easy this was to integrate</h3>
+            <p className="my-4 text-sm">If you care for your time, I hands down would go with this."</p>
+        </blockquote>
+        <figcaption className="flex items-center justify-center ">
+            <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture"/>
+            <div className="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                <div>Bonnie Green</div>
+                <div className="text-sm text-gray-500 dark:text-gray-400 ">Developer at Open AI</div>
+            </div>
+        </figcaption>    
+    </figure>
+    <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
+        <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 className="text-md font-semibold text-gray-900 dark:text-white">Solid foundation for any project</h3>
+            <p className="my-4 text-sm">Designing with Figma components that can be easily translated to the utility classes of Tailwind CSS is a huge timesaver!"</p>
+        </blockquote>
+        <figcaption className="flex items-center justify-center ">
+            <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="profile picture"/>
+            <div className="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                <div>Roberta Casas</div>
+                <div className="text-sm text-gray-500 dark:text-gray-400">Lead designer at Dropbox</div>
+            </div>
+        </figcaption>    
+    </figure>
+    <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700">
+        <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Mindblowing workflow</h3>
+            <p className="my-4 text-sm">Aesthetically, the well designed components are beautiful and will undoubtedly level up your next application."</p>
+        </blockquote>
+        <figcaption className="flex items-center justify-center ">
+            <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="profile picture"/>
+            <div className="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                <div>Jese Leos</div>
+                <div className="text-sm text-gray-500 dark:text-gray-400">Software Engineer at Facebook</div>
+            </div>
+        </figcaption>    
+    </figure>
+    <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 rounded-b-lg md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
+        <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Efficient Collaborating</h3>
+            <p className="my-4 text-sm">You have many examples that can be used to create a fast prototype for your team."</p>
+        </blockquote>
+        <figcaption className="flex items-center justify-center ">
+            <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" alt="profile picture"/>
+            <div className="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                <div>Joseph McFall</div>
+                <div className="text-sm text-gray-500 dark:text-gray-400">CTO at Google</div>
+            </div>
+        </figcaption>    
+    </figure>
+</div>
 
-          Frontend developer and UI/UX enthusiast. Join me on this coding adventure!
 
-
-        </p>
-        <span className="pt-2">
-          #FrontendWithZoey 
-          <span className="py-2" aria-label="computer" role="img">
-            💻
-          </span>
-        </span>
-      </CardBody>
-      <CardFooter className="gap-3">
-        <div className="flex gap-1">
-          <p className="font-semibold text-default-400 text-small">4</p>
-          <p className=" text-default-400 text-small">Following</p>
-        </div>
-        <div className="flex gap-1">
-          <p className="font-semibold text-default-400 text-small">97.1K</p>
-          <p className="text-default-400 text-small">Followers</p>
-        </div>
-      </CardFooter>
-    </Card>
-      </div>     
-
-      <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <InfiniteMovingCards
-        items={testimonials}
-        direction="right"
-        speed="slow"
-      />
-    </div>
-      
     </section>
 
     
