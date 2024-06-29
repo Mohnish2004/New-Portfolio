@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hover\:scale-105:hover {
+    transform: scale(1.05);
+}
+.hover\:-translate-x-10:hover {
+    transform: translateX(-2.5rem);
+}
+.hover\:translate-x-10:hover {
+    transform: translateX(2.5rem);
+}
+

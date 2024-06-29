@@ -11,8 +11,11 @@ import { Suspense } from 'react';
 import { unstable_noStore as noStore } from 'next/cache';
 import Image from 'next/image';
 import { FlipWords } from "@/components/flip"; // Replace with the correct path to FlipWords component
-
-
+import { LinkPreview } from "@/components/link-preview";
+import { SparklesCore } from "@/components/sparkles";
+import {Card, CardHeader, CardBody, CardFooter, Avatar, Button} from "@nextui-org/react";
+import React from "react";
+import { InfiniteMovingCards } from "@/components/infinite-moving-cards";
 
 function Badge() {
   return (
@@ -22,6 +25,8 @@ function Badge() {
     />
   );
 }
+
+
 
 function ArrowIcon() {
   return (
@@ -46,16 +51,16 @@ function ChannelLink({}) {
       <a
         href={"/"}
         target="_blank"
-        className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800"
+        className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl"
       >
         <div className="flex items-center space-x-3">
           <div className="relative h-16">
             <img
               src={"/me.png"}
-              height={64}
-              width={64}
+              height={84}
+              width={84}
               sizes="33vw"
-              className="h-16 w-16 rounded-full border border-neutral-200 dark:border-neutral-700"
+              className="h-16 w-26 rounded-full border border-neutral-200 dark:border-neutral-700"
             />
             <div className="relative -right-10 -top-6 inline-flex h-6 w-6 items-center rounded-full border border-neutral-200 bg-white p-1 dark:border-neutral-700">
               <svg width="15" height="11" role="img" aria-label="YouTube logo">
@@ -63,14 +68,51 @@ function ChannelLink({}) {
               </svg>
             </div>
           </div>
-          <div className="flex flex-col">
-            <p className="font-medium text-neutral-900 dark:text-neutral-100">
+          <div className="flex flex-col pl-5 leading-tight" >
+          <p className="font-light text-sm text-neutral-900 dark:text-neutral-100">
+            Research Paper
             </p>
-
+            <h1 className="font-medium text-neutral-900 dark:text-neutral-100">
+            Volatility Forecasting of Large Cap U.S. Equities Using GARCH Neural Network
+            </h1>
           </div>
         </div>
         <div className="transform text-neutral-700 transition-transform duration-300 group-hover:-rotate-12 dark:text-neutral-300">
+        </div>
+      </a>
+    </div>
+  );
+}
+
+function ProjectLink({}) {
+  return (
+    <div className="group flex w-full shadow-medium">
+      <a
+        href={"/"}
+        target="_blank"
+        className="flex w-full items-center justify-between rounded-lg rounded bg-neutral-50 px-6 py-4 dark:border-neutral-700 dark:bg-neutral-800"
+      >
+        <div className="flex items-center">
+          <div className="relative h-50">
+            <img
+              src={"/mobile.png"}
+              height={620}
+              width={620}
+              sizes="40vw"
+            />
+          </div>
+          <div className="flex flex-col">
+          <p className=" font-semibold text-neutral-900 dark:text-neutral-100">
+              NAME
+            </p>
+            <h2 className="font-light leading-none text-neutral-900 dark:text-neutral-100 tracking-tighter ">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices lorem non feugiat egestas amet.
+            </h2>
+            <Chip className="text-slate mbg-white mt-6 dark:text-white dark:bg-slate-900 dark:border-slate-800" variant="faded" radius="sm" size="sm">Web Development</Chip>
+          </div>
+          <div className=" mt-20 transform text-neutral-700 transition-transform duration-300 group-hover:-rotate-12 dark:text-neutral-300">
           <ArrowIcon />
+        </div>
         </div>
       </a>
     </div>
@@ -97,23 +139,68 @@ function BlogLink({}) {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const Home = () => {
   const words = ["Developer", "Manager", "Designer", "Leader","Photographer","Innovator", "Full-stack","Mobile","Web","AI","ML","Data","Security","Product"]; // Example words array
   const duration = 2000; // Example duration in milliseconds
-
+  const [isFollowed, setIsFollowed] = React.useState(false);
+  const testimonials = [
+    {
+      quote:
+        "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
+      name: "Charles Dickens",
+      title: "A Tale of Two Cities",
+    },
+    {
+      quote:
+        "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
+      name: "William Shakespeare",
+      title: "Hamlet",
+    },
+    {
+      quote: "All that we see or seem is but a dream within a dream.",
+      name: "Edgar Allan Poe",
+      title: "A Dream Within a Dream",
+    },
+    {
+      quote:
+        "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
+      name: "Jane Austen",
+      title: "Pride and Prejudice",
+    },
+    {
+      quote:
+        "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
+      name: "Herman Melville",
+      title: "Moby-Dick",
+    },
+  ];
   return (
     
     <section className="antialiased max-w-xl mx-4 mt-8 sm:mx-auto">
-      <img src="/me.png" alt="Profile" className="w-[150px] h-[150px] rounded-full mb-5"/>
+      <img src="/me.png" alt="Profile" className="select-none w-[150px] h-[150px] rounded-full mb-5"/>
       <h1 className="mb-1 text-5xl tracking-tighter">
        Hey, I'm Mohnish 👋
       </h1>
-      <div className="mb-10">
-      <Chip className="text-slate bg-white mr-2" variant="faded" radius="md" size="sm">
+      <div className="mb-20">
+      <Chip className="select-none text-slate bg-white mr-2 dark:text-white dark:bg-slate-900 dark:border-slate-800" variant="faded" radius="sm" size="sm">
           <FlipWords words={words} duration={duration} className="my-custom-class" />
         </Chip>
-      <Chip className="text-slate bg-white mr-2" variant="faded" radius="lg" size="sm">President of CodeLab</Chip>
-      <Chip className="text-slate bg-white mr-2 mt-2" variant="dot" radius="lg" size="sm">Open for internships</Chip>
+      <Chip className="select-none text-slate bg-white mr-2 dark:text-white dark:bg-slate-900 dark:border-slate-800" variant="faded" radius="sm" size="sm">President of CodeLab</Chip>
+      <Chip className="select-none text-slate bg-white mr-2 mt-2 dark:text-white dark:bg-slate-900 dark:border-slate-800" variant="dot" radius="sm" size="sm">Open for internships</Chip>
       </div>
 
       <div className="mb-10">
@@ -127,93 +214,71 @@ const Home = () => {
       </div>
 
 
-
-
-
-
-
-
  <section>
- <div className="mb-10">
-      <h2 className=" font-semibold mb-2 text-2xl tracking-tighter">
-       Publications
+  <div className="mb-5 ">
+      <h2 className=" font-semibold mb-5 text-2xl tracking-tighter">
+       Projects
       </h2>
-      <div className="my-8 flex w-full flex-col space-x-0 space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-        <ChannelLink/>
-        <ChannelLink/>
-      </div>
-  </div>
+      <div className="h-25 rounded-lg p-2 border border-neutral-200 bg-neutral-50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+  <div className="grid h-full grid-cols-2">
+  <div className="m-5">
+          <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
+              Pool it
+            </p>
+            <h2 className="font-light leading-none text-neutral-900 dark:text-neutral-100 ">
+            Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.            </h2>
+            <Chip className="text-slate mbg-white mt-2 dark:text-white dark:bg-slate-900 dark:border-slate-800" variant="faded" radius="sm" size="sm">Web Development</Chip>
+          </div>
+    <div className=" flex items-center justify-center ">
+      <img src="/mobile.png" alt=""/>
+    </div>
+    <div className=" flex items-center justify-center">
+  
+    </div>
+    </div>
+    </div>
+    </div>
 
+    
+    <div className="h-25 mb-5 rounded-lg p-2 border border-neutral-200 bg-neutral-50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+  <div className="grid h-full grid-cols-2">
+  <div className="m-5">
+          <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
+              Pool it
+            </p>
+            <h2 className="font-light leading-none text-neutral-900 dark:text-neutral-100 ">
+            Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.            </h2>
+            <Chip className="text-slate mbg-white mt-2 dark:text-white dark:bg-slate-900 dark:border-slate-800" variant="faded" radius="sm" size="sm">Web Development</Chip>
+          </div>
+    <div className=" flex items-center justify-center">
+      <img src="/mobile.png" className=" "  />
+    </div>
+    <div className=" flex items-center justify-center">
+  
+    </div>
+    </div>
+    </div>
 
+    <div className="h-25 mb-5 rounded-lg p-2 border border-neutral-200 bg-neutral-50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+  <div className="grid h-full grid-cols-2">
+  <div className="m-5">
+          <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
+              Pool it
+            </p>
+            <h2 className="font-light leading-none text-neutral-900 dark:text-neutral-100 ">
+            Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.            </h2>
+            <Chip className="text-slate mbg-white mt-2 dark:text-white dark:bg-slate-900 dark:border-slate-800" variant="faded" radius="sm" size="sm">Web Development</Chip>
+          </div>
+    <div className=" flex items-center justify-center">
+      <img src="/mobile.png" className="" />
+    </div>
+    <div className=" flex items-center justify-center">
+  
+    </div>
+    </div>
+    </div>
 
-
-
-
-      <div className="prose prose-neutral dark:prose-invert">
-        <p>
-          Over the past decade, I've written content on my blog and newsletter.
-          I try to keep things simple. You'll find writing about technologies
-          I'm interested in at the time, or how I'm learning and growing in my
-          career, sharing knowledge along the way.
-        </p>
-      </div>
-      <div className="my-8 flex w-full flex-col space-y-4">
-        <BlogLink
-        />
-        <BlogLink  />
-        <BlogLink />
-      </div>
-      <div className="prose prose-neutral dark:prose-invert">
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </div>
-      <div className="my-8 flex h-14 w-full flex-row space-x-2 overflow-x-auto">
-        <div className="flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800">
-          <a href="https://linear.app">
-            <svg width="78" height="20" role="img" aria-label="Linear logo">
-              <use href="/sprite.svg#linear" />
-            </svg>
-          </a>
-        </div>
-        <div className="flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800">
-          <a href="https://supabase.com">
-            <svg width="100" height="19" role="img" aria-label="Supabase logo">
-              <use href="/sprite.svg#supabase" />
-            </svg>
-          </a>
-        </div>
-        <div className="flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800">
-          <a href="https://www.makeswift.com/blog/makeswift-is-joining-bigcommerce">
-            <svg width="96" height="19" role="img" aria-label="Makeswift logo">
-              <use href="/sprite.svg#makeswift" />
-            </svg>
-          </a>
-        </div>
-        <div className="flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800">
-          <a href="https://resend.com">
-            <svg width="70" height="17" role="img" aria-label="Resend logo">
-              <use href="/sprite.svg#resend" />
-            </svg>
-          </a>
-        </div>
-        <div className="flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800">
-          <a href="https://bun.sh">
-            <svg width="35" height="27" role="img" aria-label="Bun logo">
-              <use href="/sprite.svg#bun" />
-            </svg>
-          </a>
-        </div>
-      </div>
-      <div className="prose prose-neutral dark:prose-invert">
-        <p>
-          I've worked with and advised companies on{' '}
-          <Link href="/blog/developer-marketing">developer marketing</Link>,{' '}
-          <Link href="/blog/devrel">developer relations</Link>, building
-          open-source communities, product-led growth, and more.
-        </p>
-      </div>
-      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+    <ul className="mb-10 justify-end font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
           <a
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
@@ -222,82 +287,129 @@ const Home = () => {
             href="https://twitter.com/leeerob"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">follow me</p>
+            <p className="ml-2 h-7">See more projects</p>
           </a>
         </li>
+        </ul>
+
+
+    
+
+
+
+
+
+
+  <div className="mb-5">
+      <h2 className=" font-semibold mb-2 text-2xl tracking-tighter">
+       Publications
+      </h2>
+  </div>
+
+  <ChannelLink></ChannelLink>
+
+  <ul className="mb-10 justify-end font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
           <a
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://leerob.substack.com"
+            href="https://twitter.com/leeerob"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">get email updates</p>
+            <p className="ml-2 h-7">Read more</p>
           </a>
         </li>
-      </ul>
+        </ul>
+
     </section>
 
 
 
-      <div className="mt-10">
-      <h2 className=" font-semibold mb-2 text-2xl tracking-tighter">
+
+
+
+
+
+      <div className="mt-20">
+      <h2 className=" font-semibold mb-2 text-3xl tracking-tighter">
        Experience
       </h2>
-      <section>
+
+
+
+
+
+
+      <section className="mt-10">
       <div className="prose prose-neutral dark:prose-invert">
-        <p>
-          On a mission to build products developers{' '}
-          <Link href="/blog/developer-experience">love</Link>, and along the
-          way, teach the next generation of developers. Here's a summary of my
-          work so far.
-        </p>
-        <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Vercel</h2>
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">Product Manager
+</h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-          VP of Product
+        CodeLab
         </p>
-        <p>
-          I joined <a href="https://vercel.com/home">Vercel</a> early to grow{' '}
-          <a href="https://nextjs.org">Next.js</a> and our developer community.
-          I built our Developer Relations team to teach our community about our
-          products.
-        </p>
-        <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Hy-Vee</h2>
+        
+        <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">        Undergraduate Researcher
+</h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-          Senior Software Engineer, 2018 — 2020
-        </p>
-        <p>
-          Hy-Vee, an almost 100-year-old grocery chain in the United States,
-          wanted to build a new version of their digital storefront. I joined a
-          team of <Link href="/blog/product-engineers">product engineers</Link>{' '}
-          working across web and mobile to rebuild their legacy .NET application
-          (~500k MAU) with React and React Native.
+        Laboratory for AI, Robotics and Automation        </p>
+
+        <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+        <h2 className="font-medium text-xl mb-1 tracking-tighter"> Vice President of Externals</h2>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+        Google Developer Student Club
         </p>
 
-        <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Workiva</h2>
+      
+      <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">Software Engineering Intern</h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-          Software Engineer, 2015 — 2018
+        eSolutionsMEA
         </p>
-        <p>
-          Workiva ($WK) is a cloud platform for data reporting and compliance.
-          During my time at Workiva, I gained my first production experience
-          using React. I worked on tooling to help predict and alert and
-          regressions in our SaaS platform, building a product similar to
-          open-source tools like Sentry.
+
+        <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">Student Ambassador / Tour Guide</h2>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+        University of California, Davis
         </p>
+
+        <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">Vice President of Experience</h2>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+          Sachacks
+        </p>
+
+        <ul className="mb-10 justify-end font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://twitter.com/leeerob"
+          >
+            <ArrowIcon />
+            <p className="ml-2 h-7">Learn more </p>
+          </a>
+        </li>
+        </ul>
+
       </div>
     </section>
       </div>
 
+
+
+
+      
       <div className="mt-10">
-      <h2 className=" font-semibold mb-2 text-2xl tracking-tighter">
+      <h2 className=" font-semibold mb-10 text-3xl tracking-tighter">
        Education
       </h2>
-
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">Bachelor of Science in Computer Science</h2>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+        University of California, Davis / 2022 — 2026
+        </p>
       </div>
 
 
@@ -306,8 +418,164 @@ const Home = () => {
        Testimonials
       </h2>
 
-      </div>
+      <Card className="max-w-[340px]">
+      <CardHeader className="justify-between">
+        <div className="flex gap-5">
+          <Avatar isBordered radius="full" size="md" src="https://nextui.org/avatars/avatar-1.png" />
+          <div className="flex flex-col gap-1 items-start justify-center">
+            <h4 className="text-small font-semibold leading-none text-default-600">Zoey Lang</h4>
+            <h5 className="text-small tracking-tight text-default-400">@zoeylang</h5>
+          </div>
+        </div>
+        <Button
+          className={isFollowed ? "bg-transparent text-foreground border-default-200" : ""}
+          color="primary"
+          radius="full"
+          size="sm"
+          variant={isFollowed ? "bordered" : "solid"}
+          onPress={() => setIsFollowed(!isFollowed)}
+        >
+          {isFollowed ? "Unfollow" : "Follow"}
+        </Button>
+      </CardHeader>
+      <CardBody className="px-3 py-0 text-small text-default-400">
+        <p>
+          Frontend developer and UI/UX enthusiast. Join me on this coding adventure! Frontend developer and UI/UX enthusiast. Join me on this coding adventure!
+
+          Frontend developer and UI/UX enthusiast. Join me on this coding adventure!
+
+
+        </p>
+        <span className="pt-2">
+          #FrontendWithZoey 
+          <span className="py-2" aria-label="computer" role="img">
+            💻
+          </span>
+        </span>
+      </CardBody>
+      <CardFooter className="gap-3">
+        <div className="flex gap-1">
+          <p className="font-semibold text-default-400 text-small">4</p>
+          <p className=" text-default-400 text-small">Following</p>
+        </div>
+        <div className="flex gap-1">
+          <p className="font-semibold text-default-400 text-small">97.1K</p>
+          <p className="text-default-400 text-small">Followers</p>
+        </div>
+      </CardFooter>
+    </Card>
+
+
+
+    <Card className="max-w-[340px]">
+      <CardHeader className="justify-between">
+        <div className="flex gap-5">
+          <Avatar isBordered radius="full" size="md" src="https://nextui.org/avatars/avatar-1.png" />
+          <div className="flex flex-col gap-1 items-start justify-center">
+            <h4 className="text-small font-semibold leading-none text-default-600">Zoey Lang</h4>
+            <h5 className="text-small tracking-tight text-default-400">@zoeylang</h5>
+          </div>
+        </div>
+        <Button
+          className={isFollowed ? "bg-transparent text-foreground border-default-200" : ""}
+          color="primary"
+          radius="full"
+          size="sm"
+          variant={isFollowed ? "bordered" : "solid"}
+          onPress={() => setIsFollowed(!isFollowed)}
+        >
+          {isFollowed ? "Unfollow" : "Follow"}
+        </Button>
+      </CardHeader>
+      <CardBody className="px-3 py-0 text-small text-default-400">
+        <p>
+          Frontend developer and UI/UX enthusiast. Join me on this coding adventure! Frontend developer and UI/UX enthusiast. Join me on this coding adventure!
+
+          Frontend developer and UI/UX enthusiast. Join me on this coding adventure!
+
+
+        </p>
+        <span className="pt-2">
+          #FrontendWithZoey 
+          <span className="py-2" aria-label="computer" role="img">
+            💻
+          </span>
+        </span>
+      </CardBody>
+      <CardFooter className="gap-3">
+        <div className="flex gap-1">
+          <p className="font-semibold text-default-400 text-small">4</p>
+          <p className=" text-default-400 text-small">Following</p>
+        </div>
+        <div className="flex gap-1">
+          <p className="font-semibold text-default-400 text-small">97.1K</p>
+          <p className="text-default-400 text-small">Followers</p>
+        </div>
+      </CardFooter>
+    </Card>
+
+
+
+
+    <Card className="max-w-[340px]">
+      <CardHeader className="justify-between">
+        <div className="flex gap-5">
+          <Avatar isBordered radius="full" size="md" src="https://nextui.org/avatars/avatar-1.png" />
+          <div className="flex flex-col gap-1 items-start justify-center">
+            <h4 className="text-small font-semibold leading-none text-default-600">Zoey Lang</h4>
+            <h5 className="text-small tracking-tight text-default-400">@zoeylang</h5>
+          </div>
+        </div>
+        <Button
+          className={isFollowed ? "bg-transparent text-foreground border-default-200" : ""}
+          color="primary"
+          radius="full"
+          size="sm"
+          variant={isFollowed ? "bordered" : "solid"}
+          onPress={() => setIsFollowed(!isFollowed)}
+        >
+          {isFollowed ? "Unfollow" : "Follow"}
+        </Button>
+      </CardHeader>
+      <CardBody className="px-3 py-0 text-small text-default-400">
+        <p>
+          Frontend developer and UI/UX enthusiast. Join me on this coding adventure! Frontend developer and UI/UX enthusiast. Join me on this coding adventure!
+
+          Frontend developer and UI/UX enthusiast. Join me on this coding adventure!
+
+
+        </p>
+        <span className="pt-2">
+          #FrontendWithZoey 
+          <span className="py-2" aria-label="computer" role="img">
+            💻
+          </span>
+        </span>
+      </CardBody>
+      <CardFooter className="gap-3">
+        <div className="flex gap-1">
+          <p className="font-semibold text-default-400 text-small">4</p>
+          <p className=" text-default-400 text-small">Following</p>
+        </div>
+        <div className="flex gap-1">
+          <p className="font-semibold text-default-400 text-small">97.1K</p>
+          <p className="text-default-400 text-small">Followers</p>
+        </div>
+      </CardFooter>
+    </Card>
+      </div>     
+
+      <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+      <InfiniteMovingCards
+        items={testimonials}
+        direction="right"
+        speed="slow"
+      />
+    </div>
+      
     </section>
+
+    
   );
 }
 

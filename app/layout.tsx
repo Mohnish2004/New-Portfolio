@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
+import { SparklesCore } from "@/components/sparkles";
 
 export const metadata: Metadata = {
   title: {
