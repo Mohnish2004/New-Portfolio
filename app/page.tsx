@@ -29,9 +29,11 @@ import useMeasure from "react-use-measure";
 function Badge() {
   return (
     <a
+    href={"/"}
       target="_blank"
+      rel="noopener noreferrer"
       className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100"
-    />
+    ></a>
   );
 }
 
@@ -60,6 +62,7 @@ function ChannelLink({}) {
       <a
         href={"/"}
         target="_blank"
+        rel="noopener noreferrer"
         className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-102 hover:shadow-md"
       >
         <div className="flex items-center space-x-3">
@@ -84,6 +87,7 @@ function ProjectLink({}) {
       <a
         href={"/"}
         target="_blank"
+        rel="noopener noreferrer"
         className="flex w-full items-center justify-between rounded-lg rounded bg-neutral-50 px-6 py-4 dark:border-neutral-700 dark:bg-neutral-800"
       >
         <div className="flex items-center">
@@ -93,6 +97,7 @@ function ProjectLink({}) {
               height={620}
               width={620}
               sizes="40vw"
+              alt="test"
             />
           </div>
           <div className="flex flex-col">
@@ -153,7 +158,7 @@ const Home = () => {
     <section className="antialiased max-w-xl mx-4 mt-8 sm:mx-auto">
       <img src="/me.png" alt="Profile" className="select-none w-[150px] h-[150px] rounded-full mb-5"/>
       <h1 className="mb-1 text-5xl tracking-tighter">
-       Hey, I'm Mohnish 👋🏽
+       Hey, I&apos;m Mohnish 👋🏽
       </h1>
       <div className="mb-20">
       <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">          <FlipWords words={words} duration={duration} className="my-custom-class" />
@@ -211,7 +216,7 @@ const Home = () => {
             <span className="inline-flex items-center dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-5 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">AI/ML</span>
           </div>
     <div className=" flex items-center justify-center ">
-      <img src="/mobile.png"/>
+      <img src="/mobile.png"              alt="test"/>
     </div>
     <div className=" flex items-center justify-center">
   
@@ -232,7 +237,7 @@ const Home = () => {
             <span className="inline-flex items-center dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-5 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">Web Development</span>
           </div>
     <div className=" flex items-center justify-center">
-      <img src="/mobile.png" className=" "  />
+      <img src="/mobile.png"               alt="test" />
     </div>
     <div className=" flex items-center justify-center">
   
@@ -251,7 +256,7 @@ const Home = () => {
             <span className="inline-flex items-center dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-5 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">Mobile App</span>
           </div>
     <div className=" flex items-center justify-center">
-      <img src="/mobile.png" className="" />
+      <img src="/mobile.png"               alt="test" />
     </div>
     <div className=" flex items-center justify-center">
   
@@ -479,7 +484,7 @@ const Home = () => {
         <h3 className="font-semibold text-gray-900 dark:text-white">Popover title</h3>
     </div>
     <div className="px-3 py-2">
-        <p>And here's some amazing content. It's very engaging. Right?</p>
+        <p>And here&apos;s some amazing content. It&apos;s very engaging. Right?</p>
     </div>
     <div data-popper-arrow></div>
 </div>

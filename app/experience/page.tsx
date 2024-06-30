@@ -134,6 +134,7 @@ const Home = () => {
 
   <div className="group flex w-full">
       <a
+      href={"/"}
         className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-101 hover:shadow-md"
       >
         <div className="flex items-center space-x-3">
@@ -144,6 +145,7 @@ const Home = () => {
               width={84}
               sizes="33vw"
               className="h-14 mt-1 ml-4 w-14 rounded-full"
+              alt="test"
             />
           </div>
 

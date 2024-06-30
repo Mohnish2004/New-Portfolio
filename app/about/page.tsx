@@ -40,7 +40,7 @@ const Home = () => {
       </h1>
       <div className="mb-10 mt-5">
       <p>
-      I'm driven by a deep passion for using technology to create innovative solutions that make a lasting impact. Take a relaxed stroll through these projects that I've poured my heart and soul into.
+      I&apos;m driven by a deep passion for using technology to create innovative solutions that make a lasting impact. Take a relaxed stroll through these projects that I&apos;ve poured my heart and soul into.
       </p>
       </div>
 
