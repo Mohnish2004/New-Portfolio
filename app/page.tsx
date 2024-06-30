@@ -211,7 +211,7 @@ const Home = () => {
             <span className="inline-flex items-center dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-5 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">AI/ML</span>
           </div>
     <div className=" flex items-center justify-center ">
-      <img src="/mobile.png" alt=""/>
+      <img src="/mobile.png"/>
     </div>
     <div className=" flex items-center justify-center">
   
@@ -310,7 +310,7 @@ const Home = () => {
 
 <div className="inline-flex items-center">
   <span className="bg-gray-50 px-3 py-1 text-xs font-medium text-gray-600 dark:text-white rounded-md ring-1 ring-inset ring-gray-500/10">
-    <a href="#" className="text-md text-neutral-500 hover:text-neutral-800 dark:hover:text-neutral-100 inline-flex items-center rounded-lg">
+    <a href="/" className="text-md text-neutral-500 hover:text-neutral-800 dark:hover:text-neutral-100 inline-flex items-center rounded-lg">
       <svg className="w-3.5 h-3.5 me-2 rtl:rotate-180 transition-all duration-500 hover:scale-130 hover:shadow-xl" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
         <path d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2Zm-3 15H4.828a1 1 0 0 1 0-2h6.238a1 1 0 0 1 0 2Zm0-4H4.828a1 1 0 0 1 0-2h6.238a1 1 0 1 1 0 2Z"/>
         <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z"/>

@@ -59,7 +59,7 @@ const Home = () => {
       </h1>
       <div className="mb-10 mt-5">
       <p>
-      I'm driven by a deep passion for using technology to create innovative solutions that make a lasting impact. Take a relaxed stroll through these projects that I've poured my heart and soul into.
+      I&apos;m driven by a deep passion for using technology to create innovative solutions that make a lasting impact. Take a relaxed stroll through these projects that I&apos;ve poured my heart and soul into.
       </p>
       </div>
 
@@ -71,9 +71,9 @@ const Home = () => {
 
  <div className="mb-5">
   <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-  <a className="group block" href="#">
+  <a className="group block" href="/">
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
-      <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/mobile2.png" alt="Image Description"/>
+      <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/mobile2.png" alt="Description"/>
     </div>
     </a>
       <div className="p-4">
@@ -104,9 +104,9 @@ const Home = () => {
 
  <div className="mb-5">
   <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-  <a className="group block" href="#">
+  <a className="group block" href="/">
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
-      <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/mobile2.png" alt="Image Description"/>
+      <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/mobile2.png" alt="Description"/>
     </div>
     </a>
       <div className="p-4">
@@ -131,9 +131,9 @@ const Home = () => {
 
   <div className="mb-5">
   <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-  <a className="group block" href="#">
+  <a className="group block" href="/">
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
-      <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/mobile2.png" alt="Image Description"/>
+      <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/mobile2.png" alt="Description"/>
     </div>
     </a>
       <div className="p-4">
@@ -186,9 +186,9 @@ const Home = () => {
         </div>
       </div>
       <div className="md:w-1/2">
-        <a className="group block h-full" href="#">
+        <a className="group block h-full" href="/">
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
-            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/mobile2.png" alt="Image Description"/>
+            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/mobile2.png" alt="Description"/>
           </div>
         </a>
       </div>
@@ -225,9 +225,9 @@ const Home = () => {
         </div>
       </div>
       <div className="md:w-1/2">
-        <a className="group block h-full" href="#">
+        <a className="group block h-full" href="/">
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
-            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/mobile2.png" alt="Image Description"/>
+            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/mobile2.png" alt="Description"/>
           </div>
         </a>
       </div>

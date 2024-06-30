@@ -30,7 +30,7 @@ export const Navbar = () => {
     <NextUINavbar className="rounded-full mb-10" position="sticky" >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-        <img src="/sign.png" className="h-8" />
+        <img src="/sign.png" alt="test" className="h-8" />
         </NavbarBrand>
         </NavbarContent>
 
@@ -81,7 +81,7 @@ export const Navbar = () => {
                     ? "primary"
                     : "foreground"
                 }
-                href="#"
+                href="/"
                 size="lg"
               >
                 {item.label}
