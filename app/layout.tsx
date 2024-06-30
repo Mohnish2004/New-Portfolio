@@ -1,3 +1,4 @@
+
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import { Link } from "@nextui-org/link";
@@ -44,16 +45,20 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
         <Navbar />
 
-        <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+        <section className="flex flex-col items-center justify-center gap-4 ">
 
+        
       <div className="inline-block justify-center">
+
         {children}
 
             <footer className="w-full flex items-center justify-center py-3">
             </footer>
             </div>
+    
     </section>        
     </Providers>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
       </body>
     </html>
   );

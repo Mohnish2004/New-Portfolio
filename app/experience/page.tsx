@@ -57,11 +57,16 @@ const Home = () => {
       <h1 className="mt-6 text-5xl tracking-tighter">
       My Professional Experience
       </h1>
+
+      
       <div className="mb-10 mt-5">
       <p>
       I'm driven by a deep passion for using technology to create innovative solutions that make a lasting impact. Take a relaxed stroll through these projects that I've poured my heart and soul into.
       </p>
       </div>
+
+
+
 
 
       <section className="mt-10">
@@ -96,7 +101,7 @@ const Home = () => {
         </p>
 
 
-        <ul className="mb-10 justify-end font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+        <ul className=" justify-end font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
           <a
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
@@ -113,6 +118,47 @@ const Home = () => {
       </div>
     </section>
 
+
+    
+
+    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+      <img className="col-span-2 max-h-16 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" width="158" height="48"/>
+      <img className="col-span-2 max-h-16 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" width="158" height="48"/>
+      <img className="col-span-2 max-h-16 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" width="158" height="48"/>
+      <img className="col-span-2 max-h-16 w-full object-contain sm:col-start-2 lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" width="158" height="48"/>
+      <img className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" width="158" height="48"/>
+    </div>
+  </div>
+
+
+  <div className="group flex w-full">
+      <a
+        className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-101 hover:shadow-md"
+      >
+        <div className="flex items-center space-x-3">
+          <div className="relative h-16">
+            <img
+              src={"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/The_University_of_California_Davis.svg/640px-The_University_of_California_Davis.svg.png"}
+              height={84}
+              width={84}
+              sizes="33vw"
+              className="h-14 mt-1 ml-4 w-14 rounded-full"
+            />
+          </div>
+
+
+          <div className="flex flex-col pl-5 leading-tight" >
+          <h2 className="font-medium text-xl mb-1 tracking-tighter">Bachelor of Science in Computer Science</h2>
+          <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+        University of California, Davis / 2022 — 2026
+        </p>
+          </div>
+        </div>
+
+      </a>
+    </div>
+  
     <h2 className=" mt-20 font-semibold mb-2 text-3xl tracking-tighter">
       Leadership Experience
       </h2>
@@ -171,52 +217,6 @@ const Home = () => {
     </section>
     
 
-
-
-
-
-
-<ol className="mt-20 relative border-s border-gray-200 dark:border-gray-700">                  
-    <li className="mb-10 ms-4">
-        <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">President</h3>
-    </li>
-    <li className="mb-10 ms-4">
-        <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Vice President of Externals</h3>
-    </li>
-    <li className="mb-10 ms-4">
-        <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-        <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Dec 2023 - June 2024</time>
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Product Manager</h3>
-        <p className="text-sm font-normal text-gray-500 dark:text-gray-400">All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.</p>
-    </li>
-</ol>
-
-
-<ol className=" mt-20 relative border-s border-gray-200 dark:border-gray-700">                  
-    <li className="mb-10 ms-4">
-        <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-        <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">February 2022</time>
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Application UI code in Tailwind CSS</h3>
-        <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.</p>
-        <a href="#" className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Learn more <svg className="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-  </svg></a>
-    </li>
-    <li className="mb-10 ms-4">
-        <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-        <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">March 2022</time>
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Marketing UI design in Figma</h3>
-        <p className="t font-normal text-gray-500 dark:text-gray-400">All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.</p>
-    </li>
-    <li className="ms-4">
-        <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-        <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">April 2022</time>
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">E-Commerce UI code in Tailwind CSS</h3>
-        <p className="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</p>
-    </li>
-</ol>
 
 
 

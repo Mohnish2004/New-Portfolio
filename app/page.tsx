@@ -1,4 +1,9 @@
 'use client'
+import {Tooltip} from "@nextui-org/tooltip";
+
+import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@nextui-org/react";
+
+import {Popover, PopoverTrigger, PopoverContent} from "@nextui-org/popover";
 import { Link } from "@nextui-org/link";
 import { Snippet } from "@nextui-org/snippet";
 import { Code } from "@nextui-org/code";
@@ -55,24 +60,10 @@ function ChannelLink({}) {
       <a
         href={"/"}
         target="_blank"
-        className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+        className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-102 hover:shadow-md"
       >
         <div className="flex items-center space-x-3">
-          <div className="relative h-16">
-            <img
-              src={"/me.png"}
-              height={84}
-              width={84}
-              sizes="33vw"
-              className="h-16 w-26 rounded-full border border-neutral-200 dark:border-neutral-700"
-            />
-            <div className="relative -right-10 -top-6 inline-flex h-6 w-6 items-center rounded-full border border-neutral-200 bg-white p-1 dark:border-neutral-700">
-              <svg width="15" height="11" role="img" aria-label="YouTube logo">
-                <use href="/sprite.svg#youtube" />
-              </svg>
-            </div>
-          </div>
-          <div className="flex flex-col pl-5 leading-tight" >
+          <div className="flex flex-col pl-3 pr-3 leading-tight" >
           <p className="font-light text-sm text-neutral-900 dark:text-neutral-100">
             Research Paper
             </p>
@@ -81,8 +72,7 @@ function ChannelLink({}) {
             </h1>
           </div>
         </div>
-        <div className="transform text-neutral-700 transition-transform duration-300 group-hover:-rotate-12 dark:text-neutral-300">
-        </div>
+
       </a>
     </div>
   );
@@ -155,7 +145,7 @@ const Home = () => {
   const words = ["Developer", "Manager", "Designer", "Leader","Photographer","Innovator", "Full-stack","Mobile","Web","AI","ML","Data","Security","Product"]; // Example words array
   const duration = 2000; // Example duration in milliseconds
   const [isFollowed, setIsFollowed] = React.useState(false);
-  
+
 
 
   return (
@@ -163,13 +153,13 @@ const Home = () => {
     <section className="antialiased max-w-xl mx-4 mt-8 sm:mx-auto">
       <img src="/me.png" alt="Profile" className="select-none w-[150px] h-[150px] rounded-full mb-5"/>
       <h1 className="mb-1 text-5xl tracking-tighter">
-       Hey, I'm Mohnish 👋
+       Hey, I'm Mohnish 👋🏽
       </h1>
       <div className="mb-20">
       <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">          <FlipWords words={words} duration={duration} className="my-custom-class" />
 </span>
       <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">President of CodeLab</span>
-      <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">Open for internships</span>
+      <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mt-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">Open for internships</span>
 
 
        </div>
@@ -182,12 +172,32 @@ const Home = () => {
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
       </p>
+      <div className="flex justify-between items-center mt-4 w-full">
+
+<ul className=" justify-end font-sm flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+  <li>
+    <a
+      className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+      rel="noopener noreferrer"
+      target="_blank"
+      href="https://twitter.com/leeerob"
+    >
+      <ArrowIcon />
+      <p className="ml-2 h-7">Read more</p>
+    </a>
+  </li>
+</ul>
+
+</div>
+
       </div>
 
 
+
+
  <section>
-  <div className="mb-5 ">
-      <h2 className=" font-semibold mb-5 text-2xl tracking-tighter">
+  <div className="mb-5  ">
+      <h2 className=" font-semibold mb-5 mt-15 text-2xl tracking-tighter">
        Projects
       </h2>
       <div className="h-25 rounded-lg p-2 border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
@@ -265,6 +275,8 @@ const Home = () => {
 
 
     
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.4.1/flowbite.min.css" rel="stylesheet" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.4.1/flowbite.min.js"></script>
 
 
 
@@ -272,26 +284,13 @@ const Home = () => {
 
 
   <div className="mb-5">
-      <h2 className=" font-semibold mb-2 text-2xl tracking-tighter">
+      <h2 className=" font-semibold mb-2 text-3xl tracking-tighter">
        Publications
       </h2>
   </div>
 
   <ChannelLink></ChannelLink>
 
-  <ul className="mb-10 justify-end font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://twitter.com/leeerob"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">Read more</p>
-          </a>
-        </li>
-        </ul>
 
     </section>
 
@@ -303,9 +302,26 @@ const Home = () => {
 
 
       <div className="mt-20">
-      <h2 className=" font-semibold mb-2 text-3xl tracking-tighter">
-       Experience
-      </h2>
+      <div className="mt-20 flex justify-between items-center">
+
+<h2 className="font-semibold text-3xl tracking-tighter">
+  Experience
+</h2>
+
+<div className="inline-flex items-center">
+  <span className="bg-gray-50 px-3 py-1 text-xs font-medium text-gray-600 dark:text-white rounded-md ring-1 ring-inset ring-gray-500/10">
+    <a href="#" className="text-md text-neutral-500 hover:text-neutral-800 dark:hover:text-neutral-100 inline-flex items-center rounded-lg">
+      <svg className="w-3.5 h-3.5 me-2 rtl:rotate-180 transition-all duration-500 hover:scale-130 hover:shadow-xl" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
+        <path d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2Zm-3 15H4.828a1 1 0 0 1 0-2h6.238a1 1 0 0 1 0 2Zm0-4H4.828a1 1 0 0 1 0-2h6.238a1 1 0 1 1 0 2Z"/>
+        <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z"/>
+      </svg>
+      Resume
+    </a>
+  </span>
+</div>
+
+</div>
+
 
 
 
@@ -314,42 +330,95 @@ const Home = () => {
 
       <section className="mt-10">
       <div className="prose prose-neutral dark:prose-invert">
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Product Manager
-</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-        CodeLab
-        </p>
+      <div className="flex items-center text-gray-600 mb-1">
+            <div className="flex-shrink-0 mr-4">
+                <img src="/codelab.svg" alt="Company Logo" className="h-20 object-contain" />
+            </div>
+            <div>
+                <h2 className="text-lg text-black font-medium ">Product Manager</h2>
+                <div className="text-gray-500 text-sm mb-1">
+                <span>CodeLab, 2022-2023</span>
+                    <p className="text-gray-700">Successfully designed and launched a mobile application that increased user engagement</p>
+                </div>
+            </div>
+        </div>
+
         
         <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">        Undergraduate Researcher
-</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-        Laboratory for AI, Robotics and Automation        </p>
 
+        <div className="flex items-center text-gray-600">
+            <div className="flex-shrink-0 mr-4 ">
+            <img src="/lara.svg" alt="Company Logo" className="h-20 w-15 object-contain" />
+            </div>
+            <div>
+                <h2 className="text-lg text-black font-medium">Undergraduate Researcher</h2>
+                <div className="text-gray-500 text-sm mb-2">
+                    <span>Laboratory for AI, Robotics and Automation</span>
+                    <p className="text-gray-700">Successfully designed and launched a mobile application that increased user engagement</p>
+                </div>
+            </div>
+        </div>
         <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter"> Vice President of Externals</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-        Google Developer Student Club
-        </p>
 
-      
-      <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Software Engineering Intern</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-        eSolutionsMEA
-        </p>
-
+        <div className="flex items-center text-gray-600 mb-1">
+            <div className="flex-shrink-0 mr-4">
+            <img src="/gdsc.svg" alt="Company Logo" className="h-20 object-contain" />
+            </div>
+            <div>
+                <h2 className="text-lg text-black font-medium ">Technical Project Manager intern</h2>
+                <div className="text-gray-500 text-sm mb-2">
+                    <span>UC Davis Genome Center, Design2Data</span>
+                    <p className="text-gray-700">Successfully designed and launched a mobile application that increased user engagement</p>
+                </div>
+            </div>
+        </div>
         <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Student Ambassador / Tour Guide</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-        University of California, Davis
-        </p>
 
+        <div className="flex items-center text-gray-600 mb-1">
+            <div className="flex-shrink-0 mr-4">
+            <img src="/gdsc.svg" alt="Company Logo" className="h-20 object-contain" />
+            </div>
+            <div>
+                <h2 className="text-lg text-black font-medium ">Vice President of Externals</h2>
+                <div className="text-gray-500 text-sm mb-2">
+                    <span>Google Developer Student Club</span>
+                    <p className="text-gray-700">Successfully designed and launched a mobile application that increased user engagement</p>
+                </div>
+            </div>
+        </div>
         <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Vice President of Experience</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-          Sachacks
-        </p>
+
+        <div className="flex items-center text-gray-600 mb-1">
+            <div className="flex-shrink-0 mr-4">
+                <img src="/esolutions.svg" alt="Company Logo" className="h-20 object-contain" />
+            </div>
+            <div>
+                <h2 className="text-lg text-black font-medium ">Software Engineering Intern</h2>
+                <div className="text-gray-500 text-sm mb-2">
+                    <span>eSolutionsMEA</span>
+                    <p className="text-gray-700">Successfully designed and launched a mobile application that increased user engagement</p>
+                </div>
+            </div>
+        </div>
+        <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+
+        <div className="flex items-center text-gray-600 mb-1">
+            <div className="flex-shrink-0 mr-4">
+                <img src="/uc.svg" alt="Company Logo" className="h-20 object-contain" />
+            </div>
+            <div>
+                <h2 className="text-lg text-black font-medium ">Student Ambassador / Tour Guide</h2>
+                <div className="text-gray-500 text-sm mb-2">
+                    <span>University of California, Davis</span>
+                    <p className="text-gray-700">Successfully designed and launched a mobile application that increased user engagement</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
 
         <ul className="mb-10 justify-end font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
@@ -372,21 +441,52 @@ const Home = () => {
 
 
 
-      
-      <div className="mt-10">
-      <h2 className=" font-semibold mb-10 text-3xl tracking-tighter">
-       Education
-      </h2>
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Bachelor of Science in Computer Science</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-        University of California, Davis / 2022 — 2026
-        </p>
-      </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div data-popover id="popover-default" role="tooltip" className="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+    <div className="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+        <h3 className="font-semibold text-gray-900 dark:text-white">Popover title</h3>
+    </div>
+    <div className="px-3 py-2">
+        <p>And here's some amazing content. It's very engaging. Right?</p>
+    </div>
+    <div data-popper-arrow></div>
+</div>
 
       <div className="mt-10">
       <h2 className=" font-semibold mb-2 text-2xl tracking-tighter">
-       Testimonials
+      Hear what people have to say about me...
       </h2>
 
 </div>
@@ -394,60 +494,36 @@ const Home = () => {
 
 
 
-<div className="grid mt-10 mb-8 border border-gray-200 rounded-lg max-w-3xl shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800">
-    <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700">
-        <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Very easy this was to integrate</h3>
-            <p className="my-4 text-sm">If you care for your time, I hands down would go with this."</p>
-        </blockquote>
-        <figcaption className="flex items-center justify-center ">
-            <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture"/>
-            <div className="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
-                <div>Bonnie Green</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400 ">Developer at Open AI</div>
-            </div>
-        </figcaption>    
-    </figure>
-    <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
-        <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <h3 className="text-md font-semibold text-gray-900 dark:text-white">Solid foundation for any project</h3>
-            <p className="my-4 text-sm">Designing with Figma components that can be easily translated to the utility classes of Tailwind CSS is a huge timesaver!"</p>
-        </blockquote>
-        <figcaption className="flex items-center justify-center ">
-            <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="profile picture"/>
-            <div className="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
-                <div>Roberta Casas</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">Lead designer at Dropbox</div>
-            </div>
-        </figcaption>    
-    </figure>
-    <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700">
-        <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Mindblowing workflow</h3>
-            <p className="my-4 text-sm">Aesthetically, the well designed components are beautiful and will undoubtedly level up your next application."</p>
-        </blockquote>
-        <figcaption className="flex items-center justify-center ">
-            <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="profile picture"/>
-            <div className="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
-                <div>Jese Leos</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">Software Engineer at Facebook</div>
-            </div>
-        </figcaption>    
-    </figure>
-    <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 rounded-b-lg md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
-        <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Efficient Collaborating</h3>
-            <p className="my-4 text-sm">You have many examples that can be used to create a fast prototype for your team."</p>
-        </blockquote>
-        <figcaption className="flex items-center justify-center ">
-            <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" alt="profile picture"/>
-            <div className="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
-                <div>Joseph McFall</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">CTO at Google</div>
-            </div>
-        </figcaption>    
-    </figure>
+
+<div className="flex items-start mb-10 mt-10 gap-2.5">
+<Tooltip
+          key="left-start"
+          placement="left-start"
+      content={
+        <div className="px-1 py-2">
+          <div className="text-small font-bold">Amazon</div>
+          <div className="text-tiny">AI Privacy engineer</div>
+        </div>
+      }
+    >
+   <img className="w-10 h-10 rounded-full" src="https://media.licdn.com/dms/image/D4D03AQGGI9xxCnbrJg/profile-displayphoto-shrink_200_200/0/1679623474258?e=2147483647&v=beta&t=VFlTvlVnkq8xnOO9GhLVAp6KneyqroowGcBVumDuYK4" alt="Jese image"/>
+   </Tooltip>
+   
+   <div className="flex flex-col gap-1 w-full max-w-[320px]">
+      <div className="flex items-center space-x-2 rtl:space-x-reverse">
+         <span className="text-sm font-semibold text-gray-900 dark:text-white">Geetika</span>
+         <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+      </div>
+      <div className="flex flex-col leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
+        <p className="text-sm font-normal text-gray-900 dark:text-white"> Mohnish is just the best guy, hire him now</p>
+      </div>
+      <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+   </div>
 </div>
+
+
+
+
 
 
     </section>

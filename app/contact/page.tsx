@@ -36,7 +36,7 @@ const Home = () => {
     
     <section className="antialiased max-w-xl mx-4 sm:mx-auto">
       <h1 className="mt-6 text-5xl tracking-tighter">
-      Everything about me
+      Get in touch
       </h1>
       <div className="mb-10 mt-5">
       <p>
