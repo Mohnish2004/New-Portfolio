@@ -24,7 +24,8 @@ import { InfiniteMovingCards } from "@/components/infinite-moving-cards";
 import Card1 from "@/components/Card1";
 import { animate, motion, useMotionValue } from "framer-motion";
 import { useEffect, useState } from "react";
-import useMeasure from "react-use-measure";
+import { FlipWords1 } from "@/components/flip1"; // Replace with the correct path to FlipWords component
+
 
 
 
@@ -139,6 +140,7 @@ function BlogLink({}) {
 const Home = () => {
   const words = ["Developer", "Manager", "Designer", "Leader","Photographer","Innovator", "Full-stack","Mobile","Web","AI","ML","Data","Security","Product"]; // Example words array
   const duration = 2000; // Example duration in milliseconds
+  const sentence = "Hello world This is a sentence React animations are cool!";
   const [isFollowed, setIsFollowed] = React.useState(false);
 
 
@@ -151,7 +153,7 @@ const Home = () => {
        Hey, I&apos;m Mohnish 👋🏽
       </h1>
       <div className="mb-20">
-      <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">          <FlipWords words={words} duration={duration} className="my-custom-class" />
+       <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">          <FlipWords words={words} duration={duration} className="my-custom-class" />
 </span>
       <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">President of CodeLab</span>
       <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mt-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">Open for internships</span>
@@ -191,69 +193,122 @@ const Home = () => {
 
 
  <section>
-  <div className="mb-5  ">
-      <h2 className=" font-semibold mb-5 mt-15 text-2xl tracking-tighter">
-       Projects
-      </h2>
-      <div className="h-25 rounded-lg p-2 border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-  <div className="grid h-full grid-cols-2">
-  <div className="m-5">
-          <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
-              Pool it
-            </p>
-            <h2 className="font-light leading-none text-neutral-900 dark:text-neutral-100 ">
-            Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.            </h2>
-            <span className="inline-flex items-center dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-5 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">AI/ML</span>
-          </div>
-    <div className=" flex items-center justify-center ">
-      <img src="/mobile.png"              alt="test"/>
-    </div>
-    <div className=" flex items-center justify-center">
-  
-    </div>
-    </div>
-    </div>
-    </div>
 
-    
-    <div className="h-25 mb-5 rounded-lg p-2 border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-  <div className="grid h-full grid-cols-2">
-  <div className="m-5">
-          <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
-              Pool it
-            </p>
-            <h2 className="font-light leading-none text-neutral-900 dark:text-neutral-100 ">
-            Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.            </h2>
-            <span className="inline-flex items-center dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-5 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">Web Development</span>
+ <div className="mb-5">
+  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+    <div className="flex flex-col md:flex-row">
+      <div className="p-6 md:w-1/2 flex flex-col justify-between">
+        <div>
+          <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
+             d2dcure.com
+          </h1>
+          <p className="mt-1 mb-4 text-gray-600 leading-tight dark:text-neutral-400">
+            Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.
+          </p>
+          <div className="mt-4">
+            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+              AI/ML
+            </span>
+            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+              AI/ML
+            </span>
           </div>
-    <div className=" flex items-center justify-center">
-      <img src="/mobile.png"               alt="test" />
-    </div>
-    <div className=" flex items-center justify-center">
-  
-    </div>
-    </div>
-    </div>
-
-    <div className="h-25 mb-5 rounded-lg p-2 border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-  <div className="grid h-full grid-cols-2">
-  <div className="m-5">
-          <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
-              Pool it
-            </p>
-            <h2 className="font-light leading-none text-neutral-900 dark:text-neutral-100 ">
-            Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.            </h2>
-            <span className="inline-flex items-center dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-5 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">Mobile App</span>
+        </div>
+        <div className="mt-2">
+          <button type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
+            Read more
+          </button>
+        </div>
+      </div>
+      <div className="md:w-1/2">
+        <a className="group block h-full" href={"/"}>
+          <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
+            
+            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/mobile2.png" alt="Description"/>
           </div>
-    <div className=" flex items-center justify-center">
-      <img src="/mobile.png"               alt="test" />
+        </a>
+      </div>
     </div>
-    <div className=" flex items-center justify-center">
-  
-    </div>
-    </div>
-    </div>
+  </div>
+</div>
 
+
+<div className="mb-5">
+  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+    <div className="flex flex-col md:flex-row">
+      <div className="p-6 md:w-1/2 flex flex-col justify-between">
+        <div>
+          <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
+             d2dcure.com
+          </h1>
+          <p className="mt-1 mb-4 text-gray-600 leading-tight dark:text-neutral-400">
+            Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.
+          </p>
+          <div className="mt-4">
+            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+              AI/ML
+            </span>
+            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+              AI/ML
+            </span>
+          </div>
+        </div>
+        <div className="mt-2">
+          <button type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
+            Read more
+          </button>
+        </div>
+      </div>
+      <div className="md:w-1/2">
+        <a className="group block h-full" href={"/"}>
+          <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
+            
+            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/mobile2.png" alt="Description"/>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div className="mb-5">
+  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+    <div className="flex flex-col md:flex-row">
+      <div className="p-6 md:w-1/2 flex flex-col justify-between">
+        <div>
+          <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
+             d2dcure.com
+          </h1>
+          <p className="mt-1 mb-4 text-gray-600 leading-tight dark:text-neutral-400">
+            Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.
+          </p>
+          <div className="mt-4">
+            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+              AI/ML
+            </span>
+            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+              AI/ML
+            </span>
+          </div>
+        </div>
+        <div className="mt-2">
+          <button type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
+            Read more
+          </button>
+        </div>
+      </div>
+      <div className="md:w-1/2">
+        <a className="group block h-full" href={"/"}>
+          <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
+            
+            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/mobile2.png" alt="Description"/>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
     <ul className="mb-10 justify-end font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
           <a
@@ -304,12 +359,12 @@ const Home = () => {
 </h2>
 
 <div className="inline-flex items-center">
-  <span className="bg-gray-50 px-3 py-1 text-xs font-medium text-gray-600 dark:text-white rounded-md ring-1 ring-inset ring-gray-500/10">
+  <span className="bg-gray-50 px-3 py-1 text-sm font-medium text-gray-600 dark:text-white rounded-md ring-1 ring-inset ring-gray-500/10">
     <a href="/" className="text-md text-neutral-500 hover:text-neutral-800 dark:hover:text-neutral-100 inline-flex items-center rounded-lg">
       <svg className="w-3.5 h-3.5 me-2 rtl:rotate-180 transition-all duration-500 hover:scale-130 hover:shadow-xl" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
         <path d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2Zm-3 15H4.828a1 1 0 0 1 0-2h6.238a1 1 0 0 1 0 2Zm0-4H4.828a1 1 0 0 1 0-2h6.238a1 1 0 1 1 0 2Z"/>
         <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z"/>
-      </svg><p>hi</p>
+      </svg>
       Resume
     </a>
   </span>
@@ -357,7 +412,7 @@ const Home = () => {
 
         <div className="flex items-center text-gray-600 mb-1">
             <div className="flex-shrink-0 mr-4">
-            <img src="/gdsc.svg" alt="Company Logo" className="h-20 object-contain" />
+            <img src="/d2d.svg" alt="Company Logo" className="h-20 object-contain" />
             </div>
             <div>
                 <h2 className="text-lg text-black font-medium ">Technical Project Manager intern</h2>
@@ -503,18 +558,128 @@ const Home = () => {
     >
    <img className="w-10 h-10 rounded-full" src="https://media.licdn.com/dms/image/D4D03AQGGI9xxCnbrJg/profile-displayphoto-shrink_200_200/0/1679623474258?e=2147483647&v=beta&t=VFlTvlVnkq8xnOO9GhLVAp6KneyqroowGcBVumDuYK4" alt="Jese"/>
    </Tooltip>
-   
    <div className="flex flex-col gap-1 w-full max-w-[320px]">
       <div className="flex items-center space-x-2 rtl:space-x-reverse">
          <span className="text-sm font-semibold text-gray-900 dark:text-white">Geetika</span>
          <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
       </div>
       <div className="flex flex-col leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
-        <p className="text-sm font-normal text-gray-900 dark:text-white"> Mohnish is just the best guy, hire him now</p>
+      <FlipWords1 sentence={sentence} duration={duration} className="my-custom-class text-sm" />
       </div>
       <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>
    </div>
 </div>
+
+
+<div className="flex items-start mb-10 mt-10 gap-2.5 justify-end">
+  <div className="flex flex-col gap-1 w-full max-w-[320px]">
+    <div className="flex items-center space-x-2 rtl:space-x-reverse">
+      <span className="text-sm font-semibold text-gray-900 dark:text-white">Kamal</span>
+      <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+    </div>
+    <div className="flex flex-col leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-s-xl rounded-es-xl dark:bg-gray-700">
+    <FlipWords1 sentence={sentence} duration={duration} className="my-custom-class text-sm" />
+    </div>
+    <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+  </div>
+  <Tooltip
+    key="right-start"
+    placement="right-start"
+    content={
+      <div className="px-1 py-2">
+        <div className="text-small font-bold">Maximo Esolutions</div>
+        <div className="text-tiny">Business Consultant</div>
+      </div>
+    }
+  >
+    <img className="w-10 h-10 rounded-full" src="/Testimonial/kamal.jpeg" alt="Jese"/>
+  </Tooltip>
+</div>
+
+
+
+
+<div className="flex items-start mb-10 mt-5 gap-2.5">
+<Tooltip
+          key="left-start"
+          placement="left-start"
+      content={
+        <div className="px-1 py-2">
+          <div className="text-small font-bold">AI Institute</div>
+          <div className="text-tiny">Business Development Coordinator</div>
+        </div>
+      }
+    >
+   <img className="w-10 h-10 rounded-full" src="/Testimonial/jim.jpeg" alt="Jese"/>
+   </Tooltip>
+   <div className="flex flex-col gap-1 w-full max-w-[320px]">
+      <div className="flex items-center space-x-2 rtl:space-x-reverse">
+         <span className="text-sm font-semibold text-gray-900 dark:text-white">Jim Pantaleo</span>
+         <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+      </div>
+      <div className="flex flex-col leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
+      <FlipWords1 sentence={sentence} duration={duration} className="my-custom-class text-sm" />
+      </div>
+      <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+   </div>
+</div>
+
+
+
+<div className="flex items-start mb-10 mt-10 gap-2.5 justify-end">
+  <div className="flex flex-col gap-1 w-full max-w-[320px]">
+    <div className="flex items-center space-x-2 rtl:space-x-reverse">
+      <span className="text-sm font-semibold text-gray-900 dark:text-white">Gopi</span>
+      <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+    </div>
+    <div className="flex flex-col leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-s-xl rounded-es-xl dark:bg-gray-700">
+    <FlipWords1 sentence={sentence} duration={duration} className="my-custom-class text-sm" />
+    </div>
+    <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+  </div>
+  <Tooltip
+    key="right-start"
+    placement="right-start"
+    content={
+      <div className="px-1 py-2">
+        <div className="text-small font-bold">Empower</div>
+        <div className="text-tiny">IT Director</div>
+      </div>
+    }
+  >
+    <img className="w-10 h-10 rounded-full" src="/Testimonial/gopi.jpeg" alt="Jese"/>
+  </Tooltip>
+</div>
+
+
+
+
+<div className="flex items-start mb-10 mt-5 gap-2.5">
+<Tooltip
+          key="left-start"
+          placement="left-start"
+      content={
+        <div className="px-1 py-2">
+          <div className="text-small font-bold">Google</div>
+          <div className="text-tiny">Software Engineering Manager</div>
+        </div>
+      }
+    >
+   <img className="w-10 h-10 rounded-full" src="/Testimonial/rajesh.jpeg" alt="Jese"/>
+   </Tooltip>
+   <div className="flex flex-col gap-1 w-full max-w-[320px]">
+      <div className="flex items-center space-x-2 rtl:space-x-reverse">
+         <span className="text-sm font-semibold text-gray-900 dark:text-white">Rajesh</span>
+         <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+      </div>
+      <div className="flex flex-col leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
+      <FlipWords1 sentence={sentence} duration={duration} className="my-custom-class text-sm" />
+      </div>
+      <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+   </div>
+</div>
+
+
 
 
 

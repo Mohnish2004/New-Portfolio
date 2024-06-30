@@ -73,17 +73,16 @@ const Home = () => {
   <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
   <a className="group block" href={"/"}>
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
-      <p>test to remove</p>
       <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/mobile2.png" alt="Description"/>
     </div>
     </a>
       <div className="p-4">
-        <h3 className="relative inline-block font-medium text-lg text-black before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400 before:transition before:origin-left before:scale-x-0 group-hover:before:scale-x-100 dark:text-white">
-          Pool it
-        </h3>
-        <p className="mt-1 text-gray-600 dark:text-neutral-400">
-          Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.
-        </p>
+      <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
+             d2dcure.com
+          </h1>
+          <p className="mt-1 mb-4 text-gray-600 leading-tight dark:text-neutral-400">
+            Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.
+          </p>
         <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
           AI/ML
         </span>
@@ -108,18 +107,18 @@ const Home = () => {
   <a className="group block" href={"/"}>
     
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
-    <p>test to remove</p>
+
 
       <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/mobile2.png" alt="Description"/>
     </div>
     </a>
       <div className="p-4">
-        <h3 className="relative inline-block font-medium text-lg text-black before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400 before:transition before:origin-left before:scale-x-0 group-hover:before:scale-x-100 dark:text-white">
-          Pool it
-        </h3>
-        <p className="mt-1 text-gray-600 dark:text-neutral-400">
-          Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.
-        </p>
+      <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
+             d2dcure.com
+          </h1>
+          <p className="mt-1 mb-4 text-gray-600 leading-tight dark:text-neutral-400">
+            Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.
+          </p>
         <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
           AI/ML
         </span>
@@ -137,18 +136,18 @@ const Home = () => {
   <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
   <a className="group block" href={"/"}>
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
-    <p>test to remove</p>
+
 
       <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/mobile2.png" alt="Description"/>
     </div>
     </a>
       <div className="p-4">
-        <h3 className="relative inline-block font-medium text-lg text-black before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400 before:transition before:origin-left before:scale-x-0 group-hover:before:scale-x-100 dark:text-white">
-          Pool it
-        </h3>
-        <p className="mt-1 text-gray-600 dark:text-neutral-400">
-          Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.
-        </p>
+      <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
+             d2dcure.com
+          </h1>
+          <p className="mt-1 mb-4 text-gray-600 leading-tight dark:text-neutral-400">
+            Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.
+          </p>
         <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
           AI/ML
         </span>
@@ -165,59 +164,20 @@ const Home = () => {
     
 
 
-  <div className="mb-5">
-  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-    <div className="flex flex-col md:flex-row">
-      <div className="p-4 md:w-1/2 flex flex-col justify-between">
-        <div>
-          <h3 className="relative inline-block font-medium text-lg text-black before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400 before:transition before:origin-left before:scale-x-0 group-hover:before:scale-x-100 dark:text-white">
-            Pool it
-          </h3>
-          <p className="mt-1 text-gray-600 dark:text-neutral-400">
-            Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.
-          </p>
-          <div className="mt-2">
-            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-              AI/ML
-            </span>
-            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-              AI/ML
-            </span>
-          </div>
-        </div>
-        <div className="mt-2">
-          <button type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
-            Read more
-          </button>
-        </div>
-      </div>
-      <div className="md:w-1/2">
-        <a className="group block h-full" href={"/"}>
-          <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
-          <p>test to remove</p>
-
-            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/mobile2.png" alt="Description"/>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 
 <div className="mb-5">
   <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
     <div className="flex flex-col md:flex-row">
-      <div className="p-4 md:w-1/2 flex flex-col justify-between">
+      <div className="p-6 md:w-1/2 flex flex-col justify-between">
         <div>
-          <h3 className="relative inline-block font-medium text-lg text-black before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400 before:transition before:origin-left before:scale-x-0 group-hover:before:scale-x-100 dark:text-white">
-            Pool it
-          </h3>
-          <p className="mt-1 text-gray-600 dark:text-neutral-400">
+          <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
+             d2dcure.com
+          </h1>
+          <p className="mt-1 mb-4 text-gray-600 leading-tight dark:text-neutral-400">
             Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.
           </p>
-          <div className="mt-2">
+          <div className="mt-4">
             <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
               AI/ML
             </span>
@@ -235,8 +195,7 @@ const Home = () => {
       <div className="md:w-1/2">
         <a className="group block h-full" href={"/"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
-          <p>test to remove</p>
-
+            
             <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/mobile2.png" alt="Description"/>
           </div>
         </a>
