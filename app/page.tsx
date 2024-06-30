@@ -26,16 +26,6 @@ import { animate, motion, useMotionValue } from "framer-motion";
 import { useEffect, useState } from "react";
 import useMeasure from "react-use-measure";
 
-function Badge() {
-  return (
-    <a
-    href={"/"}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100"
-    ></a>
-  );
-}
 
 
 
@@ -319,7 +309,7 @@ const Home = () => {
       <svg className="w-3.5 h-3.5 me-2 rtl:rotate-180 transition-all duration-500 hover:scale-130 hover:shadow-xl" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
         <path d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2Zm-3 15H4.828a1 1 0 0 1 0-2h6.238a1 1 0 0 1 0 2Zm0-4H4.828a1 1 0 0 1 0-2h6.238a1 1 0 1 1 0 2Z"/>
         <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z"/>
-      </svg>
+      </svg><p>hi</p>
       Resume
     </a>
   </span>
@@ -511,7 +501,7 @@ const Home = () => {
         </div>
       }
     >
-   <img className="w-10 h-10 rounded-full" src="https://media.licdn.com/dms/image/D4D03AQGGI9xxCnbrJg/profile-displayphoto-shrink_200_200/0/1679623474258?e=2147483647&v=beta&t=VFlTvlVnkq8xnOO9GhLVAp6KneyqroowGcBVumDuYK4" alt="Jese image"/>
+   <img className="w-10 h-10 rounded-full" src="https://media.licdn.com/dms/image/D4D03AQGGI9xxCnbrJg/profile-displayphoto-shrink_200_200/0/1679623474258?e=2147483647&v=beta&t=VFlTvlVnkq8xnOO9GhLVAp6KneyqroowGcBVumDuYK4" alt="Jese"/>
    </Tooltip>
    
    <div className="flex flex-col gap-1 w-full max-w-[320px]">

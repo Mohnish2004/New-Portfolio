@@ -85,7 +85,7 @@ export const LinkPreview = ({
             quality={quality}
             layout={layout}
             priority={true}
-            alt="hidden image"
+            alt="test"
           />
         </div>
       ) : null}
@@ -144,7 +144,7 @@ export const LinkPreview = ({
                     layout={layout}
                     priority={true}
                     className="rounded-lg"
-                    alt="preview image"
+                    alt="preview"
                   />
                 </Link>
               </motion.div>
