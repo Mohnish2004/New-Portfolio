@@ -95,7 +95,7 @@ const Home = () => {
       <p>
       Feel free to reach out for collaboration or a chat. I check emails frequently and respond to calls too.</p>
       </div>
-      
+
       <Clock />
 
       <Snippet size="sm" hideSymbol className=" transition-all duration-300 hover:scale-105 hover:shadow-md  h-7 items-center text-xs rounded-md bg-gray-50  mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer">  
@@ -122,7 +122,7 @@ const Home = () => {
 
 
 
-<iframe src="https://calendar.google.com/calendar/appointments/AcZssZ3v3WNqru-XQpPB_dsgAkq7b91P6NPwmkp2nMc=?gv=true" className="mb-10 mt-5 h-50 w-100 rounded-md items-center text-xs bg-gray-50  mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer" width="100%" height="600" ></iframe>
+<iframe src="https://calendar.google.com/calendar/appointments/AcZssZ3v3WNqru-XQpPB_dsgAkq7b91P6NPwmkp2nMc=?gv=true" title="meeting" className="mb-10 mt-5 h-50 w-100 rounded-md items-center text-xs bg-gray-50  mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer" width="100%" height="600" ></iframe>
 
  <section>
 
