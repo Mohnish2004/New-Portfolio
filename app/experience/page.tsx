@@ -217,76 +217,76 @@ const Home = () => {
         <Image
           
           className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/200.png" alt={''} width={400} height={200}
+          src="/certificates/200.png" alt={'test'} width={400} height={200}
         />
       </div>
       <div className="flex w-1/2 flex-wrap align-top">
         <Image
           
           className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/201.png" alt={''} width={400} height={200}
+          src="/certificates/201.png" alt={'test'} width={400} height={200}
         />
       </div>
       <div className="flex w-1/2 flex-wrap align-top">
         <Image
           
           className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/202.png" alt={''} width={400} height={200}
+          src="/certificates/202.png" alt={'tes'} width={400} height={200}
         />
       </div>
       <div className="flex w-1/2 flex-wrap align-top">
         <Image
           
           className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/203.png" alt={''} width={400} height={200}
+          src="/certificates/203.png" alt={'tse'} width={400} height={200}
         />
       </div>
       <div className="flex w-1/2 flex-wrap align-top">
         <Image
           
           className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/204.png" alt={''} width={400} height={200}
+          src="/certificates/204.png" alt={'ts'} width={400} height={200}
         />
       </div>
       <div className="flex w-1/2 flex-wrap align-top">
         <Image
           
           className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/205.png" alt={''} width={400} height={200}
+          src="/certificates/205.png" alt={'ste'} width={400} height={200}
         />
       </div>
       <div className="flex w-1/2 flex-wrap align-top">
         <Image
           
           className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/206.png" alt={''} width={400} height={200}
+          src="/certificates/206.png" alt={'tse'} width={400} height={200}
         />
       </div>
       <div className="flex w-1/2 flex-wrap align-top">
         <Image
           
           className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/207.png" alt={''} width={400} height={200}
+          src="/certificates/207.png" alt={'tse'} width={400} height={200}
         />
       </div>
       <div className="flex w-1/2 flex-wrap align-top">
         <Image
           
           className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/210.png" alt={''} width={400} height={200}
+          src="/certificates/210.png" alt={'ste'} width={400} height={200}
         />
       </div>
       <div className="flex w-1/2 flex-wrap align-top">
         <Image
           
           className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/208.png" alt={''} width={400} height={200}
+          src="/certificates/208.png" alt={'ste'} width={400} height={200}
         />
       </div>      <div className="flex w-1/2 mr-5 flex-wrap align-top">
         <Image
           
           className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/211.png" alt={''} width={400} height={200}
+          src="/certificates/211.png" alt={'tse'} width={400} height={200}
         />
       </div>
       </div>
