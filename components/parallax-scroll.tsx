@@ -66,11 +66,12 @@ export const ParallaxScroll = ({
             <motion.div key={"grid-3" + idx} style={{ y: translateThird }}>
               <Image
                 src={el}
-                className="h-80 w-full object-cover rounded-lg"
+                className="h-80 w-full rounded-lg"
                 alt="thumbnail"
                 layout="responsive"
                 width={400}
                 height={400}
+                objectFit="cover"
               />
             </motion.div>
           ))}

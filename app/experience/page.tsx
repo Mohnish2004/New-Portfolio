@@ -61,11 +61,39 @@ const Home = () => {
       
       <div className="mb-10 mt-5">
       <p>
-      I&apos;m driven by a deep passion for using technology to create innovative solutions that make a lasting impact. Take a relaxed stroll through these projects that I&apos;ve poured my heart and soul into.
       </p>
       </div>
 
 
+      <div className="group mt-10 flex w-full">
+      <a
+      href={"/"}
+        className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-101 hover:shadow-md"
+      >
+        <div className="flex items-center space-x-3">
+          <div className="relative h-16">
+            <img
+              src={"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/The_University_of_California_Davis.svg/640px-The_University_of_California_Davis.svg.png"}
+              height={84}
+              width={84}
+              sizes="33vw"
+              className="h-14 mt-1 ml-4 w-14 rounded-full"
+              alt="test"
+            />
+          </div>
+
+
+          <div className="flex flex-col pl-5 leading-tight" >
+          <h2 className="font-medium text-xl mb-1 tracking-tighter">Bachelor of Science in Computer Science</h2>
+          <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+        University of California, Davis / 2022 — 2026
+        </p>
+          </div>
+        </div>
+
+      </a>
+    </div>
+  
 
 
 
@@ -119,48 +147,10 @@ const Home = () => {
     </section>
 
 
-    
-
-    <div className="mx-auto max-w-7xl px-6 lg:px-8">
-    <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-      <img className="col-span-2 max-h-16 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" width="158" height="48"/>
-      <img className="col-span-2 max-h-16 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" width="158" height="48"/>
-      <img className="col-span-2 max-h-16 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" width="158" height="48"/>
-      <img className="col-span-2 max-h-16 w-full object-contain sm:col-start-2 lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" width="158" height="48"/>
-      <img className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" width="158" height="48"/>
-    </div>
-  </div>
 
 
-  <div className="group flex w-full">
-      <a
-      href={"/"}
-        className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-101 hover:shadow-md"
-      >
-        <div className="flex items-center space-x-3">
-          <div className="relative h-16">
-            <img
-              src={"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/The_University_of_California_Davis.svg/640px-The_University_of_California_Davis.svg.png"}
-              height={84}
-              width={84}
-              sizes="33vw"
-              className="h-14 mt-1 ml-4 w-14 rounded-full"
-              alt="test"
-            />
-          </div>
 
 
-          <div className="flex flex-col pl-5 leading-tight" >
-          <h2 className="font-medium text-xl mb-1 tracking-tighter">Bachelor of Science in Computer Science</h2>
-          <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-        University of California, Davis / 2022 — 2026
-        </p>
-          </div>
-        </div>
-
-      </a>
-    </div>
-  
     <h2 className=" mt-20 font-semibold mb-2 text-3xl tracking-tighter">
       Leadership Experience
       </h2>

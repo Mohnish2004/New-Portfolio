@@ -49,63 +49,41 @@ function ArrowIcon() {
 
 function ChannelLink({}) {
   return (
-    <div className="group flex w-full">
-      <a
-        href={"/"}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-102 hover:shadow-md"
-      >
-        <div className="flex items-center space-x-3">
-          <div className="flex flex-col pl-3 pr-3 leading-tight" >
-          <p className="font-light text-sm text-neutral-900 dark:text-neutral-100">
-            Research Paper
-            </p>
-            <h1 className="font-medium text-neutral-900 dark:text-neutral-100">
-            Volatility Forecasting of Large Cap U.S. Equities Using GARCH Neural Network
-            </h1>
-          </div>
-        </div>
+    <div className="group mb-5 flex w-full transition-all duration-300 hover:scale-105 hover:shadow-xl">
+    <a
+      href={"/"}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-102 hover:shadow-md"
+    >
+      <div className="flex items-center space-x-3">
+      <img src="https://cdn3d.iconscout.com/3d/premium/thumb/crypto-stocks-chart-5349277-4466490.png?f=webp" className="h-20 w-20 "></img>
 
-      </a>
-    </div>
-  );
-}
+        <div className="flex flex-col pl-3 pr-3 leading-tight" >
+        <p className="font-light text-sm text-neutral-900 dark:text-neutral-100">
+          Research Paper
+          </p>
+          <h1 className="font-medium text-neutral-900 dark:text-neutral-100">
+          Volatility Forecasting of Large Cap U.S. Equities Using GARCH Neural Network
+          </h1>
+          <div>
+          <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+        Artificial Intelligence
+      </span>
+      <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+        Machine Learning
+      </span>
+      <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+        Finance
+      </span>
+          </div>
+        </div>
+        
+      </div>
 
-function ProjectLink({}) {
-  return (
-    <div className="group flex w-full shadow-medium">
-      <a
-        href={"/"}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex w-full items-center justify-between rounded-lg rounded bg-neutral-50 px-6 py-4 dark:border-neutral-700 dark:bg-neutral-800"
-      >
-        <div className="flex items-center">
-          <div className="relative h-50">
-            <img
-              src={"/mobile.png"}
-              height={620}
-              width={620}
-              sizes="40vw"
-              alt="test"
-            />
-          </div>
-          <div className="flex flex-col">
-          <p className=" font-semibold text-neutral-900 dark:text-neutral-100">
-              NAME
-            </p>
-            <h2 className="font-light leading-none text-neutral-900 dark:text-neutral-100 tracking-tighter ">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices lorem non feugiat egestas amet.
-            </h2>
-            <Chip className="text-slate mbg-white mt-6 dark:text-white dark:bg-slate-900 dark:border-slate-800" variant="faded" radius="sm" size="sm">Web Development</Chip>
-          </div>
-          <div className=" mt-20 transform text-neutral-700 transition-transform duration-300 group-hover:-rotate-12 dark:text-neutral-300">
-          <ArrowIcon />
-        </div>
-        </div>
-      </a>
-    </div>
+    </a>
+  </div>
+
   );
 }
 
@@ -140,7 +118,7 @@ function BlogLink({}) {
 const Home = () => {
   const words = ["Developer", "Manager", "Designer", "Leader","Photographer","Innovator", "Full-stack","Mobile","Web","AI","ML","Data","Security","Product"]; // Example words array
   const duration = 2000; // Example duration in milliseconds
-  const sentence = "Hello world This is a sentence React animations are cool!";
+  const sentence = "Mohnish is the goat";
   const [isFollowed, setIsFollowed] = React.useState(false);
 
 
@@ -193,45 +171,48 @@ const Home = () => {
 
 
  <section>
-
  <div className="mb-5">
   <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
     <div className="flex flex-col md:flex-row">
       <div className="p-6 md:w-1/2 flex flex-col justify-between">
         <div>
           <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
-             d2dcure.com
+          D2D Cure
           </h1>
-          <p className="mt-1 mb-4 text-gray-600 leading-tight dark:text-neutral-400">
-            Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.
-          </p>
-          <div className="mt-4">
-            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-              AI/ML
-            </span>
-            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-              AI/ML
-            </span>
+          <p className="mt-1 mb-4 text-xs text-gray-600 leading-tight dark:text-neutral-400">
+          A comprehensive overhaul and modernization of the D2D Cure Database, designed to enhance user experience and streamline the submission, curation, and characterization of enzyme data. This project, developed in collaboration with over 40 institutions, aims to provide a durable platform for biotech research for the next decade.
+</p>          <div className="mt-4">
+
+<span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+          Full Stack
+        </span>
+        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+          Technical PM
+        </span>
+        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+          Client
+        </span>
+        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+        🚀 Winter 2024
+        </span>
+        <button type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
+          Read more
+        </button>
+        
           </div>
-        </div>
-        <div className="mt-2">
-          <button type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
-            Read more
-          </button>
         </div>
       </div>
       <div className="md:w-1/2">
         <a className="group block h-full" href={"/"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
             
-            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/mobile2.png" alt="Description"/>
+            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " src="/projects/cure.png" alt="Description"/>
           </div>
         </a>
       </div>
     </div>
   </div>
 </div>
-
 
 <div className="mb-5">
   <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
@@ -239,38 +220,40 @@ const Home = () => {
       <div className="p-6 md:w-1/2 flex flex-col justify-between">
         <div>
           <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
-             d2dcure.com
+          Slate
           </h1>
-          <p className="mt-1 mb-4 text-gray-600 leading-tight dark:text-neutral-400">
-            Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.
-          </p>
+          <p className="mt-1 mb-4 text-gray-600 text-xs leading-tight dark:text-neutral-400">
+          A collaborative, crowd-sourced note-creating platform, that is powered by Gemini. Slate acts as a dynamic hub to study, get instructor endorsed answers, and collaborate - all in one.</p>
           <div className="mt-4">
-            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-              AI/ML
-            </span>
-            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-              AI/ML
-            </span>
+          <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+          AI/LLM
+        </span>
+        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+          Full Stack
+        </span>
+        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+          HackDavis '24
+        </span>
+        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+        🏆 Best UI/UX
+        </span>
+        <button type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
+          Read more
+        </button>
           </div>
-        </div>
-        <div className="mt-2">
-          <button type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
-            Read more
-          </button>
         </div>
       </div>
       <div className="md:w-1/2">
         <a className="group block h-full" href={"/"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
             
-            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/mobile2.png" alt="Description"/>
+            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " src="/projects/slate.jpg" alt="Description"/>
           </div>
         </a>
       </div>
     </div>
   </div>
 </div>
-
 
 <div className="mb-5">
   <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
@@ -278,37 +261,38 @@ const Home = () => {
       <div className="p-6 md:w-1/2 flex flex-col justify-between">
         <div>
           <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
-             d2dcure.com
+             Enigma Vault
           </h1>
-          <p className="mt-1 mb-4 text-gray-600 leading-tight dark:text-neutral-400">
-            Allows UC Davis students to easily connect and rideshare with fellow students or family members traveling from the university.
-          </p>
+          <p className="mt-1 mb-4 text-gray-600 text-xs leading-tight dark:text-neutral-400">
+          A blockchain-based cryptocurrency project developed from scratch with RSA encryption and functionalities like mining, transactions, purchase etc.</p>
           <div className="mt-4">
             <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-              AI/ML
+              Cybersecurity
             </span>
             <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-              AI/ML
+             Web Dev
             </span>
-          </div>
-        </div>
-        <div className="mt-2">
-          <button type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
+            <span className="mt-2 inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+            🏆 Best Advanced Project Award 
+            </span>
+            <button type="button" className="mt-2 transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
             Read more
           </button>
+          </div>
         </div>
       </div>
       <div className="md:w-1/2">
         <a className="group block h-full" href={"/"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
             
-            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/mobile2.png" alt="Description"/>
+            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " src="/projects/enigmacoin.png" alt="Description"/>
           </div>
         </a>
       </div>
     </div>
   </div>
 </div>
+
     <ul className="mb-10 justify-end font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
           <a
@@ -359,7 +343,7 @@ const Home = () => {
 </h2>
 
 <div className="inline-flex items-center">
-  <span className="bg-gray-50 px-3 py-1 text-sm font-medium text-gray-600 dark:text-white rounded-md ring-1 ring-inset ring-gray-500/10">
+  <span className="bg-gray-50 px-3 py-1 text-sm font-medium text-gray-300 dark:text-gray-200 rounded-md ring-1 ring-inset ring-gray-500/10 border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800">
     <a href="/" className="text-md text-neutral-500 hover:text-neutral-800 dark:hover:text-neutral-100 inline-flex items-center rounded-lg">
       <svg className="w-3.5 h-3.5 me-2 rtl:rotate-180 transition-all duration-500 hover:scale-130 hover:shadow-xl" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
         <path d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2Zm-3 15H4.828a1 1 0 0 1 0-2h6.238a1 1 0 0 1 0 2Zm0-4H4.828a1 1 0 0 1 0-2h6.238a1 1 0 1 1 0 2Z"/>
@@ -380,7 +364,39 @@ const Home = () => {
 
       <section className="mt-10">
       <div className="prose prose-neutral dark:prose-invert">
-      <div className="flex items-center text-gray-600 mb-1">
+      <div className="prose prose-neutral dark:prose-invert">
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">Product Manager / President </h2>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm">CodeLab / Present</p>
+        <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">Technical Project Manager</h2>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm">UC Davis Genome Center / Present 
+</p>
+        <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+        
+        
+        
+        
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">        Undergraduate Researcher
+</h2>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+        Laboratory for AI, Robotics and Automation / Present   </p>
+
+      
+      <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">Software Engineering Intern</h2>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+        eSolutionsMEA / 2023
+        </p>
+
+        <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">Student Ambassador / Tour Guide</h2>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+        University of California, Davis / Present
+        </p>
+
+      </div>
+      {/* <div className="flex items-center text-gray-600 mb-1">
             <div className="flex-shrink-0 mr-4">
                 <img src="/codelab.svg" alt="Company Logo" className="h-20 object-contain" />
             </div>
@@ -463,7 +479,7 @@ const Home = () => {
                     <p className="text-gray-700">Successfully designed and launched a mobile application that increased user engagement</p>
                 </div>
             </div>
-        </div>
+        </div> */}
 
 
 
@@ -476,7 +492,7 @@ const Home = () => {
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://twitter.com/leeerob"
+            href=""
           >
             <ArrowIcon />
             <p className="ml-2 h-7">Learn more </p>
@@ -523,19 +539,8 @@ const Home = () => {
 
 
 
-
-<div data-popover id="popover-default" role="tooltip" className="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
-    <div className="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
-        <h3 className="font-semibold text-gray-900 dark:text-white">Popover title</h3>
-    </div>
-    <div className="px-3 py-2">
-        <p>And here&apos;s some amazing content. It&apos;s very engaging. Right?</p>
-    </div>
-    <div data-popper-arrow></div>
-</div>
-
       <div className="mt-10">
-      <h2 className=" font-semibold mb-2 text-2xl tracking-tighter">
+      <h2 className=" font-semibold mb-2 text-3xl tracking-tighter">
       Hear what people have to say about me...
       </h2>
 
@@ -563,7 +568,7 @@ const Home = () => {
          <span className="text-sm font-semibold text-gray-900 dark:text-white">Geetika</span>
          <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
       </div>
-      <div className="flex flex-col leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
+      <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-e-xl bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
       <FlipWords1 sentence={sentence} duration={duration} className="my-custom-class text-sm" />
       </div>
       <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>
@@ -577,7 +582,7 @@ const Home = () => {
       <span className="text-sm font-semibold text-gray-900 dark:text-white">Kamal</span>
       <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
     </div>
-    <div className="flex flex-col leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-s-xl rounded-es-xl dark:bg-gray-700">
+    <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-e-xl bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
     <FlipWords1 sentence={sentence} duration={duration} className="my-custom-class text-sm" />
     </div>
     <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>
@@ -617,7 +622,7 @@ const Home = () => {
          <span className="text-sm font-semibold text-gray-900 dark:text-white">Jim Pantaleo</span>
          <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
       </div>
-      <div className="flex flex-col leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
+      <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-e-xl bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
       <FlipWords1 sentence={sentence} duration={duration} className="my-custom-class text-sm" />
       </div>
       <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>
@@ -632,7 +637,7 @@ const Home = () => {
       <span className="text-sm font-semibold text-gray-900 dark:text-white">Gopi</span>
       <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
     </div>
-    <div className="flex flex-col leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-s-xl rounded-es-xl dark:bg-gray-700">
+    <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-e-xl bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
     <FlipWords1 sentence={sentence} duration={duration} className="my-custom-class text-sm" />
     </div>
     <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>
@@ -661,7 +666,7 @@ const Home = () => {
       content={
         <div className="px-1 py-2">
           <div className="text-small font-bold">Google</div>
-          <div className="text-tiny">Software Engineering Manager</div>
+          <div className="text-tiny">Software Manager</div>
         </div>
       }
     >
@@ -672,7 +677,7 @@ const Home = () => {
          <span className="text-sm font-semibold text-gray-900 dark:text-white">Rajesh</span>
          <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
       </div>
-      <div className="flex flex-col leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
+      <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-e-xl bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
       <FlipWords1 sentence={sentence} duration={duration} className="my-custom-class text-sm" />
       </div>
       <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>

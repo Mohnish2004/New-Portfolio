@@ -1,5 +1,5 @@
 
-import { ParallaxScroll } from '@/components/parallax-scroll'; // Replace with correct path
+import { ParallaxScroll } from '@/components/parallax-scroll';
 
 export default function DocsLayout({
   children,
