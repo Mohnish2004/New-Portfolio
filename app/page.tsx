@@ -6,7 +6,6 @@ import {Card as NextUICard, CardHeader, CardBody, CardFooter, Avatar, Button} fr
 import React from "react";
 
 import { useEffect, useState } from "react";
-import { FlipWords1 } from "@/components/flip1"; // Replace with the correct path to FlipWords component
 
 import { LinkPreview } from "@/components/link-preview";
 
@@ -99,12 +98,43 @@ function BlogLink({}) {
 
 
 const Home = () => {
-  const words = ["Developer", "Manager", "Designer", "Leader","Photographer","Innovator", "Full-stack","Mobile","Web","AI","ML","Data","Security","Product"]; // Example words array
+  const words = ["Developer", "Manager", "Designer", "Researcher","Leader","Photographer","Innovator", "Tourguide", "Full-stack","Mobile/Web","AI/ML","Security","Product","PM"]; // Example words array
   const duration = 2000; // Example duration in milliseconds
-  const sentence = "Mohnish is the goat";
-  const [isFollowed, setIsFollowed] = React.useState(false);
+   const [isExpanded, setIsExpanded] = useState(false);
+  const toggleExpand = () => setIsExpanded(!isExpanded);
 
+  const [isExpanded1, setIsExpanded1] = useState(false);
+const [isExpanded2, setIsExpanded2] = useState(false);
+const [isExpanded3, setIsExpanded3] = useState(false);
+const [isExpanded4, setIsExpanded4] = useState(false);
+const [isExpanded5, setIsExpanded5] = useState(false);
 
+const toggleExpand1 = () => setIsExpanded1(!isExpanded1);
+const toggleExpand2 = () => setIsExpanded2(!isExpanded2);
+const toggleExpand3 = () => setIsExpanded3(!isExpanded3);
+const toggleExpand4 = () => setIsExpanded4(!isExpanded4);
+const toggleExpand5 = () => setIsExpanded5(!isExpanded5);
+
+const sentence = "Mohnish is an incredibly creative individual with exceptional product design and management skills. His imaginative mindset and unique ideas make him an invaluable asset to any team he joins. I have no doubt that his future projects will be characterized by ongoing success and innovation.  ";
+  const sentence2 = "I had the pleasure of mentoring Mohnish for a duration of 1 week surrounding the world of EAMs and Interpersonal relationships that were required to succeed in this domain. Mohnish was almost immediately receptive of all the concepts in the EAM domain, oftentimes associating complex ideas with day-to-day scenarios and grasping concepts faster than the normal rate. All in all, I would say that the mental faculties required to succeed in his domain of choice definitely shone during his time with me and I would be sure to say that he’d be a great fit wherever he decides to go.  ";
+  const sentence3 = "Mohnish was a participant in an AIFS hackathon some months ago here at UC Davis (I was a mentor to the teams) and I was taken aback at his organization and visualization skills regarding the hack. The judges were blown away by his and his partner's app which garnered 2nd Place among some very tough competitors. My thought was, 'This young man is going places'. Watch him ascend to the highest levels of academia and AgTech. This is a bold statement but I truly believe with great people like Mohnish, our planet will be OK. I believe this. Reach out to him. Meet him. You'll agree.  ";
+  const sentence4 = "He is an exceptionally hardworking software engineer. With a unique blend of imagination and dedication, he brings a fresh perspective to every project. His drive and determination are off the charts, and he consistently goes above and beyond to deliver outstanding results.  ";
+ 
+  const sentence5 = "Your long testimonial content goes here. It can be as long as you want, and it will be truncated if it exceeds three lines. Add more text to see how...Your long testimonial content goes here. It can be as long as you want, and it will be truncated if it exceeds three lines. Add more text to see how it works with longer content.";
+  
+  
+  const truncatedContent = sentence.split(' ').slice(0, 30).join(' ');
+  const shouldTruncate = sentence.split(' ').length > 30;
+const truncatedContent2 = sentence2.split(' ').slice(0, 30).join(' ');
+const shouldTruncate2 = sentence2.split(' ').length > 30;
+const truncatedContent3 = sentence3.split(' ').slice(0, 30).join(' ');
+const shouldTruncate3 = sentence3.split(' ').length > 30;
+const truncatedContent4 = sentence4.split(' ').slice(0, 30).join(' ');
+const shouldTruncate4 = sentence4.split(' ').length > 30;
+const truncatedContent5 = sentence4.split(' ').slice(0, 30).join(' ');
+const shouldTruncate5 = sentence4.split(' ').length > 30;
+  const [expanded, setExpanded] = useState(false);
+  
 
   return (
     
@@ -531,41 +561,76 @@ const Home = () => {
 
 
 
-<div className="flex items-start mb-10 mt-10 gap-2.5">
-<Tooltip
-          key="left-start"
-          placement="left-start"
-      content={
-        <div className="px-1 py-2">
-          <div className="text-small font-bold">Amazon</div>
-          <div className="text-tiny">AI Privacy engineer</div>
-        </div>
-      }
-    >
-   <Image className="w-10 h-10 rounded-full" width="60" height="60" src="https://media.licdn.com/dms/image/D4D03AQGGI9xxCnbrJg/profile-displayphoto-shrink_200_200/0/1679623474258?e=2147483647&v=beta&t=VFlTvlVnkq8xnOO9GhLVAp6KneyqroowGcBVumDuYK4" alt="Jese"/>
-   </Tooltip>
-   <div className="flex flex-col gap-1 w-full max-w-[320px]">
-      <div className="flex items-center space-x-2 rtl:space-x-reverse">
-         <span className="text-sm font-semibold text-gray-900 dark:text-white">Geetika</span>
-         <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+<div className="flex items-start mb-5 mt-10 gap-2.5">
+  <Tooltip
+    key="left-start"
+    placement="left-start"
+    content={
+      <div className="px-1 py-2">
+        <div className="text-small font-bold">Amazon</div>
+        <div className="text-tiny">AI Privacy engineer</div>
       </div>
-      <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-e-xl bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
-      <FlipWords1 sentence={sentence} duration={duration} className="my-custom-class text-sm" />
+    }
+  >
+    <Image className="w-10 h-10 rounded-full" width="60" height="60" src="https://media.licdn.com/dms/image/D4D03AQGGI9xxCnbrJg/profile-displayphoto-shrink_200_200/0/1679623474258?e=2147483647&v=beta&t=VFlTvlVnkq8xnOO9GhLVAp6KneyqroowGcBVumDuYK4" alt="Jese"/>
+  </Tooltip>
+  <div className="flex flex-col gap-1 w-full max-w-[320px]">
+    <div className="flex items-center space-x-2 rtl:space-x-reverse">
+      <span className="text-sm font-semibold text-gray-900 dark:text-white">Geetika</span>
+      <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+    </div>
+    <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-e-xl bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
+    <p className="text-sm text-gray-900 dark:text-white">
+      {isExpanded ? sentence : truncatedContent}
+      {shouldTruncate && !isExpanded && '...'}
+    </p>
+    <div className="flex justify-between items-center mt-2">
+      {shouldTruncate && (
+        <button
+          onClick={toggleExpand}
+          className="text-xs text-black font-bold hover:text-blue-800 self-start"
+        >
+          {isExpanded ? 'Read less' : 'Read more'}
+        </button>
+      )}
+      <span className="text-xs text-gray-500 dark:text-gray-400">
+        Sent
+      </span>
       </div>
-      <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>
-   </div>
+    </div>
+  </div>
 </div>
 
-<div className="flex items-start mb-10 mt-10 gap-2.5 justify-end">
+
+
+
+
+
+<div className="flex items-start mb-5 mt-5 gap-2.5 justify-end">
   <div className="flex flex-col gap-1 w-full max-w-[320px]">
     <div className="flex items-center space-x-2 rtl:space-x-reverse">
       <span className="text-sm font-semibold text-gray-900 dark:text-white">Kamal</span>
       <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
     </div>
-    <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-tl-lg rounded-b-lg bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
-    <FlipWords1 sentence={sentence} duration={duration} className="my-custom-class text-sm" />
+    <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-tl-lg rounded-b-lg bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
+    <p className="text-sm text-gray-900 dark:text-white">
+      {isExpanded2 ? sentence2 : truncatedContent2}
+      {shouldTruncate2 && !isExpanded2 && '...'}
+    </p>
+    <div className="flex justify-between items-center mt-2">
+      {shouldTruncate2 && (
+        <button
+          onClick={toggleExpand2}
+          className="text-xs text-black font-bold hover:text-blue-800 self-start"
+        >
+          {isExpanded2 ? 'Read less' : 'Read more'}
+        </button>
+      )}
+      <span className="text-xs text-gray-500 dark:text-gray-400">
+        Sent
+      </span>
+      </div>
     </div>
-    <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>
   </div>
   <Tooltip
     key="right-start"
@@ -581,46 +646,71 @@ const Home = () => {
   </Tooltip>
 </div>
 
-
-
-
-<div className="flex items-start mb-10 mt-5 gap-2.5">
-<Tooltip
-          key="left-start"
-          placement="left-start"
-      content={
-        <div className="px-1 py-2">
-          <div className="text-small font-bold">AI Institute</div>
-          <div className="text-tiny">Business Development Coordinator</div>
-        </div>
-      }
-    >
-   <Image className="w-10 h-10 rounded-full" src="/Testimonial/jim.jpeg" width="200" height="200" alt="Jese"/>
-   </Tooltip>
-   <div className="flex flex-col gap-1 w-full max-w-[320px]">
-      <div className="flex items-center space-x-2 rtl:space-x-reverse">
-         <span className="text-sm font-semibold text-gray-900 dark:text-white">Jim Pantaleo</span>
-         <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+<div className="flex items-start mb-5 mt-5 gap-2.5">
+  <Tooltip
+    key="left-start"
+    placement="left-start"
+    content={
+      <div className="px-1 py-2">
+        <div className="text-small font-bold">AI Institute</div>
+        <div className="text-tiny">Business Development Coordinator</div>
       </div>
-      <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-e-xl bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
-      <FlipWords1 sentence={sentence} duration={duration} className="my-custom-class text-sm" />
+    }
+  >
+    <Image className="w-10 h-10 rounded-full" src="/Testimonial/jim.jpeg" width="200" height="200" alt="Jese"/>
+  </Tooltip>
+  <div className="flex flex-col gap-1 w-full max-w-[320px]">
+    <div className="flex items-center space-x-2 rtl:space-x-reverse">
+      <span className="text-sm font-semibold text-gray-900 dark:text-white">Jim Pantaleo</span>
+      <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+    </div>
+    <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-tl-lg rounded-b-lg bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
+    <p className="text-sm text-gray-900 dark:text-white">
+      {isExpanded3 ? sentence3 : truncatedContent3}
+      {shouldTruncate3 && !isExpanded3 && '...'}
+    </p>
+    <div className="flex justify-between items-center mt-2">
+      {shouldTruncate3 && (
+        <button
+          onClick={toggleExpand3}
+          className="text-xs text-black font-bold hover:text-blue-800 self-start"
+        >
+          {isExpanded3 ? 'Read less' : 'Read more'}
+        </button>
+      )}
+      <span className="text-xs text-gray-500 dark:text-gray-400">
+        Sent
+      </span>
       </div>
-      <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>
-   </div>
+    </div>
+  </div>
 </div>
 
-
-
-<div className="flex items-start mb-10 mt-10 gap-2.5 justify-end">
+<div className="flex items-start mb-5 mt-5 gap-2.5 justify-end">
   <div className="flex flex-col gap-1 w-full max-w-[320px]">
     <div className="flex items-center space-x-2 rtl:space-x-reverse">
       <span className="text-sm font-semibold text-gray-900 dark:text-white">Gopi</span>
       <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
     </div>
-    <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-tl-lg rounded-b-lg bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
-    <FlipWords1 sentence={sentence} duration={duration} className="my-custom-class text-sm" />
+    <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-tl-lg rounded-b-lg bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
+    <p className="text-sm text-gray-900 dark:text-white">
+      {isExpanded4 ? sentence4 : truncatedContent4}
+      {shouldTruncate4 && !isExpanded4 && '...'}
+    </p>
+    <div className="flex justify-between items-center mt-2">
+      {shouldTruncate4 && (
+        <button
+          onClick={toggleExpand4}
+          className="text-xs text-black font-bold hover:text-blue-800 self-start"
+        >
+          {isExpanded4 ? 'Read less' : 'Read more'}
+        </button>
+      )}
+      <span className="text-xs text-gray-500 dark:text-gray-400">
+        Sent
+      </span>
+      </div>
     </div>
-    <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>
   </div>
   <Tooltip
     key="right-start"
@@ -638,37 +728,45 @@ const Home = () => {
 
 
 
-
-<div className="flex items-start mb-10 mt-5 gap-2.5">
-<Tooltip
+        <div className="flex items-start mb-5 mt-5 gap-2.5">
+        <Tooltip
           key="left-start"
           placement="left-start"
-      content={
-        <div className="px-1 py-2">
-          <div className="text-small font-bold">Google</div>
-          <div className="text-tiny">Software Manager</div>
+          content={
+            <div className="px-1 py-2">
+              <div className="text-small font-bold">Google</div>
+              <div className="text-tiny">Software Manager</div>
+            </div>
+          }
+        >
+          <Image className="w-10 h-10 rounded-full" src="/Testimonial/rajesh.jpeg" width={200} height={200} alt="Rajesh"/>
+        </Tooltip>
+        <div className="flex flex-col gap-1 w-full max-w-[320px]">
+          <div className="flex items-center space-x-2 rtl:space-x-reverse">
+            <span className="text-sm font-semibold text-gray-900 dark:text-white">Rajesh Balaraman</span>
+            <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+          </div>
+          <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-tl-lg rounded-b-lg bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
+    <p className="text-sm text-gray-900 dark:text-white">
+      {isExpanded5 ? sentence5 : truncatedContent5}
+      {shouldTruncate5 && !isExpanded5 && '...'}
+    </p>
+    <div className="flex justify-between items-center mt-2">
+      {shouldTruncate5 && (
+        <button
+          onClick={toggleExpand5}
+          className="text-xs text-black font-bold hover:text-blue-800 self-start"
+        >
+          {isExpanded5 ? 'Read less' : 'Read more'}
+        </button>
+      )}
+      <span className="text-xs text-gray-500 dark:text-gray-400">
+        Sent
+      </span>
+            </div>
+          </div>
         </div>
-      }
-    >
-   <Image className="w-10 h-10 rounded-full" src="/Testimonial/rajesh.jpeg" width="200" height="200" alt="Jese"/>
-   </Tooltip>
-   <div className="flex flex-col gap-1 w-full max-w-[320px]">
-      <div className="flex items-center space-x-2 rtl:space-x-reverse">
-         <span className="text-sm font-semibold text-gray-900 dark:text-white">Rajesh</span>
-         <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
       </div>
-      <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-e-xl bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
-      <FlipWords1 sentence={sentence} duration={duration} className="my-custom-class text-sm" />
-      </div>
-      <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>
-   </div>
-</div>
-
-
-
-
-
-
 
 
     </section>

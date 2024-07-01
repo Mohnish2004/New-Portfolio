@@ -113,7 +113,7 @@ const Home = () => {
       className="inline-flex items-center text-xs mt-1 text-gray-600 dark:text-white cursor-pointer"
     >
       <FiPhone className="text-md mr-1" />
-      <a href="tel:8882192787">
+      <a href="tel:5109469930">
       <span className="text-xs font-medium">+1 5109469930</span>
       </a>
     </div></Snippet>

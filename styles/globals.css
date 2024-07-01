@@ -56,3 +56,26 @@
     flex: 0 0 100%;
     min-width: 0;
   }
+
+  .chat-bubble {
+    position: relative;
+    max-width: 320px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #f0f0f0;
+    padding: 12px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  .chat-content {
+    overflow: hidden;
+    max-height: 60px; /* Adjust as needed */
+    transition: max-height 0.3s ease-out;
+  }
+  .read-more {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+    display: block;
+    text-align: right;
+  }
