@@ -51,7 +51,7 @@ const Home = () => {
     
     <section className="antialiased max-w-xl mx-4 sm:mx-auto">
       <h1 className="mt-6 text-5xl tracking-tighter">
-      Selected Projects
+      Featured work
       </h1>
       <div className="mb-10 mt-5">
       <p>
@@ -74,7 +74,7 @@ const Home = () => {
       <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
              D2D Cure
           </h1>
-          <p className="mt-1 mb-4 text-gray-600 leading-tight dark:text-neutral-400">
+          <p className="mt-1 mb-4 text-gray-600 text-sm leading-tight dark:text-neutral-400">
           A comprehensive overhaul and modernization of the D2D Cure Database, designed to enhance user experience and streamline the submission, curation, and characterization of enzyme data. This project, developed in collaboration with over 40 institutions, aims to provide a durable platform for biotech research for the next decade.</p>
         <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
           Full Stack
@@ -146,7 +146,7 @@ const Home = () => {
       <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
              Slate
           </h1>
-          <p className="mt-1 mb-4 text-gray-600 leading-tight dark:text-neutral-400">
+          <p className="mt-1 mb-4 text-gray-600 text-sm leading-tight dark:text-neutral-400">
           A collaborative, crowd-sourced note-creating platform, that is powered by Gemini. Slate acts as a dynamic hub to study, get instructor endorsed answers, and collaborate - all in one.
 </p>
         <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">

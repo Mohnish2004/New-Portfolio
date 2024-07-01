@@ -35,8 +35,7 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <head />
-      
+
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",
@@ -48,22 +47,16 @@ export default function RootLayout({
 
         <section className="flex flex-col items-center justify-center gap-4 ">
 
-        
-      <div className="inline-block justify-center">
+      <div className="inline-block justify-center md:ml-10 sm:ml-10">
 
         {children}
 
-
-
             </div>
-
-
-
     </section>        
     <Footer/>
-
     </Providers>
-    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+
+
       </body>
 
     </html>
