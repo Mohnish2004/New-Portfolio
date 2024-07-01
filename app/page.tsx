@@ -134,7 +134,7 @@ const Home = () => {
           className="font-bold"
         >
            product
-        </LinkPreview>{" "} at a time. Starting from my dorm room projects, I've cultivated a versatile skill set through diverse client engagements and hands-on{" "}      <LinkPreview
+        </LinkPreview>{" "} at a time. Starting from my dorm room projects, I&apos;ve cultivated a versatile skill set through diverse client engagements and hands-on{" "}      <LinkPreview
           url="/"
           imageSrc="/resume.png"
           isStatic
