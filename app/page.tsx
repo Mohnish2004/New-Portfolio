@@ -57,7 +57,7 @@ function ChannelLink({}) {
       className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-102 hover:shadow-md"
     >
       <div className="flex items-center space-x-3">
-      <img src="https://cdn3d.iconscout.com/3d/premium/thumb/crypto-stocks-chart-5349277-4466490.png?f=webp" className="h-20 w-20 "></img>
+      <img src="https://cdn3d.iconscout.com/3d/premium/thumb/crypto-stocks-chart-5349277-4466490.png?f=webp" className="h-20 w-20 " alt="test"></img>
 
         <div className="flex flex-col pl-3 pr-3 leading-tight" >
         <p className="font-light text-sm text-neutral-900 dark:text-neutral-100">
@@ -232,7 +232,7 @@ const Home = () => {
           Full Stack
         </span>
         <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-          HackDavis '24
+          HackDavis &apos;24
         </span>
         <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
         🏆 Best UI/UX
