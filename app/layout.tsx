@@ -8,6 +8,7 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import { SparklesCore } from "@/components/sparkles";
+import {Footer} from "@/components/footer";
 
 export const metadata: Metadata = {
   title: {
@@ -52,14 +53,19 @@ export default function RootLayout({
 
         {children}
 
-            <footer className="w-full flex items-center justify-center py-3">
-            </footer>
+
+
             </div>
-    
+
+
+
     </section>        
+    <Footer/>
+
     </Providers>
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
       </body>
+
     </html>
   );
 }

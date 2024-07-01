@@ -582,7 +582,7 @@ const Home = () => {
       <span className="text-sm font-semibold text-gray-900 dark:text-white">Kamal</span>
       <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
     </div>
-    <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-e-xl bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
+    <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-tl-lg rounded-b-lg bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
     <FlipWords1 sentence={sentence} duration={duration} className="my-custom-class text-sm" />
     </div>
     <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>
@@ -637,7 +637,7 @@ const Home = () => {
       <span className="text-sm font-semibold text-gray-900 dark:text-white">Gopi</span>
       <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
     </div>
-    <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-e-xl bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
+    <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-tl-lg rounded-b-lg bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
     <FlipWords1 sentence={sentence} duration={duration} className="my-custom-class text-sm" />
     </div>
     <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>
