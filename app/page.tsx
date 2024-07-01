@@ -147,9 +147,8 @@ const Home = () => {
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
       </p>
-      <div className="flex justify-between items-center mt-4 w-full">
 
-<ul className=" justify-end font-sm flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+<ul className=" mt-6 justify-end font-sm flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
   <li>
     <a
       className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
@@ -163,12 +162,14 @@ const Home = () => {
   </li>
 </ul>
 
-</div>
 
       </div>
 
 
 
+      <h2 className=" font-semibold mb-5 text-2xl tracking-tighter">
+       Selected work
+      </h2>
 
  <section>
  <div className="mb-5">
@@ -180,21 +181,8 @@ const Home = () => {
           D2D Cure
           </h1>
           <p className="mt-1 mb-4 text-xs text-gray-600 leading-tight dark:text-neutral-400">
-          A comprehensive overhaul and modernization of the D2D Cure Database, designed to enhance user experience and streamline the submission, curation, and characterization of enzyme data. This project, developed in collaboration with over 40 institutions, aims to provide a durable platform for biotech research for the next decade.
+          A comprehensive overhaul of the D2D Cure Database, improving user experience and enzyme data management. Supporting biotech research for the next decade.
 </p>          <div className="mt-4">
-
-<span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-          Full Stack
-        </span>
-        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-          Technical PM
-        </span>
-        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-          Client
-        </span>
-        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-        🚀 Winter 2024
-        </span>
         <button type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
           Read more
         </button>
@@ -223,21 +211,8 @@ const Home = () => {
           Slate
           </h1>
           <p className="mt-1 mb-4 text-gray-600 text-xs leading-tight dark:text-neutral-400">
-          A collaborative, crowd-sourced note-creating platform, that is powered by Gemini. Slate acts as a dynamic hub to study, get instructor endorsed answers, and collaborate - all in one.</p>
-          <div className="mt-4">
-          <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-          AI/LLM
-        </span>
-        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-          Full Stack
-        </span>
-        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-          HackDavis &apos;24
-        </span>
-        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-        🏆 Best UI/UX
-        </span>
-        <button type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
+          A crowd-sourced note-taking platform powered by Gemini, serving as a dynamic hub for studying, instructor-endorsed answers, and collaboration.     </p>     <div className="mt-4">
+        <button type="button" className=" text-xs transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
           Read more
         </button>
           </div>
@@ -266,15 +241,7 @@ const Home = () => {
           <p className="mt-1 mb-4 text-gray-600 text-xs leading-tight dark:text-neutral-400">
           A blockchain-based cryptocurrency project developed from scratch with RSA encryption and functionalities like mining, transactions, purchase etc.</p>
           <div className="mt-4">
-            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-              Cybersecurity
-            </span>
-            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-             Web Dev
-            </span>
-            <span className="mt-2 inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-            🏆 Best Advanced Project Award 
-            </span>
+
             <button type="button" className="mt-2 transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
             Read more
           </button>
@@ -318,7 +285,7 @@ const Home = () => {
 
 
   <div className="mb-5">
-      <h2 className=" font-semibold mb-2 text-3xl tracking-tighter">
+      <h2 className=" font-semibold mb-2 text-2xl tracking-tighter">
        Publications
       </h2>
   </div>
@@ -338,7 +305,7 @@ const Home = () => {
       <div className="mt-20">
       <div className="mt-20 flex justify-between items-center">
 
-<h2 className="font-semibold text-3xl tracking-tighter">
+<h2 className="font-semibold text-2xl tracking-tighter">
   Experience
 </h2>
 
@@ -540,7 +507,7 @@ const Home = () => {
 
 
       <div className="mt-10">
-      <h2 className=" font-semibold mb-2 text-3xl tracking-tighter">
+      <h2 className=" font-semibold mb-2 text-2xl tracking-tighter">
       Hear what people have to say about me...
       </h2>
 

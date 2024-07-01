@@ -27,7 +27,7 @@ import {
 export const Navbar = () => {
 
   return (
-    <NextUINavbar className="shadow-xl mb-10" position="sticky" >
+    <NextUINavbar className=" mb-10" position="sticky" >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
         <svg width="90" height="50" viewBox="0 0 144 66" fill="none" xmlns="http://www.w3.org/2000/svg" className="dark:text-white">
