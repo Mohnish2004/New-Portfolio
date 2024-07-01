@@ -11,3 +11,48 @@
 .hover\:translate-x-10:hover {
     transform: translateX(2.5rem);
 }
+
+.scroll {
+    position: relative;
+    width: 45vw;
+    background-color: var(--boxify-bg-light-dark); /* Assuming this is a CSS variable */
+    overflow: hidden;
+    z-index: 1;
+    padding: 10px; /* Added px unit */
+  }
+  
+  .m-scroll {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: scrollText 110s infinite linear;
+    font-size: 0; /* Ensure child elements have proper font-size if needed */
+    display: flex;
+    width: 400%;
+  }
+  
+  .m-scroll span {
+    display: inline-block;
+    margin: 0 50px; /* Adjusted margin to be horizontal only */
+    color: white;
+  }
+  
+  @keyframes scrollText {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+
+  .embla {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }

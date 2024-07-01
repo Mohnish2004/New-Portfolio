@@ -20,11 +20,12 @@ import Card1 from "@/components/Card1";
 import { animate, motion, useMotionValue } from "framer-motion";
 import { useEffect, useState } from "react";
 import useMeasure from "react-use-measure";
-
-
+import ReactDOM from 'react-dom/client'
+import CertificateGallery from '@/components/cert';
 
 
 function ArrowIcon() {
+
   return (
     <svg
       width="12"
@@ -48,16 +49,16 @@ const Home = () => {
   const words = ["Developer", "Manager", "Designer", "Leader","Photographer","Innovator", "Full-stack","Mobile","Web","AI","ML","Data","Security","Product"]; // Example words array
   const duration = 2000; // Example duration in milliseconds
   const [isFollowed, setIsFollowed] = React.useState(false);
-  
+
 
 
   return (
     
     <section className="antialiased max-w-xl mx-4 sm:mx-auto">
+
       <h1 className="mt-6 text-5xl tracking-tighter">
       My Professional Experience
       </h1>
-
       
       <div className="mb-10 mt-5">
       <p>
@@ -207,7 +208,92 @@ const Home = () => {
         Dean&apos;ss Honor List, Best Presentation award, individual standout award & Best Beginner Project award @GDSC , Best in Leveraging of Data/Computation @ 2023 AIFS Apps for Food and Ag Hackathon, x2 VIRTUOSO AWARD, Best Position Paper @ Model United Nations, 5 x Best Speaker @ Toastmasters International, Badminton, Runner up @ Men&apos;s doubles Tournament</p>
       </div>
     </section>
+
+    <div className="max-w-lg mt-10">
     
+    <div className="scroll">
+  <div className="m-scroll gap-5">
+    <div className="flex w-1/2 flex-wrap align-top">
+        <Image
+          
+          className="block h-90 w-90 rounded-md object-cover object-center"
+          src="/certificates/200.png" alt={''} width={400} height={200}
+        />
+      </div>
+      <div className="flex w-1/2 flex-wrap align-top">
+        <Image
+          
+          className="block h-90 w-90 rounded-md object-cover object-center"
+          src="/certificates/201.png" alt={''} width={400} height={200}
+        />
+      </div>
+      <div className="flex w-1/2 flex-wrap align-top">
+        <Image
+          
+          className="block h-90 w-90 rounded-md object-cover object-center"
+          src="/certificates/202.png" alt={''} width={400} height={200}
+        />
+      </div>
+      <div className="flex w-1/2 flex-wrap align-top">
+        <Image
+          
+          className="block h-90 w-90 rounded-md object-cover object-center"
+          src="/certificates/203.png" alt={''} width={400} height={200}
+        />
+      </div>
+      <div className="flex w-1/2 flex-wrap align-top">
+        <Image
+          
+          className="block h-90 w-90 rounded-md object-cover object-center"
+          src="/certificates/204.png" alt={''} width={400} height={200}
+        />
+      </div>
+      <div className="flex w-1/2 flex-wrap align-top">
+        <Image
+          
+          className="block h-90 w-90 rounded-md object-cover object-center"
+          src="/certificates/205.png" alt={''} width={400} height={200}
+        />
+      </div>
+      <div className="flex w-1/2 flex-wrap align-top">
+        <Image
+          
+          className="block h-90 w-90 rounded-md object-cover object-center"
+          src="/certificates/206.png" alt={''} width={400} height={200}
+        />
+      </div>
+      <div className="flex w-1/2 flex-wrap align-top">
+        <Image
+          
+          className="block h-90 w-90 rounded-md object-cover object-center"
+          src="/certificates/207.png" alt={''} width={400} height={200}
+        />
+      </div>
+      <div className="flex w-1/2 flex-wrap align-top">
+        <Image
+          
+          className="block h-90 w-90 rounded-md object-cover object-center"
+          src="/certificates/210.png" alt={''} width={400} height={200}
+        />
+      </div>
+      <div className="flex w-1/2 flex-wrap align-top">
+        <Image
+          
+          className="block h-90 w-90 rounded-md object-cover object-center"
+          src="/certificates/208.png" alt={''} width={400} height={200}
+        />
+      </div>      <div className="flex w-1/2 mr-5 flex-wrap align-top">
+        <Image
+          
+          className="block h-90 w-90 rounded-md object-cover object-center"
+          src="/certificates/211.png" alt={''} width={400} height={200}
+        />
+      </div>
+      </div>
+
+
+</div>
+</div>   
 
 
 
