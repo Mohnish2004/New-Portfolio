@@ -45,10 +45,6 @@ function ArrowIcon() {
 
 
 const Home = () => {
-  const words = ["Developer", "Manager", "Designer", "Leader","Photographer","Innovator", "Full-stack","Mobile","Web","AI","ML","Data","Security","Product"]; // Example words array
-  const duration = 2000; // Example duration in milliseconds
-  const [isFollowed, setIsFollowed] = React.useState(false);
-  
 
 
   return (
@@ -71,14 +67,15 @@ const Home = () => {
   <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
   <a className="group block" href={"/"}>
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
-      <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/cure.png" alt="Description"/>
+      <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/cure.png" alt="Description"/>
     </div>
     </a>
       <div className="p-4">
       <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
              D2D Cure
           </h1>
-
+          <p className="mt-1 mb-4 text-gray-600 leading-tight dark:text-neutral-400">
+          A comprehensive overhaul and modernization of the D2D Cure Database, designed to enhance user experience and streamline the submission, curation, and characterization of enzyme data. This project, developed in collaboration with over 40 institutions, aims to provide a durable platform for biotech research for the next decade.</p>
         <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
           Full Stack
         </span>
@@ -109,7 +106,7 @@ const Home = () => {
         className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-102 hover:shadow-md"
       >
         <div className="flex items-center space-x-3">
-        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/crypto-stocks-chart-5349277-4466490.png?f=webp" className="h-20 w-20 " alt="test"></img>
+        <img width="1000" height="1000" src="https://cdn3d.iconscout.com/3d/premium/thumb/crypto-stocks-chart-5349277-4466490.png?f=webp" className="h-20 w-20 "  alt="test"></img >
 
           <div className="flex flex-col pl-3 pr-3 leading-tight" >
           <p className="font-light text-sm text-neutral-900 dark:text-neutral-100">
@@ -142,7 +139,7 @@ const Home = () => {
   <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
   <a className="group block" href={"/"}>
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
-      <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/slate3.png" alt="Description"/>
+      <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/slate3.png" alt="Description"/>
     </div>
     </a>
       <div className="p-4">
@@ -181,7 +178,7 @@ const Home = () => {
       <div className="md:w-1/2">
         <a className="group block h-full" href={"/"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-l-lg dark:bg-neutral-800">
-            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/projects/d2d2.png" alt="Description"/>
+            <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/projects/d2d2.png" alt="Description"/>
           </div>
         </a>
       </div>
@@ -219,7 +216,7 @@ const Home = () => {
       <div className="md:w-1/2">
         <a className="group block h-full" href={"/"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-l-lg dark:bg-neutral-800">
-            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/projects/prof.png" alt="Description"/>
+            <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/projects/prof.png" alt="Description"/>
           </div>
         </a>
       </div>
@@ -257,7 +254,7 @@ const Home = () => {
    <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
 
 
-     <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/pool.png" alt="Description"/>
+     <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/pool.png" alt="Description"/>
    </div>
    </a>
      <div className="p-4">
@@ -283,7 +280,7 @@ const Home = () => {
    <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
 
 
-     <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/inside2.png" alt="Description"/>
+     <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/inside2.png" alt="Description"/>
    </div>
    </a>
      <div className="p-4">
@@ -333,7 +330,7 @@ const Home = () => {
         <a className="group block h-full" href={"/"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
             
-            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full" src="/projects/essence.png" alt="Description"/>
+            <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full" src="/projects/essence.png" alt="Description"/>
           </div>
         </a>
       </div>
@@ -373,7 +370,7 @@ const Home = () => {
         <a className="group block h-full" href={"/"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
             
-            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " src="/projects/enigmacoin.png" alt="Description"/>
+            <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " src="/projects/enigmacoin.png" alt="Description"/>
           </div>
         </a>
       </div>
@@ -411,7 +408,7 @@ const Home = () => {
         <a className="group block h-full" href={"/"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
             
-            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " src="/projects/enigmavault.png" alt="Description"/>
+            <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " src="/projects/enigmavault.png" alt="Description"/>
           </div>
         </a>
       </div>
@@ -430,7 +427,7 @@ const Home = () => {
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
 
 
-      <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/slice.png" alt="Description"/>
+      <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/slice.png" alt="Description"/>
     </div>
     </a>
       <div className="p-4">
@@ -459,7 +456,7 @@ const Home = () => {
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
 
 
-      <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/hustle.png" alt="Description"/>
+      <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/hustle.png" alt="Description"/>
     </div>
     </a>
       <div className="p-4">
@@ -510,7 +507,7 @@ const Home = () => {
         <a className="group block h-full" href={"/"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
             
-            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover h-full w-full" src="/projects/farm.png" alt="Description"/>
+            <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover h-full w-full" src="/projects/farm.png" alt="Description"/>
           </div>
         </a>
       </div>

@@ -57,7 +57,7 @@ function ChannelLink({}) {
       className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-102 hover:shadow-md"
     >
       <div className="flex items-center space-x-3">
-      <img src="https://cdn3d.iconscout.com/3d/premium/thumb/crypto-stocks-chart-5349277-4466490.png?f=webp" className="h-20 w-20 " alt="test"></img>
+      <img src="https://cdn3d.iconscout.com/3d/premium/thumb/crypto-stocks-chart-5349277-4466490.png?f=webp" width="60" height="60" className="h-20 w-20 " alt="test"></img>
 
         <div className="flex flex-col pl-3 pr-3 leading-tight" >
         <p className="font-light text-sm text-neutral-900 dark:text-neutral-100">
@@ -126,7 +126,7 @@ const Home = () => {
   return (
     
     <section className="antialiased max-w-xl mx-4 mt-8 sm:mx-auto">
-      <img src="/me.png" alt="Profile" className="select-none w-[150px] h-[150px] rounded-full mb-5"/>
+      <Image src="/me.png" alt="Profile" width="300" height="300" className="select-none w-[150px] h-[150px] rounded-full mb-5"/>
       <h1 className="mb-1 text-5xl tracking-tighter">
        Hey, I&apos;m Mohnish 👋🏽
       </h1>
@@ -194,7 +194,7 @@ const Home = () => {
         <a className="group block h-full" href={"/"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
             
-            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " src="/projects/cure.png" alt="Description"/>
+            <Image className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " src="/projects/cure.png" width="1000" height="1000" alt="Description"/>
           </div>
         </a>
       </div>
@@ -222,7 +222,7 @@ const Home = () => {
         <a className="group block h-full" href={"/"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
             
-            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " src="/projects/slate.jpg" alt="Description"/>
+            <Image className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " width="1000" height="1000" src="/projects/slate.jpg" alt="Description"/>
           </div>
         </a>
       </div>
@@ -252,7 +252,7 @@ const Home = () => {
         <a className="group block h-full" href={"/"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
             
-            <img className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " src="/projects/enigmacoin.png" alt="Description"/>
+            <Image className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " width="1000" height="1000" src="/projects/enigmacoin.png" alt="Description"/>
           </div>
         </a>
       </div>
@@ -365,7 +365,7 @@ const Home = () => {
       </div>
       {/* <div className="flex items-center text-gray-600 mb-1">
             <div className="flex-shrink-0 mr-4">
-                <img src="/codelab.svg" alt="Company Logo" className="h-20 object-contain" />
+                <Image src="/codelab.svg" alt="Company Logo" className="h-20 object-contain" />
             </div>
             <div>
                 <h2 className="text-lg text-black font-medium ">Product Manager</h2>
@@ -381,7 +381,7 @@ const Home = () => {
 
         <div className="flex items-center text-gray-600">
             <div className="flex-shrink-0 mr-4 ">
-            <img src="/lara.svg" alt="Company Logo" className="h-20 w-15 object-contain" />
+            <Image src="/lara.svg" alt="Company Logo" className="h-20 w-15 object-contain" />
             </div>
             <div>
                 <h2 className="text-lg text-black font-medium">Undergraduate Researcher</h2>
@@ -395,7 +395,7 @@ const Home = () => {
 
         <div className="flex items-center text-gray-600 mb-1">
             <div className="flex-shrink-0 mr-4">
-            <img src="/d2d.svg" alt="Company Logo" className="h-20 object-contain" />
+            <Image src="/d2d.svg" alt="Company Logo" className="h-20 object-contain" />
             </div>
             <div>
                 <h2 className="text-lg text-black font-medium ">Technical Project Manager intern</h2>
@@ -409,7 +409,7 @@ const Home = () => {
 
         <div className="flex items-center text-gray-600 mb-1">
             <div className="flex-shrink-0 mr-4">
-            <img src="/gdsc.svg" alt="Company Logo" className="h-20 object-contain" />
+            <Image src="/gdsc.svg" alt="Company Logo" className="h-20 object-contain" />
             </div>
             <div>
                 <h2 className="text-lg text-black font-medium ">Vice President of Externals</h2>
@@ -423,7 +423,7 @@ const Home = () => {
 
         <div className="flex items-center text-gray-600 mb-1">
             <div className="flex-shrink-0 mr-4">
-                <img src="/esolutions.svg" alt="Company Logo" className="h-20 object-contain" />
+                <Image src="/esolutions.svg" alt="Company Logo" className="h-20 object-contain" />
             </div>
             <div>
                 <h2 className="text-lg text-black font-medium ">Software Engineering Intern</h2>
@@ -437,7 +437,7 @@ const Home = () => {
 
         <div className="flex items-center text-gray-600 mb-1">
             <div className="flex-shrink-0 mr-4">
-                <img src="/uc.svg" alt="Company Logo" className="h-20 object-contain" />
+                <Image src="/uc.svg" alt="Company Logo" className="h-20 object-contain" />
             </div>
             <div>
                 <h2 className="text-lg text-black font-medium ">Student Ambassador / Tour Guide</h2>
@@ -528,7 +528,7 @@ const Home = () => {
         </div>
       }
     >
-   <img className="w-10 h-10 rounded-full" src="https://media.licdn.com/dms/image/D4D03AQGGI9xxCnbrJg/profile-displayphoto-shrink_200_200/0/1679623474258?e=2147483647&v=beta&t=VFlTvlVnkq8xnOO9GhLVAp6KneyqroowGcBVumDuYK4" alt="Jese"/>
+   <Image className="w-10 h-10 rounded-full" width="200" height="200" src="https://media.licdn.com/dms/image/D4D03AQGGI9xxCnbrJg/profile-displayphoto-shrink_200_200/0/1679623474258?e=2147483647&v=beta&t=VFlTvlVnkq8xnOO9GhLVAp6KneyqroowGcBVumDuYK4" alt="Jese"/>
    </Tooltip>
    <div className="flex flex-col gap-1 w-full max-w-[320px]">
       <div className="flex items-center space-x-2 rtl:space-x-reverse">
@@ -542,6 +542,81 @@ const Home = () => {
    </div>
 </div>
 
+<div className="flex items-start mb-10 mt-10 gap-2.5">
+<Tooltip
+          key="left-start"
+          placement="left-start"
+      content={
+        <div className="px-1 py-2">
+          <div className="text-small font-bold">Amazon</div>
+          <div className="text-tiny">AI Privacy engineer</div>
+        </div>
+      }
+    >
+   <Image className="w-10 h-10 rounded-full" width="60" height="60" src="https://media.licdn.com/dms/image/D4D03AQGGI9xxCnbrJg/profile-displayphoto-shrink_200_200/0/1679623474258?e=2147483647&v=beta&t=VFlTvlVnkq8xnOO9GhLVAp6KneyqroowGcBVumDuYK4" alt="Jese"/>
+   </Tooltip>
+   <div className="flex flex-col gap-1 w-full max-w-[320px]">
+      <div className="flex items-center space-x-2 rtl:space-x-reverse">
+         <span className="text-sm font-semibold text-gray-900 dark:text-white">Geetika</span>
+         <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+      </div>
+      <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-e-xl bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
+      <FlipWords1 sentence={sentence} duration={duration} className="my-custom-class text-sm" />
+      </div>
+      <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+   </div>
+</div>
+
+<div className="flex items-start mb-10 mt-10 gap-2.5">
+<Tooltip
+          key="left-start"
+          placement="left-start"
+      content={
+        <div className="px-1 py-2">
+          <div className="text-small font-bold">Amazon</div>
+          <div className="text-tiny">AI Privacy engineer</div>
+        </div>
+      }
+    >
+   <Image className="w-10 h-10 rounded-full" width="200" height="60" src="https://media.licdn.com/dms/image/D4D03AQGGI9xxCnbrJg/profile-displayphoto-shrink_200_200/0/1679623474258?e=2147483647&v=beta&t=VFlTvlVnkq8xnOO9GhLVAp6KneyqroowGcBVumDuYK4" alt="Jese"/>
+   </Tooltip>
+   <div className="flex flex-col gap-1 w-full max-w-[320px]">
+      <div className="flex items-center space-x-2 rtl:space-x-reverse">
+         <span className="text-sm font-semibold text-gray-900 dark:text-white">Geetika</span>
+         <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+      </div>
+      <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-e-xl bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
+      <FlipWords1 sentence={sentence} duration={duration} className="my-custom-class text-sm" />
+      </div>
+      <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+   </div>
+</div>
+
+
+<div className="flex items-start mb-10 mt-10 gap-2.5">
+<Tooltip
+          key="left-start"
+          placement="left-start"
+      content={
+        <div className="px-1 py-2">
+          <div className="text-small font-bold">Amazon</div>
+          <div className="text-tiny">AI Privacy engineer</div>
+        </div>
+      }
+    >
+   <Image className="w-10 h-10 rounded-full" width="60" height="60" src="https://media.licdn.com/dms/image/D4D03AQGGI9xxCnbrJg/profile-displayphoto-shrink_200_200/0/1679623474258?e=2147483647&v=beta&t=VFlTvlVnkq8xnOO9GhLVAp6KneyqroowGcBVumDuYK4" alt="Jese"/>
+   </Tooltip>
+   <div className="flex flex-col gap-1 w-full max-w-[320px]">
+      <div className="flex items-center space-x-2 rtl:space-x-reverse">
+         <span className="text-sm font-semibold text-gray-900 dark:text-white">Geetika</span>
+         <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+      </div>
+      <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-e-xl bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
+      <FlipWords1 sentence={sentence} duration={duration} className="my-custom-class text-sm" />
+      </div>
+      <span className="text-tiny font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+   </div>
+</div>
 
 <div className="flex items-start mb-10 mt-10 gap-2.5 justify-end">
   <div className="flex flex-col gap-1 w-full max-w-[320px]">
@@ -564,7 +639,7 @@ const Home = () => {
       </div>
     }
   >
-    <img className="w-10 h-10 rounded-full" src="/Testimonial/kamal.jpeg" alt="Jese"/>
+    <Image className="w-10 h-10 rounded-full" src="/Testimonial/kamal.jpeg" width="200" height="200" alt="Jese"/>
   </Tooltip>
 </div>
 
@@ -582,7 +657,7 @@ const Home = () => {
         </div>
       }
     >
-   <img className="w-10 h-10 rounded-full" src="/Testimonial/jim.jpeg" alt="Jese"/>
+   <Image className="w-10 h-10 rounded-full" src="/Testimonial/jim.jpeg" width="200" height="200" alt="Jese"/>
    </Tooltip>
    <div className="flex flex-col gap-1 w-full max-w-[320px]">
       <div className="flex items-center space-x-2 rtl:space-x-reverse">
@@ -619,7 +694,7 @@ const Home = () => {
       </div>
     }
   >
-    <img className="w-10 h-10 rounded-full" src="/Testimonial/gopi.jpeg" alt="Jese"/>
+    <Image className="w-10 h-10 rounded-full" src="/Testimonial/gopi.jpeg" width="200" height="200" alt="Jese"/>
   </Tooltip>
 </div>
 
@@ -637,7 +712,7 @@ const Home = () => {
         </div>
       }
     >
-   <img className="w-10 h-10 rounded-full" src="/Testimonial/rajesh.jpeg" alt="Jese"/>
+   <Image className="w-10 h-10 rounded-full" src="/Testimonial/rajesh.jpeg" width="200" height="200" alt="Jese"/>
    </Tooltip>
    <div className="flex flex-col gap-1 w-full max-w-[320px]">
       <div className="flex items-center space-x-2 rtl:space-x-reverse">

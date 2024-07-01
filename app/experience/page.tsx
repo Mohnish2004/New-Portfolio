@@ -72,10 +72,10 @@ const Home = () => {
       >
         <div className="flex items-center space-x-3">
           <div className="relative h-16">
-            <img
+            <Image
               src={"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/The_University_of_California_Davis.svg/640px-The_University_of_California_Davis.svg.png"}
-              height={84}
-              width={84}
+              height="1000"
+              width="1000"
               sizes="33vw"
               className="h-14 mt-1 ml-4 w-14 rounded-full"
               alt="test"
