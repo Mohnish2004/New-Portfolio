@@ -608,7 +608,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 
 <div className="flex items-start mb-5 mt-5 gap-2.5 justify-end">
   <div className="flex flex-col gap-1 w-full max-w-[320px]">
-    <div className="flex items-center space-x-2 rtl:space-x-reverse">
+    <div className="flex items-center space-x-2 justify-end rtl:space-x-reverse">
       <span className="text-sm font-semibold text-gray-900 dark:text-white">Kamal</span>
       <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
     </div>
@@ -688,7 +688,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 
 <div className="flex items-start mb-5 mt-5 gap-2.5 justify-end">
   <div className="flex flex-col gap-1 w-full max-w-[320px]">
-    <div className="flex items-center space-x-2 rtl:space-x-reverse">
+    <div className="flex items-center space-x-2 justify-end rtl:space-x-reverse">
       <span className="text-sm font-semibold text-gray-900 dark:text-white">Gopi</span>
       <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
     </div>
