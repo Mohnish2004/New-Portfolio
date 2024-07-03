@@ -62,7 +62,7 @@ const Home = () => {
       </div>
 
       <div className=" mb-5 group flex w-full">
-      <a       href={""}
+      <div
         className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-101 hover:shadow-md"
       >
         <div className="flex items-center space-x-3">
@@ -88,7 +88,7 @@ const Home = () => {
           </div>
         </div>
 
-      </a>
+      </div>
     </div>
   
 
