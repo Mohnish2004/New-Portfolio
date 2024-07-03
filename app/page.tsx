@@ -159,13 +159,13 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       </h2>
       <p>
       I&apos;m a third-year Computer Science student at the University of California, Davis. With a passion for solving problems one {" "}      <LinkPreview
-          url="https://www.codelabdavis.com/"
+          url="/projects"
           imageSrc="/mobile1.png"
           isStatic
           className="font-bold"
         >
            Product
-        </LinkPreview>{" "} at a time. Starting from my dorm room projects, I&apos;ve cultivated a versatile skill set through diverse client engagements and hands-on{" "}      <LinkPreview
+        </LinkPreview>{""} at a time. Starting from my dorm room projects, I&apos;ve cultivated a versatile skill set through diverse client engagements and hands-on{" "}      <LinkPreview
           url="https://drive.google.com/file/d/1tR8yrlVjDstqXk55d0FE4fVFTfr3RU34/view?usp=sharing"
       
           imageSrc="/resume.png"
@@ -219,7 +219,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
           <p className="mt-1 mb-4 text-xs text-gray-600 leading-tight dark:text-neutral-400">
           A comprehensive overhaul of the D2D Cure Database, improving user experience and enzyme data management. Supporting biotech research for the next decade.
 </p>          <div className="mt-4">
-        <button   onClick={() => window.location.href='https://example.com'}
+        <button   onClick={() => window.location.href='https://medium.com/@mohnish.gopi/d2dcure-5b41fcbc0ee4'}
  type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
           Read more
         </button>
@@ -230,7 +230,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       <div className="md:w-1/2">
         <a className="group block h-full" href={"/"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
-          <a href='https://example.com'>
+          <a href='https://medium.com/@mohnish.gopi/d2dcure-5b41fcbc0ee4'>
 
             <Image className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " src="/projects/cure.png" width="1000" height="1000" alt="Description"/>
           </a></div>

@@ -18,11 +18,11 @@ export default function Swipe() {
         effect={'cards'}
         grabCursor={true}
         modules={[EffectCards]}
-        className="mySwiper rounded-sm"
+        className="mySwiper rounded-sm transition-all duration-300 hover:scale-102 hover:shadow-lg"
       >
         <SwiperSlide>        <Image
           
-          className="block h-full w-full rounded-sm object-cover object-center"
+          className="block h-full w-full  rounded-sm object-cover object-center"
           src="/exp_pics/102.jpg" alt={''} width={500} height={500}
         /></SwiperSlide>
                 <SwiperSlide>        <Image

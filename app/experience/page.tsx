@@ -211,7 +211,7 @@ const Home = () => {
       <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">Accolades</h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-        Dean&apos;ss Honor List, Best Presentation award, individual standout award & Best Beginner Project award @GDSC , Best in Leveraging of Data/Computation @ 2023 AIFS Apps for Food and Ag Hackathon, x2 VIRTUOSO AWARD, Best Position Paper @ Model United Nations, 5 x Best Speaker @ Toastmasters International, Badminton, Runner up @ Men&apos;s doubles Tournament</p>
+        Dean&apos;s Honor List, Best Advanced project, Best UI/UX at Hackdavis '24, Best Presentation award, individual standout award & Best Beginner Project award @GDSC , Best in Leveraging of Data/Computation @ 2023 AIFS Apps for Food and Ag Hackathon, x2 VIRTUOSO AWARD, Best Position Paper @ Model United Nations, 5 x Best Speaker @ Toastmasters International, Badminton, Runner up @ Men&apos;s doubles Tournament</p>
       </div>
     </section>
 
