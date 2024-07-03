@@ -219,7 +219,8 @@ const Home = () => {
     
     <div className="scroll">
   <div className="m-scroll gap-5">
-    <div className="flex w-1/2 flex-wrap align-top">
+    <div className=" w-1/2 align-top bg-fixed">
+       
         <Image
           
           className="block h-90 w-90 rounded-md object-cover object-center"

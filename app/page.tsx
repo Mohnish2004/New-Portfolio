@@ -251,7 +251,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
           <p className="mt-1 mb-4 text-gray-600 text-xs leading-tight dark:text-neutral-400">
           A crowd-sourced AI note-taking platform powered by Gemini, serving as a dynamic hub for studying, instructor-endorsed answers, and collaboration.     </p>     <div className="mt-4">
         <button   onClick={() => window.location.href='https://devpost.com/software/slate-pas0bz'}
- type="button" className=" text-xs transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
+ type="button" className=" transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
           Read more
         </button>
           </div>
@@ -566,7 +566,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       <h2 className=" font-medium text-2xl">
       Testimonials
       </h2>
-      <p className="mt-2 text-gray-500 text-sm">Read insights and praises from mentors and peers who have guided and witnessed my professional growth.</p>
+      <p className="mt-2 text-gray-300 text-sm">Read insights and praises from mentors and peers who have guided and witnessed my professional growth.</p>
 
 
 

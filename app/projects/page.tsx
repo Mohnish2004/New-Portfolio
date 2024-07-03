@@ -195,10 +195,11 @@ const Home = () => {
      </a></div>
    </a>
      <div className="p-4">
-     <h1 className="text-2xl mb-1 inline-block font-medium text-black dark:text-white">
+
+     <h1 className="text-2xl mb-1 mr-3 inline-block font-medium text-black dark:text-white">
             DevFest Website
          </h1>
-
+         <div>
        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
          Front-end
        </span>
@@ -210,6 +211,8 @@ const Home = () => {
 >
   View Site
 </button>
+</div>
+
      </div>
    </div>
  </div>
@@ -231,6 +234,7 @@ const Home = () => {
      <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
       Brand Identity
          </h1>
+         <div>
        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
          Graphic Design
        </span>
@@ -241,6 +245,7 @@ const Home = () => {
 >
   View Figma
 </button>
+</div>
      </div>
      </div>
  </div>
