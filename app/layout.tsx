@@ -9,6 +9,9 @@ import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import { SparklesCore } from "@/components/sparkles";
 import {Footer} from "@/components/footer";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
+
 
 export const metadata: Metadata = {
   title: {
@@ -48,7 +51,8 @@ export default function RootLayout({
         <section className="flex flex-col items-center justify-center gap-4 ">
 
       <div className="inline-block justify-center md:ml-10 sm:ml-10">
-
+      <SpeedInsights/>
+      <Analytics/>
         {children}
 
             </div>
