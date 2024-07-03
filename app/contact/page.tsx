@@ -88,7 +88,7 @@ const Home = () => {
   return (
     
     <section className="antialiased max-w-xl mx-4 sm:mx-auto">
-      <h1 className="mt-6 text-5xl tracking-tighter">
+      <h1 className="text-5xl tracking-tighter">
       Get in touch
       </h1>
       <div className="mb-10 mt-5">
@@ -98,7 +98,7 @@ const Home = () => {
 
       <Clock />
 
-      <Snippet size="sm" hideSymbol className=" transition-all duration-300 hover:scale-105 hover:shadow-md  h-7 items-center text-xs rounded-md bg-gray-50  mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer">  
+      <Snippet size="sm" hideSymbol className=" transition-all duration-300 hover:scale-105 hover:shadow-md  h-7 items-center rounded-md bg-gray-50  mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer">  
       <div      
       className="inline-flex items-center text-xs mt-1 text-gray-600 dark:text-white cursor-pointer"
     >
@@ -108,7 +108,7 @@ const Home = () => {
       </a>
     </div></Snippet>
 
-    <Snippet size="sm" hideSymbol className=" transition-all duration-300 hover:scale-105 hover:shadow-md  h-7 items-center text-xs rounded-md bg-gray-50  mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer">  
+    <Snippet size="sm" hideSymbol className=" transition-all duration-300 hover:scale-105 hover:shadow-md  h-7 items-center text-xs rounded-md bg-gray-50  mr-2  dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer">  
       <div      
       className="inline-flex items-center text-xs mt-1 text-gray-600 dark:text-white cursor-pointer"
     >
@@ -122,7 +122,7 @@ const Home = () => {
 
 
 
-<iframe src="https://calendar.google.com/calendar/appointments/AcZssZ3v3WNqru-XQpPB_dsgAkq7b91P6NPwmkp2nMc=?gv=true" title="meeting" className="mb-10 mt-5 h-50 w-100 rounded-md items-center text-xs bg-gray-50  mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer" width="100%" height="600" ></iframe>
+<iframe src="https://calendar.google.com/calendar/appointments/AcZssZ3v3WNqru-XQpPB_dsgAkq7b91P6NPwmkp2nMc=?gv=true" title="meeting" className="mb-10 mt-5 h-50 w-100 rounded-md items-center  bg-gray-50  mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer" width="100%" height="600" ></iframe>
 
  <section>
 

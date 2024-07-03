@@ -11,17 +11,12 @@ import { Suspense } from 'react';
 import { unstable_noStore as noStore } from 'next/cache';
 import Image from 'next/image';
 import { FlipWords } from "@/components/flip"; // Replace with the correct path to FlipWords component
-import { LinkPreview } from "@/components/link-preview";
 import { SparklesCore } from "@/components/sparkles";
 import {Card as NextUICard, CardHeader, CardBody, CardFooter, Avatar, Button} from "@nextui-org/react";
 import React from "react";
-import { InfiniteMovingCards } from "@/components/infinite-moving-cards";
-import Card1 from "@/components/Card1";
-import { animate, motion, useMotionValue } from "framer-motion";
-import { useEffect, useState } from "react";
-import useMeasure from "react-use-measure";
-import ReactDOM from 'react-dom/client'
-import CertificateGallery from '@/components/cert';
+
+import { LinkPreview } from "@/components/link-preview";
+import { LinkPreviews } from "@/components/link-preview-exp";
 
 
 function ArrowIcon() {
@@ -56,19 +51,18 @@ const Home = () => {
     
     <section className="antialiased max-w-xl mx-4 sm:mx-auto">
 
-      <h1 className="mt-6 text-5xl tracking-tighter">
-      My Professional Experience
+      <h1 className="text-5xl tracking-tighter">
+      Experience
       </h1>
-      
-      <div className="mb-10 mt-5">
-      <p>
-      </p>
+      <div className="inline-flex items-center">
+
+</div>
+
+      <div >
       </div>
 
-
-      <div className="group mt-10 flex w-full">
+      <div className=" mb-5 group flex w-full">
       <a
-      href={"/"}
         className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-101 hover:shadow-md"
       >
         <div className="flex items-center space-x-3">
@@ -83,12 +77,14 @@ const Home = () => {
             />
           </div>
 
-
           <div className="flex flex-col pl-5 leading-tight" >
           <h2 className="font-medium text-xl mb-1 tracking-tighter">Bachelor of Science in Computer Science</h2>
           <p className="text-neutral-600 dark:text-neutral-400 text-sm">
         University of California, Davis / 2022 — 2026
         </p>
+        <div className="mt-2">
+  </div>
+
           </div>
         </div>
 
@@ -98,36 +94,47 @@ const Home = () => {
 
 
 
-      <section className="mt-10">
-      <div className="prose prose-neutral dark:prose-invert">
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Product Manager</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">CodeLab</p>
-        <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+    <section className="mt-5">
+  <div className="prose prose-neutral dark:prose-invert">
+  
+    <h2 className="font-medium text-xl mb-1 tracking-tighter">Product Manager / President</h2>
+    <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+      <LinkPreviews url="https://www.codelabdavis.com/" imageSrc="/cl6.png" isStatic>
+        CodeLab
+      </LinkPreviews> / Present
+    </p>
+    <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
 
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Technical Project Manager</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">UC Davis Genome Center</p>
-        <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
-        
-        
-        
-        
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">        Undergraduate Researcher
-</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-        Laboratory for AI, Robotics and Automation        </p>
+    <h2 className="font-medium text-xl mb-1 tracking-tighter">Technical Project Manager</h2>
+    <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+      <LinkPreviews url="https://genomecenter.ucdavis.edu/" >
+        UC Davis Genome Center
+      </LinkPreviews> / Present
+    </p>
+    <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
 
-      
-      <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Software Engineering Intern</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-        eSolutionsMEA
-        </p>
+    <h2 className="font-medium text-xl mb-1 tracking-tighter">Undergraduate Researcher</h2>
+    <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+      <LinkPreviews url="https://soltanilab.engineering.ucdavis.edu/" >
+        Laboratory for AI, Robotics and Automation
+      </LinkPreviews> / Present
+    </p>
+    <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
 
-        <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Student Ambassador / Tour Guide</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-        University of California, Davis
-        </p>
+    <h2 className="font-medium text-xl mb-1 tracking-tighter">Software Engineering Intern</h2>
+    <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+      <LinkPreviews url="https://www.maximo.ae/" imageSrc="/maximo.png" isStatic>
+        IBM Maximo eSolutions
+      </LinkPreviews> / 2023
+    </p>
+    <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+
+    <h2 className="font-medium text-xl mb-1 tracking-tighter">Student Ambassador / Tour Guide</h2>
+    <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+      <LinkPreviews url="https://www.ucdavis.edu/about/visit/campus-tour">
+        Undergraduate admissions
+      </LinkPreviews> / Present
+    </p>
 
 
         <ul className=" justify-end font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
@@ -136,7 +143,7 @@ const Home = () => {
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://twitter.com/leeerob"
+            href="https://drive.google.com/file/d/1tR8yrlVjDstqXk55d0FE4fVFTfr3RU34/view?usp=sharing"
           >
             <ArrowIcon />
             <p className="ml-2 h-7">Download Resume</p>
@@ -152,39 +159,38 @@ const Home = () => {
 
 
 
-    <h2 className=" mt-20 font-semibold mb-2 text-3xl tracking-tighter">
-      Leadership Experience
+    <h2 className=" mt-10 font-semibold mb-2 text-2xl tracking-tighter">
+      Leadership
       </h2>
 
       <section className="mt-5">
       <div className="prose prose-neutral dark:prose-invert">
         <h2 className="font-medium text-xl mb-1 tracking-tighter">President / Vice President</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">CodeLab</p>
+
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm"><LinkPreviews url="https://www.codelabdavis.com/" imageSrc="/cl6.png" isStatic>CodeLab</LinkPreviews></p> 
         <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
 
         <h2 className="font-medium text-xl mb-1 tracking-tighter">Vice President</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">Google Developers Students Club</p>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm"><LinkPreviews url="https://bento.me/gdscdavis">Google Developer Student Club</LinkPreviews></p>
         <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
         
 
         <h2 className="font-medium text-xl mb-1 tracking-tighter">Vice President</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">Sachacks</p>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm"><LinkPreviews url="https://sachacks.io/">SacHacks</LinkPreviews></p>
 
       
       <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">Deputy Headboy</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-        Jss Private School
-        </p>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm"><LinkPreviews url="https://jsspsdubai.com/">JSS Private School</LinkPreviews></p>
       </div>
     </section>
 
 
-    <h2 className=" font-semibold mt-20 text-3xl tracking-tighter">
+    <h2 className=" font-semibold mt-20 text-2xl tracking-tighter">
        Achievements
       </h2>
 
-      <section className="mt-10">
+      <section className="mt-5">
       <div className="prose prose-neutral dark:prose-invert">
         <h2 className="font-medium text-xl mb-1 tracking-tighter">Technical skill </h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">Programming: Python, C, C++, JavaScript, HTML, CSS, SQL, Web Development: MongoDB, Express.js, React.js, Node.js, App Development: Kotlin, Flutter, Dart, Swift </p>

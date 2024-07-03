@@ -79,3 +79,81 @@
     display: block;
     text-align: right;
   }
+
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper {
+  width: 140px;
+  height: 220px;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: white;
+  color: #fff;
+  padding: 5px; /* Adjust padding to add space around the image */
+  padding-bottom: 25px; /* Adjust padding to add space around the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow for Polaroid effect */
+  position: relative;
+}
+
+.swiper-slide::before {
+  content: "hi hello";
+  display: block;
+  padding-bottom: 20%; /* Adjust bottom padding to make the bottom border bigger */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: -1;
+}
+
+.swiper-slide:nth-child(1n) {
+  background-color: white;
+}
+
+.swiper-slide:nth-child(2n) {
+  background-color: white;
+}
+
+.swiper-slide:nth-child(3n) {
+  background-color: white;
+}
+
+.swiper-slide:nth-child(4n) {
+  background-color: white;
+}
+
+.swiper-slide:nth-child(5n) {
+  background-color: white;
+}
+
+.swiper-slide:nth-child(6n) {
+  background-color: white;
+}
+
+.swiper-slide:nth-child(7n) {
+  background-color: white;
+}
+
+.swiper-slide:nth-child(8n) {
+  background-color: white;
+}
+
+.swiper-slide:nth-child(9n) {
+  background-color: white;
+}
+
+.swiper-slide:nth-child(10n) {
+  background-color: white;
+}

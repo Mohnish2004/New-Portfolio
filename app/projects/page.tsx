@@ -50,13 +50,12 @@ const Home = () => {
   return (
     
     <section className="antialiased max-w-xl mx-4 sm:mx-auto">
-      <h1 className="mt-6 text-5xl tracking-tighter">
-      Featured work
+      <h1 className="mt-2 text-5xl tracking-tighter">
+      Selected Work
       </h1>
       <div className="mb-10 mt-5">
       <p>
-      I&apos;m driven by a deep passion for using technology to create innovative solutions that make a lasting impact. Take a relaxed stroll through these projects that I&apos;ve poured my heart and soul into.
-      </p>
+      Here are a few recent highlights of my work. Whatever I'm working on, I always follow the same simple approach—blending aesthetics with functionality to create impactful solutions.      </p>
       </div>
 
 
@@ -67,7 +66,9 @@ const Home = () => {
   <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
   <a className="group block" href={"/"}>
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
+    <a href='https://example.com'>
       <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/cure.png" alt="Description"/>
+      </a>
     </div>
     </a>
       <div className="p-4">
@@ -88,9 +89,14 @@ const Home = () => {
         <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
         🚀 Winter 2024
         </span>
-        <button type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
-          Read more
-        </button>
+<button
+  type="button"
+  onClick={() => window.location.href='https://example.com'}
+  className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10"
+>
+  Read more
+</button>
+
 
 
       </div>
@@ -100,7 +106,7 @@ const Home = () => {
 
   <div className="group mb-5 flex w-full transition-all duration-300 hover:scale-105 hover:shadow-xl">
       <a
-        href={"/"}
+        href={"https://drive.google.com/file/d/12xnuAkIVjqKLicPoPP9W_dt4a6KRIAZE/view?usp=sharing"}
         target="_blank"
         rel="noopener noreferrer"
         className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-102 hover:shadow-md"
@@ -139,7 +145,10 @@ const Home = () => {
   <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
   <a className="group block" href={"/"}>
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
+    <a href='https://devpost.com/software/slate-pas0bz'>
+
       <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/slate3.png" alt="Description"/>
+      </a>
     </div>
     </a>
       <div className="p-4">
@@ -161,14 +170,85 @@ const Home = () => {
         <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
         🏆 Best UI/UX
         </span>
-        <button type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
-          Read more
-        </button>
+<button
+  type="button"
+  onClick={() => window.location.href='https://devpost.com/software/slate-pas0bz'}
+  className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10"
+>
+  Read more
+</button>
+
 
 
       </div>
     </div>
   </div>
+
+
+
+
+  <div className="mb-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+
+<div className="mb-5">
+ <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+ <a className="group block" href={"/"}>
+   <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
+   <a href='https://www.devfestdavis.com/'>
+     <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/devweb.png" alt="Description"/>
+     </a></div>
+   </a>
+     <div className="p-4">
+     <h1 className="text-2xl mb-1 inline-block font-medium text-black dark:text-white">
+            DevFest Website
+         </h1>
+
+       <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+         Front-end
+       </span>
+<button
+  type="button"
+  onClick={() => window.location.href='https://www.devfestdavis.com/'}
+  className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10"
+
+>
+  View Site
+</button>
+     </div>
+   </div>
+ </div>
+
+
+
+
+ <div className="mb-5">
+ <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+ <a className="group block" href={"/"}>
+   <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
+
+   <a href='https://www.example.com/page.html'>
+
+     <Image width="1000" height="1000"  className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/devfest.png" alt="Description"/>
+     </a></div>
+   </a>
+     <div className="p-4">
+     <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
+      Brand Identity
+         </h1>
+       <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+         Graphic Design
+       </span>
+<button
+  type="button"
+  onClick={() => window.location.href='https://www.example.com/page.html'}
+  className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10"
+>
+  View Figma
+</button>
+     </div>
+     </div>
+ </div>
+ </div>
+
 
 
 
@@ -178,7 +258,10 @@ const Home = () => {
       <div className="md:w-1/2">
         <a className="group block h-full" href={"/"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-l-lg dark:bg-neutral-800">
+          <a href='https://medium.com/@mohnish.gopi/d2d-enzyme-rate-calculator-c1cc87f268f4'>
+
             <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/projects/d2d2.png" alt="Description"/>
+            </a>
           </div>
         </a>
       </div>
@@ -199,9 +282,13 @@ const Home = () => {
             <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
              PM
             </span>
-            <button type="button" className="mt-2 transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
-            Read more
-          </button>
+<button
+  type="button"
+  onClick={() => window.location.href='https://medium.com/@mohnish.gopi/d2d-enzyme-rate-calculator-c1cc87f268f4'}
+  className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10"
+>
+  Read more
+</button>
           </div>
         </div>
       </div>
@@ -210,13 +297,21 @@ const Home = () => {
 </div>
 
 
+
+
+
+
+
 <div className="mb-5">
   <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
     <div className="flex flex-col md:flex-row">
       <div className="md:w-1/2">
         <a className="group block h-full" href={"/"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-l-lg dark:bg-neutral-800">
+          <a href='https://medium.com/@mohnish.gopi/the-journey-of-profficient-a-first-time-pms-tale-c6583ef88d07'>
+
             <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/projects/prof.png" alt="Description"/>
+            </a>
           </div>
         </a>
       </div>
@@ -233,9 +328,13 @@ const Home = () => {
             <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
              PM
             </span>
-            <button type="button" className="mt-2 transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
-            Read more
-          </button>
+<button
+  type="button"
+  onClick={() => window.location.href='https://medium.com/@mohnish.gopi/the-journey-of-profficient-a-first-time-pms-tale-c6583ef88d07'}
+  className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10"
+>
+  Read more
+</button>
           </div>
         </div>
       </div>
@@ -253,9 +352,10 @@ const Home = () => {
    
    <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
 
+   <a href='https://devpost.com/software/pool-it-or74mp'>
 
      <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/pool.png" alt="Description"/>
-   </div>
+     </a></div>
    </a>
      <div className="p-4">
      <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
@@ -266,9 +366,13 @@ const Home = () => {
        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
          Mobile Dev
        </span>
-       <button type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
-         Read more
-       </button>
+<button
+  type="button"
+  onClick={() => window.location.href='https://devpost.com/software/pool-it-or74mp'}
+  className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10"
+>
+  Read more
+</button>
      </div>
    </div>
  </div>
@@ -279,9 +383,10 @@ const Home = () => {
  <a className="group block" href={"/"}>
    <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
 
+   <a href='https://drive.google.com/file/d/1IjhYgylaQl5PIXfp1HapYMvdxos_wBkO/view'>
 
-     <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/inside2.png" alt="Description"/>
-   </div>
+     <Image width="1000" height="1000"  className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/inside2.png" alt="Description"/>
+     </a></div>
    </a>
      <div className="p-4">
      <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
@@ -292,9 +397,13 @@ const Home = () => {
        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
          Object Oriented
        </span>
-       <button type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
-         Read more
-       </button>
+<button
+  type="button"
+  onClick={() => window.location.href='https://drive.google.com/file/d/1IjhYgylaQl5PIXfp1HapYMvdxos_wBkO/view'}
+  className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10"
+>
+  Read more
+</button>
      </div>
      </div>
  </div>
@@ -320,18 +429,20 @@ const Home = () => {
             <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
              NLP
             </span>
-            <button type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
+            <button type="button"   onClick={() => window.location.href='https://github.com/Mohnish2004/Essence'}
+ className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
             Read more
           </button>
           </div>
         </div>
       </div>
       <div className="md:w-1/2">
-        <a className="group block h-full" href={"/"}>
+        <a className="group block h-full" href={"https://github.com/Mohnish2004/Essence"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
-            
+              <a href='https://github.com/Mohnish2004/Essence'>
+
             <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full" src="/projects/essence.png" alt="Description"/>
-          </div>
+            </a></div>
         </a>
       </div>
     </div>
@@ -360,18 +471,23 @@ const Home = () => {
             <span className="mt-2 inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
             🏆 Best Advanced Project Award 
             </span>
-            <button type="button" className="mt-2 transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
-            Read more
-          </button>
+<button
+  type="button"
+  onClick={() => window.location.href='https://github.com/Mohnish2004/EnigmaVault'}
+  className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10"
+>
+  Read more
+</button>
           </div>
         </div>
       </div>
       <div className="md:w-1/2">
-        <a className="group block h-full" href={"/"}>
+        <a className="group block h-full" href={"https://github.com/Mohnish2004/EnigmaVault"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
-            
+          <a href='https://github.com/Mohnish2004/EnigmaVault'>
+
             <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " src="/projects/enigmacoin.png" alt="Description"/>
-          </div>
+            </a></div>
         </a>
       </div>
     </div>
@@ -398,18 +514,23 @@ const Home = () => {
             <span className="mt-2 inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
             🏆 Best Beginner Project Award
             </span>
-            <button type="button" className="mt-2 transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
-            Read more
-          </button>
+<button
+  type="button"
+  onClick={() => window.location.href='https://github.com/Mohnish2004/EnigmaCoin'}
+  className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10"
+>
+  Read more
+</button>
           </div>
         </div>
       </div>
       <div className="md:w-1/2">
-        <a className="group block h-full" href={"/"}>
+        <a className="group block h-full" href={"https://github.com/Mohnish2004/EnigmaCoin"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
-            
+          <a href='https://github.com/Mohnish2004/EnigmaCoin'>
+
             <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " src="/projects/enigmavault.png" alt="Description"/>
-          </div>
+            </a></div>
         </a>
       </div>
     </div>
@@ -422,12 +543,11 @@ const Home = () => {
 
  <div className="mb-5">
   <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-  <a className="group block" href={"/"}>
-    
+  <a className="group block" href='https://github.com/Mohnish2004/Expense-Manager' >
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
-
-
+    <a href='https://github.com/Mohnish2004/Expense-Manager'>
       <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/slice.png" alt="Description"/>
+</a>
     </div>
     </a>
       <div className="p-4">
@@ -442,9 +562,14 @@ const Home = () => {
         <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
           Python
         </span>
-        <button type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
-          Read more
-        </button>
+<button
+  type="button"
+  onClick={() => window.location.href='https://github.com/Mohnish2004/Expense-Manager'}
+  className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10"
+>
+  Read more
+</button>
+
       </div>
     </div>
   </div>
@@ -454,10 +579,10 @@ const Home = () => {
   <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
   <a className="group block" href={"/"}>
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
-
-
+<a href='https://github.com/Mohnish2004/TasksApp'>
       <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/hustle.png" alt="Description"/>
-    </div>
+      </a>
+   </div>
     </a>
       <div className="p-4">
       <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
@@ -472,13 +597,22 @@ const Home = () => {
           Flask
         </span>
         
-        <button type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
-          Read more
-        </button>
+<button
+  type="button"
+  onClick={() => window.location.href='https://github.com/Mohnish2004/TasksApp'}
+  className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10"
+>
+  Read more
+</button>
+
       </div>
       </div>
   </div>
   </div>
+
+
+
+
 
 
   <div className="mb-5">
@@ -497,16 +631,15 @@ const Home = () => {
             <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
              Prototype
             </span>
-            <button type="button" className="transition-all mt-2 duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
+            <button onClick={() => window.location.href='https://drive.google.com/file/d/1i3A2WT4jaaVXop15XyYXnANS76ZYRWtd/view'} type="button" className="transition-all mt-2 duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
             Read more
           </button>
           </div>
         </div>
       </div>
       <div className="md:w-1/2">
-        <a className="group block h-full" href={"/"}>
+        <a className="group block h-full" href={"https://drive.google.com/file/d/1i3A2WT4jaaVXop15XyYXnANS76ZYRWtd/view"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
-            
             <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover h-full w-full" src="/projects/farm.png" alt="Description"/>
           </div>
         </a>
@@ -525,7 +658,7 @@ const Home = () => {
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://twitter.com/leeerob"
+            href="https://github.com/Mohnish2004"
           >
             <ArrowIcon />
             <p className="ml-2 h-7">View Github</p>

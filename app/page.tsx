@@ -8,6 +8,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 
 import { LinkPreview } from "@/components/link-preview";
+import { LinkPreviews } from "@/components/link-preview-exp";
 
 
 
@@ -33,8 +34,8 @@ function ChannelLink({}) {
   return (
     <div className="group mb-5 flex w-full transition-all duration-300 hover:scale-105 hover:shadow-xl">
     <a
-      href={"/"}
-      target="_blank"
+        href={"https://drive.google.com/file/d/12xnuAkIVjqKLicPoPP9W_dt4a6KRIAZE/view?usp=sharing"}
+        target="_blank"
       rel="noopener noreferrer"
       className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-102 hover:shadow-md"
     >
@@ -165,7 +166,8 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
         >
            product
         </LinkPreview>{" "} at a time. Starting from my dorm room projects, I&apos;ve cultivated a versatile skill set through diverse client engagements and hands-on{" "}      <LinkPreview
-          url="/"
+          url="https://drive.google.com/file/d/1tR8yrlVjDstqXk55d0FE4fVFTfr3RU34/view?usp=sharing"
+      
           imageSrc="/resume.png"
           isStatic
           className="font-bold"
@@ -188,8 +190,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
     <a
       className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
       rel="noopener noreferrer"
-      target="_blank"
-      href="https://twitter.com/leeerob"
+      href="/about"
     >
       <ArrowIcon />
       <p className="ml-2 h-7">Read more</p>
@@ -218,7 +219,8 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
           <p className="mt-1 mb-4 text-xs text-gray-600 leading-tight dark:text-neutral-400">
           A comprehensive overhaul of the D2D Cure Database, improving user experience and enzyme data management. Supporting biotech research for the next decade.
 </p>          <div className="mt-4">
-        <button type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
+        <button   onClick={() => window.location.href='https://example.com'}
+ type="button" className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
           Read more
         </button>
         
@@ -228,9 +230,10 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       <div className="md:w-1/2">
         <a className="group block h-full" href={"/"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
-            
+          <a href='https://example.com'>
+
             <Image className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " src="/projects/cure.png" width="1000" height="1000" alt="Description"/>
-          </div>
+          </a></div>
         </a>
       </div>
     </div>
@@ -246,8 +249,9 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
           Slate
           </h1>
           <p className="mt-1 mb-4 text-gray-600 text-xs leading-tight dark:text-neutral-400">
-          A crowd-sourced note-taking platform powered by Gemini, serving as a dynamic hub for studying, instructor-endorsed answers, and collaboration.     </p>     <div className="mt-4">
-        <button type="button" className=" text-xs transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
+          A crowd-sourced AI note-taking platform powered by Gemini, serving as a dynamic hub for studying, instructor-endorsed answers, and collaboration.     </p>     <div className="mt-4">
+        <button   onClick={() => window.location.href='https://devpost.com/software/slate-pas0bz'}
+ type="button" className=" text-xs transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
           Read more
         </button>
           </div>
@@ -256,9 +260,10 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       <div className="md:w-1/2">
         <a className="group block h-full" href={"/"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
-            
+          <a href='https://devpost.com/software/slate-pas0bz'>
+
             <Image className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " width="1000" height="1000" src="/projects/slate.jpg" alt="Description"/>
-          </div>
+          </a></div>
         </a>
       </div>
     </div>
@@ -271,13 +276,14 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       <div className="p-6 md:w-1/2 flex flex-col justify-between">
         <div>
           <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
-             Enigma Vault
+          Enzyme Rate Calculator
           </h1>
           <p className="mt-1 mb-4 text-gray-600 text-xs leading-tight dark:text-neutral-400">
-          A blockchain-based cryptocurrency project developed from scratch with RSA encryption and functionalities like mining, transactions, purchase etc.</p>
+          A web appl developed to streamline the calculation of enzyme reaction rates and generate graphs from student-generated data for the Design 2 Data (D2D) project</p>
           <div className="mt-4">
 
-            <button type="button" className="mt-2 transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
+            <button   onClick={() => window.location.href='https://medium.com/@mohnish.gopi/d2d-enzyme-rate-calculator-c1cc87f268f4'}
+ type="button" className="mt-2 transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
             Read more
           </button>
           </div>
@@ -286,9 +292,10 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       <div className="md:w-1/2">
         <a className="group block h-full" href={"/"}>
           <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
-            
-            <Image className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " width="1000" height="1000" src="/projects/enigmacoin.png" alt="Description"/>
-          </div>
+          <a href='https://medium.com/@mohnish.gopi/d2d-enzyme-rate-calculator-c1cc87f268f4'>
+
+            <Image className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " width="1000" height="1000" src="/projects/d2d2.png" alt="Description"/>
+          </a></div>
         </a>
       </div>
     </div>
@@ -300,8 +307,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
           <a
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
             rel="noopener noreferrer"
-            target="_blank"
-            href="https://twitter.com/leeerob"
+            href="/projects"
           >
             <ArrowIcon />
             <p className="ml-2 h-7">See more projects</p>
@@ -345,8 +351,13 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 </h2>
 
 <div className="inline-flex items-center">
+<LinkPreview
+          url="https://drive.google.com/file/d/1tR8yrlVjDstqXk55d0FE4fVFTfr3RU34/view?usp=sharing"
+          imageSrc="/resume.png"
+          isStatic
+        >
   <span className="bg-gray-50 px-3 py-1 text-sm font-medium text-gray-300 dark:text-gray-200 rounded-md ring-1 ring-inset ring-gray-500/10 border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800">
-    <a href="/" className="text-md text-neutral-500 hover:text-neutral-800 dark:hover:text-neutral-100 inline-flex items-center rounded-lg">
+    <a href="https://drive.google.com/file/d/1tR8yrlVjDstqXk55d0FE4fVFTfr3RU34/view?usp=sharing" className="text-md text-neutral-500 hover:text-neutral-800 dark:hover:text-neutral-100 inline-flex items-center rounded-lg">
       <svg className="w-3.5 h-3.5 me-2 rtl:rotate-180 transition-all duration-500 hover:scale-130 hover:shadow-xl" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
         <path d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2Zm-3 15H4.828a1 1 0 0 1 0-2h6.238a1 1 0 0 1 0 2Zm0-4H4.828a1 1 0 0 1 0-2h6.238a1 1 0 1 1 0 2Z"/>
         <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z"/>
@@ -354,6 +365,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       Resume
     </a>
   </span>
+  </LinkPreview>
 </div>
 
 </div>
@@ -364,40 +376,50 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 
 
 
-      <section className="mt-10">
-      <div className="prose prose-neutral dark:prose-invert">
-      <div className="prose prose-neutral dark:prose-invert">
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Product Manager / President </h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">CodeLab / Present</p>
-        <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+<section className="mt-5">
+  <div className="prose prose-neutral dark:prose-invert">
+  
+    <h2 className="font-medium text-xl mb-1 tracking-tighter">Product Manager / President</h2>
+    <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+      <LinkPreviews url="https://www.codelabdavis.com/" imageSrc="/cl6.png" isStatic>
+        CodeLab
+      </LinkPreviews> / Present
+    </p>
+    <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
 
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Technical Project Manager</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">UC Davis Genome Center / Present 
-</p>
-        <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
-        
-        
-        
-        
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">        Undergraduate Researcher
-</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-        Laboratory for AI, Robotics and Automation / Present   </p>
+    <h2 className="font-medium text-xl mb-1 tracking-tighter">Technical Project Manager</h2>
+    <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+      <LinkPreviews url="https://genomecenter.ucdavis.edu/" >
+        UC Davis Genome Center
+      </LinkPreviews> / Present
+    </p>
+    <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
 
-      
-      <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Software Engineering Intern</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-        eSolutionsMEA / 2023
-        </p>
+    <h2 className="font-medium text-xl mb-1 tracking-tighter">Undergraduate Researcher</h2>
+    <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+      <LinkPreviews url="https://soltanilab.engineering.ucdavis.edu/" >
+        Laboratory for AI, Robotics and Automation
+      </LinkPreviews> / Present
+    </p>
+    <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
 
-        <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Student Ambassador / Tour Guide</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-        University of California, Davis / Present
-        </p>
+    <h2 className="font-medium text-xl mb-1 tracking-tighter">Software Engineering Intern</h2>
+    <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+      <LinkPreviews url="https://www.maximo.ae/" imageSrc="/maximo.png" isStatic>
+        IBM Maximo eSolutions
+      </LinkPreviews> / 2023
+    </p>
+    <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
 
-      </div>
+    <h2 className="font-medium text-xl mb-1 tracking-tighter">Student Ambassador / Tour Guide</h2>
+    <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+      <LinkPreviews url="https://www.ucdavis.edu/about/visit/campus-tour">
+        Undergraduate admissions
+      </LinkPreviews> / Present
+    </p>
+
+
+  
       {/* <div className="flex items-center text-gray-600 mb-1">
             <div className="flex-shrink-0 mr-4">
                 <Image src="/codelab.svg" alt="Company Logo" className="h-20 object-contain" />
@@ -493,8 +515,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
           <a
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
             rel="noopener noreferrer"
-            target="_blank"
-            href={"/"}
+            href={"/experience"}
           >
             <ArrowIcon />
             <p className="ml-2 h-7">Learn more </p>
@@ -588,7 +609,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       {shouldTruncate && (
         <button
           onClick={toggleExpand}
-          className="text-xs text-black font-bold hover:text-blue-800 self-start"
+          className="text-xs text-black dark:text-gray-400 font-bold hover:text-blue-800 self-start"
         >
           {isExpanded ? 'Read less' : 'Read more'}
         </button>
@@ -621,7 +642,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       {shouldTruncate2 && (
         <button
           onClick={toggleExpand2}
-          className="text-xs text-black font-bold hover:text-blue-800 self-start"
+          className="text-xs text-black dark:text-gray-400 font-bold hover:text-blue-800 self-start"
         >
           {isExpanded2 ? 'Read less' : 'Read more'}
         </button>
@@ -673,7 +694,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       {shouldTruncate3 && (
         <button
           onClick={toggleExpand3}
-          className="text-xs text-black font-bold hover:text-blue-800 self-start"
+          className="text-xs text-black dark:text-gray-400 font-bold hover:text-blue-800 self-start"
         >
           {isExpanded3 ? 'Read less' : 'Read more'}
         </button>
@@ -701,7 +722,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       {shouldTruncate4 && (
         <button
           onClick={toggleExpand4}
-          className="text-xs text-black font-bold hover:text-blue-800 self-start"
+          className="text-xs text-black dark:text-gray-400 font-bold hover:text-blue-800 self-start"
         >
           {isExpanded4 ? 'Read less' : 'Read more'}
         </button>
@@ -728,7 +749,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 
 
 
-        <div className="flex items-start mb-5 mt-5 gap-2.5">
+        {/* <div className="flex items-start mb-5 mt-5 gap-2.5">
         <Tooltip
           key="left-start"
           placement="left-start"
@@ -766,7 +787,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
 
     </section>
