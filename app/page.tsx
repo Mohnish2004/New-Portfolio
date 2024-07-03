@@ -566,7 +566,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       <h2 className=" font-medium text-2xl">
       Testimonials
       </h2>
-      <p className="mt-2 text-gray-300 text-sm">Read insights and praises from mentors and peers who have guided and witnessed my professional growth.</p>
+      <p className="mt-2 text-gray-600 dark:text-gray-300 text-sm">Read insights and praises from mentors and peers who have guided and witnessed my professional growth.</p>
 
 
 

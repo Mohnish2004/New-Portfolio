@@ -4,6 +4,7 @@ import React from "react";
 import Swipe from "@/components/app"
 import Swipe1 from "@/components/app1"
 import Swipe2 from "@/components/app2"
+import { LinkPreview } from "@/components/link-preview";
 
 
 import Image from "next/image";
@@ -64,9 +65,9 @@ const Home = () => {
 
 {/* <img
                     src="/exp_pics/water.svg" className="float-right -mr-3 rounded-lg block h-40 w-25 image-cover" alt={''}></img> */}
-  <p className="first-letter:text-7xl mb-10 first-letter:font-medium first-letter:text-neutral-600 text-neutral-600 dark:text-neutral-300 first-letter:dark:text-white first-letter:mr-3 first-letter:float-left">
-  They say, &quot;A jack of all trades is a master of none,&quot; but not many people know the full quote: &quot;but oftentimes better than a master of one.&quot; That&apos;s exactly how I see myself, I enjoy wearing multiple hats because I just love to try new things. This philosophy extends to my professional life as well. I&apos;ve explored product management, various branches of software engineering—from web to mobile, AI to ML, and even cybersecurity. My research has also taken me into robotics and virtual reality development. At the same time I always enjoy Designing because I love the intersection of art and technology. Remember every UI tells a story, and every interface is a journey, just like designing and developing this very website.
-  </p>
+<p className="first-letter:text-7xl mb-10 first-letter:font-medium first-letter:text-neutral-600 text-neutral-600 dark:text-neutral-300 first-letter:dark:text-white first-letter:mr-3 first-letter:float-left">
+  They say, <a className="underline decoration-neutral-500/50"><span className=" text-md font-bold neutral-600 dark:text-ne dark:text-white">"A jack of all trades is a master of none,"</span></a>but not many people know the full quote:  <a className="underline decoration-neutral-500/50"><span className="text-md font-bold neutral-600 dark:text-ne dark:text-white">"but oftentimes better than a master of one."</span></a> That&apos;s exactly how I see myself, I enjoy wearing multiple hats because I just love to try new things. This philosophy extends to my professional life as well. I&apos;ve explored product management, various branches of software engineering—from web to mobile, AI to ML, and even cybersecurity. My research has also taken me into robotics and virtual reality development. At the same time I always enjoy Designing because I love the intersection of art and technology. Remember every UI tells a story, and every interface is a journey, just like designing and developing this very website.
+</p>
 
 
 
@@ -81,7 +82,8 @@ const Home = () => {
   <img
                     src="/exp_pics/121.png" className="float-left rounded-sm block mr-2 h-40 w-25 image-cover" alt={''}></img> */}
   <p className=" text-neutral-600 dark:text-neutral-300 mb-2 mt-10" >
-    One constant in my journey is my commitment to leadership. I take ownership and responsibility, paving the path wherever I go. This passion for leadership led me to join CodeLab, the largest software and design agency in Davis, where I currently serve as president. It&apos;s a role that has allowed me to grow and showcase my leadership abilities.   While I&apos;m still exploring the full extent of my capabilities, one thing remains clear—I&apos;m driven by curiosity and a desire to learn, adapt, and grow. My dream is to contribute to projects that have a positive impact—on people and the planet. I&apos;m particularly excited about the potential of AI to personalize user experiences without losing the human touch.
+    One constant in my journey is my commitment to leadership. I take ownership and responsibility, paving the path wherever I go. This passion for leadership led me to join       <LinkPreview url="https://www.codelabdavis.com/" imageSrc="/cl6.png" className="font-semibold"isStatic>
+CodeLab</LinkPreview>, the largest software and design agency in Davis, where I currently serve as president. It&apos;s a role that has allowed me to grow and showcase my leadership abilities.   While I&apos;m still exploring the full extent of my capabilities, one thing remains clear—I&apos;m driven by curiosity and a desire to learn, adapt, and grow. My dream is to contribute to projects that have a positive impact—on people and the planet. I&apos;m particularly excited about the potential of AI to personalize user experiences without losing the human touch.
 
 
   </p>
@@ -151,7 +153,8 @@ const Home = () => {
   <p className="text-neutral-600 dark:text-neutral-300 mb-10 mt-10" >
   Outside of work, I promise I do have a life. You can often find me enjoying long drives, hitting the gym, playing badminton, or watching movies (Interstellar is still my favorite). I enjoy traveling too, especially since I mostly grew up in Dubai, which I proudly call home. If you ever meet me in real life, I won&apos;t stop talking about why you should visit—I can go on and on! But for now, have a look at these pics and decide for yourself.
 
-I&apos;m a casual photographer—casual because I prefer it not to feel professional. I love capturing life&apos;s unplanned moments and finding beauty in simple things. Want to see some? Check out my gallery.
+I&apos;m a casual photographer—casual because I prefer it not to feel professional. I love capturing life&apos;s unplanned moments and finding beauty in simple things. Want to see some? Check out my       <LinkPreview url="https://www.codelabdavis.com/" imageSrc="/cl6.png" className="font-semibold" isStatic>
+gallery. </LinkPreview>
  </p>
 
 <p className="text-neutral-600 dark:text-neutral-300 mb-10 mt-10">
