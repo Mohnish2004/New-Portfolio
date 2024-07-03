@@ -55,14 +55,17 @@ const Home = () => {
       <div className="mb-10 mt-5">
       <div className="prose lg:prose-xl mx-auto">
 
+      <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+
+
       <div className="ml-5 float-right ">              
 <Swipe1 />
 </div>
 
 {/* <img
                     src="/exp_pics/water.svg" className="float-right -mr-3 rounded-lg block h-40 w-25 image-cover" alt={''}></img> */}
-  <p className="first-letter:text-7xl mb-10 first-letter:font-semibold first-letter:text-neutral-600 text-neutral-600 dark:text-neutral-300 first-letter:dark:text-white first-letter:mr-3 first-letter:float-left">
-  They say, "A jack of all trades is a master of none," but not many people know the full quote: "but oftentimes better than a master of one." That&apos;s exactly how I see myself, I enjoy wearing multiple hats because I just love to try new things. This philosophy extends to my professional life as well. I&apos;ve explored product management, various branches of software engineering—from web to mobile, AI to ML, and even cybersecurity. My research has also taken me into robotics and virtual reality development. At the same time I always enjoy Designing because I love the intersection of art and technology. Remember every UI tells a story, and every interface is a journey, just like designing and developing this very website.
+  <p className="first-letter:text-7xl mb-10 first-letter:font-medium first-letter:text-neutral-600 text-neutral-600 dark:text-neutral-300 first-letter:dark:text-white first-letter:mr-3 first-letter:float-left">
+  They say, &quot;A jack of all trades is a master of none,&quot; but not many people know the full quote: &quot;but oftentimes better than a master of one.&quot; That&apos;s exactly how I see myself, I enjoy wearing multiple hats because I just love to try new things. This philosophy extends to my professional life as well. I&apos;ve explored product management, various branches of software engineering—from web to mobile, AI to ML, and even cybersecurity. My research has also taken me into robotics and virtual reality development. At the same time I always enjoy Designing because I love the intersection of art and technology. Remember every UI tells a story, and every interface is a journey, just like designing and developing this very website.
   </p>
 
 

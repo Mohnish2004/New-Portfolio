@@ -10,9 +10,7 @@ import {Chip} from "@nextui-org/react";
 import { Suspense } from 'react';
 import { unstable_noStore as noStore } from 'next/cache';
 import Image from 'next/image';
-import { FlipWords } from "@/components/flip"; // Replace with the correct path to FlipWords component
-import { LinkPreview } from "@/components/link-preview";
-import { SparklesCore } from "@/components/sparkles";
+
 import {Card as NextUICard, CardHeader, CardBody, CardFooter, Avatar, Button} from "@nextui-org/react";
 import React from "react";
 import { InfiniteMovingCards } from "@/components/infinite-moving-cards";
@@ -55,12 +53,11 @@ const Home = () => {
       </h1>
       <div className="mb-10 mt-5">
       <p>
-      Here are a few recent highlights of my work. Whatever I'm working on, I always follow the same simple approach—blending aesthetics with functionality to create impactful solutions.      </p>
+      Here are a few recent highlights of my work. Whatever I&apos;m working on, I always follow the same simple approach—blending aesthetics with functionality to create impactful solutions.      </p>
       </div>
 
 
  <section>
-
 
  <div className="mb-5">
   <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">

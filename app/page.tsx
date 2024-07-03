@@ -164,7 +164,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
           isStatic
           className="font-bold"
         >
-           product
+           Product
         </LinkPreview>{" "} at a time. Starting from my dorm room projects, I&apos;ve cultivated a versatile skill set through diverse client engagements and hands-on{" "}      <LinkPreview
           url="https://drive.google.com/file/d/1tR8yrlVjDstqXk55d0FE4fVFTfr3RU34/view?usp=sharing"
       
@@ -172,7 +172,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
           isStatic
           className="font-bold"
         >
-           experience
+           Experience
         </LinkPreview>{" "} </p>
         
 <p className="mt-4">My journey in tech started small but quickly grew as I embraced many roles including leadership. Currently, I serve as the president of             
