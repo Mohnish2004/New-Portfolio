@@ -38,7 +38,7 @@
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <span className="text-xs inline-flex items-baseline left-align">© Made with
-    <Image src="/bear.svg" alt="" width={100} height={100} className="self-start w-8 h-8 mx-1 relative" style={{ top: '-10px' }} />by Mohnish Gopi | Last updated: July 4th, 2024
+    <Image src="/bear.svg" alt="" width={100} height={100} className="self-start w-8 h-8 relative" style={{ top: '-10px' }} />by Mohnish | Last updated: July, 2024
 </span>
     </div>
 </footer>
