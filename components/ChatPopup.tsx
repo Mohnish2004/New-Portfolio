@@ -35,7 +35,7 @@ export default function ChatPopup() {
   };
 
   return (
-    <div className="fixed bottom-16 right-4 dark:backdrop-blur-xl dark:bg-black/30 backdrop-blur-xl bg-white/30 w-80 h-96 transition-all duration-300 hover:scale-101 shadow-md items-center rounded-md mr-2 text-xs dark:border-neutral-700 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer flex flex-col p-4">
+    <div className="fixed bottom-16 right-4 dark:backdrop-blur-xl dark:bg-neutral-700/20 backdrop-blur-xl bg-neutral-200/20 w-80 h-96 transition-all duration-1000 hover:shadow-lg items-center rounded-md mr-2 text-xs dark:border-neutral-700 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer flex flex-col p-4">
       <div className="flex-grow overflow-y-auto mb-4">
         {showInitialMessage && (
           <div className="flex flex-col items-center justify-center h-full">
