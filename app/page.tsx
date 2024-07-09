@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 
 import { LinkPreview } from "@/components/link-preview";
 import { LinkPreviews } from "@/components/link-preview-exp";
+import Chat from "@/components/chat";
 
 
 
@@ -789,8 +790,10 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
         </div>
       </div> */}
 
+<Chat/>
 
     </section>
+    
 
     
   );

@@ -10,6 +10,7 @@ import {Chip} from "@nextui-org/react";
 import { Suspense } from 'react';
 import { unstable_noStore as noStore } from 'next/cache';
 import Image from 'next/image';
+import Chat from "@/components/chat";
 
 import {Card as NextUICard, CardHeader, CardBody, CardFooter, Avatar, Button} from "@nextui-org/react";
 import React from "react";
@@ -669,6 +670,7 @@ const Home = () => {
         </ul>
 
 </section>
+<Chat></Chat>
     </section>
 
     

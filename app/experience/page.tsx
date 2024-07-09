@@ -17,6 +17,7 @@ import React from "react";
 
 import { LinkPreview } from "@/components/link-preview";
 import { LinkPreviews } from "@/components/link-preview-exp";
+import Chat from "@/components/chat";
 
 
 function ArrowIcon() {
@@ -306,7 +307,7 @@ const Home = () => {
 
 
 
-
+<Chat></Chat>
 
 
     </section>

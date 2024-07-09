@@ -11,6 +11,7 @@ import { SparklesCore } from "@/components/sparkles";
 import {Footer} from "@/components/footer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
+import Chat from "@/components/chat";
 
 
 export const metadata: Metadata = {
@@ -54,9 +55,8 @@ export default function RootLayout({
       <SpeedInsights/>
       <Analytics/>
         {children}
-
             </div>
-    </section>        
+    </section>   
     <Footer/>
     </Providers>
 

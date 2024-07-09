@@ -1,22 +1,8 @@
 'use client'
-import { Link } from "@nextui-org/link";
 import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
-import { button as buttonStyles } from "@nextui-org/theme";
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
-import {Chip} from "@nextui-org/react";
-import { Suspense } from 'react';
-import { unstable_noStore as noStore } from 'next/cache';
-import Image from 'next/image';
-import { FlipWords } from "@/components/flip"; // Replace with the correct path to FlipWords component
-import { LinkPreview } from "@/components/link-preview";
-import { SparklesCore } from "@/components/sparkles";
-import { InfiniteMovingCards } from "@/components/infinite-moving-cards";
-import Card1 from "@/components/Card1";
-import { animate, motion, useMotionValue } from "framer-motion";
-import useMeasure from "react-use-measure";
+import Chat from "@/components/chat";
+
+
 import React, { useState, useEffect } from "react";
 import { DateTime } from "luxon";
 import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
@@ -95,6 +81,8 @@ const Home = () => {
       <p>
       Feel free to reach out for collaboration or a chat. I check emails frequently and respond to calls too.</p>
       </div>
+
+      <Chat />
 
       <Clock />
 
