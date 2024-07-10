@@ -42,7 +42,7 @@ export default function ChatPopup() {
       <div className="flex-grow overflow-y-auto mb-4">
         {showInitialMessage && (
           <div className="flex flex-col items-center justify-center h-full">
-                <Tooltip radius="sm" placement='top' color="default" showArrow={true} content={            <img src="/bear1.jpeg" alt="Djungelskog" className="w-20 h-30 rounded-md" />}>
+                <Tooltip radius="sm" placement='top' color="default" showArrow={true} content={            <img src="/bear1.jpeg" alt="Djungelskog" className="w-20 h-30 mb-1 mt-1 -ml-1 -mr-1 rounded-md" />}>
 
             <img src="/bear.svg" alt="Djungelskog" className="w-20 h-20 mb-4" />
             </Tooltip>
