@@ -156,7 +156,8 @@ CodeLab</LinkPreview>, the largest software and design agency in Davis, where I 
 I&apos;m a casual photographer—casual because I prefer it not to feel professional. I love capturing life&apos;s unplanned moments and finding beauty in simple things. Want to see some? Check out my       <LinkPreview url="/gallery" imageSrc="/gallery.png" className="font-semibold" isStatic>
 gallery. </LinkPreview>
  </p>
-
+ <iframe  src="https://open.spotify.com/embed/playlist/0yIGIUWcMpxYiW2Emhibrb?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+ 
 <p className="text-neutral-600 dark:text-neutral-300 mb-10 mt-10">
 I&apos;m open to job opportunities that allow me to make a meaningful impact. If you have an opportunity that aligns with my skills and experiences, I&apos;d love to explore how we can collaborate. If you&apos;ve made it this far, thank you for taking the time to learn about me. You can either reach out to me or continue scrolling to discover more. The choice is yours!
 
