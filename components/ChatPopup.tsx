@@ -1,6 +1,9 @@
 import { useEffect, useRef } from 'react';
 import { useChat } from 'ai/react';
 import { useState } from 'react';
+import {Tooltip, Button} from "@nextui-org/react";
+import { px } from 'framer-motion';
+
 
 
 export default function ChatPopup() {
@@ -39,10 +42,15 @@ export default function ChatPopup() {
       <div className="flex-grow overflow-y-auto mb-4">
         {showInitialMessage && (
           <div className="flex flex-col items-center justify-center h-full">
+                <Tooltip radius="sm" placement='top' color="default" showArrow={true} content={            <img src="/bear1.jpeg" alt="Djungelskog" className="w-20 h-30 rounded-md" />}>
+
             <img src="/bear.svg" alt="Djungelskog" className="w-20 h-20 mb-4" />
+            </Tooltip>
+
             <p className="text-center text-gray-900 dark:text-white text-sm">
               Hello, I&apos;m Djungelskog, your guide through Mohnish&apos;s portfolio. Feel free to ask me anything! Fun fact: I was born in <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ikea_logo.svg/2560px-Ikea_logo.svg.png" alt="IKEA Logo" className="inline h-3 w-auto" />.
-            </p>
+            </p>  
+
           </div>
         )}
         {messages.map((message) => (

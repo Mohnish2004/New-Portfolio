@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import ChatPopup from '@/components/ChatPopup';
 import { Button } from '@nextui-org/button';
-
+import {Tooltip} from "@nextui-org/tooltip";
 export default function ChatIcon() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -14,14 +14,16 @@ export default function ChatIcon() {
   return (
     <>
       <div className="fixed bottom-4 right-4">
-<button                 onClick={toggleChat}>
+      <Tooltip showArrow={true} placement='left' radius='sm' content="Chat with me">
+<button  className=' rounded-full dark:backdrop-blur-xl dark:bg-neutral-700/20 backdrop-blur-xl bg-neutral-200/20 p-2' onClick={toggleChat}>
 
                   <img
                 src="/bear.svg"
                 alt="User avatar"
-                className="w-10 h-11"
+                className="w-7 h-8"
               />   
     </button>
+    </Tooltip>
       </div>
       {isOpen && <ChatPopup />}
     </>
