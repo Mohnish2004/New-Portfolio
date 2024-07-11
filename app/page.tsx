@@ -31,16 +31,17 @@ function ArrowIcon() {
   );
 }
 
+
 function ChannelLink({}) {
   return (
-    <div className="group mb-5 flex w-full transition-all duration-300 hover:scale-105 hover:shadow-xl">
+    <div data-aos="fade-up" className="group mb-5 flex w-full transition-all duration-300 hover:scale-105  hover:shadow-xl">
     <a
         href={"https://drive.google.com/file/d/12xnuAkIVjqKLicPoPP9W_dt4a6KRIAZE/view?usp=sharing"}
         target="_blank"
       rel="noopener noreferrer"
       className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-102 hover:shadow-md"
     >
-      <div className="flex items-center space-x-3">
+      <div className="flex items-center space-x-3 ">
       <img src="https://cdn3d.iconscout.com/3d/premium/thumb/crypto-stocks-chart-5349277-4466490.png?f=webp" width="60" height="60" className="h-20 w-20 " alt="test"></img>
 
         <div className="flex flex-col pl-3 pr-3 leading-tight" >
@@ -98,7 +99,6 @@ function BlogLink({}) {
 
 
 
-
 const Home = () => {
   const words = ["Developer", "Manager", "Designer", "Researcher","Leader","Photographer","Innovator", "Tourguide", "Full-stack","Mobile/Web","AI/ML","Security","Product","PM"]; // Example words array
   const duration = 2000; // Example duration in milliseconds
@@ -139,13 +139,13 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
   
 
   return (
-    
+  
     <section className="antialiased max-w-xl mx-4 mt-8 sm:mx-auto">
       <Image src="/me.png" alt="Profile" width="300" height="300" className="select-none w-[150px] h-[150px] rounded-full mb-5"/>
-      <h1 className="mb-1 text-5xl">
+      <h1 className="mb-1 text-5xl" data-aos="fade-left">
        Hey, I&apos;m Mohnish 👋🏽
       </h1>
-      <div className="mb-20">
+      <div className="mb-20" data-aos="fade-right">
        <span className="inline-flex items-center rounded-md bg-gray-50 px-1 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">          <FlipWords words={words} duration={duration} className="my-custom-class" />
 </span>
       <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">President of CodeLab</span>
@@ -154,11 +154,12 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 
        </div>
 
-      <div className="mb-10">
+      {/* <div className="mb-10" > */}
       <h2 className=" font-medium mb-2 text-2xl">
        About me
       </h2>
-      <p>
+      <div data-aos="fade-right">
+      <p data-aos="fade-up" >
       I&apos;m a third-year Computer Science student at the University of California, Davis. With a passion for solving problems one {" "}      <LinkPreview
           url="/projects"
           imageSrc="/mobile1.png"
@@ -176,7 +177,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
            Experience
         </LinkPreview>{" "} </p>
         
-<p className="mt-4">My journey in tech started small but quickly grew as I embraced many roles including leadership. Currently, I serve as the president of             
+<p data-aos="fade-right" className="mt-4" >My journey in tech started small but quickly grew as I embraced many roles including leadership. Currently, I serve as the president of             
 <LinkPreview
           url="https://www.codelabdavis.com/"
           imageSrc="/cl6.png"
@@ -185,8 +186,9 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
         >
            Codelab
         </LinkPreview>, the largest software and design agency in Davis.</p>
-        
-<ul className=" mt-6 justify-end font-sm flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+        {/* </div> */}
+
+<ul className=" mb-4 mt-6 justify-end font-sm flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
   <li>
     <a
       className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
@@ -199,18 +201,17 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
   </li>
 </ul>
 
-
       </div>
 
 
 
-      <h2 className="font-medium mb-5 text-2xl">
+      <h2 className="font-medium mb-5 text-2xl" >
        Featured work
       </h2>
 
  <section>
  <div className="mb-5">
-  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+  <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
     <div className="flex flex-col md:flex-row">
       <div className="p-6 md:w-1/2 flex flex-col justify-between">
         <div>
@@ -242,7 +243,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 </div>
 
 <div className="mb-5">
-  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+  <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
     <div className="flex flex-col md:flex-row">
       <div className="p-6 md:w-1/2 flex flex-col justify-between">
         <div>
@@ -272,7 +273,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 </div>
 
 <div className="mb-5">
-  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+  <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
     <div className="flex flex-col md:flex-row">
       <div className="p-6 md:w-1/2 flex flex-col justify-between">
         <div>
@@ -332,7 +333,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       </h2>
   </div>
 
-  <ChannelLink></ChannelLink>
+  <ChannelLink data-aos="fade-up" ></ChannelLink>
 
 
     </section>
@@ -357,7 +358,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
           imageSrc="/resume.png"
           isStatic
         >
-  <span className="bg-gray-50 px-3 py-1 text-sm font-medium text-gray-300 dark:text-gray-200 rounded-md ring-1 ring-inset ring-gray-500/10 border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800">
+  <span data-aos="fade-up" className="bg-gray-50 px-3 py-1 text-sm font-medium text-gray-300 dark:text-gray-200 rounded-md ring-1 ring-inset ring-gray-500/10 border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800">
     <a href="https://drive.google.com/file/d/1tR8yrlVjDstqXk55d0FE4fVFTfr3RU34/view?usp=sharing" className="text-md text-neutral-500 hover:text-neutral-800 dark:hover:text-neutral-100 inline-flex items-center rounded-lg">
       <svg className="w-3.5 h-3.5 me-2 rtl:rotate-180 transition-all duration-500 hover:scale-130 hover:shadow-xl" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
         <path d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2Zm-3 15H4.828a1 1 0 0 1 0-2h6.238a1 1 0 0 1 0 2Zm0-4H4.828a1 1 0 0 1 0-2h6.238a1 1 0 1 1 0 2Z"/>
@@ -583,7 +584,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 
 
 
-<div className="flex items-start mb-5 mt-10 gap-2.5">
+<div className="flex items-start mb-5 mt-10 gap-2.5" data-aos="fade-right">
   <Tooltip
     key="left-start"
     placement="left-start"
@@ -628,7 +629,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 
 
 
-<div className="flex items-start mb-5 mt-5 gap-2.5 justify-end">
+<div className="flex items-start mb-5 mt-5 gap-2.5 justify-end" data-aos="fade-left">
   <div className="flex flex-col gap-1 w-full max-w-[320px]">
     <div className="flex items-center space-x-2 justify-end rtl:space-x-reverse">
       <span className="text-sm font-semibold text-gray-900 dark:text-white">Kamal</span>
@@ -668,7 +669,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
   </Tooltip>
 </div>
 
-<div className="flex items-start mb-5 mt-5 gap-2.5">
+<div className="flex items-start mb-5 mt-5 gap-2.5" data-aos="fade-right">
   <Tooltip
     key="left-start"
     placement="left-start"
@@ -708,7 +709,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
   </div>
 </div>
 
-<div className="flex items-start mb-5 mt-5 gap-2.5 justify-end">
+<div className="flex items-start mb-5 mt-5 gap-2.5 justify-end" data-aos="fade-left">
   <div className="flex flex-col gap-1 w-full max-w-[320px]">
     <div className="flex items-center space-x-2 justify-end rtl:space-x-reverse">
       <span className="text-sm font-semibold text-gray-900 dark:text-white">Gopi</span>

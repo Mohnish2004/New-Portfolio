@@ -12,6 +12,7 @@ import {Footer} from "@/components/footer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 import Chat from "@/components/chat";
+import { AOSInit } from './aos'
 
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
     icon: "/me.png",
   },
 };
+
 
 export const viewport: Viewport = {
   themeColor: [
@@ -39,6 +41,9 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
+      <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
+      <AOSInit />
+
 
       <body
         className={clsx(
@@ -60,6 +65,7 @@ export default function RootLayout({
     <Footer/>
     </Providers>
 
+    <script src="bower_components/aos/dist/aos.js"></script>
 
       </body>
 

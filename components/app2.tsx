@@ -18,6 +18,7 @@ export default function Swipe2() {
         effect={'cards'}
         grabCursor={true}
         modules={[EffectCards]}
+        data-aos="fade-in"
         className="mySwiper transition-all duration-300 hover:scale-102 hover:shadow-lg rounded-sm"
       >
 

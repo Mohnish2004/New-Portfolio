@@ -14,13 +14,14 @@ import { EffectCards } from 'swiper/modules';
 export default function Swipe() {
   return (
     <>
-      <Swiper
+      <Swiper 
         effect={'cards'}
         grabCursor={true}
         modules={[EffectCards]}
+        data-aos="fade-in"
         className="mySwiper rounded-sm transition-all duration-300 hover:scale-102 hover:shadow-lg"
       >
-        <SwiperSlide>        <Image
+        <SwiperSlide >        <Image data-aos="fade-in"
           
           className="block h-full w-full  rounded-sm object-cover object-center"
           src="/exp_pics/102.jpg" alt={''} width={500} height={500}

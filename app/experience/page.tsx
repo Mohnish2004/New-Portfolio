@@ -62,7 +62,7 @@ const Home = () => {
       <div >
       </div>
 
-      <div className=" mb-5 group flex w-full">
+      <div data-aos="fade-in"  className=" mb-5 group flex w-full">
       <div
         className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-101 hover:shadow-md"
       >
@@ -166,23 +166,23 @@ const Home = () => {
 
       <section className="mt-5">
       <div className="prose prose-neutral dark:prose-invert">
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">President / Vice President</h2>
+        <h2  className="font-medium text-xl mb-1 tracking-tighter">President / Vice President</h2>
 
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm"><LinkPreviews url="https://www.codelabdavis.com/" imageSrc="/cl6.png" isStatic>CodeLab</LinkPreviews></p> 
+        <p  className="text-neutral-600 dark:text-neutral-400 text-sm"><LinkPreviews url="https://www.codelabdavis.com/" imageSrc="/cl6.png" isStatic>CodeLab</LinkPreviews></p> 
         <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
 
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Vice President</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm"><LinkPreviews url="https://bento.me/gdscdavis">Google Developer Student Club</LinkPreviews></p>
+        <h2  className="font-medium text-xl mb-1 tracking-tighter">Vice President</h2>
+        <p  className="text-neutral-600 dark:text-neutral-400 text-sm"><LinkPreviews url="https://bento.me/gdscdavis">Google Developer Student Club</LinkPreviews></p>
         <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
         
 
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Vice President</h2>
+        <h2  className="font-medium text-xl mb-1 tracking-tighter">Vice President</h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm"><LinkPreviews url="https://sachacks.io/">SacHacks</LinkPreviews></p>
 
       
       <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Deputy Headboy</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm"><LinkPreviews url="https://jsspsdubai.com/">JSS Private School</LinkPreviews></p>
+        <h2  className="font-medium text-xl mb-1 tracking-tighter">Deputy Headboy</h2>
+        <p  className="text-neutral-600 dark:text-neutral-400 text-sm"><LinkPreviews url="https://jsspsdubai.com/">JSS Private School</LinkPreviews></p>
       </div>
     </section>
 
@@ -194,24 +194,24 @@ const Home = () => {
       <section className="mt-5">
       <div className="prose prose-neutral dark:prose-invert">
         <h2 className="font-medium text-xl mb-1 tracking-tighter">Technical skill </h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">Programming: Python, C, C++, JavaScript, HTML, CSS, SQL, Web Development: MongoDB, Express.js, React.js, Node.js, App Development: Kotlin, Flutter, Dart, Swift </p>
+        <p data-aos="fade-in"  className="text-neutral-600 dark:text-neutral-400 text-sm">Programming: Python, C, C++, JavaScript, HTML, CSS, SQL, Web Development: MongoDB, Express.js, React.js, Node.js, App Development: Kotlin, Flutter, Dart, Swift </p>
         <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
 
         <h2 className="font-medium text-xl mb-1 tracking-tighter">Relevant Courses</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">Discrete Mathematics, Linear Algebra, Data Structures & Algorithms, Ethics in an Age of Technology, Computer Organization & Machine-Dependent Programming, Software Development & Object-Oriented Programming in C++, Calculus I, II & III
+        <p data-aos="fade-in"  className="text-neutral-600 dark:text-neutral-400 text-sm">Discrete Mathematics, Linear Algebra, Data Structures & Algorithms, Ethics in an Age of Technology, Computer Organization & Machine-Dependent Programming, Software Development & Object-Oriented Programming in C++, Calculus I, II & III
 
 </p>
         <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
         
 
         <h2 className="font-medium text-xl mb-1 tracking-tighter">Online Certifications</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">CS 50 Harvard, AI for Everyone (Intel AI Aware 2021), Getting Started with Python (University of Michigan - Coursera), Intro to AI (Deeplearning), Probability and Data with R (Duke University - Coursera)
+        <p data-aos="fade-in"  className="text-neutral-600 dark:text-neutral-400 text-sm">CS 50 Harvard, AI for Everyone (Intel AI Aware 2021), Getting Started with Python (University of Michigan - Coursera), Intro to AI (Deeplearning), Probability and Data with R (Duke University - Coursera)
 </p>
 
       
       <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">Accolades</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+        <p data-aos="fade-in" className="text-neutral-600 dark:text-neutral-400 text-sm">
         Dean&apos;s Honor List, Best Advanced project, Best UI/UX at Hackdavis &apos;24, Best Presentation award, individual standout award & Best Beginner Project award @GDSC , Best in Leveraging of Data/Computation @ 2023 AIFS Apps for Food and Ag Hackathon, x2 VIRTUOSO AWARD, Best Position Paper @ Model United Nations, 5 x Best Speaker @ Toastmasters International, Badminton, Runner up @ Men&apos;s doubles Tournament</p>
       </div>
     </section>

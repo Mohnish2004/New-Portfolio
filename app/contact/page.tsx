@@ -33,7 +33,7 @@ function Clock() {
   };
 
   return (
-    <div className="flex space-x-2 mb-2 mt-2 ">
+    <div className="flex space-x-2 mb-2 mt-2 " data-aos="fade-right">
 
          <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mr-1 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">
           {formattedDate}, {formattedTime}
@@ -78,7 +78,7 @@ const Home = () => {
       Get in touch
       </h1>
       <div className="mb-10 mt-5">
-      <p>
+      <p >
       Feel free to reach out for collaboration or a chat. I check emails frequently and respond to calls too.</p>
       </div>
 
@@ -86,7 +86,7 @@ const Home = () => {
 
       <Clock />
 
-      <Snippet size="sm" hideSymbol className=" transition-all duration-300 hover:scale-105 hover:shadow-md  h-7 items-center rounded-md bg-gray-50  mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer">  
+      <Snippet data-aos="fade-left"size="sm" hideSymbol className=" transition-all duration-300 hover:scale-105 hover:shadow-md  h-7 items-center rounded-md bg-gray-50  mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer">  
       <div      
       className="inline-flex items-center text-xs mt-1 text-gray-600 dark:text-white cursor-pointer"
     >
@@ -96,7 +96,7 @@ const Home = () => {
       </a>
     </div></Snippet>
 
-    <Snippet size="sm" hideSymbol className=" transition-all duration-300 hover:scale-105 hover:shadow-md  h-7 items-center text-xs rounded-md bg-gray-50  mr-2  dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer">  
+    <Snippet data-aos="fade-left" size="sm" hideSymbol className=" transition-all duration-300 hover:scale-105 hover:shadow-md  h-7 items-center text-xs rounded-md bg-gray-50  mr-2  dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer">  
       <div      
       className="inline-flex items-center text-xs mt-1 text-gray-600 dark:text-white cursor-pointer"
     >
@@ -110,7 +110,7 @@ const Home = () => {
 
 
 
-<iframe src="https://calendar.google.com/calendar/appointments/AcZssZ3v3WNqru-XQpPB_dsgAkq7b91P6NPwmkp2nMc=?gv=true" title="meeting" className="mb-10 mt-5 h-50 w-100 rounded-md items-center  bg-gray-50  mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer" width="100%" height="600" ></iframe>
+<iframe data-aos="fade-up" src="https://calendar.google.com/calendar/appointments/AcZssZ3v3WNqru-XQpPB_dsgAkq7b91P6NPwmkp2nMc=?gv=true" title="meeting" className="mb-10 mt-5 h-50 w-100 rounded-md items-center  bg-gray-50  mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer" width="100%" height="600" ></iframe>
 
  <section>
 

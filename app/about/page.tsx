@@ -60,12 +60,12 @@ const Home = () => {
 
 
       <div className="ml-5 float-right ">              
-<Swipe1 />
+<Swipe1/>
 </div>
 
 {/* <img
                     src="/exp_pics/water.svg" className="float-right -mr-3 rounded-lg block h-40 w-25 image-cover" alt={''}></img> */}
-<p className="first-letter:text-7xl mb-10 first-letter:font-medium first-letter:text-neutral-600 text-neutral-600 dark:text-neutral-300 first-letter:dark:text-white first-letter:mr-3 first-letter:float-left">
+<p data-aos="fade-in" className="first-letter:text-7xl mb-10 first-letter:font-medium first-letter:text-neutral-600 text-neutral-600 dark:text-neutral-300 first-letter:dark:text-white first-letter:mr-3 first-letter:float-left">
   They say, <span className="underline decoration-neutral-500/50"><span className=" text-md font-bold neutral-600 dark:text-ne dark:text-white">&quot;A jack of all trades is a master of none,&quot;</span></span>but not many people know the full quote:  <span className="underline decoration-neutral-500/50"><span className="text-md font-bold neutral-600 dark:text-ne dark:text-white">&quot;but oftentimes better than a master of one.&quot;</span></span> That&apos;s exactly how I see myself, I enjoy wearing multiple hats because I just love to try new things. This philosophy extends to my professional life as well. I&apos;ve explored product management, various branches of software engineering—from web to mobile, AI to ML, and even cybersecurity. My research has also taken me into robotics and virtual reality development. At the same time I always enjoy Designing because I love the intersection of art and technology. Remember every UI tells a story, and every interface is a journey, just like designing and developing this very website.
 </p>
 
@@ -81,7 +81,7 @@ const Home = () => {
 
   <img
                     src="/exp_pics/121.png" className="float-left rounded-sm block mr-2 h-40 w-25 image-cover" alt={''}></img> */}
-  <p className=" text-neutral-600 dark:text-neutral-300 mb-2 mt-10" >
+  <p data-aos="fade-in" className=" text-neutral-600 dark:text-neutral-300 mb-2 mt-10" >
     One constant in my journey is my commitment to leadership. I take ownership and responsibility, paving the path wherever I go. This passion for leadership led me to join       <LinkPreview url="https://www.codelabdavis.com/" imageSrc="/cl6.png" className="font-semibold"isStatic>
 CodeLab</LinkPreview>, the largest software and design agency in Davis, where I currently serve as president. It&apos;s a role that has allowed me to grow and showcase my leadership abilities.   While I&apos;m still exploring the full extent of my capabilities, one thing remains clear—I&apos;m driven by curiosity and a desire to learn, adapt, and grow. My dream is to contribute to projects that have a positive impact—on people and the planet. I&apos;m particularly excited about the potential of AI to personalize user experiences without losing the human touch.
 
@@ -150,24 +150,24 @@ CodeLab</LinkPreview>, the largest software and design agency in Davis, where I 
 
 
 
-  <p className="text-neutral-600 dark:text-neutral-300 mb-10 mt-10" >
+  <p data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 mb-10 mt-10" >
   Outside of work, I promise I do have a life. You can often find me enjoying long drives, hitting the gym, playing badminton, or watching movies (Interstellar is still my favorite). I enjoy traveling too, especially since I mostly grew up in Dubai, which I proudly call home. If you ever meet me in real life, I won&apos;t stop talking about why you should visit—I can go on and on! But for now, have a look at these pics and decide for yourself.
 
 I&apos;m a casual photographer—casual because I prefer it not to feel professional. I love capturing life&apos;s unplanned moments and finding beauty in simple things. Want to see some? Check out my       <LinkPreview url="/gallery" imageSrc="/gallery.png" className="font-semibold" isStatic>
 gallery. </LinkPreview>
  </p>
- <iframe title="spotify" src="https://open.spotify.com/embed/playlist/0yIGIUWcMpxYiW2Emhibrb?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+ <iframe data-aos="fade-up" title="spotify" src="https://open.spotify.com/embed/playlist/0yIGIUWcMpxYiW2Emhibrb?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
  
-<p className="text-neutral-600 dark:text-neutral-300 mb-10 mt-10">
+<p data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 mb-10 mt-10">
 I&apos;m open to job opportunities that allow me to make a meaningful impact. If you have an opportunity that aligns with my skills and experiences, I&apos;d love to explore how we can collaborate. If you&apos;ve made it this far, thank you for taking the time to learn about me. You can either reach out to me or continue scrolling to discover more. The choice is yours!
 
 
 </p>
 
-<h3 className="text-neutral-600 dark:text-neutral-300 font-semibold mt-10">
+<h3 data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 font-semibold mt-10">
 Regards 
 </h3>
-<h3 className="text-neutral-600 dark:text-neutral-300 font-light">
+<h3 data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 font-light">
 Mohnish
 </h3>
 

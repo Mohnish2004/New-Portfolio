@@ -23,6 +23,13 @@ import {
   DiscordIcon,
   HeartFilledIcon,
 } from "@/components/icons";
+import { markCurrentScopeAsDynamic } from "next/dist/server/app-render/dynamic-rendering";
+import { color } from "framer-motion";
+
+const handleClick = () => {
+  <Button color="primary" onClick={handleClick}>
+</Button>
+};
 
 export const Navbar = () => {
 
@@ -81,12 +88,13 @@ export const Navbar = () => {
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
                 color={
-                  index === 2
+                  index === 10
                     ? "primary"
                     : "foreground"
                 }
                 href={item.href}
                 size="lg"
+                className="text-3xl hover:text-black  dark:hover:text-white text-gray-900 dark:text-white hover:font-bold font-normal"
               >
                 {item.label}
               </Link>
@@ -97,3 +105,7 @@ export const Navbar = () => {
     </NextUINavbar>
   );
 };
+
+
+
+

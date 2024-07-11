@@ -18,6 +18,7 @@ export default function Swipe1() {
         effect={'cards'}
         grabCursor={true}
         modules={[EffectCards]}
+        
         className="mySwiper rounded-sm transition-all duration-300 hover:scale-102 hover:shadow-lg"
       >
         <SwiperSlide>        <Image
