@@ -13,7 +13,7 @@ export default function ChatIcon() {
 
   return (
     <>
-      <div data-aos-anchor-placement="top-bottom" className="fixed bottom-4 right-4">
+      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" className="fixed bottom-4 right-4">
       <Tooltip showArrow={true} placement='left' radius='sm' content="Chat with me">
 <button  className='rounded-full dark:backdrop-blur-xl dark:bg-neutral-300/20 backdrop-blur-xl bg-neutral-300/20 p-4' onClick={toggleChat}>
 

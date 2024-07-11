@@ -63,7 +63,6 @@ export default function DocsLayout({
       <div className="inline-block justify-center">
         {children}
 
-        <ParallaxScroll images={images}/>
 
 
       </div>

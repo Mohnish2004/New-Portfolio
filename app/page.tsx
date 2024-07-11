@@ -141,8 +141,9 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
   return (
   
     <section className="antialiased max-w-xl mx-4 mt-8 sm:mx-auto">
+
       <Image src="/me.png" alt="Profile" width="300" height="300" className="select-none w-[150px] h-[150px] rounded-full mb-5"/>
-      <h1 className="mb-1 text-5xl" data-aos="fade-left">
+      <h1 className="mb-1 text-5xl" data-aos="fade-up">
        Hey, I&apos;m Mohnish 👋🏽
       </h1>
       <div className="mb-20" data-aos="fade-right">
@@ -629,7 +630,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 
 
 
-<div className="flex items-start mb-5 mt-5 gap-2.5 justify-end" data-aos="fade-left">
+<div className="flex items-start mb-5 mt-5 gap-2.5 justify-end" data-aos="fade-up">
   <div className="flex flex-col gap-1 w-full max-w-[320px]">
     <div className="flex items-center space-x-2 justify-end rtl:space-x-reverse">
       <span className="text-sm font-semibold text-gray-900 dark:text-white">Kamal</span>
@@ -709,7 +710,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
   </div>
 </div>
 
-<div className="flex items-start mb-5 mt-5 gap-2.5 justify-end" data-aos="fade-left">
+<div className="flex items-start mb-5 mt-5 gap-2.5 justify-end" data-aos="fade-up">
   <div className="flex flex-col gap-1 w-full max-w-[320px]">
     <div className="flex items-center space-x-2 justify-end rtl:space-x-reverse">
       <span className="text-sm font-semibold text-gray-900 dark:text-white">Gopi</span>
@@ -790,8 +791,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
           </div>
         </div>
       </div> */}
-
-<Chat/>
+             <Chat></Chat>
 
     </section>
     

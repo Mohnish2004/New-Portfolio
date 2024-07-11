@@ -49,6 +49,7 @@ const Home = () => {
   return (
     
     <section className="antialiased max-w-xl mx-4 sm:mx-auto">
+
       <h1 className="mt-2 text-5xl tracking-tighter">
       Selected Work
       </h1>
@@ -56,7 +57,6 @@ const Home = () => {
       <p>
       Here are a few recent highlights of my work. Whatever I&apos;m working on, I always follow the same simple approach—blending aesthetics with functionality to create impactful solutions.      </p>
       </div>
-
 
  <section>
 
@@ -222,7 +222,7 @@ const Home = () => {
 
 
  <div className="mb-5">
- <div data-aos="fade-left" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+ <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
  <a className="group block" href={"/"}>
    <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
 
@@ -382,7 +382,7 @@ const Home = () => {
 
 
  <div className="mb-5">
- <div data-aos="fade-left" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+ <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
  <a className="group block" href={"/"}>
    <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
 
@@ -579,7 +579,7 @@ const Home = () => {
 
 
   <div className="mb-5">
-  <div data-aos="fade-left" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+  <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
   <a className="group block" href={"/"}>
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
 <a href='https://github.com/Mohnish2004/TasksApp'>
@@ -671,6 +671,7 @@ const Home = () => {
 
 </section>
 <Chat></Chat>
+
     </section>
 
     

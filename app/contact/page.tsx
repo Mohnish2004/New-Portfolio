@@ -82,7 +82,6 @@ const Home = () => {
       Feel free to reach out for collaboration or a chat. I check emails frequently and respond to calls too.</p>
       </div>
 
-      <Chat />
 
       <Clock />
 
@@ -116,6 +115,8 @@ const Home = () => {
 
 
 </section>
+<Chat />
+
     </section>
 
     
