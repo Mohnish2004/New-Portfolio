@@ -143,7 +143,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
     <section className="antialiased max-w-xl mx-4 mt-8 sm:mx-auto">
 
       <Image src="/me.png" alt="Profile" width="300" height="300" className="select-none w-[150px] h-[150px] rounded-full mb-5"/>
-      <h1 className="mb-1 text-5xl" data-aos="fade-up">
+      <h1 className="mb-1 text-5xl" data-aos="fade-in">
        Hey, I&apos;m Mohnish 👋🏽
       </h1>
       <div className="mb-20" data-aos="fade-right">
