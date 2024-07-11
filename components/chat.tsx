@@ -25,7 +25,7 @@ export default function ChatIcon() {
     </button>
     </Tooltip>
       </div>
-      {isOpen && <ChatPopup />}
+      {isOpen  && <ChatPopup />}
     </>
   );
 }

@@ -592,7 +592,7 @@ const Home = () => {
              Hustle
           </h1>
           <p className="mt-1 mb-4 text-xs text-gray-600 leading-tight dark:text-neutral-400">
-          A user-friendly web app for efficient to-do list management. The hustle never stops as you add, update, and track tasks to stay organized and achieve your goals.          </p>
+          A user-friendly web app for efficient to-do list management. The hustle never stops as you add, update, and track tasks to stay organized and achieve your goals.</p>
         <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
           Web Dev
         </span>
