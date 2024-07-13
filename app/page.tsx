@@ -143,7 +143,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
     <section className="antialiased max-w-xl mx-4 mt-8 sm:mx-auto">
 
       <Image src="/me.png" alt="Profile" width="300" height="300" className="select-none w-[150px] h-[150px] rounded-full mb-5"/>
-      <h1 className="mb-1 text-5xl" data-aos="fade-in">
+      <h1 className="mb-1 text-4xl" data-aos="fade-in">
        Hey, I&apos;m Mohnish 👋🏽
       </h1>
       <div className="mb-20" data-aos="fade-right">
@@ -156,11 +156,11 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
        </div>
 
       {/* <div className="mb-10" > */}
-      <h2 className=" font-medium mb-2 text-2xl">
+      <h2 data-aos="fade-in" data-aos-delay="900" className=" font-medium mb-2 text-2xl">
        About me
       </h2>
-      <div data-aos="fade-right">
-      <p data-aos="fade-up" >
+      <div data-aos="fade-in" data-aos-delay="900">
+      <p data-aos="fade-in" >
       I&apos;m a third-year Computer Science student at the University of California, Davis. With a passion for solving problems one {" "}      <LinkPreview
           url="/projects"
           imageSrc="/mobile1.png"
@@ -178,7 +178,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
            Experience
         </LinkPreview>{" "} </p>
         
-<p data-aos="fade-right" className="mt-4" >My journey in tech started small but quickly grew as I embraced many roles including leadership. Currently, I serve as the president of             
+<p data-aos="fade-in" className="mt-4" >My journey in tech started small but quickly grew as I embraced many roles including leadership. Currently, I serve as the president of             
 <LinkPreview
           url="https://www.codelabdavis.com/"
           imageSrc="/cl6.png"
@@ -206,7 +206,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 
 
 
-      <h2 className="font-medium mb-5 text-2xl" >
+      <h2 data-aos="fade-in" className="font-medium mb-5 text-2xl" >
        Featured work
       </h2>
 
@@ -328,7 +328,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 
 
 
-  <div className="mb-5">
+  <div data-aos="fade-in" className="mb-5">
       <h2 className="font-medium text-2xl">
        Publications
       </h2>
@@ -349,7 +349,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       <div className="mt-20">
       <div className="mt-20 flex justify-between items-center">
 
-<h2 className="font-medium text-2xl">
+<h2 data-aos="fade-in" className="font-medium text-2xl">
   Experience
 </h2>
 
@@ -379,7 +379,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 
 
 
-<section className="mt-5">
+<section data-aos="fade-in" className="mt-5">
   <div className="prose prose-neutral dark:prose-invert">
   
     <h2 className="font-medium text-xl mb-1 tracking-tighter">Product Manager / President</h2>
@@ -565,7 +565,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 
 
 
-      <div className="mt-10">
+      <div data-aos="fade-in" className="mt-10">
       <h2 className=" font-medium text-2xl">
       Testimonials
       </h2>

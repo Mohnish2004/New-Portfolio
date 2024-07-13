@@ -41,7 +41,7 @@ const Home = () => {
 
       <div className="flex space-x-2 mb-5">
 
-      <h1 className="mb-10 text-5xl tracking-tighter">
+      <h1 data-aos="fade-in" className="mb-10 text-5xl tracking-tighter">
       About me 
       </h1>
 
@@ -56,7 +56,7 @@ const Home = () => {
       <div className="mb-10 mt-5">
       <div className="prose lg:prose-xl mx-auto">
 
-      <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+      <hr data-aos="fade-in" className="my-6 border-neutral-200 dark:border-neutral-800" />
 
 
       <div className="ml-5 float-right ">              
@@ -156,7 +156,7 @@ CodeLab</LinkPreview>, the largest software and design agency in Davis, where I 
 I&apos;m a casual photographer—casual because I prefer it not to feel professional. I love capturing life&apos;s unplanned moments and finding beauty in simple things. Want to see some? Check out my       <LinkPreview url="/gallery" imageSrc="/gallery.png" className="font-semibold" isStatic>
 gallery. </LinkPreview>
  </p>
- <iframe data-aos="fade-right" title="spotify" src="https://open.spotify.com/embed/playlist/0yIGIUWcMpxYiW2Emhibrb?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+ <iframe data-aos="fade-right" className="rounded-2xl backdrop-blur-lg" title="spotify" src="https://open.spotify.com/embed/playlist/0yIGIUWcMpxYiW2Emhibrb?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
  
 <p data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 mb-10 mt-10">
 I&apos;m open to job opportunities that allow me to make a meaningful impact. If you have an opportunity that aligns with my skills and experiences, I&apos;d love to explore how we can collaborate. If you&apos;ve made it this far, thank you for taking the time to learn about me. You can either reach out to me or continue scrolling to discover more. The choice is yours!

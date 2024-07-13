@@ -73,7 +73,7 @@ const Home = () => {
 
   return (
     
-    <section className="antialiased max-w-xl mx-4 sm:mx-auto">
+    <section data-aos="fade-in" className="antialiased max-w-xl mx-4 sm:mx-auto">
       <h1 className="text-5xl tracking-tighter">
       Get in touch
       </h1>
