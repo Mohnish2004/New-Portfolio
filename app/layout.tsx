@@ -14,7 +14,6 @@ import { Analytics } from "@vercel/analytics/react"
 import Chat from "@/components/chat";
 import { AOSInit } from './aos'
 
-
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -59,6 +58,7 @@ export default function RootLayout({
       <div className="inline-block justify-center md:ml-10 sm:ml-10">
       <SpeedInsights/>
       <Analytics/>
+      
         {children}
             </div>
     </section>   

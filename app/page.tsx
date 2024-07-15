@@ -10,7 +10,8 @@ import { useEffect, useState } from "react";
 import { LinkPreview } from "@/components/link-preview";
 import { LinkPreviews } from "@/components/link-preview-exp";
 import Chat from "@/components/chat";
-
+import Dot from "@/components/dot";
+import { cn } from "@/utils/utils/cn";
 
 
 
@@ -141,12 +142,14 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
   return (
   
     <section className="antialiased max-w-xl mx-4 mt-8 sm:mx-auto">
-
+< Dot delay={0.25} inView >
       <Image src="/me.png" alt="Profile" width="300" height="300" className="select-none w-[150px] h-[150px] rounded-full mb-5"/>
       <h1 className="mb-1 text-4xl" data-aos="fade-in">
        Hey, I&apos;m Mohnish 👋🏽
       </h1>
-      <div className="mb-20" data-aos="fade-right">
+      </Dot>
+      < Dot delay={0.5} inView >
+      <div className="mb-20">
        <span className="inline-flex items-center rounded-md bg-gray-50 px-1 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">          <FlipWords words={words} duration={duration} className="my-custom-class" />
 </span>
       <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">President of CodeLab</span>
@@ -154,6 +157,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 
 
        </div>
+       </Dot>
 
       {/* <div className="mb-10" > */}
       <h2 data-aos="fade-in" data-aos-delay="900" className=" font-medium mb-2 text-2xl">
@@ -175,6 +179,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
           isStatic
           className="font-bold"
         >
+
            Experience
         </LinkPreview>{" "} </p>
         
@@ -369,6 +374,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
     </a>
   </span>
   </LinkPreview>
+  
 </div>
 
 </div>

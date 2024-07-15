@@ -4,7 +4,7 @@ import React from 'react';
 import useMeasure from 'react-use-measure';
 import Chat from "@/components/chat";
 import { ParallaxScroll } from '@/components/parallax-scroll';
-
+import Dot from "@/components/dot";
 const Home = () => {
   const images = [
     "/about_pics/1.webp",
@@ -62,8 +62,9 @@ const Home = () => {
 
   return (
     <section className="antialiased mx-2 sm:mx-auto">
+< Dot delay={0.25} inView >
               <ParallaxScroll images={images}/>
-
+</Dot>
 <Chat></Chat>
     </section>
     
