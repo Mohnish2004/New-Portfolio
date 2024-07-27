@@ -278,6 +278,47 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
   </div>
 </div>
 
+
+{/* 
+<div className="mb-5">
+  <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+    <div className="flex flex-col md:flex-row">
+      <div className="p-6 md:w-1/2 flex flex-col justify-between">
+        <div>
+          <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
+          Education Hub
+          </h1>
+          <p className="mt-1 mb-4 text-gray-600 text-xs leading-tight dark:text-neutral-400">
+          A platform built for educational resources, tutorials, and community-driven content for mastering Rosetta's powerful tools and applications. Designed for both beginners and experts in computational biology.
+</p>     <div className="mt-4">
+        <button   onClick={() => window.location.href='https://devpost.com/software/slate-pas0bz'}
+ type="button" className=" transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
+          Read more
+        </button>
+          </div>
+        </div>
+      </div>
+      <div className="md:w-1/2">
+        <a className="group block h-full" href={"/"}>
+          <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
+          <a href='https://devpost.com/software/slate-pas0bz'>
+
+            <Image className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " width="1000" height="1000" src="/projects/eduhub2.png" alt="Description"/>
+          </a></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div> */}
+
+
+
+
+
+
+
+
+
 <div className="mb-5">
   <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
     <div className="flex flex-col md:flex-row">

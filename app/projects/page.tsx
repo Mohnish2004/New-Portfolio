@@ -619,7 +619,7 @@ const Home = () => {
 
 
   <div className="mb-5">
-  <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
     <div className="flex flex-col md:flex-row">
       <div className="p-6 md:w-1/2 flex flex-col justify-between">
         <div>
@@ -670,8 +670,6 @@ const Home = () => {
         </ul>
 
 </section>
-<Chat></Chat>
-
     </section>
 
     

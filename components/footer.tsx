@@ -1,5 +1,6 @@
 
   import Image from "next/image"
+  import { LinkPreview } from "@/components/link-preview";
   export const Footer = () => {
   
     return (
@@ -38,7 +39,7 @@
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <span className="text-xs inline-flex items-baseline left-align">© Made with
-    <Image src="/bear.svg" alt="" width={100} height={100} className="self-start w-8 h-8 relative" style={{ top: '-10px' }} />by Mohnish | Last updated: July, 2024
+   <LinkPreview url="/" isStatic imageSrc="/bear1.jpeg"><Image src="/bear.svg" alt="" width={100} height={100} className="self-start w-8 h-8 relative" style={{ top: '10px' }} /></LinkPreview>by Mohnish | Last updated: July, 2024
 </span>
     </div>
 </footer>

@@ -304,12 +304,6 @@ const Home = () => {
 </div>   
 
 
-
-
-
-<Chat></Chat>
-
-
     </section>
 
     

@@ -1,3 +1,5 @@
+import Chat from "@/components/chat";
+
 export default function DocsLayout({
   children,
 }: {
@@ -8,6 +10,8 @@ export default function DocsLayout({
       <div className="inline-block justify-center">
         {children}
       </div>
+      <Chat />
+
     </section>
   );
 }
