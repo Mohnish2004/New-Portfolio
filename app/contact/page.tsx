@@ -109,8 +109,8 @@ const Home = () => {
       <div      
       className="inline-flex items-center text-xs mt-1 text-gray-600 dark:text-white cursor-pointer"
     >
-      <FiInstagram  className="text-md" />
       <a href="https://www.instagram.com/mohniiiish/?hl=en">
+      <FiInstagram  className="text-md" />
       </a>
     </div></Snippet>
 
@@ -118,8 +118,8 @@ const Home = () => {
       <div      
       className="inline-flex items-center text-xs mt-1 text-gray-600 dark:text-white cursor-pointer"
     >
-      <FiLinkedin  className="text-md" />
       <a href="https://www.linkedin.com/in/mohnish-gopi/">
+      <FiLinkedin  className="text-md" />
       </a>
     </div></Snippet>
 
