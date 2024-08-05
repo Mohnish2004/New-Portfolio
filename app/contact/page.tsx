@@ -6,7 +6,7 @@ import Chat from "@/components/chat";
 import React, { useState, useEffect } from "react";
 import { DateTime } from "luxon";
 import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
-import { FiMail, FiPhone} from 'react-icons/fi';
+import { FiInstagram, FiLinkedin, FiMail, FiPhone, FiTwitter} from 'react-icons/fi';
 
 function Clock() {
   const [currentTime, setCurrentTime] = useState(DateTime.local());
@@ -95,13 +95,31 @@ const Home = () => {
       </a>
     </div></Snippet>
 
-    <Snippet data-aos="zoom-in" size="sm" hideSymbol className=" transition-all duration-300 hover:scale-105 hover:shadow-md  h-7 items-center text-xs rounded-md bg-gray-50  mr-2  dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer">  
+    <Snippet data-aos="zoom-in" size="sm" hideSymbol className=" transition-all duration-300 hover:scale-105 hover:shadow-md  mr-2 h-7 items-center text-xs rounded-md bg-gray-50 dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer">  
       <div      
       className="inline-flex items-center text-xs mt-1 text-gray-600 dark:text-white cursor-pointer"
     >
       <FiPhone className="text-md mr-1" />
       <a href="tel:5109469930">
       <span className="text-xs font-medium">+1 5109469930</span>
+      </a>
+    </div></Snippet>
+
+    <Snippet hideCopyButton data-aos="zoom-in" size="sm" hideSymbol className=" transition-all duration-300 hover:scale-105 hover:shadow-md  h-7 items-center rounded-md bg-gray-50  mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer">  
+      <div      
+      className="inline-flex items-center text-xs mt-1 text-gray-600 dark:text-white cursor-pointer"
+    >
+      <FiInstagram  className="text-md" />
+      <a href="https://www.instagram.com/mohniiiish/?hl=en">
+      </a>
+    </div></Snippet>
+
+    <Snippet hideCopyButton data-aos="zoom-in" size="sm" hideSymbol className=" transition-all duration-300 hover:scale-105 hover:shadow-md  h-7 items-center rounded-md bg-gray-50  mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer">  
+      <div      
+      className="inline-flex items-center text-xs mt-1 text-gray-600 dark:text-white cursor-pointer"
+    >
+      <FiLinkedin  className="text-md" />
+      <a href="https://www.linkedin.com/in/mohnish-gopi/">
       </a>
     </div></Snippet>
 
