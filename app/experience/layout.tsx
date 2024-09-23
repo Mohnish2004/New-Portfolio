@@ -10,7 +10,6 @@ export default function DocsLayout({
         {children}
       </div>
       <Chat />
-
     </section>
   );
 }
