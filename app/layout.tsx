@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   description: "I'm a third-year Computer Science student at the University of California, Davis. With a passion for solving problems one Product at a time. Starting from my dorm room projects, I've cultivated a versatile skill set through diverse client engagements and hands-on Experience",
   icons: {
-    icon: "/me.png",
+    icon: "/1s.png",
   },
 };
 
