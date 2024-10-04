@@ -142,28 +142,47 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
   return (
   
     <section className="antialiased max-w-xl mx-4 mt-8 sm:mx-auto">
-< Dot delay={0.25} inView >
-      <Image src="/me.png" alt="Profile" width="300" height="300" className="select-none w-[150px] h-[150px] rounded-full mb-5"/>
-      <h1 className="mb-1 text-4xl" data-aos="fade-in">
-       Hey, I&apos;m Mohnish 👋🏽
-      </h1>
-      </Dot>
-      < Dot delay={0.5} inView >
-      <div className="mb-20">
-       <span className="inline-flex items-center rounded-md bg-gray-50 px-1 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">          <FlipWords words={words} duration={duration} className="my-custom-class" />
-</span>
-      <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">President of CodeLab</span>
-      <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mt-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">Open for internships</span>
+<section className="antialiased mx-4 mt-8 sm:mx-auto relative">
+  <div className="max-w-xl mx-auto">
+    <Dot delay={0.25} inView>
+      <div className="relative mb-4 left-[-38px]"> {/* Adjust this value as needed */}
+        <Image 
+          src="/1.svg" 
+          alt="Profile" 
+          width={250} 
+          height={250} 
+          draggable="false"
+          className="select-none"
+        />
 
+        
+      </div>
+    </Dot>
+    <h1 
+          className="absolute top-48 left-0 -mb-6 text-4xl dark:bg-black bg-opacity-70 dark:bg-opacity-70 p-2 rounded" 
+          data-aos="fade-in"
+        >
+          Hey, I&apos;m Mohnish 👋🏽
+        </h1>
 
-       </div>
-       </Dot>
+        <div className="absolute bottom-24 left-0 mt-2 flex flex-wrap space-x-2">
+          <span className="inline-flex items-center rounded-md bg-gray-50 px-1 py-1 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">
+            <FlipWords words={words} duration={duration} className="my-custom-class" />
+          </span>
+          <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">
+            President of CodeLab
+          </span>
+          <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">
+            Open for internships
+          </span>
+        </div>
+  </div>
+</section>
 
-      {/* <div className="mb-10" > */}
-      <h2 data-aos="fade-in" data-aos-delay="900" className=" font-medium mb-2 text-2xl">
+      <h2 className=" font-medium mb-2 -mt-8 text-2xl">
        About me
       </h2>
-      <div data-aos="fade-in" data-aos-delay="900">
+      <div>
       <p data-aos="fade-in" >
       I&apos;m a third-year Computer Science student at the University of California, Davis. With a passion for solving problems one {" "}      <LinkPreview
           url="/projects"
