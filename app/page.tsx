@@ -143,13 +143,24 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
   
     <section className="antialiased max-w-xl mx-4 mt-8 sm:mx-auto">
 < Dot delay={0.25} inView >
-      <Image src="/me.png" alt="Profile" width="300" height="300" className="select-none w-[150px] h-[150px] rounded-full mb-5"/>
-      <h1 className="mb-1 text-4xl" data-aos="fade-in">
-       Hey, I&apos;m Mohnish 👋🏽
+<div className="relative mb-4 left-[-46px]"> {/* Adjust this value as needed */}
+<Image 
+          src="/1.svg" 
+          alt="Profile" 
+          width={250} 
+          height={200} 
+          draggable="false"
+          className="select-none"
+        />   
+              </div>
+              <h1 
+          className="absolute top-48 -left-2 -mb-6 text-4xl dark:bg-black bg-opacity-70 dark:bg-opacity-70 p-2 rounded" 
+          data-aos="fade-in"
+        >       Hey, I&apos;m Mohnish 👋🏽
       </h1>
       </Dot>
       < Dot delay={0.5} inView >
-      <div className="mb-20">
+      <div className="mb-14 -mt-36 ">
        <span className="inline-flex items-center rounded-md bg-gray-50 px-1 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">          <FlipWords words={words} duration={duration} className="my-custom-class" />
 </span>
       <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">President of CodeLab</span>
