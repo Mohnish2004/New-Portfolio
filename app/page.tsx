@@ -35,40 +35,79 @@ function ArrowIcon() {
 
 function ChannelLink({}) {
   return (
-    <div data-aos="fade-up" className="group mb-5 flex w-full transition-all duration-300 hover:scale-105  hover:shadow-xl">
-    <a
+    <><div data-aos="fade-up" className="group mb-5 flex w-full transition-all duration-300 hover:scale-105  hover:shadow-xl">
+      <a
         href={"https://drive.google.com/file/d/12xnuAkIVjqKLicPoPP9W_dt4a6KRIAZE/view?usp=sharing"}
         target="_blank"
-      rel="noopener noreferrer"
-      className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-102 hover:shadow-md"
-    >
-      <div className="flex items-center space-x-3 ">
-      <img src="https://cdn3d.iconscout.com/3d/premium/thumb/crypto-stocks-chart-5349277-4466490.png?f=webp" width="60" height="60" className="h-20 w-20 " alt="test"></img>
+        rel="noopener noreferrer"
+        className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-102 hover:shadow-md"
+      >
+        <div className="flex items-center space-x-3 ">
+          <img src="https://cdn3d.iconscout.com/3d/premium/thumb/crypto-stocks-chart-5349277-4466490.png?f=webp" width="60" height="60" className="h-20 w-20 " alt="test"></img>
 
-        <div className="flex flex-col pl-3 pr-3 leading-tight" >
-        <p className="font-light text-sm text-neutral-900 dark:text-neutral-100">
-          Research Paper
-          </p>
-          <h1 className="font-medium text-neutral-900 dark:text-neutral-100">
-          Volatility Forecasting of Large Cap U.S. Equities Using GARCH Neural Network
-          </h1>
-          <div>
-          <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-        Artificial Intelligence
-      </span>
-      <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-        Machine Learning
-      </span>
-      <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-        Finance
-      </span>
+          <div className="flex flex-col pl-3 pr-3 leading-tight">
+            <p className="font-light text-sm text-neutral-900 dark:text-neutral-100">
+              Research Paper
+            </p>
+            <h1 className="font-medium text-neutral-900 dark:text-neutral-100">
+              Volatility Forecasting of Large Cap U.S. Equities Using GARCH Neural Network
+            </h1>
+            <div>
+              <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                Artificial Intelligence
+              </span>
+              <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                Machine Learning
+              </span>
+              <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                Finance
+              </span>
+            </div>
           </div>
-        </div>
-        
-      </div>
 
-    </a>
-  </div>
+        </div>
+
+      </a>
+    </div><div data-aos="fade-up" className="group mb-5 flex w-full transition-all duration-300 hover:scale-105  hover:shadow-xl">
+        <a
+          href={"https://drive.google.com/file/d/1akPm3tfeHl4tv_gZefd0bLC2hxdkGa0Q/view?usp=sharing"}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-102 hover:shadow-md"
+        >
+          <div className="flex items-center space-x-3 ">
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/apple-vision-3d-icon-download-in-png-blend-fbx-gltf-file-formats--vr-glass-virtual-reality-glasses-technology-pack-science-icons-10299052.png?f=webp" width="60" height="60" className="h-20 w-20 " alt="test"></img>
+
+            <div className="flex flex-col pl-3 pr-3 leading-tight">
+              <p className="font-light text-sm text-neutral-900 dark:text-neutral-100">
+                Research Assistant
+              </p>
+              <h1 className="font-medium text-neutral-900 dark:text-neutral-100">
+              Exploring Active Vision in Bimanual Robotic Manipulation
+              </h1>
+              <div>
+                <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                  VR Development
+                </span>
+                <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                  Robotics
+                </span>
+                <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                  Assistant
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+        </a>
+      </div></>
+
+
+
+
+
+
 
   );
 }
