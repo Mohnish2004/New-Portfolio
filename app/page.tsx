@@ -236,8 +236,6 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 <p data-aos="fade-in" className="mt-4" >My journey in tech started small but quickly grew as I embraced many roles including leadership. Currently, I serve as the president of             
 <LinkPreview
           url="https://www.codelabdavis.com/"
-          imageSrc="/cl6.png"
-          isStatic
           className="font-bold ml-1"
         >
            Codelab
