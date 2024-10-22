@@ -173,7 +173,7 @@ const Home = () => {
   </div>
     
 
-  <div data-aos="fade-up"className="group mb-5 flex w-full transition-all duration-300 hover:scale-105 hover:shadow-xl">
+  <div className="group mb-5 flex w-full transition-all duration-300 hover:scale-105 hover:shadow-xl">
       <a
         href={"https://drive.google.com/file/d/12xnuAkIVjqKLicPoPP9W_dt4a6KRIAZE/view?usp=sharing"}
         target="_blank"
@@ -211,7 +211,7 @@ const Home = () => {
 
 
  <div className="mb-5">
-  <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
   <a className="group block" href={"/"}>
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
     <a href='https://devpost.com/software/slate-pas0bz'>
@@ -259,7 +259,7 @@ const Home = () => {
   <div className="mb-2 grid grid-cols-1 md:grid-cols-2 gap-4">
 
 <div className="mb-5">
- <div data-aos="fade-right" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+ <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
  <a className="group block" href={"/"}>
    <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
    <a href='https://www.devfestdavis.com/'>
@@ -293,7 +293,7 @@ const Home = () => {
 
 
  <div className="mb-5">
- <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+ <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
  <a className="group block" href={"/"}>
    <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
 
@@ -327,7 +327,7 @@ const Home = () => {
 
 
 <div className="mb-5">
-  <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
     <div className="flex flex-col md:flex-row">
       <div className="md:w-1/2">
         <a className="group block h-full" href={"/"}>
@@ -377,7 +377,7 @@ const Home = () => {
 
 
 <div className="mb-5">
-  <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
     <div className="flex flex-col md:flex-row">
       <div className="md:w-1/2">
         <a className="group block h-full" href={"/"}>
@@ -421,7 +421,7 @@ const Home = () => {
   <div className="mb-2 grid grid-cols-1 md:grid-cols-2 gap-4">
 
 <div className="mb-5">
- <div data-aos="fade-right" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+ <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
  <a className="group block" href={"/"}>
    
    <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
@@ -453,7 +453,7 @@ const Home = () => {
 
 
  <div className="mb-5">
- <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+ <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
  <a className="group block" href={"/"}>
    <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
 
@@ -487,7 +487,7 @@ const Home = () => {
 
 
   <div className="mb-5">
-  <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
     <div className="flex flex-col md:flex-row">
       <div className="p-6 md:w-1/2 flex flex-col justify-between">
         <div>
@@ -526,7 +526,7 @@ const Home = () => {
 
 
 <div className="mb-5">
-  <div data-aos="fade-up"  className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+  <div  className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
     <div className="flex flex-col md:flex-row">
       <div className="p-6 md:w-1/2 flex flex-col justify-between">
         <div>
@@ -570,7 +570,7 @@ const Home = () => {
 
 
 <div className="mb-5">
-  <div data-aos="fade-up"  className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
     <div className="flex flex-col md:flex-row">
       <div className="p-6 md:w-1/2 flex flex-col justify-between">
         <div>
@@ -616,7 +616,7 @@ const Home = () => {
 <div className="mb-2 grid grid-cols-1 md:grid-cols-2 gap-4">
 
  <div className="mb-5">
-  <div data-aos="fade-rigth"  className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
   <a className="group block" href='https://github.com/Mohnish2004/Expense-Manager' >
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
     <a href='https://github.com/Mohnish2004/Expense-Manager'>
@@ -650,7 +650,7 @@ const Home = () => {
 
 
   <div className="mb-5">
-  <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
   <a className="group block" href={"/"}>
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
 <a href='https://github.com/Mohnish2004/TasksApp'>
