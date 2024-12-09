@@ -2,8 +2,7 @@
 "use client"
 import { useState } from 'react';
 import ChatPopup from '@/components/ChatPopup';
-import { Button } from '@nextui-org/button';
-import {Tooltip} from "@nextui-org/tooltip";
+import {Tooltip} from "@nextui-org/react";
 export default function ChatIcon() {
   const [isOpen, setIsOpen] = useState(false);
 
