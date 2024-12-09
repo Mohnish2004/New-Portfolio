@@ -167,7 +167,7 @@ I&apos;m open to job opportunities that allow me to make a meaningful impact. If
 <h3 data-aos="fade-in" className="-pb-3 text-neutral-600 dark:text-neutral-300 font-semibold mt-10">
 Regards 
 </h3>
-<a className="-pl-4 -pt-5">
+<a href="/" className="-pl-4 -pt-5">
                 <svg 
                   width="90" 
                   height="90" 
