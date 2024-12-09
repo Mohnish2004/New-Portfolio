@@ -20,15 +20,15 @@ const Home = () => {
         <hr data-aos="fade-in" className="my-6 border-neutral-200 dark:border-neutral-800" />
 
         <p data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 mb-8">
-          They say, <span className="font-bold">"A jack of all trades is a master of none,"</span> but not many people know the full quote: <span className="font-bold">"but oftentimes better than a master of one."</span> That's exactly how I see myself, I enjoy wearing multiple hats because I just love to try new things. I've explored product management, various branches of software engineering—from web to mobile, AI to ML, and cybersecurity. My research has also taken me into robotics and virtual reality development. At the same time, I always enjoy designing because I love the intersection of art and technology.
+          They say, <span className="font-bold">&ldquo;A jack of all trades is a master of none,&rdquo;</span> but not many people know the full quote: <span className="font-bold">&ldquo;but oftentimes better than a master of one.&rdquo;</span> That&apos;s exactly how I see myself, I enjoy wearing multiple hats because I just love to try new things. I&apos;ve explored product management, various branches of software engineering—from web to mobile, AI to ML, and cybersecurity. My research has also taken me into robotics and virtual reality development. At the same time, I always enjoy designing because I love the intersection of art and technology.
         </p>
 
         <p data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 mb-8">
-          One constant in my journey is my commitment to leadership. I currently serve as president at <LinkPreview url="https://www.codelabdavis.com/" imageSrc="/cl6.png" className="font-semibold" isStatic>CodeLab</LinkPreview>, the largest software and design agency in Davis. While I'm still exploring the full extent of my capabilities, I'm driven by curiosity and a desire to learn, adapt, and grow.
+          One constant in my journey is my commitment to leadership. I currently serve as president at <LinkPreview url="https://www.codelabdavis.com/" imageSrc="/cl6.png" className="font-semibold" isStatic>CodeLab</LinkPreview>, the largest software and design agency in Davis. While I&apos;m still exploring the full extent of my capabilities, I&apos;m driven by curiosity and a desire to learn, adapt, and grow.
         </p>
 
         <p data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 mb-8">
-          Outside of work, you can find me enjoying long drives, hitting the gym, playing badminton, or watching movies. I grew up in Dubai, which I proudly call home. I'm also a casual photographer—capturing life's unplanned moments. Want to see some? Check out my <LinkPreview url="/gallery" imageSrc="/gallery.png" className="font-semibold" isStatic>gallery</LinkPreview>.
+          Outside of work, you can find me enjoying long drives, hitting the gym, playing badminton, or watching movies. I grew up in Dubai, which I proudly call home. I&apos;m also a casual photographer—capturing life&apos;s unplanned moments. Want to see some? Check out my <LinkPreview url="/gallery" imageSrc="/gallery.png" className="font-semibold" isStatic>gallery</LinkPreview>.
         </p>
 
         <iframe 
@@ -44,7 +44,7 @@ const Home = () => {
         />
 
         <p data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 mb-8">
-          I'm open to job opportunities that allow me to make a meaningful impact. If you have an opportunity that aligns with my skills and experiences, I'd love to explore how we can collaborate.
+          I&apos;m open to job opportunities that allow me to make a meaningful impact. If you have an opportunity that aligns with my skills and experiences, I&apos;d love to explore how we can collaborate.
         </p>
 
         <h3 data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 font-semibold">
