@@ -15,7 +15,7 @@ export default function ChatIcon() {
     <>
       <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" className="fixed bottom-4 right-4 ">
       <Tooltip showArrow={true} placement='left' radius='sm' content="Chat with me">
-<button  className='rounded-full shadow-sm dark:backdrop-blur-xl dark:bg-neutral-300/20 backdrop-blur-xl bg-neutral-300/20 p-1 animate-bounce' onClick={toggleChat}>
+<button  className='rounded-full shadow-sm dark:backdrop-blur-xl dark:bg-neutral-300/20 backdrop-blur-xl bg-neutral-300/20 p-1' onClick={toggleChat}>
 
                   <img
                 src="/bear.svg"

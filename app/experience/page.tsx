@@ -45,8 +45,30 @@ const Home = () => {
   const words = ["Developer", "Manager", "Designer", "Leader","Photographer","Innovator", "Full-stack","Mobile","Web","AI","ML","Data","Security","Product"]; // Example words array
   const duration = 2000; // Example duration in milliseconds
   const [isFollowed, setIsFollowed] = React.useState(false);
+  const [currentIndex, setCurrentIndex] = React.useState(0);
 
+  const certificates = [
+    { id: 200, alt: "Certificate 1" },
+    { id: 201, alt: "Certificate 2" },
+    { id: 202, alt: "Certificate 3" },
+    { id: 203, alt: "Certificate 4" },
+    { id: 204, alt: "Certificate 5" },
+    { id: 205, alt: "Certificate 6" },
+    { id: 206, alt: "Certificate 7" },
+    { id: 207, alt: "Certificate 8" },
+    { id: 210, alt: "Certificate 9" },
+    { id: 208, alt: "Certificate 10" },
+    { id: 211, alt: "Certificate 11" },
+  ];
 
+  // Add auto-scroll effect
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % certificates.length);
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     
@@ -60,11 +82,8 @@ const Home = () => {
 </div>
 
       <div >
-      </div>
-
-      <div data-aos="fade-in"  className=" mb-5 group flex w-full">
       <div
-        className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-101 hover:shadow-md"
+        className="flex w-full mt-2 items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-101 hover:shadow-md"
       >
         <div className="flex items-center space-x-3">
           <div className="relative h-16">
@@ -90,6 +109,10 @@ const Home = () => {
         </div>
 
       </div>
+      </div>
+
+      <div data-aos="fade-in"  className=" mb-5 group flex w-full">
+      
     </div>
   
 
@@ -138,21 +161,9 @@ const Home = () => {
     </p>
 
 
-        <ul className=" justify-end font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://drive.google.com/file/d/1tR8yrlVjDstqXk55d0FE4fVFTfr3RU34/view?usp=sharing"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">Download Resume</p>
-          </a>
-        </li>
-        </ul>
 
       </div>
+
     </section>
 
 
@@ -216,90 +227,47 @@ const Home = () => {
       </div>
     </section>
 
-    <div className="max-w-lg mt-10">
-    
-    <div className="scroll">
-  <div className="m-scroll gap-5">
-    <div className=" w-1/2 align-top bg-fixed">
-       
-        <Image
-          
-          className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/200.png" alt={'test'} width={400} height={200}
-        />
+    {/* Certificates Section */}
+    <div className="mt-10">
+      <div className="relative w-full overflow-hidden">
+        <div 
+          className="flex transition-transform duration-10000 ease-in-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {certificates.map((cert, index) => (
+            <div 
+              key={cert.id}
+              className="flex-none w-full"
+            >
+              <div className="max-w-2xl mx-auto px-4">
+                <Image
+                  src={`/certificates/${cert.id}.png`}
+                  alt={cert.alt}
+                  width={800}
+                  height={400}
+                  className="rounded-lg shadow-lg w-full h-auto"
+                  priority
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+
+
+        {/* Dots indicator */}
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+          {certificates.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-2 h-2 rounded-full transition-colors ${
+                index === currentIndex ? 'bg-white' : 'bg-white/50'
+              }`}
+            />
+          ))}
+        </div>
       </div>
-      <div className="flex w-1/2 flex-wrap align-top">
-        <Image
-          
-          className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/201.png" alt={'test'} width={400} height={200}
-        />
-      </div>
-      <div className="flex w-1/2 flex-wrap align-top">
-        <Image
-          
-          className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/202.png" alt={'tes'} width={400} height={200}
-        />
-      </div>
-      <div className="flex w-1/2 flex-wrap align-top">
-        <Image
-          
-          className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/203.png" alt={'tse'} width={400} height={200}
-        />
-      </div>
-      <div className="flex w-1/2 flex-wrap align-top">
-        <Image
-          
-          className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/204.png" alt={'ts'} width={400} height={200}
-        />
-      </div>
-      <div className="flex w-1/2 flex-wrap align-top">
-        <Image
-          
-          className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/205.png" alt={'ste'} width={400} height={200}
-        />
-      </div>
-      <div className="flex w-1/2 flex-wrap align-top">
-        <Image
-          
-          className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/206.png" alt={'tse'} width={400} height={200}
-        />
-      </div>
-      <div className="flex w-1/2 flex-wrap align-top">
-        <Image
-          
-          className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/207.png" alt={'tse'} width={400} height={200}
-        />
-      </div>
-      <div className="flex w-1/2 flex-wrap align-top">
-        <Image
-          
-          className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/210.png" alt={'ste'} width={400} height={200}
-        />
-      </div>
-      <div className="flex w-1/2 flex-wrap align-top">
-        <Image
-          
-          className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/208.png" alt={'ste'} width={400} height={200}
-        />
-      </div>      <div className="flex w-1/2 mr-5 flex-wrap align-top">
-        <Image
-          
-          className="block h-90 w-90 rounded-md object-cover object-center"
-          src="/certificates/211.png" alt={'tse'} width={400} height={200}
-        />
-      </div>
-      </div>
-</div>
-</div>   
+    </div>
     </section>
 
     
