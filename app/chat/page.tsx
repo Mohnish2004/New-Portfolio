@@ -138,7 +138,7 @@ const Home = () => {
               <div className="min-w-0">
                 <h2 className="text-sm font-semibold text-gray-900 dark:text-white">Meet Djungelskog</h2>
                 <p className="text-xs text-gray-600 dark:text-neutral-400 mt-0.5">
-                  Your friendly AI assistant, here to help you explore Mohnish's portfolio.
+                  Your friendly AI assistant, here to help you explore Mohnish&apos;s portfolio.
                 </p>
               </div>
             </div>
