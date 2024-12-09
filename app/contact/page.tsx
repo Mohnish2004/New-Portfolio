@@ -70,6 +70,7 @@ function ArrowIcon() {
 
 const Home = () => {
 
+
   return (
     
     <section data-aos="fade-in" className="antialiased max-w-xl mx-4 sm:mx-auto">
