@@ -105,6 +105,8 @@
   position: relative;
 }
 
+
+
 .swiper-slide::before {
   content: "hi hello";
   display: block;
@@ -168,4 +170,10 @@
 .scrollbar-hide {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-bottom: 5rem;
+  }
 }

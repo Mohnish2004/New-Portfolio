@@ -9,7 +9,7 @@ export default function DocsLayout({
       <div className="inline-block justify-center">
         {children}
       </div>
-      <Chat />
+      {/* <Chat /> */}
     </section>
   );
 }

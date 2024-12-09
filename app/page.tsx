@@ -719,7 +719,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 
 
 
-<div className="flex items-start mb-5 mt-10 gap-2.5" data-aos="fade-right">
+<div className="flex items-start mb-5 mt-10 gap-2.5" >
   <Tooltip
     key="left-start"
     placement="left-start"
@@ -764,7 +764,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 
 
 
-<div className="flex items-start mb-5 mt-5 gap-2.5 justify-end" data-aos="fade-up">
+<div className="flex items-start mb-5 mt-5 gap-2.5 justify-end" >
   <div className="flex flex-col gap-1 w-full max-w-[320px]">
     <div className="flex items-center space-x-2 justify-end rtl:space-x-reverse">
       <span className="text-sm font-semibold text-gray-900 dark:text-white">Kamal</span>
@@ -804,7 +804,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
   </Tooltip>
 </div>
 
-<div className="flex items-start mb-5 mt-5 gap-2.5" data-aos="fade-right">
+<div className="flex items-start mb-5 mt-5 gap-2.5" >
   <Tooltip
     key="left-start"
     placement="left-start"
@@ -844,7 +844,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
   </div>
 </div>
 
-<div className="flex items-start mb-5 mt-5 gap-2.5 justify-end" data-aos="fade-up">
+<div className="flex items-start mb-5 mt-5 gap-2.5 justify-end">
   <div className="flex flex-col gap-1 w-full max-w-[320px]">
     <div className="flex items-center space-x-2 justify-end rtl:space-x-reverse">
       <span className="text-sm font-semibold text-gray-900 dark:text-white">Gopi</span>

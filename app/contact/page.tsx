@@ -104,24 +104,6 @@ const Home = () => {
       </a>
     </div></Snippet>
 
-    <Snippet hideCopyButton data-aos="zoom-in" size="sm" hideSymbol className=" transition-all duration-300 hover:scale-105 hover:shadow-md  h-7 items-center rounded-md bg-gray-50  mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer">  
-      <div      
-      className="inline-flex items-center text-xs mt-1 text-gray-600 dark:text-white cursor-pointer"
-    >
-      <a href="https://www.instagram.com/mohniiiish/?hl=en">
-      <FiInstagram  className="text-md" />
-      </a>
-    </div></Snippet>
-
-    <Snippet hideCopyButton data-aos="zoom-in" size="sm" hideSymbol className=" transition-all duration-300 hover:scale-105 hover:shadow-md  h-7 items-center rounded-md bg-gray-50  mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10 cursor-pointer">  
-      <div      
-      className="inline-flex items-center text-xs mt-1 text-gray-600 dark:text-white cursor-pointer"
-    >
-      <a href="https://www.linkedin.com/in/mohnish-gopi/">
-      <FiLinkedin  className="text-md" />
-      </a>
-    </div></Snippet>
-
 
 
 
