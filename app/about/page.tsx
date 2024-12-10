@@ -39,7 +39,7 @@ const Home = () => {
           </div>
           <div className="absolute transition-all duration-300 transform cursor-pointer group-hover:translate-x-[-10px] group-hover:rotate-[-4deg] left-[30%] top-1/2 -translate-y-1/2">
             <Image
-              src="/exp_pics/a.jpg"
+              src="/exp_pics/a.JPG"
               alt="Polaroid 2"
               width={100}
               height={100}
@@ -48,7 +48,7 @@ const Home = () => {
           </div>
           <div className="absolute transition-all rounded-lg duration-300 transform cursor-pointer group-hover:rotate-[2deg] left-[40%] top-1/2 -translate-y-1/2">
             <Image
-              src="/exp_pics/a4.jpg"
+              src="/exp_pics/a4.JPG"
               alt="Polaroid 3"
               width={100}
               height={100}
