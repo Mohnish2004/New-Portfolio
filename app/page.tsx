@@ -180,7 +180,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 
   return (
   
-    <section className="antialiased max-w-xl mx-4 mt-8 sm:mx-auto">
+    <section data-aos="fade-in" className="antialiased max-w-xl p-4 mx-4 sm:mx-auto">
 < Dot delay={0.25} inView >
 <div className="relative mb-4 left-[-46px]"> {/* Adjust this value as needed */}
 <Image 
@@ -925,8 +925,6 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
           </div>
         </div>
       </div> */}
-             <Chat></Chat>
-
     </section>
     
 

@@ -63,7 +63,7 @@ const Home = () => {
 
   return (
     
-    <section data-aos="fade-in" className="antialiased max-w-xl mx-4 sm:mx-auto">
+    <section data-aos="fade-in" className="antialiased max-w-xl p-4 mx-4 sm:mx-auto">
 
       <h1 className="text-5xl tracking-tighter">
       Experience
@@ -76,21 +76,21 @@ const Home = () => {
       <div
         className="flex w-full mt-2 items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-101 hover:shadow-md"
       >
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-3 flex-wrap sm:flex-nowrap">
           <div className="relative h-16">
             <Image
               src={"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/The_University_of_California_Davis.svg/640px-The_University_of_California_Davis.svg.png"}
               height="1000"
               width="1000"
               sizes="33vw"
-              className="h-14 mt-1 ml-4 w-14 rounded-full"
+              className="h-12 sm:h-14 mt-1 ml-2 sm:ml-4 w-12 sm:w-14 rounded-full"
               alt="test"
             />
           </div>
 
-          <div className="flex flex-col pl-5 leading-tight" >
-          <h2 className="font-medium text-xl mb-1 tracking-tighter">Bachelor of Science in Computer Science</h2>
-          <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+          <div className="flex flex-col pl-2 sm:pl-5 leading-tight" >
+          <h2 className="font-medium text-lg sm:text-xl mb-1 tracking-tighter">Bachelor of Science in Computer Science</h2>
+          <p className="text-neutral-600 dark:text-neutral-400 text-xs sm:text-sm">
         University of California, Davis / 2022 — 2026
         </p>
         <div className="mt-2">

@@ -11,7 +11,7 @@ import Image from "next/image";
 
 const Home = () => {
   return (
-    <section className="antialiased max-w-xl mx-4 sm:mx-auto">
+    <section data-aos="fade-in" className="antialiased max-w-xl p-4 mx-4 sm:mx-auto">
       <h1 data-aos="fade-in" className="mb-8 text-5xl tracking-tighter">
         About me
       </h1>
