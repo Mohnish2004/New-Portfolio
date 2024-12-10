@@ -5,9 +5,14 @@ import Swipe from "@/components/app"
 import Swipe1 from "@/components/app1"
 import Swipe2 from "@/components/app2"
 import { LinkPreview } from "@/components/link-preview";
-
+import { Kalam } from "next/font/google";
 
 import Image from "next/image";
+
+const kalam = Kalam({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 const Home = () => {
   return (
@@ -22,32 +27,50 @@ const Home = () => {
         <p data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 mb-8">
           They say, <span className="font-bold">&ldquo;A jack of all trades is a master of none,&rdquo;</span> but not many people know the full quote: <span className="font-bold">&ldquo;but oftentimes better than a master of one.&rdquo;</span> That&apos;s exactly how I see myself, I enjoy wearing multiple hats because I just love to try new things. I&apos;ve explored product management, various branches of software engineering—from web to mobile, AI to ML, and cybersecurity. My research has also taken me into robotics and virtual reality development. At the same time, I always enjoy designing because I love the intersection of art and technology.
         </p>
-        <div className="relative h-40 my-2 flex justify-center items-center group">
-          <div className="absolute transition-all duration-300 transform cursor-pointer group-hover:translate-x-[-15px] group-hover:rotate-[-5deg] left-[30%] top-1/2 -translate-y-1/2">
+        <div className="relative h-64 my-8 flex justify-center items-center">
+          <div className="absolute transition-all duration-300 transform cursor-pointer group-hover:translate-x-[-20px] group-hover:rotate-[-8deg] left-[20%] top-1/2 -translate-y-1/2">
             <Image
               src="/exp_pics/H.png"
               alt="Polaroid 1"
               width={100}
               height={100}
-              className="rounded-lg shadow-xl transform rotate-[-10deg] border-4 border-white"
+              className="rounded-lg shadow-xl transform rotate-[-12deg] border-4 border-white"
             />
           </div>
-          <div className="absolute transition-all rounded-lg duration-300 transform cursor-pointer group-hover:rotate-[1deg] left-[40%] top-1/2 -translate-y-1/2">
+          <div className="absolute transition-all duration-300 transform cursor-pointer group-hover:translate-x-[-10px] group-hover:rotate-[-4deg] left-[30%] top-1/2 -translate-y-1/2">
             <Image
               src="/exp_pics/a.jpg"
               alt="Polaroid 2"
               width={100}
               height={100}
-              className="rounded-lg shadow-xl transform rotate-[0deg] border-4 border-white"
+              className="rounded-lg shadow-xl transform rotate-[-6deg] border-4 border-white"
             />
           </div>
-          <div className="absolute transition-all duration-300 transform cursor-pointer group-hover:translate-x-[15px] group-hover:rotate-[5deg] left-[50%] top-1/2 -translate-y-1/2">
+          <div className="absolute transition-all rounded-lg duration-300 transform cursor-pointer group-hover:rotate-[2deg] left-[40%] top-1/2 -translate-y-1/2">
             <Image
               src="/exp_pics/a4.jpg"
               alt="Polaroid 3"
               width={100}
               height={100}
-              className="rounded-lg shadow-xl transform rotate-[10deg] border-4 border-white"
+              className="rounded-lg shadow-xl transform rotate-[0deg] border-4 border-white"
+            />
+          </div>
+          <div className="absolute transition-all duration-300 transform cursor-pointer group-hover:translate-x-[10px] group-hover:rotate-[4deg] left-[50%] top-1/2 -translate-y-1/2">
+            <Image
+              src="/exp_pics/a9.jpg"
+              alt="Polaroid 4"
+              width={100}
+              height={100}
+              className="rounded-lg shadow-xl transform rotate-[6deg] border-4 border-white"
+            />
+          </div>
+          <div className="absolute transition-all duration-300 transform cursor-pointer group-hover:translate-x-[20px] group-hover:rotate-[8deg] left-[60%] top-1/2 -translate-y-1/2">
+            <Image
+              src="/exp_pics/d.JPG"
+              alt="Polaroid 5"
+              width={100}
+              height={100}
+              className="rounded-lg shadow-xl transform rotate-[12deg] border-4 border-white"
             />
           </div>
         </div>
@@ -55,7 +78,58 @@ const Home = () => {
           One constant in my journey is my commitment to leadership. I currently serve as president at <LinkPreview url="https://www.codelabdavis.com/" imageSrc="/cl6.png" className="font-semibold" isStatic>CodeLab</LinkPreview>, the largest software and design agency in Davis. While I&apos;m still exploring the full extent of my capabilities, I&apos;m driven by curiosity and a desire to learn, adapt, and grow.
         </p>
 
-        
+        <div className="relative h-64 my-8 flex justify-center items-center">
+          <div className="absolute transition-all duration-300 transform cursor-pointer hover:scale-110 left-[5%] top-1/2 -translate-y-1/2">
+            <div className="relative">
+              <Image
+                src="/exp_pics/model.jpeg"
+                alt="Polaroid 1"
+                width={120}
+                height={120}
+                className="rounded-lg shadow-lg transform rotate-[-12deg] border-4 border-white"
+              />
+              <div className="absolute top-[-40px] left-[20px] transform rotate-[-8deg]">
+                <p className="font-kalam text-neutral-600 dark:text-neutral-400 text-sm">
+                  Photoshoot 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="absolute transition-all duration-300 transform cursor-pointer hover:scale-110 left-[35%] top-1/2 -translate-y-1/2">
+            <div className="relative">
+              <Image
+                src="/exp_pics/29.jpg"
+                alt="Polaroid 2"
+                width={120}
+                height={120}
+                className="rounded-lg shadow-lg transform rotate-[5deg] border-4 border-white"
+              />
+              <div className="absolute bottom-[-40px] right-[10px] transform rotate-[5deg]">
+                <p className="font-kalam text-neutral-600 dark:text-neutral-400 text-sm">
+                   tour guide
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="absolute transition-all duration-300 transform cursor-pointer hover:scale-110 left-[65%] top-1/2 -translate-y-1/2">
+            <div className="relative">
+              <Image
+                src="/exp_pics/102.jpg"
+                alt="Polaroid 3"
+                width={120}
+                height={120}
+                className="rounded-lg shadow-lg transform rotate-[-8deg] border-4 border-white"
+              />
+              <div className="absolute top-[-40px] right-[20px] transform rotate-[-8deg]">
+                <p className="mb-2 font-kalam text-neutral-600 dark:text-neutral-400 text-sm">
+                 fav pic!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <p data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 mb-8">
           Outside of work, you can find me enjoying long drives, hitting the gym, playing badminton, or watching movies. I grew up in Dubai, which I proudly call home. I&apos;m also a casual photographer—capturing life&apos;s unplanned moments. Want to see some? Check out my <LinkPreview url="/gallery" imageSrc="/gallery.png" className="font-semibold" isStatic>gallery</LinkPreview>.
@@ -79,10 +153,10 @@ const Home = () => {
 
 
 
-        <h3 data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 font-semibold">
+        <p data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 font-semibold">
           Regards
-        </h3>
-        <a href="/" className="-pl-4 -pt-5">
+        </p>
+        <a href="/" className="-pl-4 -pt-10">
           <svg 
             width="90" 
             height="90" 

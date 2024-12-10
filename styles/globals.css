@@ -177,3 +177,30 @@
     padding-bottom: 5rem;
   }
 }
+
+@font-face {
+  font-family: 'Kalam';
+  src: url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+}
+
+.font-handwriting {
+  font-family: 'Kalam';
+  /* You can now use font-weight: 300, 400, or 700 */
+}
+.kalam-light {
+  font-family: "Kalam", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.kalam-regular {
+  font-family: "Kalam", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kalam-bold {
+  font-family: "Kalam", serif;
+  font-weight: 700;
+  font-style: normal;
+}
