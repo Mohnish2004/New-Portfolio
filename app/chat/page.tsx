@@ -124,20 +124,23 @@ const Home = () => {
   };
 
   return (
-    <section data-aos="fade-in" className="antialiased max-w-xl mx-4 sm:mx-auto">
+    <section data-aos="fade-in" className="antialiased max-w-xl mx-4 p-4 sm:mx-auto">
+              <h1 className="mt-2 text-5xl tracking-tighter">
+      Chat
+      </h1>
       <div className="relative">
         {/* Top gradient */}
         <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-white dark:from-black to-transparent z-10" />
         
         <div className="overflow-y-auto mb-4 space-y-4 h-[calc(100vh-180px)] scrollbar-hide px-2 scroll-smooth">
-          <div className="mt-10 p-4 bg-gray-50 ring-1 ring-inset ring-gray-500/10 dark:bg-neutral-800 rounded-xl">
+          <div className="mt-10 p-4 bg-white/50 dark:bg-neutral-900/50 backdrop-blur-sm rounded-2xl shadow-sm ring-1 ring-black/5 dark:ring-white/5">
             <div className="flex items-center gap-3.5">
-              <div className="p-2 bg-white dark:bg-neutral-900 rounded-lg shadow-lg">
-                <img src="/bear.svg" alt="Djungelskog" className="w-7 h-7 flex-shrink-0" />
+              <div className="p-2.5 bg-gradient-to-b from-white to-gray-50 dark:from-neutral-800 dark:to-neutral-900 rounded-xl shadow-sm ring-1 ring-black/5 dark:ring-white/5">
+                <img src="/bear.svg" alt="Djungelskog" className="w-6 h-6 flex-shrink-0" />
               </div>
               <div className="min-w-0">
-                <h2 className="text-sm font-semibold text-gray-900 dark:text-white">Meet Djungelskog</h2>
-                <p className="text-xs text-gray-600 dark:text-neutral-400 mt-0.5">
+                <h2 className="text-sm font-medium text-gray-900 dark:text-white">Meet Djungelskog</h2>
+                <p className="text-xs text-gray-500 dark:text-gray-400">
                   Your friendly AI assistant, here to help you explore Mohnish&apos;s portfolio.
                 </p>
               </div>
@@ -262,7 +265,7 @@ const Home = () => {
         {/* Bottom gradient */}
       </div>
 
-      <form onSubmit={handleFormSubmit} className="sticky bottom-0 bg-white/80 dark:bg-black/80 backdrop-blur-sm py-3 px-2">
+      <form onSubmit={handleFormSubmit} className="sticky bottom-20 sm:bottom-0 bg-white/80 dark:bg-black/80 backdrop-blur-sm py-3 px-2">
         <div className="flex gap-2">
           <input
             value={input}

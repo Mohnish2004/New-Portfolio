@@ -51,21 +51,9 @@ export const Footer = () => {
     <footer className="max-w-xl mx-auto px-4 mt-10 pb-8">
       <div className="border-t border-neutral-200 dark:border-neutral-700">
         <div className="flex flex-col md:flex-row justify-center items-center py-8">
-          {/* <div className="flex items-center space-x-4 mb-4 md:mb-0">
-            <Clock />
-          </div> */}
           
           <nav className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-neutral-600 dark:text-neutral-400">
-            <a href="/" className="hover:text-neutral-800 dark:hover:text-neutral-200">Home</a>
-            <a href="/projects" className="hover:text-neutral-800 dark:hover:text-neutral-200">Projects</a>
-            <a href="/experience" className="hover:text-neutral-800 dark:hover:text-neutral-200">Experience</a>
-            <a href="/about" className="hover:text-neutral-800 dark:hover:text-neutral-200">About</a>
-            <a href="/gallery" className="hover:text-neutral-800 dark:hover:text-neutral-200">Gallery</a>
-            <a href="/contact" className="hover:text-neutral-800 dark:hover:text-neutral-200">Contact</a>
-          </nav>
-        </div>
-
-        <div className="flex justify-center text-sm text-neutral-600 dark:text-neutral-400">
+          <div className="flex justify-center text-sm text-neutral-600 dark:text-neutral-400">
           <span className="flex items-center gap-2">
             © Made with
             <LinkPreview url="/" isStatic imageSrc="/bear1.jpeg">
@@ -80,6 +68,10 @@ export const Footer = () => {
             by Mohnish | Last updated: July, 2024
           </span>
         </div>
+          </nav>
+        </div>
+
+
       </div>
     </footer>
   )

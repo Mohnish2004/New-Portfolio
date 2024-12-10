@@ -22,10 +22,40 @@ const Home = () => {
         <p data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 mb-8">
           They say, <span className="font-bold">&ldquo;A jack of all trades is a master of none,&rdquo;</span> but not many people know the full quote: <span className="font-bold">&ldquo;but oftentimes better than a master of one.&rdquo;</span> That&apos;s exactly how I see myself, I enjoy wearing multiple hats because I just love to try new things. I&apos;ve explored product management, various branches of software engineering—from web to mobile, AI to ML, and cybersecurity. My research has also taken me into robotics and virtual reality development. At the same time, I always enjoy designing because I love the intersection of art and technology.
         </p>
-
+        <div className="relative h-40 my-2 flex justify-center items-center group">
+          <div className="absolute transition-all duration-300 transform cursor-pointer group-hover:translate-x-[-15px] group-hover:rotate-[-5deg] left-[30%] top-1/2 -translate-y-1/2">
+            <Image
+              src="/exp_pics/H.png"
+              alt="Polaroid 1"
+              width={100}
+              height={100}
+              className="rounded-lg shadow-xl transform rotate-[-10deg] border-4 border-white"
+            />
+          </div>
+          <div className="absolute transition-all rounded-lg duration-300 transform cursor-pointer group-hover:rotate-[1deg] left-[40%] top-1/2 -translate-y-1/2">
+            <Image
+              src="/exp_pics/a.jpg"
+              alt="Polaroid 2"
+              width={100}
+              height={100}
+              className="rounded-lg shadow-xl transform rotate-[0deg] border-4 border-white"
+            />
+          </div>
+          <div className="absolute transition-all duration-300 transform cursor-pointer group-hover:translate-x-[15px] group-hover:rotate-[5deg] left-[50%] top-1/2 -translate-y-1/2">
+            <Image
+              src="/exp_pics/a4.jpg"
+              alt="Polaroid 3"
+              width={100}
+              height={100}
+              className="rounded-lg shadow-xl transform rotate-[10deg] border-4 border-white"
+            />
+          </div>
+        </div>
         <p data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 mb-8">
           One constant in my journey is my commitment to leadership. I currently serve as president at <LinkPreview url="https://www.codelabdavis.com/" imageSrc="/cl6.png" className="font-semibold" isStatic>CodeLab</LinkPreview>, the largest software and design agency in Davis. While I&apos;m still exploring the full extent of my capabilities, I&apos;m driven by curiosity and a desire to learn, adapt, and grow.
         </p>
+
+        
 
         <p data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 mb-8">
           Outside of work, you can find me enjoying long drives, hitting the gym, playing badminton, or watching movies. I grew up in Dubai, which I proudly call home. I&apos;m also a casual photographer—capturing life&apos;s unplanned moments. Want to see some? Check out my <LinkPreview url="/gallery" imageSrc="/gallery.png" className="font-semibold" isStatic>gallery</LinkPreview>.
@@ -38,7 +68,7 @@ const Home = () => {
           src="https://open.spotify.com/embed/playlist/0yIGIUWcMpxYiW2Emhibrb?utm_source=generator&theme=0" 
           width="100%" 
           height="152" 
-          frameBorder="0" 
+          frameBorder="10" 
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
           loading="lazy"
         />
@@ -46,6 +76,8 @@ const Home = () => {
         <p data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 mb-8">
           I&apos;m open to job opportunities that allow me to make a meaningful impact. If you have an opportunity that aligns with my skills and experiences, I&apos;d love to explore how we can collaborate.
         </p>
+
+
 
         <h3 data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 font-semibold">
           Regards

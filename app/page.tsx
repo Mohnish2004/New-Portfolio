@@ -182,7 +182,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
   
     <section data-aos="fade-in" className="antialiased max-w-xl p-4 mx-4 sm:mx-auto">
 < Dot delay={0.25} inView >
-<div className="relative mb-4 left-[-46px]"> {/* Adjust this value as needed */}
+<div className="relative mb-4 mt-4 left-[-46px]"> {/* Adjust this value as needed */}
 <Image 
           src="/1.svg" 
           alt="Profile" 
@@ -200,11 +200,10 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       </Dot>
       < Dot delay={0.5} inView >
       <div className="mb-14 -mt-36 ">
-       <span className="inline-flex items-center rounded-md bg-gray-50 px-1 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">          <FlipWords words={words} duration={duration} className="my-custom-class" />
-</span>
-      <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">President of CodeLab</span>
-      <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mt-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">Open for internships</span>
 
+      <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">President of CodeLab</span>
+      <span className="inline-flex items-center rounded-md bg-gray-50 px-1 py-1 mr-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 font-medium text-gray-600 dark:text-white ring-1 ring-inset ring-gray-500/10">          <FlipWords words={words} duration={duration} className="my-custom-class" />
+      </span>
 
        </div>
        </Dot>
@@ -259,10 +258,9 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 
 
 
-      <h2 data-aos="fade-in" className="font-medium mb-5 text-2xl" >
+      <h2 data-aos="fade-in" className="font-medium mb-5 mt-12 text-2xl" >
        Featured work
       </h2>
-
  <section>
  <div className="mb-5">
   <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
@@ -427,11 +425,12 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       </div>
       <div className="md:w-1/2">
         <a className="group block h-full" href={"/"}>
-          <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
+        <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
           <a href='https://medium.com/@mohnish.gopi/d2d-enzyme-rate-calculator-c1cc87f268f4'>
 
             <Image className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " width="1000" height="1000" src="/projects/d2d2.png" alt="Description"/>
-          </a></div>
+          </a>
+        </div>
         </a>
       </div>
     </div>
@@ -471,13 +470,6 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 
 
     </section>
-
-
-
-
-
-
-
 
       <div className="mt-20">
       <div className="mt-20 flex justify-between items-center">
@@ -644,9 +636,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 
 
 
-
-
-
+{/* 
         <ul className="mb-10 justify-end font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
           <a
@@ -658,7 +648,15 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
             <p className="ml-2 h-7">Learn more </p>
           </a>
         </li>
-        </ul>
+        </ul> */}
+
+        <ul className=" mb-4 mt-6 justify-end font-sm flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+        <li> <a className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100" rel="noopener noreferrer" href="/experience"> <ArrowIcon />
+      <p className="ml-2 h-7">Learn more</p>
+    </a>
+  </li>
+</ul>
+
 
       </div>
     </section>
