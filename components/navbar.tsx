@@ -10,21 +10,22 @@ import {
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { 
-  HomeIcon,
-  ImageIcon,
+  CameraIcon,
   EnvelopeClosedIcon,
   GitHubLogoIcon, 
   LinkedInLogoIcon,
   FileTextIcon,
-  PersonIcon,
   BackpackIcon,
   LayersIcon,
-  StarIcon,
+  AvatarIcon,
+  InfoCircledIcon,
+  BookmarkIcon,
+  FaceIcon,
 } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 // Add this custom icon component
-const AiStarsIcon = () => (
+const AiChatIcon = () => (
   <svg
     width="16"
     height="16"
@@ -34,25 +35,29 @@ const AiStarsIcon = () => (
     className="size-4"
   >
     <path
-      d="M12 3L14.5 8.5L20 11L14.5 13.5L12 19L9.5 13.5L4 11L9.5 8.5L12 3Z"
+      d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 13.9021 3.5901 15.6665 4.59721 17.1199C4.70168 17.2707 4.7226 17.4653 4.64529 17.6317L3.42747 20.2519C3.23699 20.5853 3.47768 21 3.86159 21H12Z"
       stroke="currentColor"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
-      d="M19 17L20 19L22 20L20 21L19 23L18 21L16 20L18 19L19 17Z"
+      d="M8 12H8s.01"
       stroke="currentColor"
-      strokeWidth="1.5"
+      strokeWidth="2"
       strokeLinecap="round"
-      strokeLinejoin="round"
     />
     <path
-      d="M5 17L6 19L8 20L6 21L5 23L4 21L2 20L4 19L5 17Z"
+      d="M12 12H12.01"
       stroke="currentColor"
-      strokeWidth="1.5"
+      strokeWidth="2"
       strokeLinecap="round"
-      strokeLinejoin="round"
+    />
+    <path
+      d="M16 12H16.01"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
     />
   </svg>
 );
@@ -65,7 +70,6 @@ const navData = {
       label: "Projects",
       icon: LayersIcon,
     },
-
     {
       href: "/experience",
       label: "Experience",
@@ -74,12 +78,12 @@ const navData = {
     {
       href: "/about",
       label: "About",
-      icon: PersonIcon,
+      icon: AvatarIcon,
     },
     {
       href: "/gallery",
       label: "Gallery",
-      icon: ImageIcon,
+      icon: CameraIcon,
     },
     {
       href: "/contact",
@@ -89,7 +93,7 @@ const navData = {
     {
       href: "/chat",
       label: "AI Chat",
-      icon: AiStarsIcon,
+      icon: InfoCircledIcon,
     },
   ],
   contact: {
@@ -245,7 +249,7 @@ export const Navbar = () => {
             <Separator orientation="vertical" className="mx-2 h-8 bg-neutral-200 dark:bg-neutral-800" decorative />
             
             {navData.navbar
-              .filter(item => ['Projects', 'Experience', 'About', 'Contact', 'AI Chat'].includes(item.label))
+              .filter(item => ['Projects', 'Experience', 'About', 'Camera', 'Contact', 'AI Chat'].includes(item.label))
               .map((item) => (
                 <DockIcon key={item.href}>
                   <Tooltip>

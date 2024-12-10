@@ -95,6 +95,21 @@ const Home = () => {
 
       <section className="mt-5">
         <div className="prose prose-neutral dark:prose-invert">
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">Incoming SWE intern</h2>
+    <p className="text-neutral-600 dark:text-neutral-400 text-sm flex items-center gap-1">
+      <LinkPreviews url="https://azure.microsoft.com/en-us" >
+        <div className="flex items-center gap-1 group">
+          <span className="relative">
+            <span className=" bg-clip-text font-semibold">
+              Microsoft
+            </span>
+          </span>
+        </div>
+      </LinkPreviews> / Summer 2025
+    </p>
+    <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+
+
           <h2 className="font-medium text-xl mb-1 tracking-tighter">Product Manager / President</h2>
           <p className="text-neutral-600 dark:text-neutral-400 text-sm">
             <LinkPreviews url="https://www.codelabdavis.com/" imageSrc="/cl6.png" isStatic>
@@ -125,15 +140,26 @@ const Home = () => {
               IBM Maximo eSolutions
             </LinkPreviews> / 2023
           </p>
+
+          
+          <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+          <h2 className="font-medium text-xl mb-1 tracking-tighter">IT Technician</h2>
+          <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+            <LinkPreviews url="https://engineering.ucdavis.edu/">
+              College of Engineering
+            </LinkPreviews> / Present
+          </p>
           <hr className="my-6 border-neutral-200 dark:border-neutral-800" />
 
           <h2 className="font-medium text-xl mb-1 tracking-tighter">Student Ambassador / Tour Guide</h2>
           <p className="text-neutral-600 dark:text-neutral-400 text-sm">
             <LinkPreviews url="https://www.ucdavis.edu/about/visit/campus-tour">
               Undergraduate admissions
-            </LinkPreviews> / Present
+            </LinkPreviews> / 2023
           </p>
         </div>
+        
+        
       </section>
 
 

@@ -65,19 +65,26 @@ export const FlipWords = ({
         )}
         key={currentWord}
       >
-        {currentWord.split("").map((letter, index) => (
-          <motion.span
-            key={currentWord + index}
-            initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{
-              delay: index * 0.08,
-              duration: 0.4,
-            }}
-            className="inline-block"
-          >
-            {letter}
-          </motion.span>
+        {currentWord.split(" ").map((segment, segmentIndex, segments) => (
+          <React.Fragment key={`segment-${segmentIndex}`}>
+            {segment.split("").map((letter, letterIndex) => (
+              <motion.span
+                key={`${currentWord}-${segmentIndex}-${letterIndex}`}
+                initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{
+                  delay: (segmentIndex * segment.length + letterIndex) * 0.08,
+                  duration: 0.4,
+                }}
+                className="inline-block"
+              >
+                {letter}
+              </motion.span>
+            ))}
+            {segmentIndex < segments.length - 1 && (
+              <span className="inline-block">&nbsp;</span>
+            )}
+          </React.Fragment>
         ))}
       </motion.div>
     </AnimatePresence>

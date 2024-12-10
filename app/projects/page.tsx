@@ -64,7 +64,7 @@ const Home = () => {
   <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
   <a className="group block" href={"/"}>
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
-    <a href='https://medium.com/@mohnish.gopi/d2dcure-5b41fcbc0ee4'>
+    <a href='https://d2d-cure.vercel.app/'>
       <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/cure.png" alt="Description"/>
       </a>
     </div>
@@ -93,6 +93,13 @@ const Home = () => {
   className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10"
 >
   Read more
+</button>
+<button
+  type="button"
+  onClick={() => window.location.href='https://d2d-cure.vercel.app/'}
+  className="transition-all ml-2 duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10"
+>
+  View Site
 </button>
       </div>
     </div>
@@ -136,6 +143,77 @@ const Home = () => {
       </div>
     </div>
 
+    <div className="group mb-5 flex w-full transition-all duration-300 hover:scale-105 hover:shadow-xl">
+      <a
+        href={"https://drive.google.com/file/d/12xnuAkIVjqKLicPoPP9W_dt4a6KRIAZE/view?usp=sharing"}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-102 hover:shadow-md"
+      >
+        <div className="flex items-center space-x-3">
+        <img width="1000" height="1000" src="https://cdn3d.iconscout.com/3d/premium/thumb/crypto-stocks-chart-5349277-4466490.png?f=webp" className="h-20 w-20 "  alt="test"></img >
+
+          <div className="flex flex-col pl-3 pr-3 leading-tight" >
+          <p className="font-light text-sm text-neutral-900 dark:text-neutral-100">
+            Research Paper
+            </p>
+            <h1 className="font-medium text-neutral-900 dark:text-neutral-100">
+            Volatility Forecasting of Large Cap U.S. Equities Using GARCH Neural Network
+            </h1>
+            <div>
+            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+          Artificial Intelligence
+        </span>
+        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+          Machine Learning
+        </span>
+        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+          Finance
+        </span>
+            </div>
+          </div>
+          
+        </div>
+
+      </a>
+    </div>
+
+
+    <div data-aos="fade-up" className="group mb-5 flex w-full transition-all duration-300 hover:scale-105  hover:shadow-xl">
+        <a
+          href={"https://drive.google.com/file/d/1akPm3tfeHl4tv_gZefd0bLC2hxdkGa0Q/view?usp=sharing"}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-102 hover:shadow-md"
+        >
+          <div className="flex items-center space-x-3 ">
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/apple-vision-3d-icon-download-in-png-blend-fbx-gltf-file-formats--vr-glass-virtual-reality-glasses-technology-pack-science-icons-10299052.png?f=webp" width="60" height="60" className="h-20 w-20 " alt="test"></img>
+
+            <div className="flex flex-col pl-3 pr-3 leading-tight">
+              <p className="font-light text-sm text-neutral-900 dark:text-neutral-100">
+                Research Assistant
+              </p>
+              <h1 className="font-medium text-neutral-900 dark:text-neutral-100">
+              Exploring Active Vision in Bimanual Robotic Manipulation
+              </h1>
+              <div>
+                <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                  VR Development
+                </span>
+                <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                  Robotics
+                </span>
+                <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                  Assistant
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+        </a>
+      </div>
+
 
     <div className="mb-5">
   <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
@@ -173,40 +251,59 @@ const Home = () => {
   </div>
     
 
-  <div className="group mb-5 flex w-full transition-all duration-300 hover:scale-105 hover:shadow-xl">
-      <a
-        href={"https://drive.google.com/file/d/12xnuAkIVjqKLicPoPP9W_dt4a6KRIAZE/view?usp=sharing"}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-102 hover:shadow-md"
-      >
-        <div className="flex items-center space-x-3">
-        <img width="1000" height="1000" src="https://cdn3d.iconscout.com/3d/premium/thumb/crypto-stocks-chart-5349277-4466490.png?f=webp" className="h-20 w-20 "  alt="test"></img >
 
-          <div className="flex flex-col pl-3 pr-3 leading-tight" >
-          <p className="font-light text-sm text-neutral-900 dark:text-neutral-100">
-            Research Paper
-            </p>
-            <h1 className="font-medium text-neutral-900 dark:text-neutral-100">
-            Volatility Forecasting of Large Cap U.S. Equities Using GARCH Neural Network
-            </h1>
-            <div>
-            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-          Artificial Intelligence
-        </span>
-        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-          Machine Learning
-        </span>
-        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-          Finance
-        </span>
-            </div>
+
+
+
+
+    <div className="mb-5">
+  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+    <div className="flex flex-col md:flex-row">
+      <div className="md:w-1/2">
+        <a className="group block h-full" href={"/"}>
+          <div className="h-full overflow-hidden bg-gray-100 rounded-l-lg dark:bg-neutral-800">
+          <a href='https://drive.google.com/file/d/1PuFn_1D4t18b7H_9VPRS3ilNOY-dlGjO/view?usp=sharing'>
+
+            <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/projects/larab.png" alt="Description"/>
+            </a>
           </div>
-          
+        </a>
+      </div>
+      <div className="p-6 md:w-1/2 flex flex-col justify-between">
+        <div>
+          <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
+            Brand Identity
+          </h1>
+          <p className="mt-1 mb-4 text-gray-600 text-xs leading-tight dark:text-neutral-400">
+          Led the design and development of the LARA brand identity, including the website, social media, and marketing materials.
+</p><div className="mt-4">
+            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+             Branding
+            </span>
+            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+             Design
+            </span>
+            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+             Graphic Design
+            </span>
+<button
+  type="button"
+  onClick={() => window.location.href='https://drive.google.com/file/d/1PuFn_1D4t18b7H_9VPRS3ilNOY-dlGjO/view?usp=sharing'}
+  className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10"
+>
+  Read more
+</button>
+          </div>
         </div>
-
-      </a>
+      </div>
     </div>
+  </div>
+</div>
+
+
+
+
+
 
 
 
