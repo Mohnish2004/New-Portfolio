@@ -27,7 +27,7 @@ const Home = () => {
         <p data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 mb-8">
           They say, <span className="font-bold">&ldquo;A jack of all trades is a master of none,&rdquo;</span> but not many people know the full quote: <span className="font-bold">&ldquo;but oftentimes better than a master of one.&rdquo;</span> That&apos;s exactly how I see myself, I enjoy wearing multiple hats because I just love to try new things. I&apos;ve explored product management, various branches of software engineering—from web to mobile, AI to ML, and cybersecurity. My research has also taken me into robotics and virtual reality development. At the same time, I always enjoy designing because I love the intersection of art and technology.
         </p>
-        <div className="relative h-64 my-8 flex justify-center items-center">
+        <div className="relative h-64 my-8 flex justify-center items-center group">
           <div className="absolute transition-all duration-300 transform cursor-pointer group-hover:translate-x-[-20px] group-hover:rotate-[-8deg] left-[20%] top-1/2 -translate-y-1/2">
             <Image
               src="/exp_pics/H.png"
@@ -153,10 +153,10 @@ const Home = () => {
 
 
 
-        <p data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 font-semibold">
+        <h3 data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 font-semibold">
           Regards
-        </p>
-        <a href="/" className="-pl-4 -pt-10">
+        </h3>
+        <a href="/" className="-pl-4 -pt-5">
           <svg 
             width="90" 
             height="90" 
