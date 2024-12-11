@@ -36,24 +36,49 @@ const Home = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (messagesEndRef.current) {
-      const scrollOptions = {
-        behavior: 'smooth' as ScrollBehavior,
-        block: 'end' as ScrollLogicalPosition
-      };
-      
-      // Small delay to ensure smooth animation
-      setTimeout(() => {
-        messagesEndRef.current?.scrollIntoView(scrollOptions);
-      }, 100);
+    const scrollToBottom = () => {
+      if (messagesEndRef.current) {
+        messagesEndRef.current.scrollIntoView({
+          behavior: 'smooth',
+          block: 'end',
+        });
+      }
+    };
+
+    // Initial scroll
+    scrollToBottom();
+
+    // Set up a mutation observer to watch for changes in message content
+    const observer = new MutationObserver(scrollToBottom);
+    
+    if (messagesEndRef.current?.parentElement) {
+      observer.observe(messagesEndRef.current.parentElement, {
+        childList: true,
+        subtree: true,
+      });
     }
-  }, [messages]);
+
+    // Cleanup
+    return () => observer.disconnect();
+  }, [messages]); // Only re-run when messages change
+
+  // Add this function to handle immediate scroll on new message
+  const scrollToBottomImmediate = () => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({
+        behavior: 'auto',
+        block: 'end',
+      });
+    }
+  };
 
   const handleFormSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     if (input.trim()) {
       setShowInitialMessage(false);
       handleSubmit(event);
+      // Scroll immediately when sending a message
+      scrollToBottomImmediate();
     }
   };
 
@@ -86,9 +111,15 @@ const Home = () => {
   ];
 
   const handleQuickAction = async (action: string) => {
+    // First update the input
     const fakeEvent = { target: { value: action } } as any;
     await handleInputChange(fakeEvent);
-    setTimeout(() => handleSubmit(new Event('submit') as any), 0);
+    
+    // Then immediately submit
+    handleSubmit(new Event('submit') as any);
+    
+    // Scroll to bottom
+    scrollToBottomImmediate();
   };
 
   const handleNavigation = (path: string) => {
@@ -135,11 +166,14 @@ const Home = () => {
         <div className="overflow-y-auto mb-4 space-y-4 h-[calc(100vh-180px)] scrollbar-hide px-2 scroll-smooth">
           <div className="mt-10 p-4 bg-white/50 dark:bg-neutral-900/50 backdrop-blur-sm rounded-2xl shadow-sm ring-1 ring-black/5 dark:ring-white/5">
             <div className="flex items-center gap-3.5">
-              <div className="p-2.5 bg-gradient-to-b from-white to-gray-50 dark:from-neutral-800 dark:to-neutral-900 rounded-xl shadow-sm ring-1 ring-black/5 dark:ring-white/5">
+              <div className="relative p-2.5 bg-gradient-to-b from-white to-gray-50 dark:from-neutral-800 dark:to-neutral-900 rounded-xl shadow-sm ring-1 ring-black/5 dark:ring-white/5">
                 <img src="/bear.svg" alt="Djungelskog" className="w-6 h-6 flex-shrink-0" />
               </div>
               <div className="min-w-0">
-                <h2 className="text-sm font-medium text-gray-900 dark:text-white">Meet Djungelskog</h2>
+                <div className="flex items-center gap-2">
+                  <h2 className="text-sm font-medium text-gray-900 dark:text-white">Meet Djungelskog</h2>
+                  <span className="text-[10px] font-medium text-green-600 dark:text-green-500">online</span>
+                </div>
                 <p className="text-xs text-gray-500 dark:text-gray-400">
                   Your friendly AI assistant, here to help you explore Mohnish&apos;s portfolio.
                 </p>
@@ -152,11 +186,11 @@ const Home = () => {
               <button
                 key={index}
                 onClick={() => handleQuickAction(action.text)}
-                className="p-3 text-left rounded-xl bg-gray-50 dark:bg-neutral-800 text-xs text-gray-700 dark:text-white ring-1 ring-gray-200 dark:ring-neutral-700 hover:bg-gray-100 dark:hover:bg-neutral-700 transition-all group"
+                className="p-3 text-left rounded-xl bg-white/50 dark:bg-neutral-900/50 backdrop-blur-sm text-xs text-gray-700 dark:text-white ring-1 ring-black/5 dark:ring-white/5 hover:bg-gray-50 dark:hover:bg-neutral-800 transition-all group"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <div className="p-1.5 bg-gray-100 dark:bg-neutral-700 rounded-lg">
+                    <div className="p-1.5 bg-gradient-to-b from-white to-gray-50 dark:from-neutral-800 dark:to-neutral-900 rounded-lg ring-1 ring-black/5 dark:ring-white/5">
                       {action.icon}
                     </div>
                     <span className="line-clamp-2 min-h-[2.5rem] flex items-center">{action.text}</span>
@@ -165,6 +199,17 @@ const Home = () => {
                 </div>
               </button>
             ))}
+          </div>
+
+          <div className="relative py-4">
+            <div className="absolute inset-0 flex items-center" aria-hidden="true">
+              <div className="w-full border-t border-gray-200 dark:border-neutral-800"></div>
+            </div>
+            <div className="relative flex justify-center">
+              <span className="px-2 text-xs text-gray-500 dark:text-gray-400 bg-white dark:bg-black">
+                Your conversation will appear below
+              </span>
+            </div>
           </div>
 
           {messages.map((message) => (
@@ -266,12 +311,12 @@ const Home = () => {
       </div>
 
       <form onSubmit={handleFormSubmit} className="sticky bottom-20 sm:bottom-0 bg-white/80 dark:bg-black/80 backdrop-blur-sm py-3 px-2">
-        <div className="flex gap-2">
+        <div className="relative">
           <input
             value={input}
             onChange={handleInputChange}
             placeholder="Ask me anything..."
-            className="flex-grow h-9 items-center rounded-lg bg-gray-50 dark:bg-neutral-800 px-3 py-2 text-xs text-gray-700 dark:text-white ring-1 ring-gray-200 dark:ring-neutral-700 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-neutral-600 transition-shadow"
+            className="w-full h-10 pl-4 pr-12 rounded-xl bg-white dark:bg-neutral-900 text-sm text-gray-700 dark:text-white ring-1 ring-gray-200 dark:ring-neutral-800 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-neutral-700 transition-shadow"
           />
           <button
             type="submit"
@@ -280,9 +325,17 @@ const Home = () => {
                 stop()
               }
             }}
-            className="h-9 px-4 rounded-lg bg-gray-100 dark:bg-neutral-800 text-xs font-medium text-gray-700 dark:text-white ring-1 ring-gray-200 dark:ring-neutral-700 hover:bg-gray-200 dark:hover:bg-neutral-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all hover:scale-[1.02] active:scale-[0.98]"
+            className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-white transition-colors"
           >
-            {isLoading ? 'Stop' : 'Send'}
+            {isLoading ? (
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+              </svg>
+            )}
           </button>
         </div>
       </form>
