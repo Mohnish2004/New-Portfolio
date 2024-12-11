@@ -245,8 +245,8 @@ const Home = () => {
         await navigator.share({
           files: [file],
           title: 'Chat with Djungelskog',
-          text: '🐻 Check out my conversation with Djungelskog, the AI assistant at mohnishgopi.com/chat! #AI #Portfolio',
-          url: 'Check out my conversation with Djungelskog, the AI assistant at https://mohnishgopi.com/chat'
+          text: '🐻 Check out my conversation with Djungelskog, the AI assistant!',
+          url: 'https://mohnishgopi.com/chat'
         });
         setShowShareModal(false);
       } else {
