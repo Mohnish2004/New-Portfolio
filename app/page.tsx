@@ -291,7 +291,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       </div>
       <div className="md:w-1/2">
         <a className="group block h-full" href={"/"}>
-          <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
+          <div className="h-full overflow-hidden bg-gray-100 rounded-b-lg md:rounded-b-none md:rounded-r-lg md:rounded-l-none dark:bg-neutral-800">
           <a href='https://medium.com/@mohnish.gopi/d2dcure-5b41fcbc0ee4'>
 
             <Image className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " src="/projects/cure.png" width="1000" height="1000" alt="Description"/>
@@ -326,7 +326,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       </div>
       <div className="md:w-1/2">
         <a className="group block h-full" href={"/"}>
-          <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
+          <div className="h-full overflow-hidden bg-gray-100 rounded-b-lg md:rounded-b-none md:rounded-r-lg md:rounded-l-none dark:bg-neutral-800">
           <a href='https://medium.com/@mohnish.gopi/d2dcure-5b41fcbc0ee4'>
 
             <Image className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " src="/projects/eduhub.png" width="1000" height="1000" alt="Description"/>
@@ -360,7 +360,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       </div>
       <div className="md:w-1/2">
         <a className="group block h-full" href={"/"}>
-          <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
+          <div className="h-full overflow-hidden bg-gray-100 rounded-b-lg md:rounded-b-none md:rounded-r-lg md:rounded-l-none dark:bg-neutral-800">
           <a href='https://devpost.com/software/slate-pas0bz'>
 
             <Image className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " width="1000" height="1000" src="/projects/slate.jpg" alt="Description"/>
@@ -406,7 +406,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       </div>
       <div className="md:w-1/2">
         <a className="group block h-full" href={"/"}>
-        <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
+        <div className="h-full overflow-hidden bg-gray-100 rounded-b-lg md:rounded-b-none md:rounded-r-lg md:rounded-l-none dark:bg-neutral-800">
           <a href='https://medium.com/@mohnish.gopi/d2d-enzyme-rate-calculator-c1cc87f268f4'>
 
             <Image className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full " width="1000" height="1000" src="/projects/d2d2.png" alt="Description"/>

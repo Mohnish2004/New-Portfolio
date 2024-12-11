@@ -34,41 +34,35 @@ const Home = () => {
 
   const [showInitialMessage, setShowInitialMessage] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const chatContainerRef = useRef<HTMLDivElement>(null);
 
+  // Auto-scroll logic
   useEffect(() => {
-    const scrollToBottom = () => {
-      if (messagesEndRef.current) {
-        messagesEndRef.current.scrollIntoView({
-          behavior: 'smooth',
-          block: 'end',
-        });
-      }
+    const chatContainer = chatContainerRef.current;
+    if (!chatContainer) return;
+
+    // Check if user is near bottom before scrolling
+    const isNearBottom = () => {
+      const threshold = 100; // pixels from bottom
+      const position = chatContainer.scrollHeight - chatContainer.scrollTop - chatContainer.clientHeight;
+      return position <= threshold;
     };
 
-    // Initial scroll
-    scrollToBottom();
+    // Add a small delay to ensure content is rendered
+    setTimeout(() => {
+      if (isNearBottom() || isLoading) {
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+      }
+    }, 100);
+  }, [messages, isLoading]);
 
-    // Set up a mutation observer to watch for changes in message content
-    const observer = new MutationObserver(scrollToBottom);
-    
-    if (messagesEndRef.current?.parentElement) {
-      observer.observe(messagesEndRef.current.parentElement, {
-        childList: true,
-        subtree: true,
-      });
-    }
-
-    // Cleanup
-    return () => observer.disconnect();
-  }, [messages]); // Only re-run when messages change
-
-  // Add this function to handle immediate scroll on new message
-  const scrollToBottomImmediate = () => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({
-        behavior: 'auto',
-        block: 'end',
-      });
+  // Force scroll to bottom when user sends a message
+  const scrollToBottom = () => {
+    const chatContainer = chatContainerRef.current;
+    if (chatContainer) {
+      setTimeout(() => {
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+      }, 100);
     }
   };
 
@@ -77,8 +71,7 @@ const Home = () => {
     if (input.trim()) {
       setShowInitialMessage(false);
       handleSubmit(event);
-      // Scroll immediately when sending a message
-      scrollToBottomImmediate();
+      scrollToBottom();
     }
   };
 
@@ -111,15 +104,10 @@ const Home = () => {
   ];
 
   const handleQuickAction = async (action: string) => {
-    // First update the input
     const fakeEvent = { target: { value: action } } as any;
     await handleInputChange(fakeEvent);
-    
-    // Then immediately submit
     handleSubmit(new Event('submit') as any);
-    
-    // Scroll to bottom
-    scrollToBottomImmediate();
+    scrollToBottom();
   };
 
   const handleNavigation = (path: string) => {
@@ -163,7 +151,10 @@ const Home = () => {
         {/* Top gradient */}
         <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-white dark:from-black to-transparent z-10" />
         
-        <div className="overflow-y-auto mb-4 space-y-4 h-[calc(100vh-180px)] scrollbar-hide px-2 scroll-smooth">
+        <div 
+          ref={chatContainerRef}
+          className="overflow-y-auto mb-4 space-y-4 h-[calc(100vh-180px)] scrollbar-hide px-2 scroll-smooth"
+        >
           <div className="mt-10 p-4 bg-white/50 dark:bg-neutral-900/50 backdrop-blur-sm rounded-2xl shadow-sm ring-1 ring-black/5 dark:ring-white/5">
             <div className="flex items-center gap-3.5">
               <div className="relative p-2.5 bg-gradient-to-b from-white to-gray-50 dark:from-neutral-800 dark:to-neutral-900 rounded-xl shadow-sm ring-1 ring-black/5 dark:ring-white/5">
@@ -303,8 +294,7 @@ const Home = () => {
               </div>
             </div>
           )}
-          
-          <div ref={messagesEndRef} className="h-1" />
+          <div ref={messagesEndRef} className="h-px" />
         </div>
         
         {/* Bottom gradient */}
