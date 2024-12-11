@@ -160,32 +160,53 @@ const Home = () => {
 
       previewContainer.innerHTML = `
         <div class="flex flex-col h-full">
-          <div class="flex items-start gap-4">
-            <img src="/bear.svg" alt="Djungelskog" class="w-8 h-8" />
-            <div class="flex-1">
-              <p class="text-xl text-gray-900 dark:text-white">
+          <div class="flex items-center gap-4 mb-6">
+            <img src="/bear.svg" alt="Djungelskog" class="w-12 h-15" />
+            <div>
+              <h2 class="text-2xl font-medium text-gray-900 dark:text-white">Djungelskog</h2>
+              <p class="text-base text-gray-500 dark:text-gray-400">AI Assistant at mohnishgopi.com</p>
+            </div>
+          </div>
+          
+          <div class="flex-1 overflow-hidden">
+            <div class="text-base text-gray-600 dark:text-gray-400 mb-6">
+              <span class="font-medium text-gray-900 dark:text-white">You asked:</span><br/>
+              "${userQuestion}"
+            </div>
+            
+            <div class="bg-gray-50 dark:bg-neutral-800 rounded-xl ring-1 ring-gray-200 dark:ring-neutral-700">
+              <div class="text-lg leading-relaxed text-gray-900 dark:text-white p-8">
                 ${truncatedContent}
-              </p>
+              </div>
             </div>
           </div>
 
-          <div class="mt-auto pt-6 border-t border-gray-200 dark:border-gray-800">
+          <div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-800">
             <div class="flex items-center justify-between">
               <div>
-                <p class="text-sm text-gray-500 dark:text-gray-400">
-                  Chat with Djungelskog at
+                <p class="text-lg font-medium text-gray-900 dark:text-white">
+                  Continue the conversation
                 </p>
-                <p class="text-base font-medium text-gray-900 dark:text-white">
-                  mohnishgopi.com
+                <p class="text-base text-gray-500 dark:text-gray-400">
+                  mohnishgopi.com/chat
                 </p>
               </div>
-              <div class="flex items-center gap-2">
-                <img src="/bear.svg" alt="Djungelskog" class="w-6 h-6 opacity-60" />
-                <span class="text-sm font-medium text-gray-600 dark:text-gray-300">
-                  Djungelskog AI
-                </span>
-              </div>
-            </div>
+          <svg 
+            width="90" 
+            height="90" 
+            opacity="1"
+            viewBox="0 0 144 66" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg" 
+            className="-py-4"
+          >
+            <path 
+              d="M31.6907 46.392C32.6008 46.6137 32.2588 43.38 32.2607 43.0902C32.3 37.0367 31.6573 30.966 32.6233 24.9505C33.5996 18.8704 34.5802 7.67156 42.9693 8.9158C47.0595 9.52244 45.8074 12.0875 45.7901 15.901V15.901C45.7784 18.4651 46.5847 16.9606 47.6776 14.6411C47.688 14.619 47.6991 14.597 47.7107 14.575C48.5977 12.9027 53.3391 9.47773 55.6207 10.2532C58.0277 11.0713 58.3581 12.3177 58.5792 14.8508C59.2355 22.3716 57.2986 30.2646 56.2107 37.6655C56.0517 38.7468 54.2447 46.5594 56.042 47.2428C58.1437 48.0419 62.0784 42.6113 62.8025 41.3598C64.0016 39.2873 65.1784 37.1975 66.056 34.9659C66.3335 34.2602 66.6215 32.6826 67.398 32.2775C67.4448 32.2531 66.8928 33.6377 66.8516 33.7147C65.8647 35.5576 65.1138 37.4439 64.3711 39.3973C63.3255 42.1475 62.0528 45.999 65.232 47.9495C68.5327 49.9746 77.3767 36.1952 72.2033 33.0993C69.7474 31.6296 64.4844 34.9488 68.7025 36.1777C73.5238 37.5824 78.5518 32.5432 81.4579 29.4897C85.9965 24.7207 90.3808 17.4522 89.8825 10.5768C89.7612 8.90415 88.6007 1.71189 85.9338 1.67306C83.7317 1.64101 81.3715 13.2626 81.0434 14.5957C79.107 22.4645 78.9565 30.6402 78.6215 38.6924C78.5487 40.4428 78.4968 42.1993 78.4501 43.9506C78.4201 45.0762 78.6618 44.1259 79.0467 43.5834C81.3359 40.3564 85.3726 39.7056 88.9986 41.0842C92.1715 42.2906 93.8265 45.1067 97.1489 46.1479C107.294 49.3272 118.849 49.7842 129.401 50.2541C133.266 50.4261 144.867 49.7945 140.999 49.797C132.782 49.8024 124.542 50.5384 116.324 50.6969C92.8358 51.1498 69.2679 50.9265 45.7854 50.243C33.5997 49.8882 21.1307 49.5358 9.19336 46.7944C8.0923 46.5415 2.32182 45.7411 2.00723 44.0622C1.53533 41.5436 7.19053 39.0926 8.61197 38.3484C20.0151 32.3778 32.6365 28.3888 45.0449 25.1495C56.1013 22.2633 67.3505 20.1706 78.6922 18.7967C81.9027 18.4078 88.5545 17.8317 91.7931 18.2478C92.6529 18.3583 92.3659 17.8413 91.6494 18.6282C86.9953 23.7396 77.8499 28.3447 72.3587 32.4501C62.0051 40.1908 51.3021 47.4823 40.6481 54.8011C36.1065 57.9211 31.4261 60.8259 27.2893 64.4583" 
+              stroke="currentColor" 
+              strokeWidth="8" 
+              strokeLinecap="round"
+            />
+          </svg>            </div>
           </div>
         </div>
       `;
@@ -493,32 +514,105 @@ const Home = () => {
 
       {showShareModal && (
         <div className="fixed inset-0 backdrop-blur-sm bg-white/50 dark:bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white dark:bg-neutral-900 rounded-2xl max-w-lg w-full overflow-hidden">
-            {/* Preview */}
-            <div className="relative aspect-[1200/630] w-full bg-gray-50 dark:bg-neutral-800">
+          <div className="bg-white dark:bg-neutral-900 rounded-xl max-w-md w-full p-4 space-y-4">
+            {/* Header */}
+            <div className="flex justify-between items-center">
+              <h3 className="text-sm font-medium text-gray-900 dark:text-white">Share Conversation</h3>
+              <button 
+                onClick={() => setShowShareModal(false)}
+                className="p-1.5 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded-lg text-gray-500 dark:text-gray-400"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Image Preview */}
+            <div className="rounded-lg overflow-hidden bg-gray-50 dark:bg-neutral-800 ring-1 ring-gray-200 dark:ring-neutral-700">
               <img 
                 src={shareImageUrl} 
                 alt="Preview" 
-                className="w-full h-full object-cover" 
+                className="w-full h-full object-contain" 
               />
             </div>
 
-            {/* Actions */}
-            <div className="p-4">
-              <div className="flex gap-2">
-                <button
-                  onClick={handleShare}
-                  className="flex-1 px-4 py-2 text-sm font-medium rounded-lg bg-black text-white dark:bg-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
-                >
-                  Share Image
-                </button>
-                <button
-                  onClick={() => setShowShareModal(false)}
-                  className="px-4 py-2 text-sm font-medium rounded-lg bg-gray-100 dark:bg-neutral-800 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-neutral-700 transition-colors"
-                >
-                  Cancel
-                </button>
-              </div>
+            {/* Action Buttons */}
+            <div className="flex flex-col gap-2">
+              {showShareOptions ? (
+                <>
+                  <div className="grid grid-cols-2 gap-2">
+                    <button
+                      onClick={() => handleSocialShare('twitter')}
+                      className="flex items-center justify-center gap-2 px-3 py-2 text-xs rounded-lg bg-[#1DA1F2] text-white hover:bg-[#1a8cd8] transition-all"
+                    >
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                      </svg>
+                      Twitter
+                    </button>
+                    <button
+                      onClick={() => handleSocialShare('facebook')}
+                      className="flex items-center justify-center gap-2 px-3 py-2 text-xs rounded-lg bg-[#1877F2] text-white hover:bg-[#166fe5] transition-all"
+                    >
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                      </svg>
+                      Facebook
+                    </button>
+                    <button
+                      onClick={() => handleSocialShare('linkedin')}
+                      className="flex items-center justify-center gap-2 px-3 py-2 text-xs rounded-lg bg-[#0A66C2] text-white hover:bg-[#095196] transition-all"
+                    >
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                      LinkedIn
+                    </button>
+                    <button
+                      onClick={() => handleSocialShare('whatsapp')}
+                      className="flex items-center justify-center gap-2 px-3 py-2 text-xs rounded-lg bg-[#25D366] text-white hover:bg-[#20bd5a] transition-all"
+                    >
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                      </svg>
+                      WhatsApp
+                    </button>
+                    <button
+                      onClick={() => handleSocialShare('email')}
+                      className="flex items-center justify-center gap-2 px-3 py-2 text-xs rounded-lg bg-gray-600 text-white hover:bg-gray-700 transition-all"
+                    >
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                      </svg>
+                      Email
+                    </button>
+                  </div>
+                  <div className="flex justify-center">
+                    <button
+                      onClick={() => setShowShareOptions(false)}
+                      className="text-xs text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <div className="flex gap-2">
+                  <button
+                    onClick={handleShare}
+                    className="flex-1 px-3 py-1.5 text-xs rounded-lg bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-white ring-1 ring-gray-200 dark:ring-neutral-700 hover:bg-gray-200 dark:hover:bg-neutral-700 transition-all"
+                  >
+                    Share
+                  </button>
+                  <button
+                    onClick={handleDownload}
+                    className="flex-1 px-3 py-1.5 text-xs rounded-lg bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-white ring-1 ring-gray-200 dark:ring-neutral-700 hover:bg-gray-200 dark:hover:bg-neutral-700 transition-all"
+                  >
+                    Download
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>
