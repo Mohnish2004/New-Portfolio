@@ -61,53 +61,63 @@ const Home = () => {
  <section>
 
  <div className="mb-5">
-  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-    <div className="group block">
-      <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
-        <a href='https://d2d-cure.vercel.app/'>
-          <Image 
-            width="1000" 
-            height="1000" 
-            className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" 
-            src="/projects/cure.png" 
-            alt="Description"
-          />
-        </a>
-      </div>
+  <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+  <div className="group block">
+    <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
+      <a href='https://d2d-cure.vercel.app/'>
+        <Image 
+          alt="Description"
+          className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover"
+          height="1000"
+          src="/projects/cure.png"
+          width="1000"
+        />
+      </a>
+    </div>
+  </div>
       <div className="p-4">
-        <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
-          D2D Cure
-        </h1>
-        <p className="mt-1 mb-4 text-gray-600 text-sm leading-tight dark:text-neutral-400">
-          Project description
-        </p>
-        <div className="flex flex-wrap gap-2">
-          <span className="inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-            Tag
-          </span>
-        </div>
-        <div className="mt-3 flex gap-2">
-          <button
-            type="button"
-            onClick={() => window.location.href='https://example.com'}
-            className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10"
-          >
-            Read more
-          </button>
-        </div>
+      <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
+             D2D Cure
+          </h1>
+          <p className="mt-1 mb-4 text-gray-600 text-sm leading-tight dark:text-neutral-400">
+          A comprehensive overhaul and modernization of the D2D Cure Database, designed to enhance user experience and streamline the submission, curation, and characterization of enzyme data. This project, developed in collaboration with over 40 institutions, aims to provide a durable platform for biotech research for the next decade.</p>
+        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+          Full Stack
+        </span>
+        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+          Technical PM
+        </span>
+        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+          Client
+        </span>
+        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+        🚀 Winter 2024
+        </span>
+<button
+  type="button"
+  onClick={() => window.location.href='https://medium.com/@mohnish.gopi/d2dcure-5b41fcbc0ee4'}
+  className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10"
+>
+  Read more
+</button>
+<button
+  type="button"
+  onClick={() => window.location.href='https://d2d-cure.vercel.app/'}
+  className="transition-all ml-2 duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10"
+>
+  View Site
+</button>
       </div>
     </div>
   </div>
 
   <div className="mb-5">
   <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-  <a className="group block" href={"/"}>
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
     <a href='https://medium.com/@mohnish.gopi/d2dcure-5b41fcbc0ee4'>
       <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/eduhub.png" alt="Description"/>
       </a>
     </div>
-    </a>
       <div className="p-4">
       <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
              Rosetta Commons Education Hub
@@ -391,14 +401,12 @@ const Home = () => {
 
  <div className="mb-5">
  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
- <a className="group block" href={"/"}>
    <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
 
    <a href='https://www.example.com/page.html'>
 
      <Image width="1000" height="1000"  className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/devfest.png" alt="Description"/>
      </a></div>
-   </a>
      <div className="p-4">
      <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
       Brand Identity
@@ -519,7 +527,6 @@ const Home = () => {
 
 <div className="mb-5">
  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
- <a className="group block" href={"/"}>
    
    <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
 
@@ -527,7 +534,6 @@ const Home = () => {
 
      <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/pool.png" alt="Description"/>
      </a></div>
-   </a>
      <div className="p-4">
      <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
             Pool it
@@ -551,14 +557,12 @@ const Home = () => {
 
  <div className="mb-5">
  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
- <a className="group block" href={"/"}>
    <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
 
    <a href='https://drive.google.com/file/d/1IjhYgylaQl5PIXfp1HapYMvdxos_wBkO/view'>
 
      <Image width="1000" height="1000"  className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/inside2.png" alt="Description"/>
      </a></div>
-   </a>
      <div className="p-4">
      <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
             Inside Admissions
@@ -748,13 +752,11 @@ const Home = () => {
 
   <div className="mb-5">
   <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-  <a className="group block" href={"/"}>
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
 <a href='https://github.com/Mohnish2004/TasksApp'>
       <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/hustle.png" alt="Description"/>
       </a>
    </div>
-    </a>
       <div className="p-4">
       <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
              Hustle
