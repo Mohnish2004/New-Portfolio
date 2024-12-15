@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import { DateTime } from "luxon";
 import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
 import { FiInstagram, FiLinkedin, FiMail, FiPhone, FiTwitter} from 'react-icons/fi';
+import { useSearchParams } from 'next/navigation';
 
 function Clock() {
   const [currentTime, setCurrentTime] = useState(DateTime.local());
@@ -75,4 +76,15 @@ export const Footer = () => {
       </div>
     </footer>
   )
+}
+
+export function ConditionalFooter() {
+  const searchParams = useSearchParams();
+  const isShared = searchParams.has('s');
+
+  if (isShared) {
+    return null;
+  }
+
+  return <Footer />;
 }

@@ -5,7 +5,7 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
-import {Footer} from "@/components/footer";
+// import {Footer} from "@/components/footer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 import { AOSInit } from './aos'
@@ -61,7 +61,7 @@ export default function RootLayout({
         {children}
             </div>
     </section>   
-    <Footer/>
+    {/* <Footer/> */}
     </Providers>
 
     <script src="bower_components/aos/dist/aos.js"></script>

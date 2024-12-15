@@ -11,7 +11,6 @@ const Home = () => {
       <Dot delay={0.25} inView>
         <ParallaxScroll images={galleryImages}/>
       </Dot>
-      <Chat />
     </section>
   );
 };

@@ -284,6 +284,7 @@ ${JSON.stringify(projectLinks, null, 2)}
 
 Response Guidelines:
 1. Keep initial responses concise and focused
+1.5 Dont say thing sthat you are not sure about, just say you dont know
 2. Always offer to provide more details with "Would you like to know more about any specific aspect?"
 3. When discussing projects, use the exact URLs from projectLinks:
    • For project sites: Use projectLinks[projectName].site

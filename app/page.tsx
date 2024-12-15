@@ -787,6 +787,32 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
     <Image className="w-10 h-10 rounded-full" src="/Testimonial/gopi.jpeg" width="200" height="200" alt="Jese"/>
   </Tooltip>
 </div>
+<footer className="max-w-xl mx-auto px-4 mt-10 pb-8">
+      <div className="border-t border-neutral-200 dark:border-neutral-700">
+        <div className="flex flex-col md:flex-row justify-center items-center py-8">
+          
+          <nav className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-neutral-600 dark:text-neutral-400">
+          <div className="flex justify-center text-sm text-neutral-600 dark:text-neutral-400">
+          <span className="flex items-center gap-2">
+            © Made with
+            <LinkPreview url="/" isStatic imageSrc="/bear1.jpeg">
+              <Image 
+                src="/bear.svg" 
+                alt="" 
+                width={20} 
+                height={20} 
+                className="inline-block"
+              />
+            </LinkPreview>
+            by Mohnish | Last updated: July, 2024
+          </span>
+        </div>
+          </nav>
+        </div>
+
+
+      </div>
+    </footer>
 
     </section>
     

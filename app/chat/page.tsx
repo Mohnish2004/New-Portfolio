@@ -346,12 +346,12 @@ const Home = () => {
   // Add custom styles for markdown rendering
   const markdownStyles = {
     container: 'space-y-1',
-    p: 'my-0.5',
-    ul: 'my-0.5 space-y-0.5',
-    ol: 'my-0.5 space-y-0.5',
-    h2: 'mt-1.5 mb-1 text-lg font-semibold',
-    blockquote: 'border-l-4 pl-4 my-1',
-    pre: 'my-1',
+    p: 'my-0.5 text-xs',
+    ul: 'my-0.5 space-y-0.5 text-xs',
+    ol: 'my-0.5 space-y-0.5 text-xs',
+    h2: 'mt-1.5 mb-1 text-sm font-semibold',
+    blockquote: 'border-l-4 pl-4 my-1 text-xs',
+    pre: 'my-1 text-xs',
   };
 
   const shareAction = {
@@ -376,21 +376,17 @@ const Home = () => {
 
   return (
     <section 
-      data-aos="fade-in" 
       className={`antialiased max-w-xl mx-4 ${isSharedChat ? 'py-8' : 'p-4'} sm:mx-auto`}
     >
       {isSharedChat ? (
         <div className="flex items-center justify-between mb-8 px-1">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-gradient-to-b from-white to-gray-50 dark:from-neutral-800 dark:to-neutral-900 rounded-xl shadow-sm ring-1 ring-black/5 dark:ring-white/5">
-              <img src="/bear.svg" alt="Djungelskog" className="w-5 h-5" />
-            </div>
             <div>
-              <h2 className="text-sm font-medium text-gray-900 dark:text-white">
+              <h1 className="mt-2 text-1xl tracking-tighter">
                 Shared Conversation
-              </h2>
+              </h1>
               <p className="text-xs text-gray-500 dark:text-gray-400">
-                via Djungelskog
+                via mohnishgopi.com/chat
               </p>
             </div>
           </div>
@@ -400,7 +396,7 @@ const Home = () => {
               bg-gray-100 dark:bg-neutral-800 hover:bg-gray-200 dark:hover:bg-neutral-700 
               rounded-lg transition-colors ring-1 ring-gray-200 dark:ring-neutral-700"
           >
-            New Chat
+            Start New Chat
           </a>
         </div>
       ) : (
@@ -424,7 +420,7 @@ const Home = () => {
             <div className="mt-10 p-4 bg-white/50 dark:bg-neutral-900/50 backdrop-blur-sm rounded-2xl shadow-sm ring-1 ring-black/5 dark:ring-white/5">
               <div className="flex items-center gap-3.5">
                 <div className="relative p-2.5 bg-gradient-to-b from-white to-gray-50 dark:from-neutral-800 dark:to-neutral-900 rounded-xl shadow-sm ring-1 ring-black/5 dark:ring-white/5">
-                  <img src="/bear.svg" alt="Djungelskog" className="w-6 h-6 flex-shrink-0" />
+                  <img src="/bear1.jpg" alt="Djungelskog" className="w-6 h-6 flex-shrink-0 rounded-lg" />
                 </div>
                 <div className="min-w-0">
                   <div className="flex items-center gap-2">
@@ -467,7 +463,7 @@ const Home = () => {
             </div>
             <div className="relative flex justify-center">
               <span className="px-2 text-xs text-gray-500 dark:text-gray-400 bg-white dark:bg-black">
-                Your conversation will appear below
+                {/* Shared Conversation */}
               </span>
             </div>
           </div>
@@ -475,7 +471,7 @@ const Home = () => {
           {(isSharedChat ? sharedMessages : messages).map((message) => (
             <div 
               key={message.id} 
-              className={`flex items-start gap-2 w-full message-container ${
+              className={`flex items-start gap-1.5 w-full message-container ${
                 message.role === 'user' ? 'flex-row-reverse' : ''
               }`}
             >
@@ -486,9 +482,9 @@ const Home = () => {
                   </div>
                 ) : (
                   <img
-                    src="/bear.svg"
+                    src="/bear1.jpg"
                     alt="Djungelskog"
-                    className="w-6 h-6"
+                    className="w-6 h-6 rounded-full"
                   />
                 )}
               </div>
@@ -503,17 +499,21 @@ const Home = () => {
                     message.role === 'user' 
                       ? 'bg-gray-100 dark:bg-neutral-800' 
                       : 'bg-transparent'
-                  } rounded-xl px-3 py-2 ${
+                  } rounded-xl ${
+                    message.content.length < 10 
+                      ? 'px-3 py-1' // Smaller padding for short messages
+                      : 'px-3 py-1.5' // Regular padding for longer messages
+                  } ${
                     message.role === 'user' 
                       ? 'ring-1 ring-gray-200/50 dark:ring-neutral-700/50' 
                       : ''
                   } ${
                     message.role === 'user' ? 'w-fit max-w-[85%]' : 'w-[85%]'
-                  } break-words`}
+                  } break-words mb-0`}
                 >
-                  <div className={`${markdownStyles.container} font-inter`}>
+                  <div className={`${markdownStyles.container}`}>
                     <ReactMarkdown
-                      className="prose dark:prose-invert max-w-none prose-sm leading-tight"
+                      className="prose dark:prose-invert max-w-none prose-xs leading-tight text-xs"
                       components={{
                         p: ({node, ...props}) => <p className={`${markdownStyles.p}`} {...props} />,
                         ul: ({node, ...props}) => <ul className={`${markdownStyles.ul}`} {...props} />,
@@ -610,7 +610,7 @@ const Home = () => {
           
           {isLoading && (
             <div className="flex items-start gap-2 w-full">
-              <img src="/bear.svg" alt="Typing" className="w-6 h-6 flex-shrink-0" />
+              <img src="/bear1.jpg" alt="Typing" className="w-6 h-6 flex-shrink-0 rounded-full" />
               <div className="flex flex-col items-start">
                 <div className="bg-gray-50 dark:bg-neutral-800 rounded-xl px-3 py-2 ring-1 ring-inset ring-gray-500/10">
                   <div className="flex space-x-1">
@@ -634,7 +634,7 @@ const Home = () => {
               value={input}
               onChange={handleInputChange}
               placeholder="Ask me anything..."
-              className="w-full h-10 pl-4 pr-12 rounded-xl bg-white dark:bg-neutral-900 text-sm text-gray-700 dark:text-white ring-1 ring-gray-200 dark:ring-neutral-800 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-neutral-700 transition-shadow"
+              className="w-full h-8 pl-3 pr-10 rounded-xl bg-white dark:bg-neutral-900 text-xs text-gray-700 dark:text-white ring-1 ring-gray-200 dark:ring-neutral-800 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-neutral-700 transition-shadow"
             />
             <button
               type="submit"
