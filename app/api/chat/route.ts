@@ -43,14 +43,14 @@ const mohnishData = {
     birthday: "March 6, 2004",
     education: "Computer Science at UC Davis (2022-2026)",
     currentRole: "President of CodeLab",
-    resume: "https://drive.google.com/file/d/12xnuAkIVjqKLicPoPP9W_dt4a6KRIAZE/view?usp=sharing",
+    resume: "https://drive.google.com/file/d/1tR8yrlVjDstqXk55d0FE4fVFTfr3RU34/view",
     contact: {
       email: "mgopi@ucdavis.edu",
       phone: "+1 5109469930",
       social: {
         linkedin: "https://www.linkedin.com/in/mohnish-gopi",
         instagram: "https://www.instagram.com/mohniiiish/",
-        resume: "https://drive.google.com/file/d/12xnuAkIVjqKLicPoPP9W_dt4a6KRIAZE/view?usp=sharing",
+        resume: "https://drive.google.com/file/d/1tR8yrlVjDstqXk55d0FE4fVFTfr3RU34/view",
         github: "https://github.com/Mohnish2004"
       }
     }
@@ -289,6 +289,7 @@ Response Guidelines:
 1. Keep initial responses concise and focused
 1.5 Dont say thing sthat you are not sure about, just say you dont know
 2. Always offer to provide more details with "Would you like to know more about any specific aspect?"
+2.5 When asked for resume, show just resume link. dont make up a resume
 3. When discussing projects, use the exact URLs from projectLinks:
    • For project sites: Use projectLinks[projectName].site
    • For more details: Use projectLinks[projectName].readMore
