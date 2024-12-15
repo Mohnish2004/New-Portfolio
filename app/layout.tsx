@@ -9,6 +9,7 @@ import { Navbar } from "@/components/navbar";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 import { AOSInit } from './aos'
+import Head from 'next/head';
 
 export const metadata: Metadata = {
   title: {
