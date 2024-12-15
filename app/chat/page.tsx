@@ -11,7 +11,20 @@ import Head from 'next/head';
 
 // Inside your component
 
-const SHARE_PREVIEW_IMAGE = 'https://i.ibb.co/4VVx98F/Twitter-post-9.png';
+const SHARE_PREVIEW_IMAGE = 'https://i.ibb.co/7gLTWqc/Twitter-post-7.png';
+const SHARE_IMAGES = {
+  twitter: 'https://i.ibb.co/7gLTWqc/Twitter-post-7.png',
+  facebook: 'https://i.ibb.co/7gLTWqc/Twitter-post-7.png',
+  linkedin: 'https://i.ibb.co/7gLTWqc/Twitter-post-7.png',
+  whatsapp: 'https://i.ibb.co/7gLTWqc/Twitter-post-7.png',
+};
+
+const SHARE_METADATA = {
+  title: "Check out this conversation",
+  description: "try your own by visiting mohnishgopi.com/chat",
+  image: SHARE_PREVIEW_IMAGE,
+  domain: "mohnishgopi.com",
+};
 
 function MessageTime({ timestamp = new Date() }) {
   return (
@@ -264,26 +277,36 @@ const Home = () => {
 
   // Add social sharing handlers
   const handleSocialShare = (platform: string) => {
-    const text = encodeURIComponent('🐻 Check out my conversation with Djungelskog');
+    const text = encodeURIComponent('Check out my conversation with Djungelskog');
     const url = encodeURIComponent(shareUrl);
-    const image = encodeURIComponent(SHARE_PREVIEW_IMAGE);
+    const image = encodeURIComponent(SHARE_IMAGES[platform as keyof typeof SHARE_IMAGES] || SHARE_PREVIEW_IMAGE);
     
     let platformUrl = '';
     switch (platform) {
       case 'twitter':
-        platformUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+        platformUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}&image=${image}`;
         break;
       case 'facebook':
-        platformUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}&picture=${image}`;
+        // Facebook requires Open Graph meta tags for proper image sharing
+        platformUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
         break;
       case 'linkedin':
+        // LinkedIn also uses Open Graph meta tags
         platformUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
         break;
       case 'whatsapp':
         platformUrl = `https://wa.me/?text=${text}%20${url}`;
         break;
       case 'email':
-        platformUrl = `mailto:?subject=${text}&body=Check%20this%20out:%20${url}`;
+        platformUrl = `mailto:?subject=${text}&body=Check%20this%20out:%20${url}%0A%0APreview:%20${image}`;
+        break;
+      case 'instagram':
+        // Instagram doesn't have a direct share URL, but we can open the app
+        platformUrl = `instagram://library?AssetPath=${image}`;
+        // Fallback to web version if app is not installed
+        if (!navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+          platformUrl = 'https://instagram.com';
+        }
         break;
     }
     
@@ -294,11 +317,15 @@ const Home = () => {
     }
   };
 
+  const [downloadSuccess, setDownloadSuccess] = useState(false);
+
   const handleDownload = () => {
     const a = document.createElement('a');
     a.href = shareImageUrl;
     a.download = 'djungelskog-chat.png';
     a.click();
+    setDownloadSuccess(true);
+    setTimeout(() => setDownloadSuccess(false), 2000);
     setShowShareModal(false);
   };
 
@@ -345,10 +372,46 @@ const Home = () => {
     }
   };
 
+  const handleNativeShare = async () => {
+    if (!navigator.share) {
+      console.log('Web Share API not supported');
+      return;
+    }
+
+    try {
+      await navigator.share({
+        title: SHARE_METADATA.title,
+        text: SHARE_METADATA.description,
+        url: shareUrl,
+      });
+    } catch (error) {
+      console.error('Error sharing:', error);
+    }
+  };
+
   return (
     <section 
       className={`antialiased max-w-xl mx-4 ${isSharedChat ? 'py-8' : 'p-4'} sm:mx-auto`}
     >
+      <Head>
+        <title>{SHARE_METADATA.title}</title>
+        <meta name="description" content={SHARE_METADATA.description} />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={shareUrl || `https://${SHARE_METADATA.domain}/chat`} />
+        <meta property="og:title" content={SHARE_METADATA.title} />
+        <meta property="og:description" content={SHARE_METADATA.description} />
+        <meta property="og:image" content={SHARE_METADATA.image} />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={shareUrl || `https://${SHARE_METADATA.domain}/chat`} />
+        <meta property="twitter:title" content={SHARE_METADATA.title} />
+        <meta property="twitter:description" content={SHARE_METADATA.description} />
+        <meta property="twitter:image" content={SHARE_METADATA.image} />
+      </Head>
+
       {isSharedChat ? (
         <div className="flex items-center justify-between mb-8 px-1">
           <div className="flex items-center gap-3">
@@ -390,9 +453,9 @@ const Home = () => {
           {!isSharedChat && (
             <div className="mt-10 p-4 bg-white/50 dark:bg-neutral-900/50 backdrop-blur-sm rounded-2xl shadow-sm ring-1 ring-black/5 dark:ring-white/5">
               <div className="flex items-center gap-3.5">
-                <div className="relative p-2.5 bg-gradient-to-b from-white to-gray-50 dark:from-neutral-800 dark:to-neutral-900 rounded-xl shadow-sm ring-1 ring-black/5 dark:ring-white/5">
-                  <img src="/bear1.jpg" alt="Djungelskog" className="w-6 h-6 flex-shrink-0 rounded-lg" />
-                </div>
+                {/* <div className="relative p-2.5 bg-gradient-to-b from-white to-gray-50 dark:from-neutral-800 dark:to-neutral-900 rounded-xl shadow-sm ring-1 ring-black/5 dark:ring-white/5"> */}
+                  <img src="/bear1.jpg" alt="Djungelskog" className="w-8 h-8 flex-shrink-0 rounded-lg shadow-sm ring-1 ring-black/5 dark:ring-white/5"></img>
+                {/* </div> */}
                 <div className="min-w-0">
                   <div className="flex items-center gap-2">
                     <h2 className="text-sm font-medium text-gray-900 dark:text-white">Meet Djungelskog</h2>
@@ -434,7 +497,7 @@ const Home = () => {
             </div>
             <div className="relative flex justify-center">
               <span className="px-2 text-xs text-gray-500 dark:text-gray-400 bg-white dark:bg-black">
-                {/* Shared Conversation */}
+                {isSharedChat ? 'Shared conversation' : 'Your conversation will appear below'}
               </span>
             </div>
           </div>
@@ -668,18 +731,30 @@ const Home = () => {
                     className="flex-1 px-3 py-2 text-sm rounded-lg bg-gray-50 dark:bg-neutral-800 
                       text-gray-900 dark:text-white ring-1 ring-gray-200 dark:ring-neutral-700"
                   />
-                  <Tooltip content="Copy to clipboard">
+                  <Tooltip 
+                    content={showCopySuccess ? "Copied!" : "Copy to clipboard"}
+                    placement="top"
+                  >
                     <button
                       onClick={handleCopyUrl}
                       disabled={isShortening}
-                      className="p-2 rounded-lg bg-gray-100 dark:bg-neutral-800 
-                        text-gray-700 dark:text-white ring-1 ring-gray-200 dark:ring-neutral-700 
-                        hover:bg-gray-200 dark:hover:bg-neutral-700 transition-colors
-                        disabled:opacity-50 disabled:cursor-not-allowed"
+                      className={`p-2 rounded-lg transition-all duration-200 ${
+                        showCopySuccess 
+                          ? 'bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400' 
+                          : 'bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-white'
+                      } ring-1 ring-gray-200 dark:ring-neutral-700 
+                      hover:bg-gray-200 dark:hover:bg-neutral-700
+                      disabled:opacity-50 disabled:cursor-not-allowed`}
                     >
-                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                      </svg>
+                      {showCopySuccess ? (
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>
+                      ) : (
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                        </svg>
+                      )}
                     </button>
                   </Tooltip>
                 </div>
@@ -737,6 +812,28 @@ const Home = () => {
                         </svg>
                         Email
                       </button>
+                      <button
+                        onClick={() => handleSocialShare('instagram')}
+                        className="flex items-center justify-center gap-2 px-3 py-2 text-xs rounded-lg 
+                        bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white hover:opacity-90 transition-all"
+                      >
+                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        Instagram
+                      </button>
+                      <button
+                        onClick={handleNativeShare}
+                        className="col-span-2 flex items-center justify-center gap-2 px-3 py-2 text-xs rounded-lg
+                        bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-white 
+                        ring-1 ring-gray-200 dark:ring-neutral-700 
+                        hover:bg-gray-200 dark:hover:bg-neutral-700 transition-all"
+                      >
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185z" />
+                        </svg>
+                        Other Options
+                      </button>
                     </>
                   ) : (
                     <>
@@ -751,12 +848,27 @@ const Home = () => {
                       </button>
                       <button
                         onClick={handleDownload}
-                        className="flex items-center justify-center gap-2 px-3 py-2 text-xs rounded-lg
-                        bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-white 
-                        ring-1 ring-gray-200 dark:ring-neutral-700 
-                        hover:bg-gray-200 dark:hover:bg-neutral-700 transition-all"
+                        className={`flex items-center justify-center gap-2 px-3 py-2 text-xs rounded-lg
+                        transition-all duration-200 ${
+                          downloadSuccess 
+                            ? 'bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400' 
+                            : 'bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-white'
+                        } ring-1 ring-gray-200 dark:ring-neutral-700 
+                        hover:bg-gray-200 dark:hover:bg-neutral-700`}
                       >
-                        Download
+                        {downloadSuccess ? (
+                          <>
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                            </svg>
+                            Downloaded
+                          </>
+                        ) : (
+                          <>
+                            <FaDownload className="w-4 h-4" />
+                            Download
+                          </>
+                        )}
                       </button>
                     </>
                   )}

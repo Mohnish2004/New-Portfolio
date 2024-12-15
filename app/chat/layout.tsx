@@ -1,7 +1,7 @@
 import Chat from "@/components/chat";
 import { Metadata } from 'next';
 import Head from 'next/head';
-const SHARE_PREVIEW_IMAGE = 'https://i.ibb.co/4VVx98F/Twitter-post-9.png';
+const SHARE_PREVIEW_IMAGE = 'https://i.ibb.co/7gLTWqc/Twitter-post-7.png';
 
 export const metadata: Metadata = {
   title: 'Chat with Djungelskog',
