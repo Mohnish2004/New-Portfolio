@@ -65,7 +65,13 @@ const Home = () => {
   <a className="group block" href={"/"}>
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
     <a href='https://d2d-cure.vercel.app/'>
-      <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/cure.png" alt="Description"/>
+      <Image 
+        alt="Description"
+        className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover"
+        height="1000"
+        src="/projects/cure.png"
+        width="1000"
+      />
       </a>
     </div>
     </a>
