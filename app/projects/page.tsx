@@ -58,8 +58,6 @@ const Home = () => {
       Here are a few recent highlights of my work. Whatever I&apos;m working on, I always follow the same simple approach—blending aesthetics with functionality to create impactful solutions.      </p>
       </div>
 
- <section>
-
  <div className="mb-5">
   <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
   <div className="group block">
@@ -840,7 +838,6 @@ const Home = () => {
         </ul>
 
 </section>
-    </section>
 
     
   );
