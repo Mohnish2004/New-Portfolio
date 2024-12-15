@@ -475,7 +475,7 @@ const Home = () => {
                 <button
                   key={index}
                   onClick={() => handleQuickAction(action.text)}
-                  className="p-3 text-left rounded-xl bg-white/50 dark:bg-neutral-900/50 backdrop-blur-sm text-xs text-gray-700 dark:text-white ring-1 ring-black/5 dark:ring-white/5 hover:bg-gray-50 dark:hover:bg-neutral-800 transition-all group"
+                  className="p-3 text-left rounded-xl bg-white/50 dark:bg-neutral-900/50 backdrop-blur-sm text-xs text-gray-700 dark:text-white ring-1 ring-gray-200/50 dark:ring-neutral-700/50 hover:bg-gray-50 dark:hover:bg-neutral-800 transition-all group"
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
@@ -643,15 +643,29 @@ const Home = () => {
           ))}
           
           {isLoading && (
-            <div className="flex items-start gap-2 w-full">
-              <img src="/bear1.jpg" alt="Typing" className="w-6 h-6 flex-shrink-0 rounded-full" />
-              <div className="flex flex-col items-start">
-                <div className="bg-gray-50 dark:bg-neutral-800 rounded-xl px-3 py-2 ring-1 ring-inset ring-gray-500/10">
-                  <div className="flex space-x-1">
-                    <div className="w-1.5 h-1.5 rounded-full bg-gray-400 animate-bounce [animation-delay:-0.3s]"></div>
-                    <div className="w-1.5 h-1.5 rounded-full bg-gray-400 animate-bounce [animation-delay:-0.15s]"></div>
-                    <div className="w-1.5 h-1.5 rounded-full bg-gray-400 animate-bounce"></div>
-                  </div>
+            <div className="flex items-start gap-1.5 w-full">
+              <img 
+                src="/bear1.jpg" 
+                alt="Typing" 
+                className="w-6 h-6 flex-shrink-0 rounded-full"
+              />
+              <div className="min-w-0 flex-1">
+                <div className="flex items-center gap-1.5 px-3 py-2 w-fit rounded-xl bg-transparent">
+                  <span 
+                    className="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600 
+                    animate-[typing_1.4s_ease-in-out_infinite]
+                    opacity-60"
+                  ></span>
+                  <span 
+                    className="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600 
+                    animate-[typing_1.4s_ease-in-out_0.2s_infinite]
+                    opacity-60"
+                  ></span>
+                  <span 
+                    className="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600 
+                    animate-[typing_1.4s_ease-in-out_0.4s_infinite]
+                    opacity-60"
+                  ></span>
                 </div>
               </div>
             </div>

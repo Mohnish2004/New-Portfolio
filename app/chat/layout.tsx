@@ -3,20 +3,27 @@ import { Metadata } from 'next';
 import Head from 'next/head';
 const SHARE_PREVIEW_IMAGE = 'https://i.ibb.co/7gLTWqc/Twitter-post-7.png';
 
+const SHARE_METADATA = {
+  title: "Check out this conversation",
+  description: "Try it out by visiting mohnishgopi.com/chat",
+  image: SHARE_PREVIEW_IMAGE,
+  domain: "mohnishgopi.com",
+};
+
 export const metadata: Metadata = {
-  title: 'Chat with Djungelskog',
-  description: 'Check out my conversation with Djungelskog at mohnishgopi.com',
+  title: 'Check out this conversation',
+  description: 'Try it out by visiting mohnishgopi.com/chat',
   openGraph: {
-    title: 'Chat with Djungelskog',
-    description: 'Check out my conversation with Djungelskog at mohnishgopi.com',
+    title: 'Check out this conversation',
+    description: 'Try it out by visiting mohnishgopi.com/chat',
     images: [SHARE_PREVIEW_IMAGE],
     type: 'website',
     url: 'https://mohnishgopi.com/chat',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Chat with Djungelskog',
-    description: 'Check out my conversation with Djungelskog at mohnishgopi.com',
+    title: 'Check out this conversation',
+    description: 'Try it out by visiting mohnishgopi.com/chat',
     images: [SHARE_PREVIEW_IMAGE],
     creator: '@yourtwitterhandle', // Optional: Add your Twitter handle
   },

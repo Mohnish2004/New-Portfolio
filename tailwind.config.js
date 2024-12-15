@@ -17,6 +17,23 @@ module.exports = {
       animation: {
         'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'pulse-slower': 'pulse 10s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'typing': 'typing 1.4s ease-in-out infinite',
+      },
+      keyframes: {
+        typing: {
+          '0%': { 
+            transform: 'translateY(0px)',
+            opacity: '0.4'
+          },
+          '50%': { 
+            transform: 'translateY(-4px)', 
+            opacity: '0.8'
+          },
+          '100%': { 
+            transform: 'translateY(0px)',
+            opacity: '0.4'
+          },
+        },
       },
       typography: {
         DEFAULT: {

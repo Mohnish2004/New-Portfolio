@@ -43,12 +43,15 @@ const mohnishData = {
     birthday: "March 6, 2004",
     education: "Computer Science at UC Davis (2022-2026)",
     currentRole: "President of CodeLab",
+    resume: "https://drive.google.com/file/d/12xnuAkIVjqKLicPoPP9W_dt4a6KRIAZE/view?usp=sharing",
     contact: {
       email: "mgopi@ucdavis.edu",
       phone: "+1 5109469930",
       social: {
         linkedin: "https://www.linkedin.com/in/mohnish-gopi",
-        instagram: "https://www.instagram.com/mohniiiish/"
+        instagram: "https://www.instagram.com/mohniiiish/",
+        resume: "https://drive.google.com/file/d/12xnuAkIVjqKLicPoPP9W_dt4a6KRIAZE/view?usp=sharing",
+        github: "https://github.com/Mohnish2004"
       }
     }
   },
@@ -57,10 +60,10 @@ const mohnishData = {
     origins: {
       birthplace: "Abu Dhabi",
       grewUp: "Dubai",
-      familyOrigins: "Ayilam, India"
+      familyOrigins: "Chennai, India"
     },
     family: {
-      father: { name: "Gopi", from: "Ayilam, India", role: "biggest inspiration" },
+      father: { name: "Gopi", from: "Chennai, India", role: "biggest inspiration" },
       mother: { name: "Prema", traits: ["amazing cook", "decor skills"] },
       sisters: ["Geetika", "Kamalik"]
     }
