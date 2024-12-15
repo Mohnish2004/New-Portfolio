@@ -719,8 +719,14 @@ const Home = () => {
   <a className="group block" href='https://github.com/Mohnish2004/Expense-Manager' >
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
     <a href='https://github.com/Mohnish2004/Expense-Manager'>
-      <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/slice.png" alt="Description"/>
-</a>
+      <Image 
+        width="1000" 
+        height="1000" 
+        className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover"
+        src="/projects/slice.png"
+        alt="Slice Project Screenshot"
+      />
+    </a>
     </div>
     </a>
       <div className="p-4">

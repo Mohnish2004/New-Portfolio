@@ -712,10 +712,18 @@ const Home = () => {
 
             {/* Image Preview */}
             <div className="space-y-2">
-              <label className="text-xs font-medium text-gray-700 dark:text-gray-300">
+              <label 
+                htmlFor="share-image-preview" 
+                className="text-xs font-medium text-gray-700 dark:text-gray-300"
+              >
                 Share Image
               </label>
-              <div className="rounded-lg overflow-hidden bg-gray-50 dark:bg-neutral-800 ring-1 ring-gray-200 dark:ring-neutral-700">
+              <div 
+                id="share-image-preview"
+                role="img"
+                aria-label="Share preview"
+                className="rounded-lg overflow-hidden bg-gray-50 dark:bg-neutral-800 ring-1 ring-gray-200 dark:ring-neutral-700"
+              >
                 <img 
                   src={shareImageUrl} 
                   alt="Preview" 
