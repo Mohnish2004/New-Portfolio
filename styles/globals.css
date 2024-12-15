@@ -204,3 +204,59 @@
   font-weight: 700;
   font-style: normal;
 }
+
+/* Add these to your global CSS */
+.markdown-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.markdown-content ul, 
+.markdown-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-content blockquote {
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #6b7280;
+}
+
+.prose {
+  --tw-prose-body: theme('colors.gray.600');
+  --tw-prose-headings: theme('colors.gray.900');
+  --tw-prose-links: theme('colors.blue.600');
+  --tw-prose-bold: theme('colors.gray.900');
+  --tw-prose-counters: theme('colors.gray.500');
+  --tw-prose-bullets: theme('colors.gray.300');
+  --tw-prose-hr: theme('colors.gray.200');
+  --tw-prose-quotes: theme('colors.gray.900');
+  --tw-prose-quote-borders: theme('colors.gray.200');
+  --tw-prose-captions: theme('colors.gray.500');
+  --tw-prose-code: theme('colors.gray.900');
+  --tw-prose-pre-code: theme('colors.gray.200');
+  --tw-prose-pre-bg: theme('colors.gray.800');
+  --tw-prose-th-borders: theme('colors.gray.300');
+  --tw-prose-td-borders: theme('colors.gray.200');
+}
+
+.prose > * + * {
+  margin-top: 0.75em !important; /* Reduce default spacing between elements */
+}
+
+.prose li + li {
+  margin-top: 0.25em !important; /* Reduce spacing between list items */
+}
+
+.prose p {
+  margin-bottom: 0.75em !important; /* Reduce paragraph spacing */
+}
