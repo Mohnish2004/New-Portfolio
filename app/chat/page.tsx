@@ -684,6 +684,38 @@ const Home = () => {
         </div>
       </div>
 
+      {/* {!isSharedChat && (
+        <div className="flex items-center gap-1.5 mb-2 px-2">
+          <button
+            className="p-1 text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-400 transition-colors"
+            onClick={() => {}} // Add if you want click behavior besides tooltip
+          >
+            <svg 
+              className="w-4 h-4" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              strokeWidth={2} 
+              stroke="currentColor"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" 
+              />
+            </svg>
+          </button>
+          <Tooltip
+            content="AI responses may not always be accurate and can sometimes provide incorrect information."
+            placement="top"
+            className="max-w-xs text-xs p-3 text-gray-400 dark:text-gray-500"
+          >
+            <p className="text-xs text-gray-400 dark:text-gray-500">
+              AI responses may not be 100% accurate
+            </p>
+          </Tooltip>
+        </div>
+      )} */}
+
       {!isSharedChat && (
         <form onSubmit={handleFormSubmit} className="sticky bottom-20 sm:bottom-0 bg-white/80 dark:bg-black/80 backdrop-blur-sm py-3 px-2">
           <div className="relative">
@@ -691,8 +723,22 @@ const Home = () => {
               value={input}
               onChange={handleInputChange}
               placeholder="Ask me anything..."
-              className="w-full h-8 pl-3 pr-10 rounded-xl bg-white dark:bg-neutral-900 text-xs text-gray-700 dark:text-white ring-1 ring-gray-200 dark:ring-neutral-800 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-neutral-700 transition-shadow"
+              className="w-full h-8 pl-3 pr-20 rounded-xl bg-white dark:bg-neutral-900 text-xs text-gray-700 dark:text-white ring-1 ring-gray-200 dark:ring-neutral-800 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-neutral-700 transition-shadow"
             />
+            <Tooltip
+              content="AI responses may not always be accurate and can sometimes provide incorrect information."
+              placement="top"
+              className="max-w-xs text-xs p-3 text-gray-400 dark:text-gray-500"
+            >
+              <button
+                type="button"
+                className="absolute right-12 top-1/2 -translate-y-1/2 p-1.5 rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-white transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                </svg>
+              </button>
+            </Tooltip>
             <button
               type="submit"
               onClick={() => {

@@ -552,16 +552,9 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
     </p>
 
 
-    <ul className="mb-10 -ml-6 justify-end font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-1 md:space-y-0 dark:text-neutral-300">
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100 no-underline"
-            rel="noopener noreferrer"
-            href="/experience"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">Learn more</p>
-          </a>
-        </ul>
+    <div className="pt-10">
+
+        </div>
 
 
       </div>

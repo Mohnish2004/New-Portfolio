@@ -131,13 +131,13 @@ const Home = () => {
           </div>
         </div>
 
-        <p data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 mb-8">
+        <p data-aos="fade-in" className="text-neutral-600 dark:text-neutral-300 mb-8 pb-10 ">
           Outside of work, you can find me enjoying long drives, hitting the gym, playing badminton, or watching movies. I grew up in Dubai, which I proudly call home. I&apos;m also a casual photographer—capturing life&apos;s unplanned moments. Want to see some? Check out my <LinkPreview url="/gallery" imageSrc="/gallery.png" className="font-semibold" isStatic>gallery</LinkPreview>.
         </p>
 
         <iframe 
           data-aos="fade-right" 
-          className="rounded-2xl backdrop-blur-lg mb-8" 
+          className="rounded-2xl backdrop-blur-lg mt-8 mb-8" 
           title="spotify" 
           src="https://open.spotify.com/embed/playlist/0yIGIUWcMpxYiW2Emhibrb?utm_source=generator&theme=0" 
           width="100%" 
