@@ -51,9 +51,19 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-        <Navbar />
+          {/* Top gradient blur */}
+          {/* <div className="gradient-blur fixed top-0 left-0 right-0 z-[90]" style={{ height: '70px', transform: 'rotate(180deg)'}}>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div> */}
 
-        <section className="flex flex-col items-center justify-center gap-4 ">
+          <Navbar />
+
+          <section className="flex flex-col items-center justify-center gap-4 ">
 
       <div className="inline-block justify-center md:ml-10 sm:ml-10">
       <SpeedInsights/>
@@ -63,6 +73,15 @@ export default function RootLayout({
             </div>
     </section>   
     {/* <Footer/> */}
+    {/* Bottom gradient blur */}
+    <div className="gradient-blur fixed bottom-0 left-0 right-0 z-[90]" style={{ height: '90px' }}>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
     </Providers>
 
     <script src="bower_components/aos/dist/aos.js"></script>

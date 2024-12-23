@@ -122,6 +122,7 @@ export const Navbar = () => {
     <>
       {/* Desktop Navigation */}
       <div className="hidden md:block h-10" />
+      
       <TooltipProvider delayDuration={0}>
         <div className="hidden md:flex pointer-events-none inset-x-0 top-0 z-50 mx-auto h-20">
           <Dock className="fixed pointer-events-auto bg-background/90 backdrop-blur-lg relative mx-auto flex h-14 items-center px-1 [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_20px_80px_-20px_#ffffff1f_inset]">
@@ -165,7 +166,7 @@ export const Navbar = () => {
                       <item.icon className="size-4" />
                     </Link>
                   </TooltipTrigger>
-                  <TooltipContent className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200 border-none">
+                  <TooltipContent className="bg-neutral-900 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-900 border-none" side="bottom">
                     <p>{item.label}</p>
                   </TooltipContent>
                 </Tooltip>
@@ -195,7 +196,7 @@ export const Navbar = () => {
                         <social.icon className="size-4" />
                       </Link>
                     </TooltipTrigger>
-                    <TooltipContent className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200 border-none">
+                    <TooltipContent className="bg-neutral-900 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-900 border-none" side="bottom">
                       <p>{name}</p>
                     </TooltipContent>
                   </Tooltip>
@@ -213,7 +214,7 @@ export const Navbar = () => {
                 <TooltipTrigger asChild>
                   <ModeToggle />
                 </TooltipTrigger>
-                <TooltipContent>
+                <TooltipContent side="bottom">
                   <p>Theme</p>
                 </TooltipContent>
               </Tooltip>
@@ -264,7 +265,7 @@ export const Navbar = () => {
                         <item.icon className="size-4" />
                       </Link>
                     </TooltipTrigger>
-                    <TooltipContent side="top" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200 border-none">
+                    <TooltipContent side="top" className="bg-neutral-900 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-900 border-none">
                       <p>{item.label}</p>
                     </TooltipContent>
                   </Tooltip>
@@ -278,7 +279,7 @@ export const Navbar = () => {
                 <TooltipTrigger asChild>
                   <ModeToggle />
                 </TooltipTrigger>
-                <TooltipContent side="top">
+                <TooltipContent side="bottom">
                   <p>Theme</p>
                 </TooltipContent>
               </Tooltip>
