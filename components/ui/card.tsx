@@ -25,18 +25,23 @@ CardHeader.displayName = "CardHeader";
 const CardTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
->(({ className, children = "Untitled", ...props }, ref) => (
-  <h3
-    ref={ref}
-    className={cn(
-      "text-2xl font-semibold leading-none tracking-tight",
-      className
-    )}
-    {...props}
-  >
-    {children}
-  </h3>
-));
+>(({ className, children = "Untitled", ...props }, ref) => {
+  if (!children) {
+    return null; // Don't render empty headings
+  }
+  return (
+    <h3
+      ref={ref}
+      className={cn(
+        "text-2xl font-semibold leading-none tracking-tight",
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </h3>
+  );
+});
 CardTitle.displayName = "CardTitle";
 
 const CardDescription = React.forwardRef<
