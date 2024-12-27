@@ -1,4 +1,10 @@
 'use client'
+declare global {
+  interface Window {
+    SpeechRecognition: any;
+    webkitSpeechRecognition: any;
+  }
+}
 import { useChat } from 'ai/react';
 import React, { useRef, useEffect, useState } from "react";
 import { DateTime } from "luxon";
@@ -8,6 +14,9 @@ import html2canvas from 'html2canvas';
 import { FaTwitter, FaFacebook, FaLinkedin, FaDownload } from 'react-icons/fa';
 // Add to your layout or page component
 import Head from 'next/head';
+import { useMicrophonePermission } from '@/hooks/useMicrophonePermission';
+import { motion, AnimatePresence } from 'framer-motion';
+import MessageContent from '../components/MessageContent';
 
 // Inside your component
 
@@ -394,6 +403,48 @@ const Home = () => {
     }
   };
 
+  const [isListening, setIsListening] = useState(false);
+  const { hasPermission, requestPermission } = useMicrophonePermission();
+
+  const handleVoiceInput = async () => {
+    if (!hasPermission) {
+      const granted = await requestPermission();
+      if (!granted) {
+        // You might want to show a toast or notification here
+        return;
+      }
+    }
+
+    try {
+      setIsListening(true);
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      const recognition = new SpeechRecognition();
+      
+      recognition.lang = 'en-US';
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.onresult = (event: any) => {
+        const transcript = event.results[0][0].transcript;
+        handleInputChange({ target: { value: transcript } } as any);
+      };
+
+      recognition.onerror = (event: any) => {
+        console.error('Speech recognition error:', event.error);
+        setIsListening(false);
+      };
+
+      recognition.onend = () => {
+        setIsListening(false);
+      };
+
+      recognition.start();
+    } catch (error) {
+      console.error('Speech recognition error:', error);
+      setIsListening(false);
+    }
+  };
+
   return (
     <section 
       className={`antialiased max-w-xl mx-4 ${isSharedChat ? 'py-8' : 'p-4'} sm:mx-auto`}
@@ -507,78 +558,111 @@ const Home = () => {
             </div>
           </div>
 
-          {(isSharedChat ? sharedMessages : messages).map((message) => (
-            <div 
-              key={message.id} 
-              className={`flex items-start gap-1.5 w-full message-container ${
-                message.role === 'user' ? 'flex-row-reverse' : ''
-              }`}
-            >
-              <div className="flex-shrink-0">
-                {message.role === 'user' ? (
-                  <div className="w-6 h-6 rounded-full bg-gray-100 dark:bg-neutral-800 flex items-center justify-center ring-1 ring-gray-200 dark:ring-neutral-700">
-                    <span className="text-[10px] font-medium text-gray-600 dark:text-neutral-300">You</span>
-                  </div>
-                ) : (
-                  <img
-                    src="/bear1.jpg"
-                    alt="Djungelskog"
-                    className="w-6 h-6 rounded-full"
-                  />
-                )}
-              </div>
-
-              <div 
-                className={`flex flex-col ${
-                  message.role === 'user' ? 'items-end' : 'items-start'
-                } min-w-0 flex-1`}
+          <AnimatePresence>
+            {(isSharedChat ? sharedMessages : messages).map((message) => (
+              <motion.div
+                key={message.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3 }}
+                className={`flex items-start gap-1.5 w-full message-container ${
+                  message.role === 'user' ? 'flex-row-reverse' : ''
+                }`}
               >
-                <div 
-                  className={`group relative ${
-                    message.role === 'user' 
-                      ? 'bg-gray-100 dark:bg-neutral-800' 
-                      : 'bg-transparent'
-                  } rounded-xl ${
-                    message.content.length < 10 
-                      ? 'px-3 py-1' // Smaller padding for short messages
-                      : 'px-3 py-1.5' // Regular padding for longer messages
-                  } ${
-                    message.role === 'user' 
-                      ? 'ring-1 ring-gray-200/50 dark:ring-neutral-700/50' 
-                      : ''
-                  } ${
-                    message.role === 'user' ? 'w-fit max-w-[85%]' : 'w-[85%]'
-                  } break-words mb-0`}
-                >
-                  <div className={`${markdownStyles.container}`}>
-                    <ReactMarkdown
-                      className="prose dark:prose-invert max-w-none prose-xs leading-tight text-xs"
-                      components={{
-                        p: ({node, ...props}) => <p className={`${markdownStyles.p}`} {...props} />,
-                        ul: ({node, ...props}) => <ul className={`${markdownStyles.ul}`} {...props} />,
-                        ol: ({node, ...props}) => <ol className={`${markdownStyles.ol}`} {...props} />,
-                        h2: ({node, children, ...props}) => 
-                          children ? (
-                            <h2 className={`${markdownStyles.h2}`} {...props}>
-                              {children}
-                            </h2>
-                          ) : null,
-                        blockquote: ({node, ...props}) => <blockquote className={`${markdownStyles.blockquote}`} {...props} />,
-                        pre: ({node, ...props}) => <pre className={`${markdownStyles.pre}`} {...props} />,
-                      }}
-                    >
-                      {message.content}
-                    </ReactMarkdown>
-                  </div>
+                <div className="flex-shrink-0">
+                  {message.role === 'user' ? (
+                    <div className="w-6 h-6 rounded-full bg-gray-100 dark:bg-neutral-800 flex items-center justify-center ring-1 ring-gray-200 dark:ring-neutral-700">
+                      <span className="text-[10px] font-medium text-gray-600 dark:text-neutral-300">You</span>
+                    </div>
+                  ) : (
+                    <img
+                      src="/bear1.jpg"
+                      alt="Djungelskog"
+                      className="w-6 h-6 rounded-full"
+                    />
+                  )}
                 </div>
 
-                {/* Navigation links and share button - outside the message */}
-                {message.role === 'assistant' && (
-                  <div className="flex flex-wrap items-center gap-2 mt-2">
-                    {getRelevantLinks(message.content).map((link, index) => (
+                <div 
+                  className={`flex flex-col ${
+                    message.role === 'user' ? 'items-end' : 'items-start'
+                  } min-w-0 flex-1`}
+                >
+                  <div 
+                    className={`group relative ${
+                      message.role === 'user' 
+                        ? 'bg-gray-100 dark:bg-neutral-800' 
+                        : 'bg-transparent'
+                    } rounded-xl ${
+                      message.content.length < 10 
+                        ? 'px-3 py-1' 
+                        : 'px-3 py-1.5'
+                    } ${
+                      message.role === 'user' 
+                        ? 'ring-1 ring-gray-200/50 dark:ring-neutral-700/50' 
+                        : ''
+                    } ${
+                      message.role === 'user' ? 'w-fit max-w-[85%]' : 'w-full'
+                    } break-words mb-0`}
+                  >
+                    <div className="w-full">
+                      <MessageContent content={message.content} />
+                    </div>
+                  </div>
+
+                  {/* Navigation links and share button - outside the message */}
+                  {message.role === 'assistant' && (
+                    <div className="flex flex-wrap items-center gap-2 mt-2">
+                      {getRelevantLinks(message.content).map((link, index) => (
+                        <button
+                          key={index}
+                          onClick={() => handleNavigation(link.path)}
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium 
+                          text-gray-600 dark:text-gray-300
+                          bg-gray-50 dark:bg-neutral-800/50
+                          hover:bg-gray-100 dark:hover:bg-neutral-800
+                          rounded-full transition-colors
+                          ring-1 ring-gray-200/50 dark:ring-neutral-700/50"
+                        >
+                          {/* Link icons */}
+                          {link.path === '/projects' && (
+                            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+                            </svg>
+                          )}
+                          {link.path === '/experience' && (
+                            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                            </svg>
+                          )}
+                          {link.path === '/about' && (
+                            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                            </svg>
+                          )}
+                                               {link.path.includes('drive.google.com') && (
+                            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                            </svg>
+                          )}
+                          <span>{link.text}</span>
+                        </button>
+                      ))}
+                      
+                      {/* Share button */}
                       <button
-                        key={index}
-                        onClick={() => handleNavigation(link.path)}
+                        onClick={async (e) => {
+                          const messageEl = e.currentTarget.closest('.message-container') as HTMLElement;
+                          const userMessage = messages.find((m, i) => 
+                            messages[i + 1]?.id === message.id && m.role === 'user'
+                          );
+                          await shareMessage(
+                            messageEl, 
+                            message.content, 
+                            userMessage?.content || 'Hi Djungelskog'
+                          );
+                        }}
                         className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium 
                         text-gray-600 dark:text-gray-300
                         bg-gray-50 dark:bg-neutral-800/50
@@ -586,71 +670,27 @@ const Home = () => {
                         rounded-full transition-colors
                         ring-1 ring-gray-200/50 dark:ring-neutral-700/50"
                       >
-                        {/* Link icons */}
-                        {link.path === '/projects' && (
-                          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
-                          </svg>
-                        )}
-                        {link.path === '/experience' && (
-                          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0" />
-                          </svg>
-                        )}
-                        {link.path === '/about' && (
-                          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                          </svg>
-                        )}
-                                               {link.path.includes('drive.google.com') && (
-                          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-                          </svg>
-                        )}
-                        <span>{link.text}</span>
+                        <svg 
+                          className="w-3.5 h-3.5" 
+                          fill="none" 
+                          viewBox="0 0 24 24" 
+                          strokeWidth={1.5} 
+                          stroke="currentColor"
+                        >
+                          <path 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round" 
+                            d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185z" 
+                          />
+                        </svg>
+                        <span>Share</span>
                       </button>
-                    ))}
-                    
-                    {/* Share button */}
-                    <button
-                      onClick={async (e) => {
-                        const messageEl = e.currentTarget.closest('.message-container') as HTMLElement;
-                        const userMessage = messages.find((m, i) => 
-                          messages[i + 1]?.id === message.id && m.role === 'user'
-                        );
-                        await shareMessage(
-                          messageEl, 
-                          message.content, 
-                          userMessage?.content || 'Hi Djungelskog'
-                        );
-                      }}
-                      className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium 
-                      text-gray-600 dark:text-gray-300
-                      bg-gray-50 dark:bg-neutral-800/50
-                      hover:bg-gray-100 dark:hover:bg-neutral-800
-                      rounded-full transition-colors
-                      ring-1 ring-gray-200/50 dark:ring-neutral-700/50"
-                    >
-                      <svg 
-                        className="w-3.5 h-3.5" 
-                        fill="none" 
-                        viewBox="0 0 24 24" 
-                        strokeWidth={1.5} 
-                        stroke="currentColor"
-                      >
-                        <path 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round" 
-                          d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185z" 
-                        />
-                      </svg>
-                      <span>Share</span>
-                    </button>
-                  </div>
-                )}
-              </div>
-            </div>
-          ))}
+                    </div>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
           
           {isLoading && (
             <div className="flex items-start gap-1.5 w-full">
@@ -717,14 +757,33 @@ const Home = () => {
       )} */}
 
       {!isSharedChat && (
-        <form onSubmit={handleFormSubmit} className="sticky bottom-20 sm:bottom-0 bg-white/80 dark:bg-black/80 backdrop-blur-sm py-3 px-2">
+        <form onSubmit={handleFormSubmit} className="sticky bottom-20 sm:bottom-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-sm py-3 px-2">
           <div className="relative">
             <input
               value={input}
               onChange={handleInputChange}
-              placeholder="Ask me anything..."
+              placeholder={isListening ? "Listening..." : "Ask me anything..."}
               className="w-full h-8 pl-3 pr-20 rounded-xl bg-white dark:bg-neutral-900 text-xs text-gray-700 dark:text-white ring-1 ring-gray-200 dark:ring-neutral-800 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-neutral-700 transition-shadow"
             />
+            <button
+              type="button"
+              onClick={handleVoiceInput}
+              className={`absolute right-20 top-1/2 -translate-y-1/2 p-1.5 rounded-lg 
+                ${isListening 
+                  ? 'text-red-500 dark:text-red-400 animate-pulse' 
+                  : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
+                } transition-colors`}
+            >
+              {isListening ? (
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+                </svg>
+              ) : (
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+                </svg>
+              )}
+            </button>
             <Tooltip
               content="AI responses may not always be accurate and can sometimes provide incorrect information."
               placement="top"
@@ -888,7 +947,7 @@ const Home = () => {
                         bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white hover:opacity-90 transition-all"
                       >
                         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.281-.059 1.689-.073 4.949-.073zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                         </svg>
                         Instagram
                       </button>
