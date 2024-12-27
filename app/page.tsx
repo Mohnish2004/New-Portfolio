@@ -5,12 +5,14 @@ import { FlipWords } from "@/components/flip"; // Replace with the correct path 
 import React from "react";
 
 import { useEffect, useState } from "react";
+import { Analytics } from '@vercel/analytics/react';
 
 import { LinkPreview } from "@/components/link-preview";
 import { LinkPreviews } from "@/components/link-preview-exp";
 import Chat from "@/components/chat";
 import Dot from "@/components/dot";
 import { cn } from "@/utils/utils/cn";
+import { Toast } from "@/components/ui/toast";
 
 
 
@@ -175,11 +177,49 @@ const shouldTruncate4 = sentence4.split(' ').length > 30;
 const truncatedContent5 = sentence4.split(' ').slice(0, 30).join(' ');
 const shouldTruncate5 = sentence4.split(' ').length > 30;
   const [expanded, setExpanded] = useState(false);
-  
+  const [showWelcome, setShowWelcome] = useState(false);
+  const [visitorCount, setVisitorCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    const fetchVisitorCount = async () => {
+      try {
+        const res = await fetch('/api/analytics');
+        const data = await res.json();
+        
+        if (data.pageViews === 0) {
+          // If API returns 0, try to get from localStorage
+          const stored = parseInt(localStorage.getItem('visitorCount') || '0');
+          const newCount = stored + 1;
+          localStorage.setItem('visitorCount', newCount.toString());
+          setVisitorCount(newCount);
+        } else {
+          setVisitorCount(data.pageViews);
+        }
+        setShowWelcome(true);
+      } catch (error) {
+        console.error('Error fetching visitor count:', error);
+        // Fallback to localStorage
+        const stored = parseInt(localStorage.getItem('visitorCount') || '0');
+        const newCount = stored + 1;
+        localStorage.setItem('visitorCount', newCount.toString());
+        setVisitorCount(newCount);
+        setShowWelcome(true);
+      }
+    };
+
+    fetchVisitorCount();
+  }, []);
 
   return (
   
-    <section data-aos="fade-in" className="antialiased max-w-xl p-4 mx-4 sm:mx-auto">
+    <section data-aos="fade-in" className="relative antialiased max-w-xl p-4 mx-4 sm:mx-auto">
+      {showWelcome && visitorCount !== null && (
+        <Toast 
+          message={`${visitorCount.toLocaleString()} visits 👋`}
+          duration={3000}
+          onClose={() => setShowWelcome(false)}
+        />
+      )}
 < Dot delay={0.25} inView >
 <div className="relative mb-4 mt-4 left-[-46px]"> {/* Adjust this value as needed */}
 <Image 
