@@ -39,11 +39,7 @@ const MessageContent: React.FC<MessageContentProps> = ({ content }) => {
               p: ({node, ...props}) => <p className="my-0.5 text-xs" {...props} />,
               ul: ({node, ...props}) => <ul className="my-0.5 space-y-0.5 text-xs" {...props} />,
               ol: ({node, ...props}) => <ol className="my-0.5 space-y-0.5 text-xs" {...props} />,
-              h2: ({node, children, ...props}) => (
-                <h2 className="mt-1.5 mb-1 text-sm font-semibold" {...props}>
-                  {children}
-                </h2>
-              ),
+              h2: ({node, ...props}) => <h2 className="mt-1.5 mb-1 text-sm font-semibold" {...props} />,
               blockquote: ({node, ...props}) => <blockquote className="border-l-4 pl-4 my-1 text-xs" {...props} />,
               pre: ({node, ...props}) => <pre className="my-1 text-xs" {...props} />
             }}
