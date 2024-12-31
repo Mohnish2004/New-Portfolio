@@ -109,6 +109,46 @@ const Home = () => {
     </div>
   </div>
 
+
+  <div className="mb-5">
+  <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+    <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
+    <a href='https://drive.google.com/file/d/1ztBCfbtx-Fmiz8FYlV5lBbNmf3xAiPSI/view?usp=sharing'>
+      <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" src="/projects/mock.png" alt="Description"/>
+      </a>
+    </div>
+      <div className="p-4">
+      <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
+             Craiglist Redesign
+          </h1>
+          <p className="mt-1 mb-4 text-gray-600 text-sm leading-tight dark:text-neutral-400">
+          A redesign of the Craiglist website, with a focus on modern aesthetics, functionality, scalability, and simplicity.
+          </p>
+        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+        Design
+        </span>
+        <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+        Branding
+        </span>
+
+<button
+  type="button"
+  onClick={() => window.location.href='https://drive.google.com/file/d/1ztBCfbtx-Fmiz8FYlV5lBbNmf3xAiPSI/view?usp=sharing'}
+  className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10"
+>
+  View Redesign
+</button>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
   <div className="mb-5">
   <div data-aos="fade-up" className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
     <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-t-lg dark:bg-neutral-800">
