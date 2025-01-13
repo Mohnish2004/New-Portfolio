@@ -226,7 +226,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
               <h1 
           className="absolute top-48 -left-2 -mb-6 text-4xl dark:bg-black bg-opacity-70 dark:bg-opacity-70 p-2 rounded" 
           data-aos="fade-in"
-        >       Hey, I&apos;m Mohnish 👋🏽
+        >        Mohnish 
       </h1>
       </Dot>
       < Dot delay={0.5} inView >
@@ -245,7 +245,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
       </h2>
       <div data-aos="fade-in" data-aos-delay="900">
       <p data-aos="fade-in" >
-      I&apos;m a third-year Computer Science student at the University of California, Davis. With a passion for solving problems one {" "}      <LinkPreview
+      Passionate about solving problems one {" "}      <LinkPreview
           url="/projects"
           imageSrc="/mobile1.png"
           isStatic
@@ -263,7 +263,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
            Experience
         </LinkPreview>{" "} </p>
         
-<p data-aos="fade-in" className="mt-4" >My journey in tech started small but quickly grew as I embraced many roles including leadership. Currently, I serve as the president of             
+<p data-aos="fade-in" className="mt-4" >Currently, I serve as the president of             
 <LinkPreview
           url="https://www.codelabdavis.com/"
           className="font-bold ml-1"

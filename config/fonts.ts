@@ -1,11 +1,11 @@
-import { Inter as FontSans, Inter as FontMono } from "next/font/google";
+import { Manrope } from "next/font/google";
 
-export const fontSans = FontSans({
+export const fontSans = Manrope({
   subsets: ["latin"],
   variable: "--font-sans",
 });
 
-export const fontMono = FontMono({
+export const fontMono = Manrope({
   subsets: ["latin"],
   variable: "--font-mono",
 });

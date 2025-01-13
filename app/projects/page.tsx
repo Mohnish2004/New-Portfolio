@@ -44,7 +44,7 @@ function ArrowIcon() {
 
 
 const Home = () => {
-
+  const [filter, setFilter] = useState('all');
 
   return (
     
@@ -56,6 +56,39 @@ const Home = () => {
       <div className="mb-10 mt-5">
       <p>
       Here are a few recent highlights of my work. Whatever I&apos;m working on, I always follow the same simple approach—blending aesthetics with functionality to create impactful solutions.      </p>
+      </div>
+
+      <div className="flex gap-2 mb-8">
+        <button
+          onClick={() => setFilter('all')}
+          className={`px-4 py-2 rounded-full text-sm transition-all ${
+            filter === 'all'
+              ? 'bg-neutral-800 text-white dark:bg-white dark:text-black'
+              : 'bg-neutral-100 text-neutral-800 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700'
+          }`}
+        >
+          All
+        </button>
+        <button
+          onClick={() => setFilter('design')}
+          className={`px-4 py-2 rounded-full text-sm transition-all ${
+            filter === 'design'
+              ? 'bg-neutral-800 text-white dark:bg-white dark:text-black'
+              : 'bg-neutral-100 text-neutral-800 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700'
+          }`}
+        >
+          Design
+        </button>
+        <button
+          onClick={() => setFilter('development')}
+          className={`px-4 py-2 rounded-full text-sm transition-all ${
+            filter === 'development'
+              ? 'bg-neutral-800 text-white dark:bg-white dark:text-black'
+              : 'bg-neutral-100 text-neutral-800 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700'
+          }`}
+        >
+          Development
+        </button>
       </div>
 
  <div className="mb-5">
@@ -496,7 +529,7 @@ const Home = () => {
             <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
              Client
             </span>
-            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
              PM
             </span>
 <button
@@ -835,31 +868,42 @@ const Home = () => {
   <div className="mb-5">
   <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
     <div className="flex flex-col md:flex-row">
+      <div className="md:w-1/2">
+        <a className="group block h-full" href={"/"}>
+          <div className="h-full overflow-hidden bg-gray-100 rounded-l-lg dark:bg-neutral-800">
+          <a href='https://medium.com/@mohnish.gopi/d2d-enzyme-rate-calculator-c1cc87f268f4'>
+
+            <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/projects/d2d2.png" alt="Description"/>
+            </a>
+          </div>
+        </a>
+      </div>
       <div className="p-6 md:w-1/2 flex flex-col justify-between">
         <div>
           <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
-             FarmChain
+             Enzyme Rate Calculator
           </h1>
           <p className="mt-1 mb-4 text-gray-600 text-xs leading-tight dark:text-neutral-400">
-          An app that revolutionizes the food supply chain through blockchain technology, providing transparency, accountability, and AI-driven shelf life predictions to minimize food waste and ensure food safety. </p>          <div className="mt-4">
+          A web appl developed to streamline the calculation of enzyme reaction rates and generate graphs from student-generated data for the Design 2 Data (D2D) project
+</p><div className="mt-4">
             <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-            🏆 Hackathon winner
+            Full Stack
             </span>
             <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-             Prototype
+             Client
             </span>
-            <button onClick={() => window.location.href='https://drive.google.com/file/d/1i3A2WT4jaaVXop15XyYXnANS76ZYRWtd/view'} type="button" className="transition-all mt-2 duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10">
-            Read more
-          </button>
+            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+             PM
+            </span>
+<button
+  type="button"
+  onClick={() => window.location.href='https://medium.com/@mohnish.gopi/d2d-enzyme-rate-calculator-c1cc87f268f4'}
+  className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 mt-3 ml-50 text-xs font-medium text-gray-600 ring-1 ring-inset bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 ring-gray-500/10"
+>
+  Read more
+</button>
           </div>
         </div>
-      </div>
-      <div className="md:w-1/2">
-        <a className="group block h-full" href={"https://drive.google.com/file/d/1i3A2WT4jaaVXop15XyYXnANS76ZYRWtd/view"}>
-          <div className="h-full overflow-hidden bg-gray-100 rounded-r-lg dark:bg-neutral-800">
-            <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover h-full w-full" src="/projects/farm.png" alt="Description"/>
-          </div>
-        </a>
       </div>
     </div>
   </div>
@@ -869,25 +913,48 @@ const Home = () => {
 
 
 
-    <ul className="mb-10 justify-end font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/Mohnish2004"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">View Github</p>
-          </a>
-        </li>
-        </ul>
 
+
+<div className="mb-5">
+  <div className="rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+    <div className="flex flex-col md:flex-row">
+      <div className="md:w-1/2">
+        <a className="group block h-full" href={"/"}>
+          <div className="h-full overflow-hidden bg-gray-100 rounded-l-lg dark:bg-neutral-800">
+          <a href='https://medium.com/@mohnish.gopi/the-journey-of-profficient-a-first-time-pms-tale-c6583ef88d07'>
+
+            <Image width="1000" height="1000" className="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover w-full h-full" src="/projects/prof.png" alt="Description"/>
+            </a>
+          </div>
+        </a>
+      </div>
+      <div className="p-6 md:w-1/2 flex flex-col justify-between">
+        <div>
+          <h1 className="text-2xl mb-2 inline-block font-medium text-black dark:text-white">
+             Profficient
+          </h1>
+          <p className="mt-1 mb-4 text-gray-600 text-xs leading-tight dark:text-neutral-400">
+          A web-based platform dedicated to providing UC Davis students with a time-saving and effortless experience in viewing and reviewing professors.</p>          <div className="mt-4">
+            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+              Full-Stack
+            </span>
+            <span className="inline-block mr-2 dark:border-neutral-600 dark:bg-neutral-700 rounded-md bg-gray-50 dark:text-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+             PM
+            </span>
+<button
+  type="button"
+  onClick={() => window.location.href='https://medium.com/@mohnish.gopi/the-journey-of-profficient-a-first-time-pms-tale-c6583ef88d07'}
+  className="transition-all duration-300 hover:scale-105 hover:shadow-md inline-block dark:border-neutral-600 dark:bg-neutral">
+  </button>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
 </section>
-
-    
   );
-}
+};
+
 
 export default Home;
-

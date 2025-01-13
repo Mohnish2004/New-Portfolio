@@ -55,6 +55,12 @@ type MessageWithMetadata = {
   };
 }
 
+// Add this type near your other type definitions
+type SpeechState = {
+  isPlaying: boolean;
+  messageId: string | null;
+};
+
 const Home = () => {
   const { messages, input, handleInputChange, handleSubmit, isLoading, stop } = useChat({
     api: '/api/chat',
@@ -445,6 +451,90 @@ const Home = () => {
     }
   };
 
+  // Add this state to handle text-to-speech
+  const [speechState, setSpeechState] = useState<SpeechState>({
+    isPlaying: false,
+    messageId: null
+  });
+
+  // Add this function to handle text-to-speech
+  const handleTextToSpeech = (messageId: string, content: string) => {
+    if (speechState.isPlaying && speechState.messageId === messageId) {
+      // Stop current speech
+      window.speechSynthesis.cancel();
+      setSpeechState({ isPlaying: false, messageId: null });
+    } else {
+      // Stop any existing speech
+      window.speechSynthesis.cancel();
+      
+      // Start new speech with bear-like voice settings
+      const utterance = new SpeechSynthesisUtterance(content);
+      
+      // Get available voices
+      const voices = window.speechSynthesis.getVoices();
+      
+      // Try to find a deep male voice
+      const deepVoice = voices.find(voice => 
+        voice.lang.includes('sv-SE') && voice.name.toLowerCase().includes('male')
+      ) || voices.find(voice => 
+        voice.lang.includes('en-GB') && voice.name.toLowerCase().includes('male')
+      ) || voices.find(voice => 
+        voice.name.toLowerCase().includes('deep')
+      );
+      
+      if (deepVoice) {
+        utterance.voice = deepVoice;
+      }
+      
+      // Adjust speech parameters for a more bear-like sound
+      utterance.rate = 0.85;    // Slower speech
+      utterance.pitch = 0.6;    // Much deeper pitch
+      utterance.volume = 1.0;   // Full volume
+      
+      // Add some growl effect by breaking up longer sentences
+      const processedContent = content
+        .replace(/([.!?])\s+/g, '$1... ') // Add slight pauses after punctuation
+        .replace(/([,])\s+/g, '$1.. ');   // Shorter pauses after commas
+      
+      utterance.text = processedContent;
+      
+      utterance.onend = () => {
+        setSpeechState({ isPlaying: false, messageId: null });
+      };
+      
+      setSpeechState({ isPlaying: true, messageId });
+      window.speechSynthesis.speak(utterance);
+    }
+  };
+
+  // Add this effect to handle voice loading
+  useEffect(() => {
+    // Load voices when component mounts
+    const loadVoices = () => {
+      window.speechSynthesis.getVoices();
+    };
+    
+    loadVoices();
+    
+    // Chrome requires this event listener
+    if (typeof window !== 'undefined') {
+      window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.speechSynthesis.onvoiceschanged = null;
+      }
+    };
+  }, []);
+
+  // Clean up speech synthesis when component unmounts
+  useEffect(() => {
+    return () => {
+      window.speechSynthesis.cancel();
+    };
+  }, []);
+
   return (
     <section 
       className={`antialiased max-w-xl mx-4 ${isSharedChat ? 'py-8' : 'p-4'} sm:mx-auto`}
@@ -684,6 +774,33 @@ const Home = () => {
                           />
                         </svg>
                         <span>Share</span>
+                      </button>
+                      
+                      {/* Text-to-speech button */}
+                      <button
+                        onClick={() => handleTextToSpeech(message.id, message.content)}
+                        className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium 
+                        text-gray-600 dark:text-gray-300
+                        bg-gray-50 dark:bg-neutral-800/50
+                        hover:bg-gray-100 dark:hover:bg-neutral-800
+                        rounded-full transition-colors
+                        ring-1 ring-gray-200/50 dark:ring-neutral-700/50"
+                      >
+                        {speechState.isPlaying && speechState.messageId === message.id ? (
+                          <>
+                            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 7.5A2.25 2.25 0 017.5 5.25h9a2.25 2.25 0 012.25 2.25v9a2.25 2.25 0 01-2.25 2.25h-9a2.25 2.25 0 01-2.25-2.25v-9z" />
+                            </svg>
+                            Stop
+                          </>
+                        ) : (
+                          <>
+                            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+                            </svg>
+                            Listen
+                          </>
+                        )}
                       </button>
                     </div>
                   )}
@@ -947,7 +1064,7 @@ const Home = () => {
                         bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white hover:opacity-90 transition-all"
                       >
                         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.281-.059 1.689-.073 4.949-.073zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.281-.059 1.689-.073 4.949-.073zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.354.2 6.782 2.618 6.979 6.98.059 1.28.073 1.689.073 4.948 0 3.259-.014 3.667-.072 4.947-.196 4.354-2.617 6.78-6.979 6.98-1.281.059-1.69.073-4.949.073zm0-10.162c-2.209 0-4 1.79-4 4 0 2.209 1.791 4 4 4s4-1.791 4-4c0-2.209-1.791-4-4-4z"/>
                         </svg>
                         Instagram
                       </button>
