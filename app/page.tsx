@@ -226,7 +226,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
               <h1 
           className="absolute top-48 -left-2 -mb-6 text-4xl dark:bg-black bg-opacity-70 dark:bg-opacity-70 p-2 rounded" 
           data-aos="fade-in"
-        >        Mohnish 
+        >        Mohnish Gopi
       </h1>
       </Dot>
       < Dot delay={0.5} inView >
