@@ -6,6 +6,7 @@ interface AudioPlayerProps {
   src: string;
   title: string;
   duration: string;
+  captionsSrc?: string;
 }
 
 const PlayIcon = () => (
@@ -24,6 +25,18 @@ const ProgressBar = ({ progress, onClick }: { progress: number; onClick: (e: Rea
   <div 
     className="h-1 bg-black/5 dark:bg-white/5 rounded-full overflow-hidden cursor-pointer"
     onClick={onClick}
+    role="slider"
+    tabIndex={0}
+    aria-valuenow={progress}
+    aria-valuemin={0}
+    aria-valuemax={100}
+    onKeyDown={(e) => {
+      if (e.key === 'ArrowRight') {
+        onClick(e as unknown as React.MouseEvent<HTMLDivElement>);
+      } else if (e.key === 'ArrowLeft') {
+        onClick(e as unknown as React.MouseEvent<HTMLDivElement>);
+      }
+    }}
   >
     <div 
       className="h-full bg-black dark:bg-white rounded-full"
@@ -41,7 +54,7 @@ const PlayButton = ({ isPlaying, onClick }: { isPlaying: boolean; onClick: () =>
   </button>
 );
 
-const AudioPlayer: React.FC<AudioPlayerProps> = ({ src, title, duration }) => {
+const AudioPlayer: React.FC<AudioPlayerProps> = ({ src, title, duration, captionsSrc }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [progress, setProgress] = useState(0);
@@ -97,7 +110,9 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ src, title, duration }) => {
 
   return (
     <div className="w-full max-w-md bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg rounded-2xl p-4 border border-zinc-200 dark:border-white/10">
-      <audio ref={audioRef} src={src} />
+      <audio ref={audioRef} src={src}>
+        <track kind="captions" src="" label="English captions" />
+      </audio>
       
       <div className="flex items-center gap-3 mb-3">
         <PlayButton isPlaying={isPlaying} onClick={togglePlay} />
