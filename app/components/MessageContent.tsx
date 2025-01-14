@@ -1,52 +1,38 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import PhotoGrid from './PhotoGrid';
+import AudioPlayer from './AudioPlayer';
 
-interface MessageContentProps {
-  content: string;
-}
-
-const MessageContent: React.FC<MessageContentProps> = ({ content }) => {
-  // Split content into text and PhotoGrid sections
-  const parts = React.useMemo(() => {
-    const regex = /(<PhotoGrid[^>]*>)/g;
-    return content.split(regex).filter(Boolean);
-  }, [content]);
-
+const MessageContent = ({ content }: { content: string }) => {
+  // Split content into parts based on AudioPlayer tags
+  const parts = content.split(/(<AudioPlayer.*?\/>)/);
+  
   return (
-    <div className="prose dark:prose-invert max-w-none prose-xs leading-tight text-xs">
+    <div className="space-y-6 text-xs">
       {parts.map((part, index) => {
-        if (part.startsWith('<PhotoGrid')) {
-          // Extract images array from PhotoGrid component string
-          const imagesMatch = part.match(/images=\{(\[.*?\])}/);
-          if (imagesMatch) {
-            try {
-              const images = JSON.parse(imagesMatch[1]);
-              return <PhotoGrid key={index} images={images.slice(0, 6)} />;
-            } catch (error) {
-              console.error('Failed to parse PhotoGrid images:', error);
-              return null;
-            }
+        // Check if this part is an AudioPlayer component
+        if (part.startsWith('<AudioPlayer')) {
+          // Extract props using regex
+          const srcMatch = part.match(/src="([^"]+)"/);
+          const titleMatch = part.match(/title="([^"]+)"/);
+          const durationMatch = part.match(/duration="([^"]+)"/);
+          
+          if (srcMatch && titleMatch && durationMatch) {
+            return (
+              <AudioPlayer
+                key={index}
+                src={srcMatch[1]}
+                title={titleMatch[1]}
+                duration={durationMatch[1]}
+              />
+            );
           }
-          return null;
         }
-
-        // Use ReactMarkdown for all non-PhotoGrid content
-        return (
+        
+        // Render regular markdown content with smaller text
+        return part && (
           <ReactMarkdown
             key={index}
-            components={{
-              p: ({node, ...props}) => <p className="my-0.5 text-xs" {...props} />,
-              ul: ({node, ...props}) => <ul className="my-0.5 space-y-0.5 text-xs" {...props} />,
-              ol: ({node, ...props}) => <ol className="my-0.5 space-y-0.5 text-xs" {...props} />,
-              h2: ({node, children, ...props}) => (
-                <h2 className="mt-1.5 mb-1 text-sm font-semibold" {...props}>
-                  {children}
-                </h2>
-              ),
-              blockquote: ({node, ...props}) => <blockquote className="border-l-4 pl-4 my-1 text-xs" {...props} />,
-              pre: ({node, ...props}) => <pre className="my-1 text-xs" {...props} />
-            }}
+            className="text-xs text-gray-900 dark:text-white prose dark:prose-invert max-w-none prose-xs"
           >
             {part}
           </ReactMarkdown>

@@ -133,11 +133,52 @@ function BlogLink({}) {
   );
 }
 
+type Testimonial = {
+  name: string;
+  role: string;
+  company: string;
+  image: string;
+  content: string;
+  isExpanded: boolean;
+  toggleExpand: () => void;
+}
 
+const TestimonialCard = ({ name, role, company, image, content, isExpanded, toggleExpand }: Testimonial) => {
+  const truncatedContent = content.split(' ').slice(0, 30).join(' ');
+  const shouldTruncate = content.split(' ').length > 30;
 
-
-
-
+  return (
+    <div className="bg-neutral-50 dark:bg-neutral-800 rounded-lg p-6">
+      <div className="flex items-center gap-4 mb-4">
+        <Image 
+          className="w-12 h-12 rounded-full"
+          src={image}
+          width={60}
+          height={60}
+          alt={name}
+        />
+        <div>
+          <h3 className="font-semibold text-gray-900 dark:text-white">{name}</h3>
+          <p className="text-sm text-gray-500 dark:text-gray-400">{role}, {company}</p>
+        </div>
+      </div>
+      <div className="text-gray-600 dark:text-gray-300">
+        <p className="text-sm">
+          {isExpanded ? content : truncatedContent}
+          {shouldTruncate && !isExpanded && '...'}
+        </p>
+        {shouldTruncate && (
+          <button
+            onClick={toggleExpand}
+            className="text-xs font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 mt-2 transition-colors"
+          >
+            {isExpanded ? 'Read less' : 'Read more'}
+          </button>
+        )}
+      </div>
+    </div>
+  );
+};
 
 const Home = () => {
   const words = ["Developer", "Product Manager", "Designer", "Researcher","Leader","Photographer", "Tour Guide", "Full-stack","Mobile/Web","AI/ML","UI/UX","Security"]; // Example words array
@@ -209,6 +250,55 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
     fetchVisitorCount();
   }, []);
 
+  const testimonials = [
+    {
+      name: "Geetika",
+      role: "AI Privacy Engineer",
+      company: "Amazon",
+      image: "https://media.licdn.com/dms/image/D4D03AQGGI9xxCnbrJg/profile-displayphoto-shrink_200_200/0/1679623474258?e=2147483647&v=beta&t=VFlTvlVnkq8xnOO9GhLVAp6KneyqroowGcBVumDuYK4",
+      content: sentence,
+      isExpanded: isExpanded,
+      toggleExpand: toggleExpand
+    },
+    {
+      name: "Kamal",
+      role: "Business Consultant",
+      company: "Maximo Esolutions",
+      image: "/Testimonial/kamal.jpeg",
+      content: sentence2,
+      isExpanded: isExpanded2,
+      toggleExpand: toggleExpand2
+    },
+    {
+      name: "Jim Pantaleo",
+      role: "Business Development Coordinator",
+      company: "AI Institute",
+      image: "/Testimonial/jim.jpeg",
+      content: sentence3,
+      isExpanded: isExpanded3,
+      toggleExpand: toggleExpand3
+    },
+    {
+      name: "Gopi",
+      role: "IT Director",
+      company: "Empower",
+      image: "/Testimonial/gopi.jpeg",
+      content: sentence4,
+      isExpanded: isExpanded4,
+      toggleExpand: toggleExpand4
+    }
+  ];
+
+  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
+
+  const nextTestimonial = () => {
+    setCurrentTestimonialIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setCurrentTestimonialIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
   return (
   
     <section data-aos="fade-in" className="relative antialiased max-w-xl p-4 mx-4 sm:mx-auto">
@@ -227,6 +317,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
           className="absolute top-48 -left-2 -mb-6 text-4xl dark:bg-black bg-opacity-70 dark:bg-opacity-70 p-2 rounded" 
           data-aos="fade-in"
         >        Mohnish Gopi
+        <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">/mo·nish/</span>
       </h1>
       </Dot>
       < Dot delay={0.5} inView >
@@ -629,189 +720,55 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
 
 
       <div data-aos="fade-in" className="mt-10">
-      <h2 className=" font-medium text-2xl">
-      Testimonials
-      </h2>
-      <p className="mt-2 text-gray-600 dark:text-gray-300 text-sm">Read insights and praises from mentors and peers who have guided and witnessed my professional growth.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
-
-
-<div className="flex items-start mb-5 mt-10 gap-2.5" >
-  <Tooltip
-    key="left-start"
-    placement="left-start"
-    content={
-      <div className="px-1 py-2">
-        <div className="text-small font-bold">Amazon</div>
-        <div className="text-tiny">AI Privacy engineer</div>
-      </div>
-    }
-  >
-    <Image className="w-10 h-10 rounded-full" width="60" height="60" src="https://media.licdn.com/dms/image/D4D03AQGGI9xxCnbrJg/profile-displayphoto-shrink_200_200/0/1679623474258?e=2147483647&v=beta&t=VFlTvlVnkq8xnOO9GhLVAp6KneyqroowGcBVumDuYK4" alt="Jese"/>
-  </Tooltip>
-  <div className="flex flex-col gap-1 w-full max-w-[320px]">
-    <div className="flex items-center space-x-2 rtl:space-x-reverse">
-      <span className="text-sm font-semibold text-gray-900 dark:text-white">Geetika</span>
-      <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+      <h2 className="font-medium text-2xl">Testimonials</h2>
+      <p className="mt-2 text-gray-600 dark:text-gray-300 text-sm">
+        Read insights and praises from mentors and peers who have guided and witnessed my professional growth.
+      </p>
     </div>
-    <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-e-xl bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
-    <p className="text-sm text-gray-900 dark:text-white">
-      {isExpanded ? sentence : truncatedContent}
-      {shouldTruncate && !isExpanded && '...'}
-    </p>
-    <div className="flex justify-between items-center mt-2">
-      {shouldTruncate && (
-        <button
-          onClick={toggleExpand}
-          className="text-xs text-black dark:text-gray-400 font-bold hover:text-blue-800 self-start"
-        >
-          {isExpanded ? 'Read less' : 'Read more'}
-        </button>
-      )}
-      <span className="text-xs text-gray-500 dark:text-gray-400">
-        Sent
-      </span>
+
+    <div className="mt-8 relative">
+      <div className="overflow-hidden">
+        <div className="transition-opacity duration-300">
+          <TestimonialCard {...testimonials[currentTestimonialIndex]} />
+        </div>
+      </div>
+      
+      <div className="flex justify-end items-center mt-4">
+        <div className="flex gap-2">
+          <button
+            onClick={prevTestimonial}
+            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-neutral-700 transition-colors"
+            aria-label="Previous testimonial"
+          >
+            <svg
+              className="w-5 h-5 text-gray-600 dark:text-gray-300"
+              fill="none"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={nextTestimonial}
+            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-neutral-700 transition-colors"
+            aria-label="Next testimonial"
+          >
+            <svg
+              className="w-5 h-5 text-gray-600 dark:text-gray-300"
+              fill="none"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-
-
-
-
-
-<div className="flex items-start mb-5 mt-5 gap-2.5 justify-end" >
-  <div className="flex flex-col gap-1 w-full max-w-[320px]">
-    <div className="flex items-center space-x-2 justify-end rtl:space-x-reverse">
-      <span className="text-sm font-semibold text-gray-900 dark:text-white">Kamal</span>
-      <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
-    </div>
-    <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-tl-lg rounded-b-lg bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
-    <p className="text-sm text-gray-900 dark:text-white">
-      {isExpanded2 ? sentence2 : truncatedContent2}
-      {shouldTruncate2 && !isExpanded2 && '...'}
-    </p>
-    <div className="flex justify-between items-center mt-2">
-      {shouldTruncate2 && (
-        <button
-          onClick={toggleExpand2}
-          className="text-xs text-black dark:text-gray-400 font-bold hover:text-blue-800 self-start"
-        >
-          {isExpanded2 ? 'Read less' : 'Read more'}
-        </button>
-      )}
-      <span className="text-xs text-gray-500 dark:text-gray-400">
-        Sent
-      </span>
-      </div>
-    </div>
-  </div>
-  <Tooltip
-    key="right-start"
-    placement="right-start"
-    content={
-      <div className="px-1 py-2">
-        <div className="text-small font-bold">Maximo Esolutions</div>
-        <div className="text-tiny">Business Consultant</div>
-      </div>
-    }
-  >
-    <Image className="w-10 h-10 rounded-full" src="/Testimonial/kamal.jpeg" width="200" height="200" alt="Jese"/>
-  </Tooltip>
-</div>
-
-<div className="flex items-start mb-5 mt-5 gap-2.5" >
-  <Tooltip
-    key="left-start"
-    placement="left-start"
-    content={
-      <div className="px-1 py-2">
-        <div className="text-small font-bold">AI Institute</div>
-        <div className="text-tiny">Business Development Coordinator</div>
-      </div>
-    }
-  >
-    <Image className="w-10 h-10 rounded-full" src="/Testimonial/jim.jpeg" width="200" height="200" alt="Jese"/>
-  </Tooltip>
-  <div className="flex flex-col gap-1 w-full max-w-[320px]">
-    <div className="flex items-center space-x-2 rtl:space-x-reverse">
-      <span className="text-sm font-semibold text-gray-900 dark:text-white">Jim Pantaleo</span>
-      <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
-    </div>
-    <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-tl-lg rounded-b-lg bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
-    <p className="text-sm text-gray-900 dark:text-white">
-      {isExpanded3 ? sentence3 : truncatedContent3}
-      {shouldTruncate3 && !isExpanded3 && '...'}
-    </p>
-    <div className="flex justify-between items-center mt-2">
-      {shouldTruncate3 && (
-        <button
-          onClick={toggleExpand3}
-          className="text-xs text-black dark:text-gray-400 font-bold hover:text-blue-800 self-start"
-        >
-          {isExpanded3 ? 'Read less' : 'Read more'}
-        </button>
-      )}
-      <span className="text-xs text-gray-500 dark:text-gray-400">
-        Sent
-      </span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div className="flex items-start mb-5 mt-5 gap-2.5 justify-end">
-  <div className="flex flex-col gap-1 w-full max-w-[320px]">
-    <div className="flex items-center space-x-2 justify-end rtl:space-x-reverse">
-      <span className="text-sm font-semibold text-gray-900 dark:text-white">Gopi</span>
-      <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
-    </div>
-    <div className="flex flex-col leading-1.5 p-4 border-gray-200 rounded-tl-lg rounded-b-lg bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 rounded-es-xl">
-    <p className="text-sm text-gray-900 dark:text-white">
-      {isExpanded4 ? sentence4 : truncatedContent4}
-      {shouldTruncate4 && !isExpanded4 && '...'}
-    </p>
-    <div className="flex justify-between items-center mt-2">
-      {shouldTruncate4 && (
-        <button
-          onClick={toggleExpand4}
-          className="text-xs text-black dark:text-gray-400 font-bold hover:text-blue-800 self-start"
-        >
-          {isExpanded4 ? 'Read less' : 'Read more'}
-        </button>
-      )}
-      <span className="text-xs text-gray-500 dark:text-gray-400">
-        Sent
-      </span>
-      </div>
-    </div>
-  </div>
-  <Tooltip
-    key="right-start"
-    placement="right-start"
-    content={
-      <div className="px-1 py-2">
-        <div className="text-small font-bold">Empower</div>
-        <div className="text-tiny">IT Director</div>
-      </div>
-    }
-  >
-    <Image className="w-10 h-10 rounded-full" src="/Testimonial/gopi.jpeg" width="200" height="200" alt="Jese"/>
-  </Tooltip>
-</div>
 <footer className="max-w-xl mx-auto px-4 mt-10 pb-8">
   <div className="border-t border-neutral-200 dark:border-neutral-700">
     <div className="flex flex-col md:flex-row justify-center items-center py-8">
@@ -828,7 +785,7 @@ const shouldTruncate5 = sentence4.split(' ').length > 30;
                 className="inline-block"
               />
             </LinkPreview>
-            by Mohnish | Last updated: July, 2024
+            by Mohnish | Last updated: Jan, 202
           </span>
         </div>
       </nav>

@@ -48,7 +48,14 @@ const mohnishData = {
     birthday: "March 6, 2004",
     education: "Computer Science at UC Davis (2022-2026)",
     currentRole: "President of CodeLab",
-    resume: "https://drive.google.com/file/d/1tR8yrlVjDstqXk55d0FE4fVFTfr3RU34/view",
+    resume: {
+      pdf: "https://drive.google.com/file/d/1tR8yrlVjDstqXk55d0FE4fVFTfr3RU34/view",
+      podcast: {
+        url: "/path/to/your/podcast.mp3",
+        title: "My Resume Podcast",
+        duration: "5:30"
+      }
+    },
     contact: {
       email: "mgopi@ucdavis.edu",
       phone: "+1 5109469930",
@@ -300,10 +307,10 @@ Response Guidelines:
 1. Keep initial responses concise and focused
 1.5 Dont say thing sthat you are not sure about, just say you dont know
 2. Always offer to provide more details with "Would you like to know more about any specific aspect?"
-2.5 When asked for resume, respond with a button-style link:
-   • Format: "Here is mohnish's latest resume:[View Resume](https://drive.google.com/file/d/1tR8yrlVjDstqXk55d0FE4fVFTfr3RU34/view)"
-   • Keep response focused on the resume link
-   • Don't fabricate resume details
+2.5 When asked for resume, respond with:
+   • Format: "Here is Mohnish's latest resume: [View Resume](https://drive.google.com/file/d/1tR8yrlVjDstqXk55d0FE4fVFTfr3RU34/view)"
+   • Also ask: "Would you like to listen to a podcast where I talk about my experience?"
+   • If they say yes, respond with: '<AudioPlayer src="./sounds/resume.wav" title="My Resume Podcast" duration="5:30" />'
 3. When discussing projects, use the exact URLs from projectLinks:
    • For project sites: Use projectLinks[projectName].site
    • For more details: Use projectLinks[projectName].readMore
